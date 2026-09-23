@@ -102,6 +102,9 @@
         .card.v2:hover {
             border-color: var(--accent-v2);
         }
+        .card.v3:hover {
+            border-color: #10b981;
+        }
         .card-header {
             margin-bottom: 16px;
         }
@@ -123,6 +126,11 @@
             background: rgba(56, 189, 248, 0.15);
             color: #38bdf8;
             border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .card.v3 .card-tag {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
         .card h2 {
             font-size: 1.5rem;
@@ -178,6 +186,13 @@
         }
         .btn-v2:hover {
             background: #1d4ed8;
+        }
+        .btn-v3 {
+            background: #10b981;
+            color: #ffffff;
+        }
+        .btn-v3:hover {
+            background: #059669;
         }
         .privacy-box {
             background: rgba(30, 41, 59, 0.5);
@@ -258,6 +273,24 @@
                     </ul>
                 </div>
                 <a href="v2/index.html" class="btn btn-v2">Explorar Variante 2 (Acessível) &rarr;</a>
+            </div>
+
+            <!-- VARIANTE 3 -->
+            <div class="card v3">
+                <div>
+                    <div class="card-header">
+                        <span class="card-tag">Variante 3 • Universal AAA</span>
+                        <h2>Acessibilidade WCAG 2.2 AAA</h2>
+                    </div>
+                    <p>Projetada para pontuação máxima em acessibilidade com as diretrizes internacionais W3C/WAI. Inclui ferramentas assistivas ativas e semântica impecável.</p>
+                    <ul class="features-list">
+                        <li>Contraste aprimorado nativo de 15.8:1, 19.5:1 e 21:1</li>
+                        <li>Painel assistivo: fonte escalável de 100% a 150% e modo dislexia</li>
+                        <li>Links de salto direto (Skip Links) e régua guia de leitura</li>
+                        <li>Marcos HTML5 semânticos com tabelas estruturadas (scope/caption)</li>
+                    </ul>
+                </div>
+                <a href="v3/index.html" class="btn btn-v3">Explorar Variante 3 (WCAG AAA) &rarr;</a>
             </div>
         </div>
 

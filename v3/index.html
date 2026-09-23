@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGAA UnB - Portal do Discente (Variante V3: WCAG 2.2 AAA)</title>
+  <link rel="shortcut icon" href="img/sigaa.ico" />
+  <link rel="stylesheet" type="text/css" href="css/sigaa_offline_complete.css" />
+  <link rel="stylesheet" type="text/css" href="wcag.css" />
+  <script src="wcag.js" defer></script>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTROLE DE VARIANTES (SIGAA REMIX) -->
+    <div id="sigaa-remix-variant-control-bar" style="
+        background: #111827;
+        color: #ffffff;
+        padding: 8px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        position: relative;
+        z-index: 999999;
+        border-bottom: 2px solid #374151;
+    ">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <a href="../index.html" style="color: #fff; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 6px; font-size: 14px; background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px;">
+                &larr; Voltar ao Portal
+            </a>
+            <span style="font-size: 14px; color: #bbb;">| SIGAA Remix Live Preview</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <a href="../v1/index.html" style="color: #fbbf24; text-decoration: none; font-weight: bold; font-size: 13px; padding: 4px 10px; border: 1px solid #fbbf24; border-radius: 4px; transition: 0.2s;">V1 (Grafite)</a>
+            <a href="../v2/index.html" style="color: #60a5fa; text-decoration: none; font-weight: bold; font-size: 13px; padding: 4px 10px; border: 1px solid #60a5fa; border-radius: 4px; transition: 0.2s;">V2 (Acessibilidade)</a>
+            <span style="background: #10b981; color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 4px; font-size: 13px;">V3 (WCAG AAA) Ativa</span>
+        </div>
+    </div>
+    
+  <!-- REGIAO VIVA PARA LEITORES DE TELA (WCAG 4.1.3) -->
+  <div id="wcagLiveAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- GUIA DE LEITURA ASSISTIVA (WCAG 1.4.12) -->
+  <div id="wcagReadingRuler" aria-hidden="true"></div>
+
+  <!-- LINKS DE SALTO DIRETO PARA NAVEGACAO POR TECLADO (WCAG 2.4.1) -->
+  <nav class="skip-links" aria-label="Atalhos rápidos para navegação">
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal (Alt+1)</a>
+    <a href="#busca-academica-input" class="skip-link">Pular para a busca acadêmica (Alt+2)</a>
+    <a href="#menu-principal-nav" class="skip-link">Pular para o menu de navegação (Alt+3)</a>
+    <a href="#barra-acessibilidade" class="skip-link">Pular para opções de acessibilidade (Alt+4)</a>
+  </nav>
+
+  <!-- BARRA DE FERRAMENTAS ASSISTIVAS DE ACESSIBILIDADE UNIVERSAL (WCAG AAA) -->
+  <aside id="barra-acessibilidade" class="wcag-assistive-toolbar" aria-label="Painel de Ferramentas de Acessibilidade">
+    <div class="wcag-toolbar-title">
+      <span>Painel Acessibilidade WCAG 2.2 AAA</span>
+    </div>
+    
+    <div class="wcag-toolbar-controls" role="group" aria-label="Controles de tamanho de texto e contraste">
+      <!-- Ajuste de Fonte -->
+      <span id="wcagFontLabel" class="sr-only">Ajuste de tamanho do texto:</span>
+      <button type="button" id="btnFontMinus" class="wcag-tool-btn" aria-label="Diminuir tamanho da fonte">A-</button>
+      <button type="button" id="btnFontReset" class="wcag-tool-btn" aria-label="Restaurar tamanho padrão da fonte">
+        A <span id="wcagFontSizeDisplay" style="font-size: 0.75rem; margin-left: 4px;">100%</span>
+      </button>
+      <button type="button" id="btnFontPlus" class="wcag-tool-btn" aria-label="Aumentar tamanho da fonte">A+</button>
+
+      <!-- Esquemas de Alto Contraste -->
+      <button type="button" id="btnThemeDark" class="wcag-tool-btn" aria-pressed="true" aria-label="Tema Escuro Padrão AAA (Contraste 15.8 para 1)">Escuro AAA</button>
+      <button type="button" id="btnThemeYellow" class="wcag-tool-btn" aria-pressed="false" aria-label="Tema Alto Contraste Amarelo sobre Preto (Contraste 19.5 para 1)">Amarelo/Preto</button>
+      <button type="button" id="btnThemeLight" class="wcag-tool-btn" aria-pressed="false" aria-label="Tema Claro Reforçado AAA (Contraste 21 para 1)">Claro AAA</button>
+
+      <!-- Recursos Especiais -->
+      <button type="button" id="btnDyslexicFont" class="wcag-tool-btn" aria-pressed="false" aria-label="Alternar para fonte otimizada para dislexia">Fonte Dislexia</button>
+      <button type="button" id="btnReadingRuler" class="wcag-tool-btn" aria-pressed="false" aria-label="Ativar guia régua de leitura com mouse">Guia de Leitura</button>
+    </div>
+  </aside>
+
+  <!-- CABECALHO ACESSIVEL (ROLE BANNER) -->
+  <header class="wcag-header" role="banner">
+    <div class="wcag-header-container">
+      <div class="wcag-logo-block">
+        <h1>UnB • SIGAA Remix</h1>
+        <p>Sistema Integrado de Gestão de Atividades Acadêmicas — Universidade de Brasília</p>
+      </div>
+      <div style="text-align: right;">
+        <span style="display: block; font-weight: 800; font-size: 1.1rem; color: var(--wcag-text);">Semestre Letivo: 2026.1</span>
+        <span style="font-size: 0.9rem; color: var(--wcag-text-muted);">Usuário autenticado: JOAO DA SILVA</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU PRINCIPAL DE NAVEGACAO ACADEMICA (ROLE NAVIGATION) -->
+  <nav id="menu-principal-nav" class="wcag-header" style="background: var(--wcag-surface-card); padding: 12px 24px;" aria-label="Navegação Principal do Portal">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+      <span style="font-weight: 800; font-size: 0.95rem; margin-right: 8px;">Acesso Rápido:</span>
+      <a href="grades.html" class="wcag-tool-btn" style="text-decoration: none;">Consultar Notas</a>
+      <a href="Consultar_205ndices_Acad234micos.html" class="wcag-tool-btn" style="text-decoration: none;">Índices Acadêmicos (IRA)</a>
+      <a href="Emitir_Atestado_de_Matr237cula.html" class="wcag-tool-btn" style="text-decoration: none;">Emitir Atestado</a>
+      <a href="Calend225rio_Acad234mico.html" class="wcag-tool-btn" style="text-decoration: none;">Calendário 2026</a>
+      <a href="Consultar_Projetos.html" class="wcag-tool-btn" style="text-decoration: none;">Projetos de Pesquisa</a>
+      <a href="Consultar_A231245es.html" class="wcag-tool-btn" style="text-decoration: none;">Extensão Universitária</a>
+      <a href="Minhas_Bolsas_na_Institui231227o.html" class="wcag-tool-btn" style="text-decoration: none;">Minhas Bolsas</a>
+    </div>
+  </nav>
+
+  <!-- PAINEL CENTRAL DE BUSCA ACESSIVEL (ROLE SEARCH) -->
+  <section class="wcag-search-section" role="search" aria-label="Busca de Disciplinas e Informações">
+    <label for="busca-academica-input" class="wcag-search-label">
+      Pesquisa Acessível no SIGAA (Digite para filtrar disciplinas instantaneamente):
+    </label>
+    <div class="wcag-search-input-group">
+      <input type="text"
+             id="busca-academica-input"
+             class="wcag-search-input"
+             placeholder="Ex: Algoritmos, Inclusiva, Horários, Sala, Notas..."
+             aria-describedby="busca-dica"
+             autocomplete="off" />
+      <button type="button" class="wcag-search-btn" aria-label="Executar pesquisa acadêmica">BUSCAR</button>
+    </div>
+    <span id="busca-dica" class="sr-only">Ao digitar, a tabela de disciplinas abaixo é filtrada em tempo real para seu leitor de tela.</span>
+
+    <div class="wcag-quick-chips" role="group" aria-label="Atalhos frequentes de alta acessibilidade">
+      <span style="font-weight: 700; font-size: 0.9rem; color: var(--wcag-text-muted);">Atalhos:</span>
+      <a href="grades.html" class="wcag-chip-link">Consultar Notas</a>
+      <a href="Consultar_205ndices_Acad234micos.html" class="wcag-chip-link">Índice IRA</a>
+      <a href="Calend225rio_Acad234mico.html" class="wcag-chip-link">Calendário Letivo</a>
+      <a href="Emitir_Atestado_de_Matr237cula.html" class="wcag-chip-link">Atestado de Matrícula</a>
+      <a href="Minhas_Bolsas_na_Institui231227o.html" class="wcag-chip-link">Bolsas Ativas</a>
+    </div>
+  </section>
+
+  <!-- LAYOUT PRINCIPAL DE DUAS COLUNAS -->
+  <div class="wcag-main-layout">
+    <!-- COLUNA 1: ASIDE COM PERFIL DO DISCENTE (WCAG 1.3.1) -->
+    <aside class="wcag-profile-card" aria-label="Informações Institucionais do Discente">
+      <div class="wcag-profile-avatar-wrap">
+        <img src="img/foto_aluno.jpg"
+             alt="Fotografia de perfil institucional do estudante João da Silva"
+             class="wcag-profile-avatar" />
+      </div>
+
+      <h2 class="wcag-profile-name">JOAO DA SILVA</h2>
+      <p class="wcag-profile-desc">Estudante de Graduação em Ciência da Computação - Universidade de Brasília</p>
+
+      <ul class="wcag-data-list" role="list" aria-label="Dados acadêmicos do aluno">
+        <li class="wcag-data-item">
+          <span class="wcag-data-label">Matrícula:</span>
+          <span class="wcag-data-value">123456789</span>
+        </li>
+        <li class="wcag-data-item">
+          <span class="wcag-data-label">Curso:</span>
+          <span class="wcag-data-value">COMPUTAÇÃO / CIC</span>
+        </li>
+        <li class="wcag-data-item">
+          <span class="wcag-data-label">Status:</span>
+          <span class="wcag-data-value" style="color: #4ade80;">ATIVO</span>
+        </li>
+        <li class="wcag-data-item">
+          <span class="wcag-data-label">E-Mail:</span>
+          <span class="wcag-data-value">joao.silva@aluno.unb.br</span>
+        </li>
+        <li class="wcag-data-item">
+          <span class="wcag-data-label">Semestre Entrada:</span>
+          <span class="wcag-data-value">2026.1</span>
+        </li>
+        <li class="wcag-data-item">
+          <span class="wcag-data-label">IRA Geral:</span>
+          <span class="wcag-data-value">0.0</span>
+        </li>
+      </ul>
+
+      <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+        <a href="grades.html" class="wcag-tool-btn" style="text-decoration: none; width: 100%;">Ver Histórico de Notas</a>
+        <a href="Emitir_Atestado_de_Matr237cula.html" class="wcag-tool-btn" style="text-decoration: none; width: 100%;">Gerar Atestado em PDF</a>
+      </div>
+    </aside>
+
+    <!-- COLUNA 2: CONTEUDO PRINCIPAL (ROLE MAIN) -->
+    <main id="conteudo" role="main" class="wcag-content-area" tabindex="-1">
+      <!-- PAINEL 1: TURMAS DO SEMESTRE (TABELA SEMANTICA ACESSIVEL - WCAG 1.3.1) -->
+      <section class="wcag-card" aria-labelledby="titulo-turmas">
+        <h2 id="titulo-turmas">Disciplinas Matriculadas — Semestre 2026.1</h2>
+        
+        <div class="wcag-table-wrap">
+          <table class="wcag-table">
+            <caption>Relação de turmas, docentes, locais de aula e horários semanais</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Componente Curricular</th>
+                <th scope="col">Docente Responsável</th>
+                <th scope="col">Local das Aulas</th>
+                <th scope="col">Horário Semanal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="wcag-course-row">
+                <th scope="row">CIC0004</th>
+                <td style="font-weight: 700;">ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES</td>
+                <td>Edison Ishikawa</td>
+                <td>45N12(BSA N AT 19/41) 3N12(PJC BT 060)</td>
+                <td>345N12 (16/03/2026 - 18/07/2026)</td>
+              </tr>
+              <tr class="wcag-course-row">
+                <th scope="row">TEF0003</th>
+                <td style="font-weight: 700;">EDUCAÇÃO INCLUSIVA</td>
+                <td>Fátima Lucília Vidal Rodrigues</td>
+                <td>FE5S3</td>
+                <td>3M1234 (16/03/2026 - 18/07/2026)</td>
+              </tr>
+              <tr class="wcag-course-row">
+                <th scope="row">CIC0005</th>
+                <td style="font-weight: 700;">FORMAÇÃO DOCENTE EM COMPUTAÇÃO</td>
+                <td>Jonathan Rosa Moreira</td>
+                <td>BSA N AT 09/41</td>
+                <td>35N34 (16/03/2026 - 18/07/2026)</td>
+              </tr>
+              <tr class="wcag-course-row">
+                <th scope="row">PAD0028</th>
+                <td style="font-weight: 700;">ORGANIZAÇÃO DA EDUCAÇÃO BRASILEIRA</td>
+                <td>Flávio Bezerra de Sousa</td>
+                <td>FE5S7</td>
+                <td>2N1234 (16/03/2026 - 18/07/2026)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PAINEL 2: NOTIFICACOES E ATUALIZACOES RECENTES -->
+      <section class="wcag-card" aria-labelledby="titulo-notificacoes">
+        <h2 id="titulo-notificacoes">Notificações e Avisos de Turmas</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <article style="border: 2px solid var(--wcag-border); border-radius: 8px; padding: 16px; background: var(--wcag-surface-card);">
+            <h3 style="font-size: 1.1rem; margin: 0 0 6px 0; color: var(--wcag-accent);">
+              ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES
+            </h3>
+            <p style="margin: 0 0 6px 0; font-size: 0.95rem; color: var(--wcag-text);">
+              Início das aulas práticas no laboratório BSA N AT 19/41. Tragam seus computadores ou utilizem as máquinas do departamento.
+            </p>
+            <time datetime="2026-03-16" style="font-size: 0.85rem; color: var(--wcag-text-muted);">16 de Março de 2026 às 08:30</time>
+          </article>
+
+          <article style="border: 2px solid var(--wcag-border); border-radius: 8px; padding: 16px; background: var(--wcag-surface-card);">
+            <h3 style="font-size: 1.1rem; margin: 0 0 6px 0; color: var(--wcag-accent);">
+              EDUCAÇÃO INCLUSIVA
+            </h3>
+            <p style="margin: 0 0 6px 0; font-size: 0.95rem; color: var(--wcag-text);">
+              Disponibilizado no portal o plano de ensino e o cronograma de apresentações de estudos de caso.
+            </p>
+            <time datetime="2026-03-17" style="font-size: 0.85rem; color: var(--wcag-text-muted);">17 de Março de 2026 às 14:15</time>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- RODAPE SEMANTICO ACESSIVEL (ROLE CONTENTINFO) -->
+  <footer class="wcag-header" role="contentinfo" style="border-top: 2px solid var(--wcag-border); padding: 30px 24px; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+      <p style="margin: 0; font-size: 0.95rem; color: var(--wcag-text-muted);">
+        SIGAA Remix • Universidade de Brasília • Versão V3 com Acessibilidade WCAG 2.2 Nível AAA
+      </p>
+      <div style="display: flex; gap: 16px;">
+        <a href="https://atendimento.unb.br/" target="_blank" rel="noopener noreferrer" class="wcag-tool-btn" style="text-decoration: none;">Abrir Chamado</a>
+        <a href="https://sistema.ouvidorias.gov.br/" target="_blank" rel="noopener noreferrer" class="wcag-tool-btn" style="text-decoration: none;">Ouvidoria UnB</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

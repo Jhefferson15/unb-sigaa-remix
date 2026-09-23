@@ -181,7 +181,7 @@ body, html, html.background {
 
 .graffiti-tags-list {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
     gap: 12px !important;
     list-style: none !important;
     padding: 0 !important;
@@ -599,6 +599,7 @@ body, html, html.background {
         justify-content: space-between !important;
         gap: 12px !important;
         overflow: hidden !important;
+        box-sizing: border-box !important;
     }
     #perfil-docente .pessoal-docente .foto {
         float: none !important;
@@ -609,19 +610,66 @@ body, html, html.background {
         max-width: 85px !important;
         height: auto !important;
     }
+    #perfil-docente p.info-docente {
+        padding: 8px 12px !important;
+        margin: 0 0 10px 0 !important;
+        word-break: break-word !important;
+        box-sizing: border-box !important;
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+    }
     #perfil-docente #agenda-docente {
-        overflow-x: auto !important;
+        overflow-x: hidden !important;
         width: 100% !important;
+        padding: 8px !important;
         box-sizing: border-box !important;
     }
     #perfil-docente #agenda-docente table {
+        display: table !important;
         width: 100% !important;
-        table-layout: auto !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+        margin-bottom: 6px !important;
+    }
+    #perfil-docente #agenda-docente tbody {
+        display: table-row-group !important;
+    }
+    #perfil-docente #agenda-docente tr {
+        display: table-row !important;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.08) !important;
     }
     #perfil-docente #agenda-docente td {
+        display: table-cell !important;
+        padding: 4px 2px !important;
         font-size: 11px !important;
-        padding: 3px 2px !important;
+        vertical-align: middle !important;
+        box-sizing: border-box !important;
+    }
+    #perfil-docente #agenda-docente td:first-child:not([colspan]) {
+        width: 65% !important;
+        text-align: left !important;
+        white-space: normal !important;
         word-break: break-word !important;
+        color: var(--graffiti-text) !important;
+    }
+    #perfil-docente #agenda-docente td:last-child:not([colspan]) {
+        width: 35% !important;
+        text-align: right !important;
+        font-weight: bold !important;
+        color: var(--graffiti-neon-yellow) !important;
+        white-space: nowrap !important;
+    }
+    #perfil-docente #agenda-docente td[colspan] {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 6px 0 !important;
+    }
+    #perfil-docente #agenda-docente td[colspan] table {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    #perfil-docente #agenda-docente td div {
+        margin-right: 0 !important;
     }
     #main-docente {
         grid-column: 1 !important;
@@ -644,6 +692,16 @@ body, html, html.background {
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 8px !important;
+        padding-right: 16px !important;
+        box-sizing: border-box !important;
+    }
+    #info-sistema div.dir {
+        width: 100% !important;
+        justify-content: flex-start !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        padding-right: 14px !important;
+        box-sizing: border-box !important;
     }
     #painel-usuario {
         display: flex !important;
@@ -651,6 +709,8 @@ body, html, html.background {
         align-items: flex-start !important;
         gap: 8px !important;
         padding: 10px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
     }
     #painel-usuario #menu-usuario {
         width: 100% !important;
@@ -674,17 +734,31 @@ body, html, html.background {
         white-space: nowrap !important;
     }
     #painel-usuario #info-usuario {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 3px !important;
         width: 100% !important;
+        box-sizing: border-box !important;
     }
     #painel-usuario #info-usuario p {
-        font-size: 11px !important;
+        font-size: 10px !important;
         line-height: 1.3 !important;
-        margin: 2px 0 !important;
+        margin: 0 !important;
+        white-space: normal !important;
         word-break: break-word !important;
     }
     #painel-usuario #info-usuario span.nome {
-        font-size: 16px !important;
+        font-size: 15px !important;
         word-break: break-word !important;
+    }
+    .graffiti-tags-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    .graffiti-tags-list li:last-child {
+        grid-column: 1 / -1 !important;
     }
     .graffiti-banner-card {
         flex: 0 0 82vw !important;
@@ -802,12 +876,14 @@ tr.linhaPar {
 }
 
 #noticias-portal {
-    background: #222230 !important;
+    background: var(--graffiti-card-bg) !important;
     border: 2px solid var(--graffiti-neon-pink) !important;
     color: var(--graffiti-text) !important;
-    box-shadow: 5px 5px 0px #000 !important;
+    box-shadow: 4px 4px 0px #000 !important;
     border-radius: 8px !important;
+    padding: 12px 16px !important;
     margin-bottom: 20px !important;
+    min-height: auto !important;
 }
 
 #noticias-portal p {
@@ -837,7 +913,10 @@ tr.linhaPar {
     text-align: center !important;
 }
 
-.graffiti-card-action-btn {
+.graffiti-card-action-btn,
+a.graffiti-card-action-btn,
+#perfil-docente a.graffiti-card-action-btn,
+#agenda-docente a.graffiti-card-action-btn {
     display: block !important;
     font-family: var(--pixacao-font) !important;
     font-weight: 800 !important;
@@ -854,14 +933,148 @@ tr.linhaPar {
     transition: transform 0.15s ease, box-shadow 0.15s ease !important;
 }
 
-.graffiti-card-action-btn:hover {
+.graffiti-card-action-btn:hover,
+a.graffiti-card-action-btn:hover {
     transform: scale(1.04) !important;
     box-shadow: 5px 5px 0px #000 !important;
     background: #ffffff !important;
+    color: #111116 !important;
 }
 
 /* Ocultar tooltips legados de horario para evitar sobreposicao de texto */
 .popUp, span.popUp {
     display: none !important;
 }
+
+/* ========================================================
+   CORRECOES CRITICAS DE INTERFACE E ELEMENTOS LEGADOS
+   ======================================================== */
+
+/* Problema 1: Paineis legados (#participantes e #avaliacao-portal) no tema escuro grafite */
+#participantes.simple-panel,
+#avaliacao-portal.simple-panel,
+#participantes,
+#avaliacao-portal,
+.simple-panel {
+    background: var(--graffiti-card-bg) !important;
+    border: 2px solid var(--graffiti-border) !important;
+    box-shadow: 4px 4px 0px #000 !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    padding: 16px !important;
+    color: var(--graffiti-text) !important;
+}
+
+#participantes h4,
+#avaliacao-portal h4,
+.simple-panel h4 {
+    font-family: var(--graffiti-title-font) !important;
+    color: var(--graffiti-neon-yellow) !important;
+    font-size: 15px !important;
+    margin: 0 0 10px 0 !important;
+    text-shadow: 1px 1px 0px #000, 2px 2px 0px var(--graffiti-neon-pink) !important;
+    letter-spacing: 1px !important;
+}
+
+#participantes p,
+#avaliacao-portal p,
+.simple-panel p,
+p.vazio {
+    color: var(--graffiti-text-muted) !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    margin: 0 !important;
+}
+
+/* Problema 7: Linha separadora de semestre na tabela (eliminar azul leitoso #C8D5EC) */
+#turmas-portal table tr td[style*="#C8D5EC"],
+#turmas-portal table tr td[style*="#c8d5ec"],
+#turmas-portal table tr td[style*="background: #C8D5EC"],
+#turmas-portal table tr td[style*="background:#C8D5EC"],
+#turmas-portal table tr.linhaSemestre td,
+#turmas-portal table tr td.linhaSemestre,
+.linhaSemestre td,
+td.linhaSemestre {
+    background: #1f1f2e !important;
+    color: var(--graffiti-neon-yellow) !important;
+    border-left: 4px solid var(--graffiti-neon-pink) !important;
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
+}
+
+/* Problema 8: Barra de progresso de integralizacao estilizada (eliminar retangulo branco cru) */
+#perfil-docente td[style*="background: white"],
+#perfil-docente td[style*="background:white"],
+#perfil-docente td[style*="background: #FFF"],
+#perfil-docente td[style*="background:#FFF"] {
+    background: #14141d !important;
+    border: 1px solid var(--graffiti-border) !important;
+    border-radius: 4px !important;
+    padding: 2px !important;
+}
+
+#perfil-docente td[style*="background: white"] > div,
+#perfil-docente td[style*="background:white"] > div,
+#perfil-docente td[style*="background: #FFF"] > div,
+#perfil-docente td[style*="background:#FFF"] > div {
+    background: linear-gradient(90deg, var(--graffiti-neon-cyan), var(--graffiti-neon-pink)) !important;
+    border: none !important;
+    border-radius: 2px !important;
+}
+
+/* Problema 9: Titulo Dados Institucionais com alto contraste e sombra neon */
+#perfil-docente #agenda-docente h4,
+#perfil-docente h4 {
+    color: var(--graffiti-neon-yellow) !important;
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 15px !important;
+    text-shadow: 1px 1px 0px #000, 2px 2px 0px var(--graffiti-neon-pink) !important;
+    letter-spacing: 1px !important;
+    margin: 14px 0 8px 0 !important;
+}
+
+/* Problema 12: Mascara gradiente suave no canto direito do carrossel */
+.graffiti-carousel-container {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.graffiti-carousel-container::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 14px !important;
+    width: 35px !important;
+    background: linear-gradient(90deg, transparent, rgba(15, 15, 21, 0.85)) !important;
+    pointer-events: none !important;
+}
+
+/* Problema 8: Rodape institucional integrado ao tema grafite */
+#rodape {
+    background: #0e0e16 !important;
+    border-top: 3px solid var(--graffiti-neon-cyan) !important;
+    padding: 18px 16px !important;
+    margin-top: 35px !important;
+    text-align: center !important;
+    border-radius: 0 0 6px 6px !important;
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+#rodape p {
+    font-family: var(--pixacao-font) !important;
+    color: var(--graffiti-text-muted) !important;
+    font-size: 11px !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+}
+
+#rodape a {
+    color: var(--graffiti-neon-yellow) !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
 
