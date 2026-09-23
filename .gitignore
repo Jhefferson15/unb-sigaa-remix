@@ -12,3 +12,23 @@ latex/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Paginas baixadas e arquivos de scrap
+*.html
+*.htm
+*.py
+analyze_*
+pages/
+scraped_pages/
+downloads/
+temp/
+scratch/
+detailed_audit_report.json
+pages_summary.json
+relatorio_auditoria.md
+# Ambiente de paginas offline e ferramentas de extracao
+offline_pages/
+offline_html/
+__pycache__/
+*.pyc
+
