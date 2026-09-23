@@ -10,42 +10,6 @@
   <script src="wcag.js" defer></script>
 </head>
 <body>
-
-    <!-- BARRA SUPERIOR DE CONTROLE DE VARIANTES (SIGAA REMIX) -->
-    <div id="sigaa-remix-variant-control-bar" style="
-        background: #111827;
-        color: #ffffff;
-        padding: 8px 16px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-        position: relative;
-        z-index: 999999;
-        border-bottom: 2px solid #374151;
-    ">
-        <div style="display: flex; align-items: center; gap: 12px;">
-            <a href="../index.html" style="color: #fff; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 6px; font-size: 14px; background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px;">
-                &larr; Voltar ao Portal
-            </a>
-            <span style="font-size: 14px; color: #bbb;">| SIGAA Remix Live Preview</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px;">
-            <a href="../v1/index.html" style="color: #fbbf24; text-decoration: none; font-weight: bold; font-size: 13px; padding: 4px 10px; border: 1px solid #fbbf24; border-radius: 4px; transition: 0.2s;">V1 (Grafite)</a>
-            <a href="../v2/index.html" style="color: #60a5fa; text-decoration: none; font-weight: bold; font-size: 13px; padding: 4px 10px; border: 1px solid #60a5fa; border-radius: 4px; transition: 0.2s;">V2 (Acessibilidade)</a>
-            <span style="background: #10b981; color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 4px; font-size: 13px;">V3 (WCAG AAA) Ativa</span>
-        </div>
-    </div>
-    
-  <!-- REGIAO VIVA PARA LEITORES DE TELA (WCAG 4.1.3) -->
-  <div id="wcagLiveAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
-
-  <!-- GUIA DE LEITURA ASSISTIVA (WCAG 1.4.12) -->
-  <div id="wcagReadingRuler" aria-hidden="true"></div>
-
   <!-- LINKS DE SALTO DIRETO PARA NAVEGACAO POR TECLADO (WCAG 2.4.1) -->
   <nav class="skip-links" aria-label="Atalhos rápidos para navegação">
     <a href="#conteudo" class="skip-link">Pular para o conteúdo principal (Alt+1)</a>
@@ -54,13 +18,16 @@
     <a href="#barra-acessibilidade" class="skip-link">Pular para opções de acessibilidade (Alt+4)</a>
   </nav>
 
+  <!-- REGIAO VIVA PARA LEITORES DE TELA (WCAG 4.1.3) -->
+  <div id="wcagLiveAnnouncer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- GUIA DE LEITURA ASSISTIVA (WCAG 1.4.12) -->
+  <div id="wcagReadingRuler" aria-hidden="true"></div>
+
   <!-- BARRA DE FERRAMENTAS ASSISTIVAS DE ACESSIBILIDADE UNIVERSAL (WCAG AAA) -->
-  <aside id="barra-acessibilidade" class="wcag-assistive-toolbar" aria-label="Painel de Ferramentas de Acessibilidade">
-    <div class="wcag-toolbar-title">
-      <span>Painel Acessibilidade WCAG 2.2 AAA</span>
-    </div>
-    
+  <aside id="barra-acessibilidade" class="wcag-assistive-toolbar" aria-label="Ferramentas de acessibilidade e preferências de exibição">
     <div class="wcag-toolbar-controls" role="group" aria-label="Controles de tamanho de texto e contraste">
+      <span class="wcag-toolbar-label">Acessibilidade:</span>
       <!-- Ajuste de Fonte -->
       <span id="wcagFontLabel" class="sr-only">Ajuste de tamanho do texto:</span>
       <button type="button" id="btnFontMinus" class="wcag-tool-btn" aria-label="Diminuir tamanho da fonte">A-</button>
@@ -116,6 +83,7 @@
     <div class="wcag-search-input-group">
       <input type="text"
              id="busca-academica-input"
+             name="busca_academica"
              class="wcag-search-input"
              placeholder="Ex: Algoritmos, Inclusiva, Horários, Sala, Notas..."
              aria-describedby="busca-dica"
@@ -158,7 +126,7 @@
         </li>
         <li class="wcag-data-item">
           <span class="wcag-data-label">Status:</span>
-          <span class="wcag-data-value" style="color: #4ade80;">ATIVO</span>
+          <span class="wcag-data-value wcag-status-ativo">ATIVO</span>
         </li>
         <li class="wcag-data-item">
           <span class="wcag-data-label">E-Mail:</span>
@@ -268,8 +236,8 @@
         SIGAA Remix • Universidade de Brasília • Versão V3 com Acessibilidade WCAG 2.2 Nível AAA
       </p>
       <div style="display: flex; gap: 16px;">
-        <a href="https://atendimento.unb.br/" target="_blank" rel="noopener noreferrer" class="wcag-tool-btn" style="text-decoration: none;">Abrir Chamado</a>
-        <a href="https://sistema.ouvidorias.gov.br/" target="_blank" rel="noopener noreferrer" class="wcag-tool-btn" style="text-decoration: none;">Ouvidoria UnB</a>
+        <a href="https://atendimento.unb.br/" target="_blank" rel="noopener noreferrer" class="wcag-tool-btn" style="text-decoration: none;" aria-label="Abrir Chamado no Atendimento UnB (abre em nova aba)">Abrir Chamado</a>
+        <a href="https://sistema.ouvidorias.gov.br/" target="_blank" rel="noopener noreferrer" class="wcag-tool-btn" style="text-decoration: none;" aria-label="Acessar Ouvidoria UnB (abre em nova aba)">Ouvidoria UnB</a>
       </div>
     </div>
   </footer>

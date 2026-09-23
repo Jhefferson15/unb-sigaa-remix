@@ -8,16 +8,16 @@
 :root {
   /* Tema 1 (Padrao): Modo Claro Reforcado AAA (Preto sobre Branco - Contraste 21:1) */
   --wcag-bg: #ffffff;
-  --wcag-surface: #f1f5f9;
+  --wcag-surface: #f8fafc;
   --wcag-surface-card: #ffffff;
   --wcag-border: #1e293b;
-  --wcag-border-focus: #0284c7;
+  --wcag-border-focus: #034977;
   --wcag-text: #000000;
   --wcag-text-muted: #1e293b;
-  --wcag-primary: #0284c7;
+  --wcag-primary: #034977;
   --wcag-primary-text: #ffffff;
   --wcag-accent: #0f172a;
-  --wcag-focus-outline: #0284c7;
+  --wcag-focus-outline: #034977;
   --wcag-font-scale: 1rem;
   --wcag-line-height: 1.65;
   --wcag-letter-spacing: 0.02em;
@@ -92,51 +92,55 @@ body {
 
 /* 4. LINKS DE SALTO DIRETO (SKIP LINKS - WCAG 2.4.1) */
 .skip-links {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  pointer-events: none;
   z-index: 9999999;
 }
 
 .skip-link {
   position: absolute;
-  top: -100px;
-  left: 10px;
-  background: var(--wcag-accent);
-  color: #000000 !important;
+  top: 0;
+  left: 16px;
+  transform: translateY(-150%);
+  background: #000000;
+  color: #ffff00 !important;
   font-weight: 800;
-  padding: 14px 20px;
+  padding: 12px 20px;
   border-radius: 6px;
-  border: 3px solid #000000;
+  border: 3px solid #ffffff;
   text-decoration: none;
-  font-size: 1.1rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-  transition: top 0.15s ease-in-out;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease-in-out;
+  pointer-events: none;
 }
 
 .skip-link:focus {
-  top: 10px;
+  transform: translateY(12px);
+  pointer-events: auto;
+  outline: 3px solid #ffff00 !important;
 }
 
 /* 5. PAINEL DE FERRAMENTAS DE ACESSIBILIDADE ASSISTIVA (TOOLBAR) */
 .wcag-assistive-toolbar {
   background: var(--wcag-surface);
   border-bottom: 2px solid var(--wcag-border);
-  padding: 12px 16px;
+  padding: 10px 16px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
 }
 
-.wcag-toolbar-title {
+.wcag-toolbar-label {
   font-weight: 800;
   font-size: 0.95rem;
   color: var(--wcag-text);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  margin-right: 6px;
 }
 
 .wcag-toolbar-controls {
@@ -164,8 +168,9 @@ body {
 }
 
 .wcag-tool-btn:hover {
-  border-color: var(--wcag-accent);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--wcag-primary);
+  background: var(--wcag-surface);
+  color: var(--wcag-text) !important;
 }
 
 .wcag-tool-btn[aria-pressed="true"] {
@@ -281,9 +286,9 @@ body.wcag-theme-yellow-black .wcag-tool-btn[aria-pressed="true"] {
 }
 
 .wcag-chip-link:hover {
-  background: var(--wcag-accent);
-  color: #000000 !important;
-  border-color: #000000;
+  background: var(--wcag-primary);
+  color: var(--wcag-primary-text) !important;
+  border-color: var(--wcag-primary);
 }
 
 /* 8. LAYOUT PRINCIPAL DE DUAS COLUNAS */
@@ -362,6 +367,19 @@ body.wcag-theme-yellow-black .wcag-tool-btn[aria-pressed="true"] {
 .wcag-data-value {
   font-weight: 800;
   color: var(--wcag-text);
+}
+
+.wcag-status-ativo {
+  color: #14532d !important;
+  font-weight: 800;
+}
+
+body.wcag-theme-dark-aaa .wcag-status-ativo {
+  color: #4ade80 !important;
+}
+
+body.wcag-theme-yellow-black .wcag-status-ativo {
+  color: #ffff00 !important;
 }
 
 /* 10. CONTEUDO PRINCIPAL E TABELAS SEMANTICAS (WCAG 1.3.1) */

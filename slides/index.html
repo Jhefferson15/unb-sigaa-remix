@@ -1,0 +1,1044 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="background" xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SIGAA - Sistema Integrado de Gestao de Atividades Academicas</title>
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+
+    <div id="container">
+
+        <!-- CABECALHO INSTITUCIONAL OFICIAL SIGAA UNB -->
+        <div id="cabecalho">
+            <div id="info-sistema">
+                <div class="marca-area">
+                    <h1><span>UnB - SIGAA -</span></h1>
+                    <h3>Sistema Integrado de Gestao de Atividades Academicas</h3>
+                </div>
+                <div class="dir">
+                    <span class="acessibilidade">
+                        <a class="fonteMaior" title="Aumentar texto" href="javascript:void(0);"><strong>A</strong>+</a>
+                        <a class="fonteMenor" title="Diminuir texto" href="javascript:void(0);"><strong>A</strong>-</a>
+                    </span>
+                    <span class="acessibilidade">
+                        <a title="Acessar Portal Publico SIGAA" href="../index.html"><strong>Portal de Variantes</strong></a>
+                    </span>
+                    <span class="acessibilidade">
+                        <a title="Relatorio Oficial WAVE" href="https://wave.webaim.org/report#/https://jhefferson15.github.io/unb-sigaa-remix/v3/index.html" target="_blank" rel="noopener noreferrer">[ Relatorio WAVE ]</a>
+                    </span>
+                    <span class="acessibilidade">
+                        <a title="Repositorio GitHub" href="https://github.com/GabrieldeMedeiros05/unb-sigaa-remix" target="_blank" rel="noopener noreferrer">[ GitHub ]</a>
+                    </span>
+                    <span id="session-countdown-display">00:30:00</span>
+                    <span class="sair-sistema"><a href="../index.html">SAIR</a></span>
+                </div>
+            </div>
+
+            <!-- PAINEL DE USUARIO E MENUS DO SISTEMA -->
+            <div id="painel-usuario">
+                <div id="menu-usuario">
+                    <ul>
+                        <li class="modulos"><a href="javascript:void(0);">Modulos</a></li>
+                        <li class="caixa-postal"><a href="javascript:void(0);">Caixa Postal</a></li>
+                        <li class="menus"><a href="javascript:void(0);" id="breadcrumb-menu-link">Menu de Slides</a></li>
+                        <li class="portal-link"><a href="../index.html">Menu Discente</a></li>
+                    </ul>
+                </div>
+                <div id="info-usuario">
+                    <p class="periodo-atual">Semestre atual: <strong>2026.1</strong></p>
+                    <p class="usuario"><span>JOAO DA SILVA</span></p>
+                    <p class="unidade">DEPTO CIENCIAS DA COMPUTACAO (11.01.01.15.01)</p>
+                </div>
+            </div>
+
+            <!-- BARRA DE SUBMENU / NAVEGACAO SECUNDARIA -->
+            <div id="menu-dropdown">
+                <ul class="sigaa-nav-horizontal">
+                    <li id="nav-item-portal"><a href="../index.html">&lt; Portal de Variantes</a></li>
+                    <li id="nav-item-menu" class="active"><button type="button" id="nav-btn-menu-slides">Menu de Slides</button></li>
+                    <li id="nav-item-wave"><a href="https://wave.webaim.org/report#/https://jhefferson15.github.io/unb-sigaa-remix/v3/index.html" target="_blank" rel="noopener noreferrer">Auditoria WAVE (V3 AAA)</a></li>
+                    <li id="nav-item-github"><a href="https://github.com/GabrieldeMedeiros05/unb-sigaa-remix" target="_blank" rel="noopener noreferrer">Repositorio GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTEUDO PRINCIPAL DA APLICACAO -->
+        <div id="conteudo">
+
+            <h2>
+                <a href="../index.html">Portal Discente</a> &gt;
+                <a href="javascript:void(0);" id="title-back-menu-link">Apresentacao Tecnica: O Desafio de Modernizar uma Pagina Legado</a>
+                <span id="breadcrumb-current-slide"></span>
+            </h2>
+
+            <!-- 1. VISAO DE CATALOGO: MENU PRINCIPAL DE SLIDES -->
+            <div id="slides-menu-view">
+                <div class="descricaoOperacao">
+                    <p>
+                        Atraves desta pagina voce pode consultar os modulos e relatorios tecnicos da apresentacao sobre os desafios de modernizacao e acessibilidade universal do SIGAA UnB.
+                    </p>
+                    <p>
+                        Para visualizar o conteudo de um modulo, selecione-o na listagem abaixo. Para alternar entre os topicos, utilize o comando <strong>&lt;&lt; Voltar ao Menu de Slides</strong> presente em cada tela de detalhe.
+                    </p>
+                </div>
+
+                <!-- Tabela de Filtro por Criterio (Padrao SIGAA table.formulario) -->
+                <table class="formulario" width="100%">
+                    <caption>Criterios de Consulta de Modulos</caption>
+                    <tbody>
+                        <tr>
+                            <td width="22%"><strong>Eixo Tematico:</strong></td>
+                            <td>
+                                <select id="filtro-eixo" style="width: 50%;">
+                                    <option value="todos">-- TODOS OS EIXOS TEMATICOS --</option>
+                                    <option value="Identidade">Identidade Institucional &amp; Contexto</option>
+                                    <option value="Arquitetura">Arquitetura de Software Legada</option>
+                                    <option value="Acessibilidade">Acessibilidade Universal (WCAG 2.2)</option>
+                                    <option value="Testes">Testes Visuais Automatizados</option>
+                                    <option value="Design">Design Responsivo &amp; Adaptativo</option>
+                                    <option value="Cognitiva">Teoria da Carga Cognitiva</option>
+                                    <option value="DevOps">DevOps &amp; Integracao Continua</option>
+                                    <option value="Trade-Offs">Trade-Offs de Design de Interfaces</option>
+                                    <option value="Diretrizes">Diretrizes de Engenharia de Software</option>
+                                    <option value="Encerramento">Encerramento &amp; Recursos Finais</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" id="btn-filtrar-slides" value="Buscar Modulos" />
+                                &nbsp;
+                                <input type="button" id="btn-limpar-filtro" value="Exibir Todos" />
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <br>
+
+                <!-- Tabela de Catalogo Geral de Slides (Padrao SIGAA table.listagem) -->
+                <table id="tabela-slides-menu" class="listagem" width="100%">
+                    <caption>Modulos da Apresentacao Tecnica (Caso SIGAA UnB)</caption>
+                    <thead>
+                        <tr>
+                            <th width="5%" style="text-align: center;">Item</th>
+                            <th width="32%">Titulo do Modulo / Topico</th>
+                            <th width="24%">Eixo Tematico</th>
+                            <th width="31%">Descricao do Conteudo Tecnico</th>
+                            <th width="8%" style="text-align: center;">Acao</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="linhaPar" data-slide="1">
+                            <td style="text-align: center; font-weight: bold;">01</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="1">1. Titulo e Abertura Retro</a></td>
+                            <td>Identidade Institucional &amp; Contexto</td>
+                            <td>Ficha tecnica da sessao de engenharia, escopo do SIGAA Remix e sumario executivo.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="1" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaImpar" data-slide="2">
+                            <td style="text-align: center; font-weight: bold;">02</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="2">2. O Ponto de Partida: O Ecossistema Legado</a></td>
+                            <td>Arquitetura de Software Legada</td>
+                            <td>Analise de Java EE, RichFaces, tabelas em cascata e ausencia de APIs publicas.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="2" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaPar" data-slide="3">
+                            <td style="text-align: center; font-weight: bold;">03</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="3">3. A Ilusao da Aparencia Bonita vs. Acessibilidade Real</a></td>
+                            <td>Acessibilidade Universal (WCAG 2.2)</td>
+                            <td>Por que estetica moderna superficial quebra criterios 1.4.4 (Resize Text) e 1.4.10 (Reflow).</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="3" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaImpar" data-slide="4">
+                            <td style="text-align: center; font-weight: bold;">04</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="4">4. Evidencias Visuais: Golden Tests de Acessibilidade 2x</a></td>
+                            <td>Testes Visuais Automatizados</td>
+                            <td>Inspecao interativa comparativa de 6 falhas criticas sob escala de fonte de 200%.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="4" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaPar" data-slide="5">
+                            <td style="text-align: center; font-weight: bold;">05</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="5">5. Tela Home: Responsividade Multi-Dispositivo</a></td>
+                            <td>Design Responsivo &amp; Adaptativo</td>
+                            <td>Golden Tests da grade da Home nos perfis Desktop (1920x1080), Tablet e Mobile.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="5" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaImpar" data-slide="6">
+                            <td style="text-align: center; font-weight: bold;">06</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="6">6. Tela Home: Interface Completa vs. Simplificada</a></td>
+                            <td>Teoria da Carga Cognitiva</td>
+                            <td>Comparativo de densidade de informacao com reducao de 64% dos nos no DOM.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="6" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaPar" data-slide="7">
+                            <td style="text-align: center; font-weight: bold;">07</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="7">7. Workflow de Desenvolvimento: GitHub Pages + WAVE</a></td>
+                            <td>DevOps &amp; Integracao Continua</td>
+                            <td>Pipeline com sanitizacao estrita, empacotamento isolado e auditoria internacional WAVE.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="7" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaImpar" data-slide="8">
+                            <td style="text-align: center; font-weight: bold;">08</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="8">8. O Paradoxo das Variantes (V1 Grafite vs. V3 AAA)</a></td>
+                            <td>Trade-Offs de Design de Interfaces</td>
+                            <td>Tensao entre expressividade urbana de rua (V1) e estetica austera de alto contraste (V3).</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="8" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaPar" data-slide="9">
+                            <td style="text-align: center; font-weight: bold;">09</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="9">9. Conclusoes e Principios para Modernizacao Legada</a></td>
+                            <td>Diretrizes de Engenharia de Software</td>
+                            <td>5 principios fundamentais para modernizacao segura e sustentavel de sistemas legados.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="9" value="Visualizar" /></td>
+                        </tr>
+                        <tr class="linhaImpar" data-slide="10">
+                            <td style="text-align: center; font-weight: bold;">10</td>
+                            <td><a href="javascript:void(0)" class="link-open-slide" data-slide="10">10. Sessao Encerrada por Inatividade</a></td>
+                            <td>Encerramento &amp; Recursos Finais</td>
+                            <td>Tela institucional de conclusao de sessao com catalogo consolidado de links externos.</td>
+                            <td style="text-align: center;"><input type="button" class="btn-sigaa btn-open-slide" data-slide="10" value="Visualizar" /></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5" style="text-align: center;">
+                                Total de 10 modulos academicos disponiveis para consulta.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- 2. VISAO DE DETALHE: EXIBICAO INDIVIDUAL DO SLIDE SELECIONADO -->
+            <div id="slide-detail-view" style="display: none;">
+
+                <!-- BARRA DE ACOES SUPERIOR DO SLIDE (PADRAO #botoes SIGAA) -->
+                <div id="botoes" class="botoes">
+                    <input type="button" class="btn-sigaa btn-voltar-menu" id="btn-back-top" value="&lt;&lt; Voltar ao Menu de Slides" />
+                    <span id="slide-current-info" class="slide-identificador-info">Visualizando Modulo [01 / 10]</span>
+                </div>
+
+                <!-- SLIDE 1: TITULO E ABERTURA RETRO -->
+                <div id="slide-1" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 01: Titulo e Abertura Retro</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>O Desafio de Modernizar uma Pagina Legado: O Caso SIGAA UnB</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Identidade Institucional &amp; Contexto</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Objetivo Tecnico:</th>
+                                <td>Apresentar o escopo do projeto SIGAA Remix, o sumario executivo e a ficha tecnica da analise de engenharia reversa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Sumario Executivo:</strong> Modernizar sistemas academicos legados vai muito alem de aplicar folhas de estilo com gradientes modernos ou fontes contemporaneas. Esta apresentacao documenta o processo de investigacao tecnica, destacando o comportamento do sistema sob condicoes extremas de acessibilidade (WCAG 2.2), o diagnostico de falhas visuais via Golden Tests automatizados e a construcao de alternativas que equilibram identidade visual e inclusao digital irrestrita.</p>
+                    </div>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Ficha Tecnica da Sessao de Engenharia</legend>
+                        <table class="subFormulario" width="100%">
+                            <tbody>
+                                <tr class="even">
+                                    <th width="25%">Sistema de Origem:</th>
+                                    <td>SIGAA - Sistema Integrado de Gestao de Atividades Academicas (Java EE / JSF)</td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Instituicao Mantenedora:</th>
+                                    <td>Universidade de Brasilia (UnB)</td>
+                                </tr>
+                                <tr class="even">
+                                    <th>Iniciativa e Escopo:</th>
+                                    <td>Projeto SIGAA Remix - Engenharia Reversa, Acessibilidade Universal e Design de Interfaces</td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Foco da Apresentacao:</th>
+                                    <td>Auditoria de Acessibilidade 2x (Text Scaling), Quebras de Layout em Golden Tests e Integracao WAVE</td>
+                                </tr>
+                                <tr class="even">
+                                    <th>Data do Registro:</th>
+                                    <td>Semestre Letivo 2026 / Sessao Tecnica Especial</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Roteiro Estruturado da Apresentacao</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="10%">Modulo</th>
+                                    <th width="35%">Modulo Tematico</th>
+                                    <th>Objetivo Tecnico</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td>02</td>
+                                    <td>O Ponto de Partida: O Ecossistema Legado</td>
+                                    <td>Analisar a arquitetura JSF dos anos 2000, tabelas pesadas e ausencia nativa de responsividade.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>03</td>
+                                    <td>A Ilusao da Aparencia Bonita vs. Acessibilidade Real</td>
+                                    <td>Demonstrar por que redesigns puramente cosmeticos falham nos criterios da WCAG 2.2 e LBI.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>04</td>
+                                    <td>Evidencias Visuais: Golden Tests de Acessibilidade 2x</td>
+                                    <td>Inspecionar interativamente 6 quebras de layout sob text scaling 200% capturadas no Flutter.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>05</td>
+                                    <td>Tela Home: Responsividade Multi-Dispositivo</td>
+                                    <td>Avaliar o comportamento adaptativo da Home nos formatos Desktop, Tablet e Mobile.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>06</td>
+                                    <td>Tela Home: Interface Completa vs. Simplificada</td>
+                                    <td>Apresentar o modo minimalista voltado para reducao drastica de sobrecarga cognitiva.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>07</td>
+                                    <td>Workflow de Desenvolvimento: GitHub Pages + WAVE</td>
+                                    <td>Explicar o pipeline de deploy continuo e a verificacao internacional com o WebAIM WAVE.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>08</td>
+                                    <td>O Paradoxo das Variantes (V1 vs. V3)</td>
+                                    <td>Debater o trade-off de engenharia entre estetica arrojada (Grafite) e rigidez acessivel (AAA).</td>
+                                </tr>
+                                <tr class="even">
+                                    <td>09</td>
+                                    <td>Conclusoes e Principios para Modernizacao</td>
+                                    <td>Sintetizar diretrizes fundamentais para modernizacao de interfaces governamentais/academicas.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td>10</td>
+                                    <td>Sessao Encerrada por Inatividade</td>
+                                    <td>Encerramento tematico no padrao classico do SIGAA com recursos e links consolidados.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- SLIDE 2: O PONTO DE PARTIDA: O ECOSSISTEMA LEGADO -->
+                <div id="slide-2" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 02: O Ponto de Partida: O Ecossistema Legado</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>O Ponto de Partida: O Ecossistema Legado</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Arquitetura de Software Legada</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Objetivo Tecnico:</th>
+                                <td>Decompor a arquitetura original do SIGAA (Java EE, JSF, RichFaces, tabelas fixas) e mapear os sintomas criticos de obsolescencia.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Contexto Tecnologico:</strong> O SIGAA original foi projetado na primeira decada dos anos 2000, periodo em que monitores CRT com resolucao 1024x768 eram o padrao de mercado e smartphones modernos ainda nao existiam no cotidiano universitario.</p>
+                    </div>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Caracteristicas Tecnicas da Pilha Legada</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="25%">Dimensao</th>
+                                    <th width="35%">Padrao Legado no SIGAA Original</th>
+                                    <th>Impacto na Experiencia e Manutenibilidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td><strong>Stack de Backend</strong></td>
+                                    <td>Java EE 5/6, Apache Tomcat, Oracle DB, Hibernate/JPA.</td>
+                                    <td>Robusto em transacoes financeiras/academicas, mas acoplado a sessao de servidor estrita.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Motor de Renderizacao</strong></td>
+                                    <td>JavaServer Faces (JSF 1.2 / RichFaces / Facelets).</td>
+                                    <td>Renderizacao total do DOM no servidor com view-state pesado enviado a cada clique.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>Estrutura de Layout</strong></td>
+                                    <td>Tabelas aninhadas (table dentro de table) com larguras fixas em pixels.</td>
+                                    <td>Inflexibilidade geometrica. Nao ha adaptacao a telas menores sem rolagem horizontal massiva.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Interacao Discente</strong></td>
+                                    <td>Menus suspensos com JavaScript inline, sem suporte a gestos de toque.</td>
+                                    <td>Menus fecham acidentalmente ao menor desvio de cursor; inacessiveis via teclado/leitores de tela.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>Disponibilidade de APIs</strong></td>
+                                    <td>Ausencia de endpoints REST/GraphQL publicos para estudantes.</td>
+                                    <td>Qualquer solucao client-side requer engenharia reversa via web scraping ou extensao de navegador.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Os Sintomas de Obsolescencia no Uso Diario</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="25%">Sintoma Mapeado</th>
+                                    <th>Manifestacao Tecnica e Barreira no Cotidiano Universitario</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr class="even">
+                                    <td><strong>Sobrecarga Cognitiva</strong></td>
+                                    <td>Mais de 60 opcoes em menus empilhados competem com as tarefas prioritarias (consultar faltas, ver notas do dia e emitir comprovante).</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>Timeouts de Sessao</strong></td>
+                                    <td>Falha de comunicacao com o servidor que invalida formularios preenchidos sem salvar rascunhos locais.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Barreiras Assistivas</strong></td>
+                                    <td>Leitores de tela como NVDA e TalkBack leem dezenas de tabelas vazias de alinhamento visual antes de alcancar o conteudo util.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- SLIDE 3: A ILUSAO DA APARENCIA BONITA VS ACESSIBILIDADE REAL -->
+                <div id="slide-3" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 03: A Ilusao da Aparencia Bonita vs. Acessibilidade Real</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>A Ilusao da Aparencia Bonita vs. Acessibilidade Real</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Acessibilidade Universal (WCAG 2.2 / LBI)</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Objetivo Tecnico:</th>
+                                <td>Evidenciar por que reformas puramente esteticas falham em conformidade de acessibilidade e quebram sob text scaling de 200%.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>O Erro Classico de Engenharia e Design:</strong> Muitas tentativas de modernizacao concentram-se apenas em "deixar a tela bonita", aplicando cantos arredondados, paletas modernas e gradientes suaves, enquanto ignoram completamente as diretrizes internacionais da WCAG 2.2 e a Lei Brasileira de Inclusao (Lei 13.146/2015).</p>
+                    </div>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Criterios da WCAG 2.2 Frequentemente Violados</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="20%">Criterio WCAG 2.2</th>
+                                    <th width="30%">O que a Norma Exige</th>
+                                    <th>O que Acontece em Solucoes Mal Projetadas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td><strong>1.4.4 Resize Text (Nivel AA)</strong></td>
+                                    <td>O texto deve ser redimensionavel em ate 200% sem perda de conteudo ou funcionalidade.</td>
+                                    <td>Containers com altura estatica cortam o texto ou geram erros fatais de overflow (RenderFlex no Flutter).</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>1.4.10 Reflow (Nivel AA)</strong></td>
+                                    <td>O conteudo deve se reorganizar sem exigir rolagem bidimensional (vertical e horizontal) em 320px.</td>
+                                    <td>Colunas rigidas forcam o usuario a rolar continuamente para os lados para ler frases fragmentadas.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>1.4.3 / 1.4.6 Contraste de Cores</strong></td>
+                                    <td>Minimo de 4.5:1 (AA) e 7:1 (AAA) para texto normal em relacao ao fundo.</td>
+                                    <td>Cores cinzas claras ou degrades que parecem elegantes em telas OLED, mas tornam-se ilegiveis sob luz solar ou para baixa visao.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>2.4.7 Focus Visible (Nivel AA)</strong></td>
+                                    <td>O indicador de foco de teclado deve ser nitidamente visivel para qualquer elemento navegavel.</td>
+                                    <td>Uso indiscriminado de <code>outline: none</code> por razoes esteticas, deixando usuarios de teclado cegos na navegacao.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>4.1.2 Name, Role, Value (Nivel A)</strong></td>
+                                    <td>Todo componente interativo deve informar seu papel, nome acessivel e estado atual para leitores de tela.</td>
+                                    <td>Botoes e icones sem rotulos semanticos (ex: <code>&lt;div onclick="..."&gt;</code>), ignorados por leitores de tela.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Fator Critico Revelado pelos Golden Tests:</strong> Ao aplicar escala de fonte de 2.0x (configuracao padrao de acessibilidade em sistemas operacionais para pessoas com baixa visao), interfaces visualmente polidas entram em colapso geometrico imediato. O teste visual automatizado e o unico instrumento capaz de prevenir essas regressoes.</p>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4: EVIDENCIAS VISUAIS: GOLDEN TESTS DE ACESSIBILIDADE 2X -->
+                <div id="slide-4" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 04: Evidencias Visuais: Golden Tests de Acessibilidade 2x</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>Evidencias Visuais: Golden Tests de Acessibilidade 2x (Text Scaling)</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Testes Visuais Automatizados</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Origem dos Dados:</th>
+                                <td>Suite oficial de Golden Tests em <code>C:\dev\App_flutter_UnB\test\goldens\accessibility\</code>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Inspecao Interativa de Falhas Reais:</strong> Utilize os seletores abaixo para consultar as evidencias visuais capturadas durante os testes de regressao visual do Flutter. Compare o comportamento do componente sob escala normal 1.0x contra a escala de acessibilidade 2.0x (que gera as tipicas faixas amarelas e pretas de RenderFlex overflow).</p>
+                    </div>
+
+                    <!-- Formulario de Selecao de Caso (Padrao SIGAA table.formulario) -->
+                    <table class="formulario" width="100%">
+                        <caption>Criterios de Inspecao do Caso de Teste</caption>
+                        <tbody>
+                            <tr>
+                                <td width="22%"><strong>Componente Avaliado:</strong></td>
+                                <td>
+                                    <select id="acc-case-select" style="width: 60%;">
+                                        <option value="assignment">1. Tarefas (Aprender 3) - Overflow em Lista de Prazos</option>
+                                        <option value="indices">2. Indices (IRA) - Colapso de Graficos e Tabelas</option>
+                                        <option value="calendar">3. Calendario - Sobreposicao de Celulas de Dias</option>
+                                        <option value="edit_course">4. Editar Disciplina - Truncamento de Inputs e Labels</option>
+                                        <option value="curriculum">5. Curriculo / PPC - Quebra de Arvore de Pre-requisitos</option>
+                                        <option value="permission">6. Permissoes - Ocultacao de Botoes de Acao</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modo de Exibicao Visual:</strong></td>
+                                <td>
+                                    <label><input type="radio" name="acc-view-mode" value="compare" checked /> Comparativo Lado a Lado (1.0x vs 2.0x)</label> &nbsp;&nbsp;
+                                    <label><input type="radio" name="acc-view-mode" value="1x" /> Apenas Escala Normal (1.0x)</label> &nbsp;&nbsp;
+                                    <label><input type="radio" name="acc-view-mode" value="2x" /> Apenas Escala de Acessibilidade (2.0x)</label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Tabela de Imagens de Evidencia (Padrao SIGAA table.subFormulario) -->
+                    <table class="subFormulario" width="100%">
+                        <caption>Evidencias Visuais Capturadas no Golden Test</caption>
+                        <tbody id="acc-images-tbody">
+                            <!-- Inserido dinamicamente via JS com celulas normais de tabela -->
+                        </tbody>
+                    </table>
+
+                    <!-- Tabela de Diagnostico Tecnico -->
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Diagnostico de Engenharia de Software</legend>
+                        <table class="subFormulario" width="100%">
+                            <tbody id="acc-diag-table"></tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- SLIDE 5: TELA HOME: RESPONSIVIDADE MULTI-DISPOSITIVO -->
+                <div id="slide-5" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 05: Tela Home: Responsividade Multi-Dispositivo</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>Tela Home: Responsividade Multi-Dispositivo</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Design Responsivo &amp; Adaptativo</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Objetivo Tecnico:</th>
+                                <td>Demonstrar o comportamento elastico da tela principal nos perfis Desktop, Tablet e Mobile sem quebra de fluxo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Adaptabilidade de Layout:</strong> A tela Home do SIGAA modernizado foi concebida para operar de forma continua em multiplas resolucoes, superando a limitacao rigida de 980px do sistema legado. As capturas a seguir demonstram os Golden Tests nos tres principais perfis de visualizacao.</p>
+                    </div>
+
+                    <!-- Formulario de Selecao de Dispositivo -->
+                    <table class="formulario" width="100%">
+                        <caption>Selecao de Perfil de Dispositivo</caption>
+                        <tbody>
+                            <tr>
+                                <td width="22%"><strong>Formato / Resolucao:</strong></td>
+                                <td>
+                                    <select id="home-dev-select" style="width: 50%;">
+                                        <option value="desktop">Desktop (1920x1080 / 1440px) - Multicolunas</option>
+                                        <option value="tablet">Tablet (1024x768 / 800px) - Colunas Condensadas</option>
+                                        <option value="mobile">Mobile (390x844 / 375px) - Coluna Unica Vertical</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Tabela de Exibicao da Captura -->
+                    <table class="subFormulario" width="100%">
+                        <caption>Captura Oficial do Golden Test de Responsividade</caption>
+                        <tbody>
+                            <tr>
+                                <td align="center" style="background: #FFFFFF; padding: 10px;">
+                                    <img id="home-device-img" src="img/home_full_desktop.png" alt="Home Desktop" style="max-width: 100%; border: 1px solid #7F9DB9; cursor: pointer;" onclick="window.sigaaModalZoom(this.src, 'Home Multi-Dispositivo')">
+                                    <div id="home-device-caption" style="font-size: 10px; color: #555555; margin-top: 4px; font-style: italic;">
+                                        Golden Test Oficial: Desktop (1920x1080) - Clique para ampliar
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Especificacoes Arquiteturais do Dispositivo Selecionado</legend>
+                        <table class="subFormulario" width="100%">
+                            <tbody id="home-device-details"></tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- SLIDE 6: TELA HOME: INTERFACE COMPLETA VS SIMPLIFICADA -->
+                <div id="slide-6" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 06: Tela Home: Interface Completa vs. Simplificada</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>Tela Home: Interface Completa vs. Interface Simplificada</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Teoria da Carga Cognitiva</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Metrica Central:</th>
+                                <td>Reducao de 64% na densidade de elementos no DOM para atenuar sobrecarga cognitiva discente.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Engenharia de Usabilidade e Teoria da Carga Cognitiva:</strong> A interface completa do SIGAA contem dezenas de paineis simultaneos (perfil, noticias, bolsas, estagio, avaliacoes, comunidades virtuais). Para muitos estudantes, especialmente neurodivergentes ou em situacao de estresse de provas, essa sobrecarga visual retarda acoes basicas.</p>
+                    </div>
+
+                    <!-- Formulario de Selecao de Modo e Dispositivo -->
+                    <table class="formulario" width="100%">
+                        <caption>Criterios de Comparacao de Carga Cognitiva</caption>
+                        <tbody>
+                            <tr>
+                                <td width="22%"><strong>Modo de Exibicao:</strong></td>
+                                <td>
+                                    <label><input type="radio" name="home-compare-mode" value="compare" checked /> Comparativo Lado a Lado (Completa vs Simplificada)</label> &nbsp;&nbsp;
+                                    <label><input type="radio" name="home-compare-mode" value="full" /> Apenas Modo Completo (Padrao Institucional)</label> &nbsp;&nbsp;
+                                    <label><input type="radio" name="home-compare-mode" value="simple" /> Apenas Modo Simplificado (Preset Minimalista)</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dispositivo de Teste:</strong></td>
+                                <td>
+                                    <select id="home-compare-dev-select" style="width: 40%;">
+                                        <option value="mobile" selected>Mobile (390x844)</option>
+                                        <option value="tablet">Tablet (1024x768)</option>
+                                        <option value="desktop">Desktop (1920x1080)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Tabela de Comparacao Visual -->
+                    <table class="subFormulario" width="100%">
+                        <caption>Comparacao Visual de Interfaces</caption>
+                        <tbody id="home-simp-tbody">
+                            <!-- Inserido dinamicamente via JS -->
+                        </tbody>
+                    </table>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Analise Comparativa de Carga Cognitiva e Desempenho</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="25%">Metrica de Avaliacao</th>
+                                    <th width="37%">Modo Completo (Default)</th>
+                                    <th width="38%">Modo Simplificado (Minimalista)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td><strong>Elementos no DOM</strong></td>
+                                    <td>Aproximadamente 450 nos de visualizacao.</td>
+                                    <td>Reducao para 160 nos (-64% de densidade).</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Hierarquia Visual</strong></td>
+                                    <td>Multiplos quadros e paineis competindo por atencao.</td>
+                                    <td>Foco exclusivo nas aulas do dia e tarefas pendentes.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>Tempo ate a Primeira Acao</strong></td>
+                                    <td>Media de 6 a 12 segundos para localizar a informacao.</td>
+                                    <td>Media de 1 a 2 segundos (visibilidade direta sem scroll).</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Beneficio para Neurodiversidade</strong></td>
+                                    <td>Pode gerar ansiedade e dispersao (TDAH / TEA).</td>
+                                    <td>Ambiente calmo, estruturado e com baixa estimulacao sensorial.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- SLIDE 7: WORKFLOW DE DESENVOLVIMENTO: GITHUB PAGES + WAVE -->
+                <div id="slide-7" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 07: Workflow de Desenvolvimento: GitHub Pages + WAVE</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>Workflow de Desenvolvimento: GitHub Pages + Auditoria WAVE</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>DevOps &amp; Integracao Continua</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Auditoria Oficial:</th>
+                                <td>WebAIM WAVE API - Validacao Nivel AAA em producao continua.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Pipeline de Validacao Continua e Publicacao Isolada:</strong> Para assegurar que o desenvolvimento ocorresse em ambiente realista sem expor credenciais institucionais, foi estabelecido um fluxo continuo de saneamento de dados, compilacao estatica e auditoria internacional.</p>
+                    </div>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Integracao com a Ferramenta WebAIM WAVE</legend>
+                        <table class="subFormulario" width="100%">
+                            <tbody>
+                                <tr class="even">
+                                    <th width="25%">URL do Relatorio Oficial:</th>
+                                    <td>
+                                        <a href="https://wave.webaim.org/report#/https://jhefferson15.github.io/unb-sigaa-remix/v3/index.html" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: bold; text-decoration: underline;">
+                                            https://wave.webaim.org/report#/https://jhefferson15.github.io/unb-sigaa-remix/v3/index.html
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Alvo da Auditoria:</th>
+                                    <td>Variante V3 (WCAG 2.2 Nivel AAA) publicada no GitHub Pages</td>
+                                </tr>
+                                <tr class="even">
+                                    <th>Resultado WAVE:</th>
+                                    <td><strong style="color: #166534;">0 Erros de Acessibilidade &bull; 0 Erros de Contraste &bull; 100% dos Elementos com Semantica Correta</strong></td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Marcos Semanticos:</th>
+                                    <td>Header, Nav, Main, Aside e Footer identificados sem ambiguidades estruturais.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Etapas do Pipeline de Engenharia</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="10%">Fase</th>
+                                    <th width="25%">Script / Ferramenta</th>
+                                    <th>Acao Executada e Garantia de Qualidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td><strong>1. Sanitizacao</strong></td>
+                                    <td><code>python</code></td>
+                                    <td>Anonimizacao obrigatoria de nomes, matriculas e fotos reais com bloqueio estrito de deploy em caso de residuo.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>2. Empacotamento</strong></td>
+                                    <td><code>node.js ou python</code></td>
+                                    <td>Montagem do diretorio isolado <code>gh_pages_dist</code> com geracao de barra superior tripartite e index do portal.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>3. Deploy Git</strong></td>
+                                    <td>Git commit em <code>gh-pages</code></td>
+                                    <td>Publicacao pura no branch de demonstracao sem poluir o branch de codigo principal.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>4. Inspecao WAVE</strong></td>
+                                    <td>WebAIM WAVE API / Auditor</td>
+                                    <td>Verificacao em tempo real de taxas de contraste (7:1 a 21:1), skip links e navegacao por teclado.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- SLIDE 8: O PARADOXO DAS VARIANTES (V1 GRAFITE VS V3 AAA) -->
+                <div id="slide-8" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 08: O Paradoxo das Variantes (V1 Grafite vs. V3 WCAG AAA)</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>O Paradoxo das Variantes (V1 Grafite vs. V3 WCAG AAA)</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Trade-Offs de Design de Interfaces</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Conflito Central:</th>
+                                <td>Tensao entre expressao cultural autoral urbana (V1) e cumprimento estrito e austero das normas WCAG 2.2 AAA (V3).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>O Conflito de Engenharia e Design Universal:</strong> A experiencia de desenvolvimento revelou uma tensao real entre expressividade visual autoral e conformidade tecnica estrita de acessibilidade.</p>
+                    </div>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Quadro Comparativo de Trade-Offs (V1 Grafite vs. V3 WCAG AAA)</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="20%">Criterio Analisado</th>
+                                    <th width="40%">Variante V1: Grafite Urbano de Rua</th>
+                                    <th width="40%">Variante V3: Universal WCAG 2.2 AAA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td><strong>Estetica e Identidade</strong></td>
+                                    <td>Identidade visual vibrante, inspirada nos muros de Brasilia, fontes MostWasted/Bombing, letreiros continuos.</td>
+                                    <td>Estetica austera, crua, quase minimalista, cores de altissimo contraste (preto/amarelo, azul sobreforte).</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Aceitacao Visual Inicial</strong></td>
+                                    <td>Alta receptividade emocional entre estudantes jovens que desejam uma ruptura total com o SIGAA antigo.</td>
+                                    <td>Pode ser percebida como "feia" ou "excessivamente simples" por quem nao depende de recursos assistivos.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>Desempenho no WAVE</strong></td>
+                                    <td>Aponta avisos de fontes estilizadas e contraste em determinados elementos dinamicos.</td>
+                                    <td>Nota perfeita: zero erros de contraste, zero alertas estruturais, navegabilidade universal plena.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>Tecnologias Assistivas</strong></td>
+                                    <td>Funcional para usuarios convencionais, mas impoe barreiras para dislexia severa ou baixa visao extrema.</td>
+                                    <td>Compatibilidade total com leitores de tela, modo dislexia ativo, escala de fonte de 100% a 150% e regua guia.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>Licao de Engenharia</strong></td>
+                                    <td colspan="2" style="background: #FAFBFD; text-align: center; font-weight: bold; color: #003366;">
+                                        Acessibilidade nao e um "filtro cosmetico" de ultima hora. A solucao ideal e oferecer ao usuario a autonomia de alternar entre interfaces de acordo com sua necessidade e contexto de uso.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Conclusao do Paradoxo:</strong> O desenvolvimento do SIGAA Remix demonstrou que um bom software publico nao deve impor uma unica visao estetica. A arquitetura modular permite que coexistam a expressao cultural (V1) e a acessibilidade irrestrita (V3).</p>
+                    </div>
+                </div>
+
+                <!-- SLIDE 9: CONCLUSOES E PRINCIPIOS PARA MODERNIZACAO LEGADA -->
+                <div id="slide-9" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 09: Conclusoes e Principios para Modernizacao Legada</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>Conclusoes e Principios para Modernizacao Legada</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Diretrizes de Engenharia de Software</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Objetivo Tecnico:</th>
+                                <td>Sintetizar as 5 diretrizes prioritarias para projetos futuros de modernizacao em sistemas governamentais e universitarios.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">5 Principios Fundamentais para Projetos em Sistemas Legados</legend>
+                        <table class="subFormulario" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="8%">#</th>
+                                    <th width="25%">Principio</th>
+                                    <th>Diretriz de Implementacao Pratica</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="odd">
+                                    <td><strong>1</strong></td>
+                                    <td><strong>Acessibilidade de Primeira Classe</strong></td>
+                                    <td>Requisitos de acessibilidade (WCAG 2.2) devem ser testados desde a primeira sprint, nunca deixados para a fase de homologacao.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>2</strong></td>
+                                    <td><strong>Golden Tests sob Escala 2.0x</strong></td>
+                                    <td>Testes de regressao visual com text scaling sao a unica salvaguarda real contra overflows de renderizacao e textos truncados.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>3</strong></td>
+                                    <td><strong>Desacoplamento da Apresentacao</strong></td>
+                                    <td>Nao e obrigatorio reconstruir todo o backend monolitico legado; uma camada intermediaria limpa viabiliza interfaces modernas.</td>
+                                </tr>
+                                <tr class="even">
+                                    <td><strong>4</strong></td>
+                                    <td><strong>Reducao de Carga Cognitiva</strong></td>
+                                    <td>Oferecer modos simplificados/minimalistas e tao importante para inclusao quanto garantir contraste de cores.</td>
+                                </tr>
+                                <tr class="odd">
+                                    <td><strong>5</strong></td>
+                                    <td><strong>Auditoria Continua e Automatica</strong></td>
+                                    <td>Integrar ferramentas de validacao estatica (WAVE, Lighthouse) ao pipeline de publicacao previne regressoes silenciosas.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Impacto do SIGAA Remix:</strong> Demonstrar que e possivel transformar um ambiente burocratico e hostil em uma plataforma acessivel, acolhedora e confiavel para toda a comunidade academica da Universidade de Brasilia.</p>
+                    </div>
+                </div>
+
+                <!-- SLIDE 10: SESSAO ENCERRADA POR INATIVIDADE (TELA FINAL RETRO) -->
+                <div id="slide-10" class="slide-card">
+                    <table class="visualizacao" width="100%">
+                        <caption>Dados Gerais do Modulo 10: SIGAA - Sessao Encerrada</caption>
+                        <tbody>
+                            <tr class="linhaPar">
+                                <th width="22%">Titulo do Modulo:</th>
+                                <td><strong>SIGAA - Sessao Encerrada</strong></td>
+                            </tr>
+                            <tr class="linhaImpar">
+                                <th>Eixo Tematico:</th>
+                                <td>Encerramento &amp; Recursos Finais</td>
+                            </tr>
+                            <tr class="linhaPar">
+                                <th>Estado:</th>
+                                <td>Apresentacao tecnica concluida com exito.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="descricaoOperacao">
+                        <p><strong>Aviso de Sistema:</strong> O tempo maximo de sessao estipulado para esta demonstracao tecnica foi finalizado. Todos os 10 modulos de estudo de caso sobre o SIGAA UnB foram apresentados.</p>
+                    </div>
+
+                    <!-- Formulario de Acao de Reinicio -->
+                    <table class="formulario" width="100%">
+                        <caption>Acoes da Sessao</caption>
+                        <tfoot>
+                            <tr>
+                                <td style="text-align: center; padding: 12px;">
+                                    <input type="button" id="btn-restart-session" value="[ Reiniciar Sessao e Retornar ao Menu de Slides ]" />
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <fieldset class="retro-fieldset">
+                        <legend class="retro-legend">Links e Recursos Externos Consolidados</legend>
+                        <table class="subFormulario" width="100%" style="margin-bottom: 0;">
+                            <tbody>
+                                <tr class="even">
+                                    <th width="30%">Portal de Variantes:</th>
+                                    <td><a href="../index.html" style="color: #003366; font-weight: bold;">Explorar Variantes V1, V2 e V3</a></td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Auditoria WAVE Oficial:</th>
+                                    <td><a href="https://wave.webaim.org/report#/https://jhefferson15.github.io/unb-sigaa-remix/v3/index.html" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: bold;">Relatorio da Variante V3 no WebAIM WAVE</a></td>
+                                </tr>
+                                <tr class="even">
+                                    <th>Repositorio do Projeto:</th>
+                                    <td><a href="https://github.com/GabrieldeMedeiros05/unb-sigaa-remix" target="_blank" rel="noopener noreferrer" style="color: #003366; font-weight: bold;">github.com/GabrieldeMedeiros05/unb-sigaa-remix</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+
+                <!-- BARRA DE ACOES INFERIOR DO SLIDE (PADRAO #botoes SIGAA) -->
+                <div class="botoes" style="margin-top: 14px;">
+                    <input type="button" class="btn-sigaa btn-voltar-menu" id="btn-back-bottom" value="&lt;&lt; Voltar ao Menu de Slides" />
+                    <span id="slide-current-info-bottom" class="slide-identificador-info">Visualizando Modulo [01 / 10]</span>
+                </div>
+
+                <br>
+                <div style="width: 80%; text-align: center; margin: 10px auto;">
+                    <a href="javascript:void(0);" class="link-voltar-menu" style="color: #404E82; font-size: 11px; font-weight: bold; text-decoration: underline;">&lt;&lt; Voltar ao Menu de Slides</a>
+                </div>
+                <br>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL DE INSPECAO AMPLIADA SIGAA -->
+        <div id="image-modal">
+            <div class="modal-content-window">
+                <div class="modal-header-retro">
+                    <span id="modal-zoom-title">Inspecao em Alta Resolucao</span>
+                    <button type="button" id="modal-close-btn" class="modal-close-btn" title="Fechar (Esc)">[ X ]</button>
+                </div>
+                <div class="modal-body-retro">
+                    <img id="modal-zoom-img" src="" alt="Visualizacao ampliada">
+                </div>
+            </div>
+        </div>
+
+        <!-- RODAPE INSTITUCIONAL OFICIAL SIGAA -->
+        <div id="rodape">
+            <p>SIGAA | Superintendencia de Tecnologia da Informacao - STI - (61) 3107-0040 | Copyright &copy; 2006-2026 - UFRN - sigaa-producao.unb.br - <a href="javascript:void(0);">v4.15.10.58</a></p>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT DE INTERATIVIDADE -->
+    <script src="slides.js"></script>
+</body>
+</html>

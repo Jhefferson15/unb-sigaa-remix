@@ -105,6 +105,9 @@
         .card.v3:hover {
             border-color: #10b981;
         }
+        .card.slides:hover {
+            border-color: #38bdf8;
+        }
         .card-header {
             margin-bottom: 16px;
         }
@@ -131,6 +134,11 @@
             background: rgba(16, 185, 129, 0.15);
             color: #34d399;
             border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .card.slides .card-tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }
         .card h2 {
             font-size: 1.5rem;
@@ -193,6 +201,15 @@
         }
         .btn-v3:hover {
             background: #059669;
+        }
+        .btn-slides {
+            background: #1B3556;
+            color: #ffffff;
+            border: 1px solid #4B6C8E;
+        }
+        .btn-slides:hover {
+            background: #2B5582;
+            color: #ffffff;
         }
         .privacy-box {
             background: rgba(30, 41, 59, 0.5);
@@ -291,6 +308,24 @@
                     </ul>
                 </div>
                 <a href="v3/index.html" class="btn btn-v3">Explorar Variante 3 (WCAG AAA) &rarr;</a>
+            </div>
+
+            <!-- APRESENTACAO DE SLIDES RETRO -->
+            <div class="card slides">
+                <div>
+                    <div class="card-header">
+                        <span class="card-tag">Apresentação • Retrô SIGAA</span>
+                        <h2>O Desafio da Modernização Legada</h2>
+                    </div>
+                    <p>Apresentação interativa com estética clássica do SIGAA dos anos 2000, analisando Golden Tests sob escala 2.0x, responsividade da Home e workflow WAVE.</p>
+                    <ul class="features-list">
+                        <li>10 slides técnicos com navegação retrô e atalhos de teclado</li>
+                        <li>Inspeção interativa de 6 falhas críticas de layout sob Text Scaling 2x</li>
+                        <li>Comparador da Home (Desktop, Tablet, Mobile) e modo Minimalista</li>
+                        <li>Análise do paradoxo entre estética urbana (V1) e conformidade AAA (V3)</li>
+                    </ul>
+                </div>
+                <a href="slides/index.html" class="btn btn-slides">Abrir Apresentação de Slides &rarr;</a>
             </div>
         </div>
 

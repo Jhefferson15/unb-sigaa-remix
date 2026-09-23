@@ -1,0 +1,611 @@
+/* ==========================================================================
+   FOLHA DE ESTILOS AUTENTICA DO SIGAA UNB (JSF 1.2 / RICHFACES DOS ANOS 2000)
+   Regras estritas: Zero emojis, sem cantos arredondados, sem sombras modernas.
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+html, body {
+    background-color: #EDF1F8;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    min-height: 100vh;
+}
+
+/* Container centralizado oficial do SIGAA UnB */
+#container {
+    width: 98%;
+    max-width: 1180px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #7F9DB9;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   CABECALHO INSTITUCIONAL
+   ========================================================================== */
+#cabecalho {
+    background: #002B49;
+    color: #FFFFFF;
+    position: relative;
+    border-bottom: 3px solid #005A9C;
+}
+
+#info-sistema {
+    padding: 6px 12px;
+    background: #002B49;
+    position: relative;
+    min-height: 38px;
+    clear: both;
+}
+
+#info-sistema .marca-area {
+    float: left;
+    padding-top: 4px;
+}
+
+#info-sistema h1 {
+    font-size: 16px;
+    margin: 0;
+    color: #FFFFFF;
+    display: inline;
+    font-weight: bold;
+}
+
+#info-sistema h3 {
+    font-size: 11px;
+    margin: 0 0 0 8px;
+    color: #8BBCE5;
+    font-weight: normal;
+    display: inline;
+}
+
+#info-sistema div.dir {
+    float: right;
+    font-size: 11px;
+    color: #FFFFFF;
+    padding-top: 4px;
+    text-align: right;
+}
+
+#info-sistema div.dir a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+#info-sistema div.dir a:hover {
+    text-decoration: underline;
+}
+
+#info-sistema span.acessibilidade {
+    padding: 0 5px;
+    border-right: 1px solid #D99C44;
+    margin: 0 2px;
+}
+
+#info-sistema span.acessibilidade a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#session-countdown-display,
+#tempoSessao {
+    background: #001A2E;
+    border: 1px solid #005A9C;
+    padding: 1px 5px;
+    color: #FFE600;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 11px;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.sair-sistema a {
+    color: #FFAAAA !important;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+/* Painel de Usuario e Menus */
+#painel-usuario {
+    background: #004071;
+    color: #FFFFFF;
+    padding: 4px 12px;
+    border-top: 1px solid #005A9C;
+    font-size: 11px;
+    clear: both;
+    min-height: 24px;
+}
+
+#painel-usuario #menu-usuario {
+    float: left;
+}
+
+#painel-usuario #menu-usuario ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#painel-usuario #menu-usuario li {
+    float: left;
+    margin-right: 15px;
+}
+
+#painel-usuario #menu-usuario li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+#painel-usuario #menu-usuario li a:hover {
+    text-decoration: underline;
+    color: #FFE600;
+}
+
+#painel-usuario #info-usuario {
+    float: right;
+    font-size: 11px;
+    text-align: right;
+}
+
+#painel-usuario #info-usuario p {
+    display: inline;
+    margin-left: 15px;
+    line-height: 20px;
+}
+
+#painel-usuario #info-usuario strong {
+    color: #FFE600;
+}
+
+/* Submenu Horizontal Classico */
+#menu-dropdown {
+    background: #003366;
+    border-bottom: 1px solid #002244;
+    clear: both;
+}
+
+.sigaa-nav-horizontal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sigaa-nav-horizontal > li {
+    float: left;
+    border-right: 1px solid #004080;
+}
+
+.sigaa-nav-horizontal > li > a,
+.sigaa-nav-horizontal > li > button {
+    display: block;
+    padding: 4px 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 18px;
+}
+
+.sigaa-nav-horizontal > li > a:hover,
+.sigaa-nav-horizontal > li > button:hover {
+    background: #004D99;
+}
+
+.sigaa-nav-horizontal > li.active > a,
+.sigaa-nav-horizontal > li.active > button {
+    background: #005A9C;
+    color: #FFE600;
+}
+
+/* ==========================================================================
+   CONTEUDO PRINCIPAL E TIPOGRAFIA SIGAA
+   ========================================================================== */
+#conteudo {
+    padding: 10px 15px;
+    background: #FFFFFF;
+    clear: both;
+}
+
+/* Titulos Hierarquicos do SIGAA */
+h2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #003366;
+    font-variant: small-caps;
+    margin: 4px 0 10px 0;
+    border-bottom: 1px solid #CFDCEF;
+    padding-bottom: 3px;
+}
+
+h2 a {
+    color: #003366;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+/* Caixa Amarela Classica: Descricao da Operacao */
+div.descricaoOperacao {
+    background: #FFFEEA;
+    border: 1px solid #E6D080;
+    padding: 8px 12px;
+    margin: 8px 0 12px 0;
+    color: #333333;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+div.descricaoOperacao p {
+    margin: 3px 0;
+}
+
+div.descricaoOperacao strong {
+    color: #554400;
+}
+
+/* Caixa Azul Informativa */
+div.infoAltRem {
+    background: #EAF3FD;
+    border: 1px solid #6593CF;
+    padding: 6px 10px;
+    margin: 8px 0 10px 0;
+    color: #003366;
+    font-size: 11px;
+    font-variant: small-caps;
+}
+
+/* ==========================================================================
+   BOTOES E BARRAS DE ACAO
+   ========================================================================== */
+div.botoes,
+#botoes {
+    background: #C4D2EB;
+    text-align: center;
+    padding: 4px 10px;
+    border: 1px solid #6593CF;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.slide-identificador-info {
+    font-size: 11px;
+    font-weight: bold;
+    color: #003366;
+    font-variant: small-caps;
+}
+
+/* Botoes 3D Bevel Cinza Tradicionais do SIGAA (JSF) */
+input[type="button"],
+input[type="submit"],
+button.btn-sigaa,
+.btn-sigaa {
+    background: #ECE9D8;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    padding: 2px 8px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button.btn-sigaa:hover,
+.btn-sigaa:hover {
+    background: #F5F4EC;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+button.btn-sigaa:active,
+.btn-sigaa:active {
+    border-top: 1px solid #707070;
+    border-left: 1px solid #707070;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    background: #E0DEC8;
+}
+
+.btn-voltar-menu {
+    color: #003366 !important;
+}
+
+a.link-voltar-menu {
+    color: #404E82;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a.link-voltar-menu:hover {
+    color: #002B49;
+}
+
+select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 2px;
+    border: 1px solid #7F9DB9;
+    background: #FFFFFF;
+}
+
+/* ==========================================================================
+   TABELAS PADRAO SIGAA (listagem, formulario, visualizacao, subFormulario)
+   ========================================================================== */
+table.listagem,
+table.formulario,
+table.visualizacao,
+table.subFormulario,
+table.tabelaRelatorio {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 12px 0;
+    background: #FFFFFF;
+    border: 1px solid #6593CF;
+    font-size: 11px;
+}
+
+table caption {
+    background: #49739C;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: left;
+    padding: 4px 8px;
+    font-size: 11px;
+    border: 1px solid #365A7D;
+}
+
+table thead th,
+table th {
+    background: #C4D2EB;
+    color: #003366;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 4px 6px;
+    border: 1px solid #6593CF;
+    text-align: left;
+}
+
+table td {
+    padding: 4px 6px;
+    border: 1px solid #CFDCEF;
+    font-size: 11px;
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Tabela de Visualizacao (Exibicao de Entidade) */
+table.visualizacao th {
+    background: #EDF1F8;
+    color: #003366;
+    font-weight: bold;
+    text-align: right;
+    width: 22%;
+    border: 1px solid #CFDCEF;
+    padding: 4px 8px;
+    vertical-align: top;
+}
+
+table.visualizacao td {
+    background: #FFFFFF;
+    color: #333333;
+    border: 1px solid #CFDCEF;
+    padding: 4px 8px;
+    vertical-align: top;
+}
+
+/* Tabela de Formulario (Filtros de Busca) */
+table.formulario td {
+    background: #FFFFFF;
+    padding: 4px 8px;
+    border: 1px solid #CFDCEF;
+}
+
+table.formulario tfoot td {
+    background: #C4D2EB;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid #6593CF;
+}
+
+/* Linhas Alternadas */
+tr.linhaPar,
+tr.even {
+    background-color: #F9FBFD;
+}
+
+tr.linhaImpar,
+tr.odd {
+    background-color: #EDF1F8;
+}
+
+/* Destaque Amarelo Historico ao Passar o Mouse */
+table.listagem tbody tr:hover,
+table.subFormulario tbody tr:hover {
+    background-color: #FFFFCC !important;
+}
+
+table tfoot td {
+    background: #C4D2EB;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid #6593CF;
+    font-size: 11px;
+    color: #003366;
+}
+
+/* Fieldset e Legend Classicos SIGAA */
+fieldset.retro-fieldset {
+    border: 1px solid #6593CF;
+    padding: 8px 12px;
+    margin: 10px 0;
+    background: #FFFFFF;
+}
+
+legend.retro-legend {
+    font-weight: bold;
+    color: #003366;
+    font-size: 11px;
+    font-variant: small-caps;
+    padding: 0 4px;
+}
+
+/* ==========================================================================
+   VISOES DE SLIDE (MENU vs DETALHE)
+   ========================================================================== */
+#slides-menu-view {
+    display: block;
+}
+
+#slide-detail-view {
+    display: none;
+}
+
+.slide-card {
+    display: none;
+}
+
+.slide-card.active {
+    display: block;
+}
+
+/* Links em Tabelas */
+a {
+    color: #003395;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #002B49;
+}
+
+a:visited {
+    color: #003390;
+}
+
+/* ==========================================================================
+   MODAL DE INSPECAO DE IMAGEM (ESTILO JANELA SIGAA)
+   ========================================================================== */
+#image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+#image-modal.active {
+    display: flex;
+}
+
+.modal-content-window {
+    background: #FFFFFF;
+    border: 2px solid #002B49;
+    max-width: 95vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header-retro {
+    background: #002B49;
+    color: #FFFFFF;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.modal-close-btn {
+    background: #A94442;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 1px 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.modal-body-retro {
+    padding: 8px;
+    overflow: auto;
+    background: #EDF1F8;
+    text-align: center;
+}
+
+.modal-body-retro img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #7F9DB9;
+}
+
+/* ==========================================================================
+   RODAPE INSTITUCIONAL OFICIAL DO SIGAA
+   ========================================================================== */
+#rodape,
+#sigaa-footer {
+    border-top: 1px solid #6593CF;
+    margin-top: 20px;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 10px;
+    color: #444444;
+    background: #FFFFFF;
+    line-height: 1.6;
+    clear: both;
+}
+
+#rodape a,
+#sigaa-footer a {
+    color: #003366;
+    text-decoration: underline;
+}

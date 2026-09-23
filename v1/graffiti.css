@@ -686,7 +686,10 @@ body, html, html.background {
     }
     #container {
         width: 100% !important;
+        max-width: 382px !important;
+        margin: 0 !important;
         border: none !important;
+        box-sizing: border-box !important;
     }
     #info-sistema {
         flex-direction: column !important;
@@ -702,6 +705,10 @@ body, html, html.background {
         gap: 6px !important;
         padding-right: 14px !important;
         box-sizing: border-box !important;
+    }
+    #info-sistema div.dir a {
+        padding: 3px 5px !important;
+        font-size: 9px !important;
     }
     #painel-usuario {
         display: flex !important;
@@ -776,6 +783,71 @@ body, html, html.background {
         display: flex !important;
         gap: 8px !important;
         flex-shrink: 0 !important;
+    }
+    #conteudo {
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+    #portal-docente {
+        grid-template-columns: 100% !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    #perfil-docente {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+    #perfil-docente .pessoal-docente {
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+    #perfil-docente #agenda-docente {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 8px 6px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+    #perfil-docente #agenda-docente table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        box-sizing: border-box !important;
+    }
+    #perfil-docente #agenda-docente td {
+        font-size: 10px !important;
+        word-break: break-all !important;
+        box-sizing: border-box !important;
+    }
+    #perfil-docente #agenda-docente td:first-child:not([colspan]) {
+        width: 60% !important;
+        max-width: 60% !important;
+        text-align: left !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        padding: 3px 2px !important;
+    }
+    #perfil-docente #agenda-docente td:last-child:not([colspan]) {
+        width: 40% !important;
+        max-width: 40% !important;
+        text-align: right !important;
+        font-weight: bold !important;
+        color: var(--graffiti-neon-yellow) !important;
+        white-space: nowrap !important;
+        padding: 3px 2px !important;
+    }
+    #perfil-docente #agenda-docente td[colspan] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    #perfil-docente #agenda-docente td[colspan] table {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
