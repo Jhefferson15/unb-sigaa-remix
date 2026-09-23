@@ -6,7 +6,26 @@
 
 /* 1. VARIAVEIS E TEMAS DE ALTO CONTRASTE (WCAG AAA >= 7:1) */
 :root {
-  /* Tema 1: Padrao AAA (Escuro Profundo & Texto Branco Puro - Contraste 15.8:1) */
+  /* Tema 1 (Padrao): Modo Claro Reforcado AAA (Preto sobre Branco - Contraste 21:1) */
+  --wcag-bg: #ffffff;
+  --wcag-surface: #f1f5f9;
+  --wcag-surface-card: #ffffff;
+  --wcag-border: #1e293b;
+  --wcag-border-focus: #0284c7;
+  --wcag-text: #000000;
+  --wcag-text-muted: #1e293b;
+  --wcag-primary: #0284c7;
+  --wcag-primary-text: #ffffff;
+  --wcag-accent: #0f172a;
+  --wcag-focus-outline: #0284c7;
+  --wcag-font-scale: 1rem;
+  --wcag-line-height: 1.65;
+  --wcag-letter-spacing: 0.02em;
+  --wcag-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Tema 2: Modo Escuro AAA (Contraste 15.8:1) */
+body.wcag-theme-dark-aaa {
   --wcag-bg: #0b1320;
   --wcag-surface: #142236;
   --wcag-surface-card: #1c2e47;
@@ -18,13 +37,9 @@
   --wcag-primary-text: #04101e;
   --wcag-accent: #facc15;
   --wcag-focus-outline: #facc15;
-  --wcag-font-scale: 1rem;
-  --wcag-line-height: 1.65;
-  --wcag-letter-spacing: 0.02em;
-  --wcag-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Tema 2: Alto Contraste Super Amarelo sobre Preto (Contraste 19.5:1) */
+/* Tema 3: Alto Contraste Super Amarelo sobre Preto (Contraste 19.5:1) */
 body.wcag-theme-yellow-black {
   --wcag-bg: #000000;
   --wcag-surface: #0a0a0a;
@@ -37,21 +52,6 @@ body.wcag-theme-yellow-black {
   --wcag-primary-text: #000000;
   --wcag-accent: #ffffff;
   --wcag-focus-outline: #ffffff;
-}
-
-/* Tema 3: Modo Claro Reforcado AAA (Contraste 21:1) */
-body.wcag-theme-light-aaa {
-  --wcag-bg: #ffffff;
-  --wcag-surface: #f8fafc;
-  --wcag-surface-card: #f1f5f9;
-  --wcag-border: #000000;
-  --wcag-border-focus: #000000;
-  --wcag-text: #000000;
-  --wcag-text-muted: #1e293b;
-  --wcag-primary: #0284c7;
-  --wcag-primary-text: #ffffff;
-  --wcag-accent: #b45309;
-  --wcag-focus-outline: #0284c7;
 }
 
 /* Modo Dislexia */
@@ -169,9 +169,15 @@ body {
 }
 
 .wcag-tool-btn[aria-pressed="true"] {
-  background: var(--wcag-accent);
-  color: #000000 !important;
+  background: var(--wcag-primary);
+  color: #ffffff !important;
   border-color: #000000;
+}
+
+body.wcag-theme-yellow-black .wcag-tool-btn[aria-pressed="true"] {
+  background: #ffff00;
+  color: #000000 !important;
+  border-color: #ffffff;
 }
 
 /* 6. CABECALHO ACESSIVEL */
@@ -416,7 +422,12 @@ table.wcag-table th {
 }
 
 table.wcag-table tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+body.wcag-theme-dark-aaa table.wcag-table tr:nth-child(even),
+body.wcag-theme-yellow-black table.wcag-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* 11. REGIAO VIVA PARA LEITORES DE TELA (ARIA-LIVE) */

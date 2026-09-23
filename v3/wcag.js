@@ -37,7 +37,7 @@
   }
 
   function setTheme(theme) {
-    document.body.classList.remove('wcag-theme-yellow-black', 'wcag-theme-light-aaa');
+    document.body.classList.remove('wcag-theme-yellow-black', 'wcag-theme-dark-aaa');
     
     var btnDark = document.getElementById('btnThemeDark');
     var btnYellow = document.getElementById('btnThemeYellow');
@@ -51,13 +51,13 @@
       document.body.classList.add('wcag-theme-yellow-black');
       if (btnYellow) btnYellow.setAttribute('aria-pressed', 'true');
       announce('Tema alterado para Alto Contraste Amarelo sobre Preto.');
-    } else if (theme === 'light-aaa') {
-      document.body.classList.add('wcag-theme-light-aaa');
-      if (btnLight) btnLight.setAttribute('aria-pressed', 'true');
-      announce('Tema alterado para Modo Claro Reforçado.');
-    } else {
+    } else if (theme === 'dark-aaa') {
+      document.body.classList.add('wcag-theme-dark-aaa');
       if (btnDark) btnDark.setAttribute('aria-pressed', 'true');
-      announce('Tema alterado para Padrão Escuro AAA.');
+      announce('Tema alterado para Modo Escuro AAA.');
+    } else {
+      if (btnLight) btnLight.setAttribute('aria-pressed', 'true');
+      announce('Tema alterado para Modo Claro Padrão AAA.');
     }
   }
 
@@ -170,12 +170,12 @@
     if (btnFontReset) btnFontReset.addEventListener('click', function () { setFontSize(0); });
 
     // Event listeners dos temas
+    var btnLight = document.getElementById('btnThemeLight');
     var btnDark = document.getElementById('btnThemeDark');
     var btnYellow = document.getElementById('btnThemeYellow');
-    var btnLight = document.getElementById('btnThemeLight');
-    if (btnDark) btnDark.addEventListener('click', function () { setTheme('default'); });
-    if (btnYellow) btnYellow.addEventListener('click', function () { setTheme('yellow-black'); });
     if (btnLight) btnLight.addEventListener('click', function () { setTheme('light-aaa'); });
+    if (btnDark) btnDark.addEventListener('click', function () { setTheme('dark-aaa'); });
+    if (btnYellow) btnYellow.addEventListener('click', function () { setTheme('yellow-black'); });
 
     // Modos adicionais
     var btnDyslexic = document.getElementById('btnDyslexicFont');
