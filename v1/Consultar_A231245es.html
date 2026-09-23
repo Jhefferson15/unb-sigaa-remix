@@ -1,0 +1,2638 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+		<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="background" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+<head>
+<link rel="stylesheet" href="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/WH/theme.css" type="text/css" />
+<link rel="stylesheet" href="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/DB/theme.css" type="text/css" />
+<script type="text/javascript" src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/prototype.PrototypeResourceLoader/prototype.js"><!--
+
+//--></script>
+<script type="text/javascript" src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/date.js"><!--
+
+//--></script>
+<script type="text/javascript" src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/popcalendar.js"><!--
+
+//--></script>
+<script type="text/javascript" src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/inputTextHelp.HtmlTextHelpRenderer/inputTextHelp.js"><!--
+
+//--></script>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+
+<meta http-equiv="Expires" content="0" />
+
+
+
+
+
+
+
+<title>SIGAA - Sistema Integrado de Gest&#227;o de Atividades Acad&#234;micas</title>
+
+<link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" rel="stylesheet" type="text/css" /><link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" media="rich-extended-skinning" rel="stylesheet" type="text/css" /><script src="/sigaa/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/jquery/jquery.js.jsf" type="text/javascript"></script><script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js.jsf" type="text/javascript"></script><link rel="shortcut icon" href="/sigaa/img/sigaa.ico" />
+
+
+
+<script type="text/javascript" src="/shared/jsBundles/jawr_loader.js"></script>
+
+<script type="text/javascript">
+
+                JAWR.loader.style('/bundles/css/sigaa_base.css', 'all');
+
+        		JAWR.loader.style('/css/ufrn_print.css', 'print');
+
+        		JAWR.loader.script('/bundles/js/sigaa_base.js');
+
+</script>
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_227240237/bundles/css/sigaa.css" />
+
+
+
+
+<link rel="alternate stylesheet" type="text/css" media="screen" title="mono" href="/sigaa/css/mono.css" />
+
+<link rel="alternate stylesheet" type="text/css" media="screen" title="contraste" href="/sigaa/css/contraste.css" />
+
+
+
+<!-- FontAwesome -->
+
+<link rel="stylesheet" type="text/css" href="/shared/beta/css/font-awesome.css" media="screen" />
+
+
+
+<!-- Painel Gen&#233;rico para telas Modal -->
+
+<script type="text/javascript" src="/shared/javascript/paineis/painel_generico.js"></script>
+
+
+
+<script src="/sigaa/javascript/styleswitch.js" type="text/javascript" ></script>
+
+
+
+<script src="/sigaa/javascript/prevenir-duplo-clique.js" type="text/javascript"></script>
+
+
+
+
+
+	
+
+	
+
+		<!-- Bot&#227;o de informar um problema -->
+
+		<link rel="stylesheet" type="text/css" href="/shared/informar-problema/css/informar-problema.css?ver=1.1" media="screen" />
+
+		<script type="text/javascript" src="/shared/informar-problema/js/webcomponents.min.js?ver=1.1"></script>
+
+		<script type="text/javascript" src="/shared/informar-problema/js/html2canvas.js?ver=1.1"></script>
+
+		<script type="text/javascript" src="/shared/informar-problema/js/informar-problema.js?ver=1.1"></script>
+
+		<!-- FIM bot&#227;o de informar um problema -->
+
+	
+
+	
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+		var mensagem;
+
+		var initMensagem = function() {
+
+			mensagem = new Mensagem();
+
+		}
+
+		YAHOO.util.Event.addListener(window,'load', initMensagem);
+
+		
+
+		function isIE(){
+
+		
+
+					return false;
+
+			
+
+		}
+
+</script>
+
+
+
+<script type="text/javascript" src="/sigaa/javascript/jsCookMenuHack.js"></script>
+
+<!-- Fim dos imports para abrir chamado -->
+
+
+
+	<script src="/shared/javascript/STICookieConsent.js"></script>
+
+	<script>
+
+	    document.addEventListener("DOMContentLoaded", () => {
+
+	    	generateCookieConsentModal("SIGAA", "N&#243;s usamos cookies para melhorar sua experi&#234;ncia de navega&#231;&#227;o no portal. Ao utilizar o %sitename%, voc&#234; concorda com a pol&#237;tica de monitoramento de cookies. Para ter mais informa&#231;&#245;es sobre como isso &#233; feito e como remover, acesse a <a href=%cookie-policy%>Pol&#237;tica de Prote&#231;&#227;o de Dados Pessoais</a>. Para saber como a UnB trata os dados, acesse a <a href=%privacy-policy%> Pol&#237;tica de cookies</a>. Se voc&#234; concorda, clique em %button-text%.", "https://protecaodedados.unb.br", "https://sti.unb.br/doc-politicas");
+
+	    })
+
+	</script>
+
+	
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="container">
+
+	<div id="cabecalho">
+
+		<div id="info-sistema">
+
+			<h1><span>UnB - SIGAA -</span></h1>
+
+			<h3>Sistema Integrado de Gest&#227;o de Atividades Acad&#234;micas</h3>
+
+			<div class="dir">
+
+				
+
+					
+
+					<style>
+#info-sistema span.sair-sistema,
+	#info-sistema #tempoSessao{
+	display: inline;
+	right: inherit;
+	position: relative;
+	top: 0;
+	padding-right: inherit;
+}
+
+#info-sistema div.dir{
+	top:0;
+	right:0;
+	text-align: right;
+	width: auto;
+	position: absolute;
+	margin:0;
+	padding: 0;
+	height:16px;
+	display: inline;
+	padding-right:5px;
+	color: #FFF;
+}
+#info-sistema span.acessibilidade{
+	padding: 0 5px;
+	border: solid #D99C44;
+	border-width: 0 1px 0 0;
+	margin: 0 5px;
+	padding: 0 5px;
+}
+	#info-sistema span.acessibilidade a{
+		font-size: 1.1em;
+		font-weight: bolder;
+		color: #FFF;
+		margin-left: 2px;
+		letter-spacing: 0.1px;
+		word-spacing: 0.1px;
+	}
+	#info-sistema span.acessibilidade a.fonteMenor strong{
+		font-size: 0.9em;
+	}
+	.rich-tabpanel-content {
+		font-size: inherit;
+	}	
+</style>
+<span class="acessibilidade">
+	<a class="fonteMaior" title="Aumentar a texto" alt="Aumentar a texto" href="#">
+		<strong>A</strong>+
+	</a>
+	<a class="fonteMenor" title="Diminuir o texto" alt="Diminuir o texto" href="#">
+		<strong>A</strong>-
+	</a>
+</span>
+<span class="acessibilidade">
+	<a title="Acessar Portal P&#250;blico SIGAA" alt="Portal P&#250;blico SIGAA" href="https://sig.unb.br/sigaa/public" target="_blank">
+		<strong>Portal P&#250;blico</strong>
+	</a>
+</span>
+
+	<span class="acessibilidade">
+		<a title="Ajuda" alt="Ajuda" href="http://portalsig.unb.br/manuais" target="_blank">
+			Ajuda?
+		</a>
+	</span>
+
+<script type="text/javascript" src="/shared/javascript/jquery/jquery-1.4.4.min.js"></script>
+<script src="/sigaa/javascript/jquery.fontsize.js" type="text/javascript" ></script>
+<script type="text/javascript" >
+	redimensionarFonte('.acessibilidade', '#conteudo', 11, 11, 14);
+</script>
+<script>var $jq = jQuery.noConflict();</script>
+
+					<span id="tempoSessao"></span>
+
+					<span class="sair-sistema"> <a href="/sigaa/logar.do?dispatch=logOff">SAIR</a> </span>
+
+				
+
+			</div>
+
+		</div>
+
+	 
+
+
+
+	<div id="painel-usuario"  >
+
+	
+
+		<div id="menu-usuario">
+
+		<ul>
+
+			<li class="modulos">
+
+			
+
+				<span id="modulos"> <a href="#" id="show-modulos"> M&#243;dulos </a> </span>
+
+			
+
+			</li>
+
+			
+
+				
+
+				<li class="caixa-postal">
+
+				
+
+					
+
+									
+
+						<a href=/sigaa/abrirCaixaPostal.jsf?sistema=2> 
+
+							
+
+							Caixa Postal					
+
+							
+
+							 
+
+						</a>
+
+					
+
+				
+
+				</li>
+
+				
+
+			
+
+			
+
+			
+
+				<li class="chamado">
+
+				
+
+					
+
+					
+
+						
+
+						
+
+							<a href="#" onclick="window.open('https://www.servicostic.unb.br/', 'chamado', 'scrollbars=1,width=700,height=600')">Abrir Chamado</a>
+
+						
+
+					
+
+				
+
+				</li>
+
+			 
+
+			
+
+			
+
+			
+
+				 
+
+					<li class="menus">
+
+						<a href="/sigaa/verPortalDiscente.do">Menu Discente</a>
+
+					</li>
+
+				 
+
+			
+
+			
+
+			
+
+				
+
+
+
+<li class="dados-pessoais">
+
+	
+
+		<a href="#" onclick="window.open('/sigaa/alterar_dados.jsf','','width=670,height=430, top=100, left=100, scrollbars' )">Alterar senha</a>
+
+	
+
+</li>
+
+			
+
+
+
+			
+
+				<!-- INICIO bot&#227;o Informar problema -->
+
+					
+
+				<!-- FIM bot&#227;o Informar problema -->
+
+			
+
+			
+
+		</ul>
+
+		
+
+		
+
+		
+
+		
+
+		</div>
+
+
+
+		<div id="info-usuario">
+
+
+
+		<p class="periodo-atual">
+
+			
+
+				Semestre atual: <strong>2026.1</strong>			
+
+			
+
+			</br>
+
+			
+
+		</p>		
+
+		<p class="usuario">
+
+		
+
+			<span title="JOAO DA SILVA">
+
+				JOAO DA SILVA
+
+			</span>
+
+			
+
+			
+
+		
+
+		</p>
+
+
+
+		<p class="unidade">
+
+			DEPTO CI&#202;NCIAS DA COMPUTA&#199;&#195;O
+
+			 (11.01.01.15.01)
+
+			
+
+		</p>
+
+
+
+		</div>
+
+	
+
+	<div id="menu-principal"></div>
+
+	</div>
+
+	</div>
+
+	
+
+
+
+	<div id="conteudo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<script type="text/javascript">
+
+//Fun&#231;&#227;o adicionada no cabe&#231;alho para evitar a reescrita em cada JSP.
+
+function contarCaracteres(field, idMostraQuantidadeUsuario, maxlimit) {
+
+	
+
+	if (field.value.length > maxlimit){
+
+		field.value = field.value.substring(0, maxlimit);
+
+	}else{ 
+
+		document.getElementById(idMostraQuantidadeUsuario).innerHTML = maxlimit - field.value.length ;
+
+	} 
+
+}
+
+</script> 
+
+    <script type="text/javascript" src="/shared/javascript/prototype.js"></script>
+    <script type="text/javascript">
+        JAWR.loader.script('/bundles/js/scriptaculous.js');
+		JAWR.loader.script('/javascript/ajaxtags/overlibmws.js');
+		JAWR.loader.script('/javascript/ajaxtags/ajaxtags.js');
+		JAWR.loader.style('/javascript/ajaxtags/css/ajaxtags.css');
+     </script>
+	
+
+
+<script type="text/javascript">var J = jQuery.noConflict();</script>
+<script type="text/javascript">
+	JAWR.loader.script('/javascript/jquery.tablesorter.min.js');
+</script>
+<link rel="stylesheet" type="text/css" href="/shared/css/tablesorter/style.css" />
+
+
+
+<style>
+	.em_andamento {
+		color: gray;
+	}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<h2> <a href='/sigaa/verPortalDiscente.do'>Portal Discente</a> > 
+		
+		
+		
+			Consultar A&#231;&#245;es de Extens&#227;o
+		
+	</h2>
+	
+	
+		<div class="descricaoOperacao">
+			
+				Senhor(a) Usu&#225;rio(a),
+				<p>	
+					Esta &#233; uma funcionalidade do sistema que permite a busca de A&#231;&#245;es de Extens&#227;o de acordo
+				com diversas combina&#231;&#245;es de crit&#233;rios. <br/><br/>
+				
+				
+					<b>Aten&#231;&#227;o:</b><br/>
+					</p>
+					<p>	
+						Algumas A&#231;&#245;es est&#227;o com a cor 'Cinza Claro' e significa que &#233; uma A&#231;&#227;o de Extens&#227;o Isolada e com a Situa&#231;&#227;o 'Cadastro em Andamento'. 
+					</p>
+				
+		</div> 
+	
+
+	
+
+
+
+<script>
+function setarLabel(select, id_hidden){
+	var indice = select.selectedIndex;
+	alert(select, id_hidden);
+	if (indice > 0)	
+		$("formBuscaAtividade:"+id_hidden).value = select.options[indice].text;
+		
+}
+
+JAWR.loader.script('/javascript/jquery.tablesorter.min.js');
+
+function checagem(id) {
+	if("formBuscaAtividade:Check2"== document.getElementById(id).id && document.getElementById(id).checked==true ){
+		document.getElementById("formBuscaAtividade:Check1").checked=false;
+		document.getElementById("formBuscaAtividade:Check3").checked=false;
+}else
+	if("formBuscaAtividade:Check1"== document.getElementById(id).id && document.getElementById(id).checked==true ){
+		document.getElementById("formBuscaAtividade:Check2").checked=false;
+		document.getElementById("formBuscaAtividade:Check3").checked=false;
+}else
+	if("formBuscaAtividade:Check3"== document.getElementById(id).id && document.getElementById(id).checked==true ){
+		document.getElementById("formBuscaAtividade:Check1").checked=false;
+		document.getElementById("formBuscaAtividade:Check2").checked=false;
+	}
+}
+</script>
+
+	
+<form id="formBuscaAtividade" name="formBuscaAtividade" method="post" action="/sigaa/extensao/Atividade/lista.jsf" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formBuscaAtividade" value="formBuscaAtividade" />
+<input id="formBuscaAtividade:nomeEdital" type="hidden" name="formBuscaAtividade:nomeEdital" /><input id="formBuscaAtividade:nomeTipoAcao" type="hidden" name="formBuscaAtividade:nomeTipoAcao" /><input id="formBuscaAtividade:nomeAreaCnpq" type="hidden" name="formBuscaAtividade:nomeAreaCnpq" /><input id="formBuscaAtividade:nomeUnidade" type="hidden" name="formBuscaAtividade:nomeUnidade" /><input id="formBuscaAtividade:nomeCentro" type="hidden" name="formBuscaAtividade:nomeCentro" /><input id="formBuscaAtividade:nomeArea" type="hidden" name="formBuscaAtividade:nomeArea" /><input id="formBuscaAtividade:nomeSituacao" type="hidden" name="formBuscaAtividade:nomeSituacao" /><input id="formBuscaAtividade:nometipoReg" type="hidden" name="formBuscaAtividade:nometipoReg" />
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<table class="formulario" width="90%">
+	<caption>Busca por A&#231;&#245;es de Extens&#227;o</caption>  
+	<tbody>
+		<tr>
+			<td> <input id="formBuscaAtividade:selectBuscaTitulo" type="checkbox" name="formBuscaAtividade:selectBuscaTitulo" class="noborder" /> </td>
+	    	<td> <label for="titulo" > T&#237;tulo da A&#231;&#227;o: </label> </td>
+	    	<td> <input id="formBuscaAtividade:buscaTitulo" type="text" name="formBuscaAtividade:buscaTitulo" onchange="javascript:$('formBuscaAtividade:selectBuscaTitulo').checked = true;" style="width:90%" />
+	    	</td>
+	    </tr>
+
+		<tr>
+			<td> <input id="formBuscaAtividade:selectBuscaAno" type="checkbox" name="formBuscaAtividade:selectBuscaAno" class="noborder" /> </td>
+	    	<td> <label for="ano"> Ano: </label> </td>
+	    	<td> <input id="formBuscaAtividade:buscaAno" type="text" name="formBuscaAtividade:buscaAno" value="2026" maxlength="4" onchange="javascript:$('formBuscaAtividade:selectBuscaAno').checked = true;" onkeyup="return formatarInteiro(this)" size="4" />
+	    	</td>
+	    </tr>
+	    
+	    <tr>
+			<td> <input id="formBuscaAtividade:selectBuscaCodigo" type="checkbox" name="formBuscaAtividade:selectBuscaCodigo" class="noborder" /> </td>
+	    	<td> <label for="ano"> C&#243;digo: </label> </td>
+	    	<td>
+	    	     <input id="formBuscaAtividade:buscaCodigo" type="text" name="formBuscaAtividade:buscaCodigo" alt="" onchange="javascript:$('formBuscaAtividade:selectBuscaCodigo').checked = true;" size="10" />
+	    	     	<img src="/sigaa/img/ajuda.gif" onMouseOver="document.getElementById('ajuda713631').style.visibility = 'visible';" onMouseOut="document.getElementById('ajuda713631').style.visibility = 'hidden';" border="0" >
+<span style="position: absolute;">
+	<div class="popUp" onMouseOut="document.getElementById('ajuda713631').style.visibility = 'hidden';"id="ajuda713631">
+		
+
+	    	     	O c&#243;digo de uma a&#231;&#227;o de extens&#227;o &#233; composto por no m&#237;nimo dez caracteres.
+	    	     	Os dois primeiros d&#237;gitos identificam o tipo da a&#231;&#227;o. Os n&#250;meros  seguintes e que
+	    	     	antecedem o caractere '-' representam o n&#250;mero 'sequ&#234;ncia' da a&#231;&#227;o. Por fim, os
+	    	     	&#250;ltimos quatro d&#237;gitos representam o ano da a&#231;&#227;o. Por exemplo, o c&#243;digo da a&#231;&#227;o
+	    	     	PD002-2009 informa que a a&#231;&#227;o &#233; um produto(PD) e que foi a segunda a&#231;&#227;o do tipo produto(002)
+	    	     	criada no ano de 2009. Existem c&#243;digos ainda onde a sequ&#234;ncia &#233; representada tr&#234;s
+	    	     	caracteres: xxx. Por exemplo, PJxxx-2008. Neste caso, o c&#243;digo da a&#231;&#227;o n&#227;o foi
+	    	     	gerado completamente e ele poder&#225; n&#227;o ser &#250;nico. Uma busca para este c&#243;digo retornaria
+	    	     	todos os projetos(PJ) de 2008.
+	    	     	</div>
+</span>
+
+	    	</td>
+	    	
+	    </tr>
+
+		<tr>
+			<td> <input id="formBuscaAtividade:selectBuscaPeriodo" type="checkbox" name="formBuscaAtividade:selectBuscaPeriodo" class="noborder" /> </td>
+	    	<td> <label for="periodo"> Per&#237;odo de execu&#231;&#227;o: </label> </td>
+	    	<td>
+	    	
+	    	<input id="formBuscaAtividade:dataInicio" name="formBuscaAtividade:dataInicio" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'));" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodo').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataInicio')" onclick="selectText('null', 'formBuscaAtividade:dataInicio')" /><span id="formBuscaAtividade:dataInicioSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataInicioCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataInicioCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataInicioCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataInicioCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataInicioCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataInicioCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataInicioCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataInicioCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataInicioCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataInicioCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataInicioCalendarVar.init(document.getElementById('formBuscaAtividade:dataInicioSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataInicioCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataInicio'),'dd/MM/yyyy')" />
+			a 
+			<input id="formBuscaAtividade:dataFim" name="formBuscaAtividade:dataFim" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'));" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodo').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataFim')" onclick="selectText('null', 'formBuscaAtividade:dataFim')" /><span id="formBuscaAtividade:dataFimSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataFimCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataFimCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataFimCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataFimCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataFimCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataFimCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataFimCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataFimCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataFimCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataFimCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataFimCalendarVar.init(document.getElementById('formBuscaAtividade:dataFimSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataFimCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataFim'),'dd/MM/yyyy')" />	
+	    	</td>
+	    </tr>
+
+		<tr>
+			<td> <input id="formBuscaAtividade:selectBuscaPeriodoConclusao" type="checkbox" name="formBuscaAtividade:selectBuscaPeriodoConclusao" class="noborder" /> </td>
+	    	<td> <label for="periodoConclusao">Per&#237;odo de conclus&#227;o: </label> </td>
+	    	<td>
+	    	
+	    	<input id="formBuscaAtividade:dataInicioConclusao" name="formBuscaAtividade:dataInicioConclusao" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'))" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodoConclusao').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataInicioConclusao')" onclick="selectText('null', 'formBuscaAtividade:dataInicioConclusao')" /><span id="formBuscaAtividade:dataInicioConclusaoSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataInicioConclusaoCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataInicioConclusaoCalendarVar.init(document.getElementById('formBuscaAtividade:dataInicioConclusaoSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataInicioConclusaoCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataInicioConclusao'),'dd/MM/yyyy')" />
+			a 
+			<input id="formBuscaAtividade:dataFimConclusao" name="formBuscaAtividade:dataFimConclusao" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'))" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodoConclusao').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataFimConclusao')" onclick="selectText('null', 'formBuscaAtividade:dataFimConclusao')" /><span id="formBuscaAtividade:dataFimConclusaoSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataFimConclusaoCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataFimConclusaoCalendarVar.init(document.getElementById('formBuscaAtividade:dataFimConclusaoSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataFimConclusaoCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataFimConclusao'),'dd/MM/yyyy')" />	
+	    	</td>
+	    </tr>
+	    
+	    <tr>
+            <td> <input id="formBuscaAtividade:selectBuscaPeriodoInicio" type="checkbox" name="formBuscaAtividade:selectBuscaPeriodoInicio" class="noborder" /> </td>
+            <td> <label for="periodoInicio">Per&#237;odo de in&#237;cio: </label> </td>
+            <td>            
+	            <input id="formBuscaAtividade:dataInicioExecucao" name="formBuscaAtividade:dataInicioExecucao" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'))" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodoInicio').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataInicioExecucao')" onclick="selectText('null', 'formBuscaAtividade:dataInicioExecucao')" /><span id="formBuscaAtividade:dataInicioExecucaoSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataInicioExecucaoCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataInicioExecucaoCalendarVar.init(document.getElementById('formBuscaAtividade:dataInicioExecucaoSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataInicioExecucaoCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataInicioExecucao'),'dd/MM/yyyy')" />
+	            a 
+	            <input id="formBuscaAtividade:dataFimExecucao" name="formBuscaAtividade:dataFimExecucao" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'))" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodoInicio').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataFimExecucao')" onclick="selectText('null', 'formBuscaAtividade:dataFimExecucao')" /><span id="formBuscaAtividade:dataFimExecucaoSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataFimExecucaoCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataFimExecucaoCalendarVar.init(document.getElementById('formBuscaAtividade:dataFimExecucaoSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataFimExecucaoCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataFimExecucao'),'dd/MM/yyyy')" />  
+            </td>
+        </tr>
+        
+        <tr>
+			<td> <input id="formBuscaAtividade:selectBuscaPeriodoRelatorio" type="checkbox" name="formBuscaAtividade:selectBuscaPeriodoRelatorio" class="noborder" /> </td>
+	    	<td> <label for="periodoConclusao">Per&#237;odo de Envio do Relat&#243;rio Final: </label> </td>
+	    	<td>
+	    	
+	    	<input id="formBuscaAtividade:dataInicioRelatorio" name="formBuscaAtividade:dataInicioRelatorio" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'))" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodoRelatorio').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataInicioRelatorio')" onclick="selectText('null', 'formBuscaAtividade:dataInicioRelatorio')" /><span id="formBuscaAtividade:dataInicioRelatorioSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataInicioRelatorioCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataInicioRelatorioCalendarVar.init(document.getElementById('formBuscaAtividade:dataInicioRelatorioSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataInicioRelatorioCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataInicioRelatorio'),'dd/MM/yyyy')" />
+			a 
+			<input id="formBuscaAtividade:dataFimRelatorio" name="formBuscaAtividade:dataFimRelatorio" type="text" maxlength="10" size="10" onkeypress="return(formatarMascara(this,event,'##/##/####'))" onchange="javascript:$('formBuscaAtividade:selectBuscaPeriodoRelatorio').checked = true;" onfocus="selectText('null', 'formBuscaAtividade:dataFimRelatorio')" onclick="selectText('null', 'formBuscaAtividade:dataFimRelatorio')" /><span id="formBuscaAtividade:dataFimRelatorioSpan"></span><script type="text/javascript">formBuscaAtividade_3AdataFimRelatorioCalendarVar=new org_apache_myfaces_PopupCalendar();
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.imgDir = "\/sigaa\/faces\/myFacesExtensionResource\/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader\/17763682\/calendar.HtmlCalendarRenderer\/DB\/";
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.monthName = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.dayName = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.startAt = 0;
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.dateFormatSymbols.weekdays = new Array("Domingo","Segunda-feira","Ter\u00E7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00E1bado");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Dom","Seg","Ter","Qua","Qui","Sex","S\u00E1b");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.dateFormatSymbols.months = new Array("Janeiro","Fevereiro","Mar\u00E7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.todayString = "Hoje \u00E9";
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.todayDateFormat = "dd\/MM\/yyyy";
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.initData.popupLeft = false;
+
+formBuscaAtividade_3AdataFimRelatorioCalendarVar.init(document.getElementById('formBuscaAtividade:dataFimRelatorioSpan'));
+</script><img src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/calendar.HtmlCalendarRenderer/images/calendar.gif" style="vertical-align:bottom;" onclick="formBuscaAtividade_3AdataFimRelatorioCalendarVar._popUpCalendar(this,document.getElementById('formBuscaAtividade:dataFimRelatorio'),'dd/MM/yyyy')" />	
+	    	</td>
+	    </tr>
+		
+		<tr>
+			<td> <input id="formBuscaAtividade:selectBuscaEdital" type="checkbox" name="formBuscaAtividade:selectBuscaEdital" class="noborder" onclick="javascript:if($('formBuscaAtividade:selectBuscaLinhaTematica').checked)$('formBuscaAtividade:selectBuscaLinhaTematica').checked=$('formBuscaAtividade:selectBuscaEdital').checked;" /> </td>
+	    	<td> <label for="edital"> Edital: </label> </td>
+	    	<td>	    	
+	    	 	<select id="formBuscaAtividade:buscaEdital" name="formBuscaAtividade:buscaEdital" size="1" onchange="submit();" onfocus="javascript:$('formBuscaAtividade:selectBuscaEdital').checked = true;javascript:$('formBuscaAtividade:selectBuscaLinhaTematica').checked = false;javascript:$('formBuscaAtividade:buscaLinhaTematica').value = 0;" style="width:95%;">	<option value="0" selected="selected">-- SELECIONE --</option>
+<optgroup label="2026">	<option value="142">Edital n&ordm; 06/2026 - Rede de Polos de Extens&atilde;o (REPE)</option>
+	<option value="143">Edital Casa Aberta - 2026</option>
+	<option value="140">Edital DEX n&ordm; 05/2026 &#150; Rede MUSA</option>
+	<option value="138">EDITAL PIBEX 2026</option>
+</optgroup><optgroup label="2025">	<option value="136">Chamada Publica Interna DEX - Semuni 2025</option>
+	<option value="137">Edital Rede CUC 2025</option>
+	<option value="141">Licenciaturas em Movimento - Saberes em Rede 2025</option>
+	<option value="135">Programa Especial Semana Universit&aacute;ria 2025</option>
+	<option value="134">Edital REPE 2025</option>
+	<option value="133">Edital Casa Aberta - 2025</option>
+	<option value="132">Edital PIBEX 2025</option>
+</optgroup><optgroup label="2024">	<option value="130">Programa Estrat&eacute;gico &#147;Extens&atilde;o Curricular da UnB: forma&ccedil;&atilde;o discente de vincula&ccedil;&atilde;o social&#148;</option>
+	<option value="129">Programa  Estrat&eacute;gico DEX/DPI/SDH Mulheres e Meninas na Ci&ecirc;ncia Pra fazer a Diferen&ccedil;a 2024</option>
+	<option value="128">REDE DE MUSEUS E ACERVOS DA UNB &#150; REDE  MUSA</option>
+	<option value="127">Programa de Extens&atilde;o Espa&ccedil;o Da Mem&oacute;ria (MemoUnB) e Inser&ccedil;&atilde;o Curricular da Extens&atilde;o</option>
+	<option value="125">Programa Especial Semana Universit&aacute;ria 2024</option>
+	<option value="126">Chamada Publica Interna DEX - Semuni 2024</option>
+	<option value="124">PROEXTPG - UnB 2024</option>
+	<option value="123">Edital Programa Estrat&eacute;gico de Extens&atilde;o Maria da Penha vai &agrave; Escola (2024): informa&ccedil;&atilde;o e forma&ccedil;&atilde;o integrando a universidade &agrave; sociedade</option>
+	<option value="122">Programa Estrat&eacute;gico Extens&atilde;o e Comunica&ccedil;&atilde;o em Rede - 2024</option>
+	<option value="118">Edital DEX N&ordm; 03/2024 &#150; Rede de Polos de Extens&atilde;o - REPE</option>
+	<option value="120">Edital DEX N&ordm; 02/2024 &#150; Rede de Casas  Universit&aacute;rias de Cultura &#150; Rede CUC 2024</option>
+	<option value="117">Edital PIBEX 2024</option>
+	<option value="119">Edital Licenciaturas em A&ccedil;&atilde;o 2024</option>
+	<option value="121">Viv&ecirc;ncia 2024</option>
+</optgroup><optgroup label="2023">	<option value="116">Democracia, Resist&ecirc;ncia e Movimento Estudantil na Universidade de Bras&iacute;lia</option>
+	<option value="115">Chamada Publica Interna DEX - Semuni 2023 - Parte 2</option>
+	<option value="114">Viv&ecirc;ncia UnB 2023</option>
+	<option value="113">Chamada Publica Interna DEX - Semuni 2023</option>
+	<option value="112">Programa Especial Semana Universit&aacute;ria 2023</option>
+	<option value="78">EDITAL PROGRAMA ESTRAT&Eacute;GICO DEX/DPI/SDH N.&ordm; 05 /2023 &#150; MULHERES E MENINAS NA CI&Ecirc;NCIA: O FUTURO &Eacute; AGORA</option>
+	<option value="77">Programas estrat&eacute;gicos do Decanato de Extens&atilde;o</option>
+	<option value="75">Edital CUC 2023</option>
+	<option value="76">Edital Licenciaturas em A&ccedil;&atilde;o 2023</option>
+	<option value="74">Edital DEX N&ordm; 03/2023 &#150; Rede de Polos de Extens&atilde;o - REPE</option>
+	<option value="73">Edital PIBEX 01/2023</option>
+</optgroup><optgroup label="2022">	<option value="72">Extens&atilde;o integrada, atuante e necess&aacute;ria</option>
+	<option value="71">Edital Rede de Polos de Extens&atilde;o</option>
+	<option value="70">Semana Universit&aacute;ria 2022 - Decanato de Extens&atilde;o</option>
+	<option value="68">Programa Especial Semana Universit&aacute;ria 2022</option>
+	<option value="69">Programa Estrat&eacute;gico UnB 2030</option>
+	<option value="67">Arte, Cultura e Engajamento Social: Forma&ccedil;&atilde;o e Difus&atilde;o Cultural</option>
+	<option value="66">Edital Licenciaturas em A&ccedil;&atilde;o 2022</option>
+	<option value="64">Edital II - Programa Estrat&eacute;gico UnB 60 anos</option>
+	<option value="65">Programa Estrat&eacute;gico Extens&atilde;o e Comunica&ccedil;&atilde;o em Rede</option>
+	<option value="58">Edital CUC 2022</option>
+	<option value="63">Edital DEX n&ordm; 07/2022 &#150; Polo UnB Chapada dos Veadeiros</option>
+	<option value="60">Edital DEX n&ordm; 04/2022 &#150; Polo UnB Estrutural</option>
+	<option value="59">Edital DEX n&ordm; 03/2022 &#150; Polo UnB Recanto das Emas</option>
+	<option value="62">Edital DEX n&ordm; 06/2022 &#150; Polo UnB Kalunga</option>
+	<option value="57">Edital PIBEX 2022</option>
+	<option value="61">Edital DEX n&ordm; 05/2022 &#150; Polo UnB Parano&aacute;</option>
+</optgroup><optgroup label="2021">	<option value="53">Edital Polo Kalunga 2021</option>
+	<option value="52">Edital Parano&aacute; 2021</option>
+	<option value="56">Programa Estrat&eacute;gico UnB 60 anos</option>
+	<option value="51">UnB Perto de Voc&ecirc;</option>
+	<option value="54">Licenciaturas em a&ccedil;&atilde;o 2021 - Segunda edi&ccedil;&atilde;o</option>
+	<option value="48">Programa Especial Semana Universit&aacute;ria 2021</option>
+	<option value="47">Programas Estrat&eacute;gicos do Decanato de Extens&atilde;o</option>
+	<option value="46">Semana Universit&aacute;ria 2021 - Decanato de Extens&atilde;o</option>
+	<option value="13">Edital Licenciaturas em A&ccedil;&atilde;o 2021</option>
+	<option value="11">Edital PIBEX 2021</option>
+	<option value="10">Edital Recanto das Emas 2021</option>
+	<option value="9">Edital Cidade Estrutural 2021</option>
+	<option value="12">Edital Casas Universit&aacute;rias de Cultura (CUC) 2021</option>
+</optgroup><optgroup label="2020">	<option value="6">Licenciaturas em a&ccedil;&atilde;o</option>
+	<option value="5">Semana Universit&aacute;ria 2020</option>
+	<option value="4">Edital UnB nos 60 anos de Bras&iacute;lia</option>
+	<option value="3">Edital Programa Casas Universit&aacute;rias de Cultura</option>
+	<option value="1">EDITAL PARA ATIVIDADES DE EXTENS&Atilde;O NA CIDADE ESTRUTURAL</option>
+</optgroup></select>	    	 
+	    	 </td>
+	    </tr>
+	    
+			<tr>
+			<td><input id="formBuscaAtividade:selectBuscaTipoAtividade" type="checkbox" name="formBuscaAtividade:selectBuscaTipoAtividade" class="noborder" /> </td>
+	    	<td> <label for="tipoAcao"> Tipo da A&#231;&#227;o: </label> </td>
+	    	<td>
+	    	 	<select id="formBuscaAtividade:buscaTipoAcao" name="formBuscaAtividade:buscaTipoAcao" multiple="multiple" size="4" onchange="javascript:$('formBuscaAtividade:selectBuscaTipoAtividade').checked = true;">	<option value="3">CURSO</option>
+	<option value="4">EVENTO</option>
+	<option value="5">PRESTA&Ccedil;&Atilde;O DE SERVI&Ccedil;OS</option>
+	<option value="6">PRODUTO</option>
+	<option value="1">PROGRAMA</option>
+	<option value="2">PROJETO</option>
+</select>
+	    	 		<img src="/sigaa/img/ajuda.gif" onMouseOver="document.getElementById('ajuda323166').style.visibility = 'visible';" onMouseOut="document.getElementById('ajuda323166').style.visibility = 'hidden';" border="0" >
+<span style="position: absolute;">
+	<div class="popUp" onMouseOut="document.getElementById('ajuda323166').style.visibility = 'hidden';"id="ajuda323166">
+		
+
+	    	 		Poder&#225; ser marcada mais de uma op&#231;&#227;o, basta 
+	    	 		apenas segurar a tecla "Ctrl" e clicar nas op&#231;&#245;es.
+	    	 		Role para baixo para mais op&#231;&#245;es.
+	    	     	</div>
+</span>
+   	 
+	    	 </td>
+	    </tr>
+
+		<tr>
+			<td><input id="formBuscaAtividade:selectBuscaAreaCNPq" type="checkbox" name="formBuscaAtividade:selectBuscaAreaCNPq" class="noborder" /> </td>
+	    	<td> <label for="areaCNPQ"> &#193;rea do CNPq: </label> </td>
+	    	<td>
+		    	<select id="formBuscaAtividade:buscaAreaCNPq" name="formBuscaAtividade:buscaAreaCNPq" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaAreaCNPq').checked = true;">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="50000004">Ci&ecirc;ncias Agr&aacute;rias</option>
+	<option value="20000006">Ci&ecirc;ncias Biol&oacute;gicas</option>
+	<option value="10000003">Ci&ecirc;ncias Exatas e da Terra</option>
+	<option value="70000000">Ci&ecirc;ncias Humanas</option>
+	<option value="60000007">Ci&ecirc;ncias Sociais Aplicadas</option>
+	<option value="40000001">Ci&ecirc;ncias da Sa&uacute;de</option>
+	<option value="30000009">Engenharias</option>
+	<option value="80000002">Ling&uuml;&iacute;stica, Letras e Artes</option>
+	<option value="90000005">Outra</option>
+</select>
+	    	 </td>
+	    </tr>
+	    <tr>
+			<td><input id="formBuscaAtividade:selectBuscaCentroUnidadeAcademicaDiscente" type="checkbox" name="formBuscaAtividade:selectBuscaCentroUnidadeAcademicaDiscente" class="noborder" /> </td>
+					
+	    	<td> <label for="centroUnidadeAcademicaDiscente"> Centro/Unidade Acad&#234;mica do(a) Discente: </label> </td>
+	    	<td> 	
+		    	<select id="formBuscaAtividade:buscaCentroUnidadeAcademicaDiscente" name="formBuscaAtividade:buscaCentroUnidadeAcademicaDiscente" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaCentroUnidadeAcademicaDiscente').checked = true;">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="672">CAMPUS UNB CEIL&Acirc;NDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SA&Uacute;DE</option>
+	<option value="673">CAMPUS UNB GAMA: FACULDADE DE CI&Ecirc;NCIAS E TECNOLOGIAS EM ENGENHARIA</option>
+	<option value="590">CENTRO ATENDIM ESTUDOS PSICOL&Oacute;GICOS</option>
+	<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENT&Aacute;VEL</option>
+	<option value="314">CENTRO DE EXCEL&Ecirc;NCIA EM TURISMO</option>
+	<option value="650">CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDISCIPLIN</option>
+	<option value="655">CENTRO FORMACAO REC HUMANOS EM TRANSPORT</option>
+	<option value="316">CENTRO INTEGRADO ORDENAMENTO TERRITORIAL</option>
+	<option value="1448">CENTRO INTERNACIONAL DE BIO&Eacute;TICA E HUMANIDADES</option>
+	<option value="315">CENTRO INTERNACIONAL DE F&Iacute;SICA</option>
+	<option value="400">CENTRO OLIMPICO</option>
+	<option value="671">CENTRO PESQ. APLIC. BAMBU FIBRAS NATURAI</option>
+	<option value="663">CENTRO POL. DIR. ECON. E TECNO. CIMUNIC.</option>
+	<option value="659">CENTRO REF. CONS. NATU. RECUP. A. DEGRAD</option>
+	<option value="677">CENTRO UNB CERRADO</option>
+	<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG</option>
+	<option value="170">DECANATO DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O / DPG</option>
+	<option value="158">DECANATO EXTENS&Atilde;O</option>
+	<option value="351">DEPARTAMENTO DE AUDIOVISUAIS E PUBLICIDADE/DAP</option>
+	<option value="345">DEPARTAMENTO DE COMUNICA&Ccedil;&Atilde;O ORGANIZACIONAL/COM</option>
+	<option value="660">DEPARTAMENTO DE DESIGN (11.01.01.14.04)</option>
+	<option value="449">DEPARTAMENTO DE ENGENHARIA MECANICA</option>
+	<option value="479">DEPARTAMENTO DE ESTUDOS LATINO AMERICANO</option>
+	<option value="678">DEPARTAMENTO DE FARMACIA</option>
+	<option value="791">DEPARTAMENTO DE GESTAO DE POLITICAS PUBL</option>
+	<option value="352">DEPARTAMENTO DE JORNALISMO/JOR</option>
+	<option value="518">DEPARTAMENTO DE MATEM&Aacute;TICA</option>
+	<option value="390">DEPARTAMENTO DE M&Eacute;TODOS E T&Eacute;CNICAS</option>
+	<option value="391">DEPARTAMENTO DE POL&Iacute;TICAS P&Uacute;BLICAS E GEST&Atilde;O DA EDUCA&Ccedil;&Atilde;O</option>
+	<option value="592">DEPARTAMENTO DE PSICOLOGIA CL&Iacute;NICA</option>
+	<option value="483">DEPARTAMENTO DE SOCIOLOGIA</option>
+	<option value="392">DEPARTAMENTO DE TEORIA E FUNDAMENTOS</option>
+	<option value="327">DEPTO ADMINISTRA&Ccedil;&Atilde;O</option>
+	<option value="481">DEPTO ANTROPOLOGIA</option>
+	<option value="492">DEPTO ARTES C&Ecirc;NICAS</option>
+	<option value="498">DEPTO ARTES VISUAIS</option>
+	<option value="464">DEPTO BIOLOGIA CELULAR</option>
+	<option value="462">DEPTO BOT&Acirc;NICA</option>
+	<option value="333">DEPTO CI&Ecirc;NCIAS CONT&Aacute;BEIS ATUARIAIS</option>
+	<option value="508">DEPTO CI&Ecirc;NCIAS DA COMPUTA&Ccedil;&Atilde;O</option>
+	<option value="466">DEPTO CI&Ecirc;NCIAS FISIOL&Oacute;GICAS</option>
+	<option value="337">DEPTO CI&Ecirc;NCIAS INFORMA&Ccedil;&Atilde;O DOCUMENTA&Ccedil;&Atilde;O</option>
+	<option value="467">DEPTO ECOLOGIA</option>
+	<option value="548">DEPTO ECONOMIA</option>
+	<option value="422">DEPTO ENFERMAGEM</option>
+	<option value="437">DEPTO ENGENHARIA CIVIL E AMBIENTAL</option>
+	<option value="760">DEPTO ENGENHARIA DE PRODUCAO</option>
+	<option value="443">DEPTO ENGENHARIA ELETRICA</option>
+	<option value="433">DEPTO ENGENHARIA FLORESTAL</option>
+	<option value="514">DEPTO ESTAT&Iacute;STICA</option>
+	<option value="552">DEPTO FILOSOFIA</option>
+	<option value="469">DEPTO FITOPATOLOGIA</option>
+	<option value="471">DEPTO GEN&Eacute;TICA E MORFOLOGIA</option>
+	<option value="555">DEPTO GEOGRAFIA</option>
+	<option value="539">DEPTO GEOLOGIA GERAL APLICADA</option>
+	<option value="541">DEPTO GEOQU&Iacute;MICA E RECURSOS MINERAIS</option>
+	<option value="559">DEPTO HIST&Oacute;RIA</option>
+	<option value="578">DEPTO LINGUISTICA, PORT. LING. CLASSICAS</option>
+	<option value="574">DEPTO L&Iacute;NGUAS ESTRANGEIRAS E TRADU&Ccedil;&Atilde;O</option>
+	<option value="540">DEPTO MINERALOGIA E PETROLOGIA</option>
+	<option value="495">DEPTO M&Uacute;SICA</option>
+	<option value="424">DEPTO NUTRICAO</option>
+	<option value="427">DEPTO ODONTOLOGIA</option>
+	<option value="594">DEPTO PROCESSOS PSICOL&Oacute;GICOS B&Aacute;SICOS</option>
+	<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN</option>
+	<option value="593">DEPTO PSICOLOGIA ESCOLAR DESENVOLVIMENTO</option>
+	<option value="596">DEPTO PSICOLOGIA SOCIAL E DO TRABALHO</option>
+	<option value="420">DEPTO SAUDE COLETIVA</option>
+	<option value="563">DEPTO SERVI&Ccedil;O SOCIAL</option>
+	<option value="361">DEPTO TECNOLOGIA ARQUITETURA URBANISMO</option>
+	<option value="362">DEPTO TEORIA HISTORIA ARQUIT E URBANISM</option>
+	<option value="580">DEPTO TEORIA LITER&Aacute;RIA E LITERATURA</option>
+	<option value="472">DEPTO ZOOLOGIA</option>
+	<option value="643">DIRETORIA DO CENTRO DE APOIO AO DESENVOLVIMENTO TECNOL&Oacute;GICO</option>
+	<option value="794">FACE GEST&Atilde;O DE POL&Iacute;TICAS P&Uacute;BLICAS/GPP</option>
+	<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERIN&Aacute;RIA</option>
+	<option value="353">FACULDADE DE ARQUITETURA E URBANISMO</option>
+	<option value="674">FACULDADE DE CI&Ecirc;NCIA DA INFORMA&Ccedil;&Atilde;O</option>
+	<option value="410">FACULDADE DE CI&Ecirc;NCIAS DA SA&Uacute;DE</option>
+	<option value="343">FACULDADE DE COMUNICA&Ccedil;&Atilde;O</option>
+	<option value="370">FACULDADE DE DIREITO</option>
+	<option value="381">FACULDADE DE EDUCA&Ccedil;&Atilde;O</option>
+	<option value="393">FACULDADE DE EDUCA&Ccedil;&Atilde;O F&Iacute;SICA</option>
+	<option value="402">FACULDADE DE MEDICINA</option>
+	<option value="666">FACULDADE DE PLANALTINA</option>
+	<option value="429">FACULDADE DE TECNOLOGIA</option>
+	<option value="323">FACULDADE ECONOMIA,  ADMINISTRA&Ccedil;&Atilde;O,  CONTABILIDADE E  GEST POL P&Uacute;BLICAS</option>
+	<option value="284">FAZENDA AGUA LIMPA</option>
+	<option value="288">HOSP-HOSPITAL UNIVERSIT&Aacute;RIO DE BRAS&Iacute;LIA</option>
+	<option value="485">INSTITUTO DE ARTES</option>
+	<option value="668">INSTITUTO DE CI&Ecirc;NCIA POL&Iacute;TICA</option>
+	<option value="455">INSTITUTO DE CI&Ecirc;NCIAS BIOL&Oacute;GICAS</option>
+	<option value="504">INSTITUTO DE CI&Ecirc;NCIAS EXATAS</option>
+	<option value="544">INSTITUTO DE CI&Ecirc;NCIAS HUMANAS</option>
+	<option value="473">INSTITUTO DE CI&Ecirc;NCIAS SOCIAIS</option>
+	<option value="524">INSTITUTO DE F&Iacute;SICA</option>
+	<option value="533">INSTITUTO DE GEOCI&Ecirc;NCIAS</option>
+	<option value="567">INSTITUTO DE LETRAS</option>
+	<option value="583">INSTITUTO DE PSICOLOGIA</option>
+	<option value="610">INSTITUTO DE QU&Iacute;MICA</option>
+	<option value="669">INSTITUTO DE RELA&Ccedil;&Otilde;ES INTERNACIONAIS</option>
+	<option value="542">OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO</option>
+	<option value="1080">PARQUE CIENT&Iacute;FICO E TECNOL&Oacute;GICO DA UNB</option>
+	<option value="827">PARQUE CIENT&Iacute;FICO TECNOL&Oacute;GICO DA UNB</option>
+	<option value="1615">PARQUE DE INOVA&Ccedil;&Atilde;O E SUSTENTABILIDADE DO AMBIENTE CONSTRU&Iacute;DO</option>
+	<option value="69">REITORIA</option>
+	<option value="140">SECRETARIA DE ADMINISTRACAO ACADEMICA</option>
+</select>
+	    	 </td>
+	    </tr>
+	    <tr>
+			<td><input id="formBuscaAtividade:selectBuscaCentroUnidadeAcademicaTecnicoAdm" type="checkbox" name="formBuscaAtividade:selectBuscaCentroUnidadeAcademicaTecnicoAdm" class="noborder" /> </td>
+					
+	    	<td> <label for="centroUnidadeAcademicaTecnicoAdm"> Centro/Unidade Acad&#234;mica do(a) T&#233;cnico(a) Administrativo(a): </label> </td>
+	    	<td> 	
+		    	<select id="formBuscaAtividade:buscaCentroUnidadeAcademicaTecnicoAdm" name="formBuscaAtividade:buscaCentroUnidadeAcademicaTecnicoAdm" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaCentroUnidadeAcademicaTecnicoAdm').checked = true;">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="672">CAMPUS UNB CEIL&Acirc;NDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SA&Uacute;DE</option>
+	<option value="673">CAMPUS UNB GAMA: FACULDADE DE CI&Ecirc;NCIAS E TECNOLOGIAS EM ENGENHARIA</option>
+	<option value="590">CENTRO ATENDIM ESTUDOS PSICOL&Oacute;GICOS</option>
+	<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENT&Aacute;VEL</option>
+	<option value="314">CENTRO DE EXCEL&Ecirc;NCIA EM TURISMO</option>
+	<option value="650">CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDISCIPLIN</option>
+	<option value="655">CENTRO FORMACAO REC HUMANOS EM TRANSPORT</option>
+	<option value="316">CENTRO INTEGRADO ORDENAMENTO TERRITORIAL</option>
+	<option value="1448">CENTRO INTERNACIONAL DE BIO&Eacute;TICA E HUMANIDADES</option>
+	<option value="315">CENTRO INTERNACIONAL DE F&Iacute;SICA</option>
+	<option value="400">CENTRO OLIMPICO</option>
+	<option value="671">CENTRO PESQ. APLIC. BAMBU FIBRAS NATURAI</option>
+	<option value="663">CENTRO POL. DIR. ECON. E TECNO. CIMUNIC.</option>
+	<option value="659">CENTRO REF. CONS. NATU. RECUP. A. DEGRAD</option>
+	<option value="677">CENTRO UNB CERRADO</option>
+	<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG</option>
+	<option value="170">DECANATO DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O / DPG</option>
+	<option value="158">DECANATO EXTENS&Atilde;O</option>
+	<option value="351">DEPARTAMENTO DE AUDIOVISUAIS E PUBLICIDADE/DAP</option>
+	<option value="345">DEPARTAMENTO DE COMUNICA&Ccedil;&Atilde;O ORGANIZACIONAL/COM</option>
+	<option value="660">DEPARTAMENTO DE DESIGN (11.01.01.14.04)</option>
+	<option value="449">DEPARTAMENTO DE ENGENHARIA MECANICA</option>
+	<option value="479">DEPARTAMENTO DE ESTUDOS LATINO AMERICANO</option>
+	<option value="678">DEPARTAMENTO DE FARMACIA</option>
+	<option value="791">DEPARTAMENTO DE GESTAO DE POLITICAS PUBL</option>
+	<option value="352">DEPARTAMENTO DE JORNALISMO/JOR</option>
+	<option value="518">DEPARTAMENTO DE MATEM&Aacute;TICA</option>
+	<option value="390">DEPARTAMENTO DE M&Eacute;TODOS E T&Eacute;CNICAS</option>
+	<option value="391">DEPARTAMENTO DE POL&Iacute;TICAS P&Uacute;BLICAS E GEST&Atilde;O DA EDUCA&Ccedil;&Atilde;O</option>
+	<option value="592">DEPARTAMENTO DE PSICOLOGIA CL&Iacute;NICA</option>
+	<option value="483">DEPARTAMENTO DE SOCIOLOGIA</option>
+	<option value="392">DEPARTAMENTO DE TEORIA E FUNDAMENTOS</option>
+	<option value="327">DEPTO ADMINISTRA&Ccedil;&Atilde;O</option>
+	<option value="481">DEPTO ANTROPOLOGIA</option>
+	<option value="492">DEPTO ARTES C&Ecirc;NICAS</option>
+	<option value="498">DEPTO ARTES VISUAIS</option>
+	<option value="464">DEPTO BIOLOGIA CELULAR</option>
+	<option value="462">DEPTO BOT&Acirc;NICA</option>
+	<option value="333">DEPTO CI&Ecirc;NCIAS CONT&Aacute;BEIS ATUARIAIS</option>
+	<option value="508">DEPTO CI&Ecirc;NCIAS DA COMPUTA&Ccedil;&Atilde;O</option>
+	<option value="466">DEPTO CI&Ecirc;NCIAS FISIOL&Oacute;GICAS</option>
+	<option value="337">DEPTO CI&Ecirc;NCIAS INFORMA&Ccedil;&Atilde;O DOCUMENTA&Ccedil;&Atilde;O</option>
+	<option value="467">DEPTO ECOLOGIA</option>
+	<option value="548">DEPTO ECONOMIA</option>
+	<option value="422">DEPTO ENFERMAGEM</option>
+	<option value="437">DEPTO ENGENHARIA CIVIL E AMBIENTAL</option>
+	<option value="760">DEPTO ENGENHARIA DE PRODUCAO</option>
+	<option value="443">DEPTO ENGENHARIA ELETRICA</option>
+	<option value="433">DEPTO ENGENHARIA FLORESTAL</option>
+	<option value="514">DEPTO ESTAT&Iacute;STICA</option>
+	<option value="552">DEPTO FILOSOFIA</option>
+	<option value="469">DEPTO FITOPATOLOGIA</option>
+	<option value="471">DEPTO GEN&Eacute;TICA E MORFOLOGIA</option>
+	<option value="555">DEPTO GEOGRAFIA</option>
+	<option value="539">DEPTO GEOLOGIA GERAL APLICADA</option>
+	<option value="541">DEPTO GEOQU&Iacute;MICA E RECURSOS MINERAIS</option>
+	<option value="559">DEPTO HIST&Oacute;RIA</option>
+	<option value="578">DEPTO LINGUISTICA, PORT. LING. CLASSICAS</option>
+	<option value="574">DEPTO L&Iacute;NGUAS ESTRANGEIRAS E TRADU&Ccedil;&Atilde;O</option>
+	<option value="540">DEPTO MINERALOGIA E PETROLOGIA</option>
+	<option value="495">DEPTO M&Uacute;SICA</option>
+	<option value="424">DEPTO NUTRICAO</option>
+	<option value="427">DEPTO ODONTOLOGIA</option>
+	<option value="594">DEPTO PROCESSOS PSICOL&Oacute;GICOS B&Aacute;SICOS</option>
+	<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN</option>
+	<option value="593">DEPTO PSICOLOGIA ESCOLAR DESENVOLVIMENTO</option>
+	<option value="596">DEPTO PSICOLOGIA SOCIAL E DO TRABALHO</option>
+	<option value="420">DEPTO SAUDE COLETIVA</option>
+	<option value="563">DEPTO SERVI&Ccedil;O SOCIAL</option>
+	<option value="361">DEPTO TECNOLOGIA ARQUITETURA URBANISMO</option>
+	<option value="362">DEPTO TEORIA HISTORIA ARQUIT E URBANISM</option>
+	<option value="580">DEPTO TEORIA LITER&Aacute;RIA E LITERATURA</option>
+	<option value="472">DEPTO ZOOLOGIA</option>
+	<option value="643">DIRETORIA DO CENTRO DE APOIO AO DESENVOLVIMENTO TECNOL&Oacute;GICO</option>
+	<option value="794">FACE GEST&Atilde;O DE POL&Iacute;TICAS P&Uacute;BLICAS/GPP</option>
+	<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERIN&Aacute;RIA</option>
+	<option value="353">FACULDADE DE ARQUITETURA E URBANISMO</option>
+	<option value="674">FACULDADE DE CI&Ecirc;NCIA DA INFORMA&Ccedil;&Atilde;O</option>
+	<option value="410">FACULDADE DE CI&Ecirc;NCIAS DA SA&Uacute;DE</option>
+	<option value="343">FACULDADE DE COMUNICA&Ccedil;&Atilde;O</option>
+	<option value="370">FACULDADE DE DIREITO</option>
+	<option value="381">FACULDADE DE EDUCA&Ccedil;&Atilde;O</option>
+	<option value="393">FACULDADE DE EDUCA&Ccedil;&Atilde;O F&Iacute;SICA</option>
+	<option value="402">FACULDADE DE MEDICINA</option>
+	<option value="666">FACULDADE DE PLANALTINA</option>
+	<option value="429">FACULDADE DE TECNOLOGIA</option>
+	<option value="323">FACULDADE ECONOMIA,  ADMINISTRA&Ccedil;&Atilde;O,  CONTABILIDADE E  GEST POL P&Uacute;BLICAS</option>
+	<option value="284">FAZENDA AGUA LIMPA</option>
+	<option value="288">HOSP-HOSPITAL UNIVERSIT&Aacute;RIO DE BRAS&Iacute;LIA</option>
+	<option value="485">INSTITUTO DE ARTES</option>
+	<option value="668">INSTITUTO DE CI&Ecirc;NCIA POL&Iacute;TICA</option>
+	<option value="455">INSTITUTO DE CI&Ecirc;NCIAS BIOL&Oacute;GICAS</option>
+	<option value="504">INSTITUTO DE CI&Ecirc;NCIAS EXATAS</option>
+	<option value="544">INSTITUTO DE CI&Ecirc;NCIAS HUMANAS</option>
+	<option value="473">INSTITUTO DE CI&Ecirc;NCIAS SOCIAIS</option>
+	<option value="524">INSTITUTO DE F&Iacute;SICA</option>
+	<option value="533">INSTITUTO DE GEOCI&Ecirc;NCIAS</option>
+	<option value="567">INSTITUTO DE LETRAS</option>
+	<option value="583">INSTITUTO DE PSICOLOGIA</option>
+	<option value="610">INSTITUTO DE QU&Iacute;MICA</option>
+	<option value="669">INSTITUTO DE RELA&Ccedil;&Otilde;ES INTERNACIONAIS</option>
+	<option value="542">OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO</option>
+	<option value="1080">PARQUE CIENT&Iacute;FICO E TECNOL&Oacute;GICO DA UNB</option>
+	<option value="827">PARQUE CIENT&Iacute;FICO TECNOL&Oacute;GICO DA UNB</option>
+	<option value="1615">PARQUE DE INOVA&Ccedil;&Atilde;O E SUSTENTABILIDADE DO AMBIENTE CONSTRU&Iacute;DO</option>
+	<option value="69">REITORIA</option>
+	<option value="140">SECRETARIA DE ADMINISTRACAO ACADEMICA</option>
+</select>
+	    	 </td>
+	    </tr>
+	    
+	    <tr>
+			<td><input id="formBuscaAtividade:selectBuscaCentroUnidadeAcademicaDocente" type="checkbox" name="formBuscaAtividade:selectBuscaCentroUnidadeAcademicaDocente" class="noborder" /> </td>
+					
+	    	<td> <label for="centroUnidadeAcademicaDocente"> Centro/Unidade Acad&#234;mica do(a) Docente: </label> </td>
+	    	<td> 	
+		    	<select id="formBuscaAtividade:buscaCentroUnidadeAcademicaDocente" name="formBuscaAtividade:buscaCentroUnidadeAcademicaDocente" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaCentroUnidadeAcademicaDocente').checked = true;">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="672">CAMPUS UNB CEIL&Acirc;NDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SA&Uacute;DE</option>
+	<option value="673">CAMPUS UNB GAMA: FACULDADE DE CI&Ecirc;NCIAS E TECNOLOGIAS EM ENGENHARIA</option>
+	<option value="590">CENTRO ATENDIM ESTUDOS PSICOL&Oacute;GICOS</option>
+	<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENT&Aacute;VEL</option>
+	<option value="314">CENTRO DE EXCEL&Ecirc;NCIA EM TURISMO</option>
+	<option value="650">CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDISCIPLIN</option>
+	<option value="655">CENTRO FORMACAO REC HUMANOS EM TRANSPORT</option>
+	<option value="316">CENTRO INTEGRADO ORDENAMENTO TERRITORIAL</option>
+	<option value="1448">CENTRO INTERNACIONAL DE BIO&Eacute;TICA E HUMANIDADES</option>
+	<option value="315">CENTRO INTERNACIONAL DE F&Iacute;SICA</option>
+	<option value="400">CENTRO OLIMPICO</option>
+	<option value="671">CENTRO PESQ. APLIC. BAMBU FIBRAS NATURAI</option>
+	<option value="663">CENTRO POL. DIR. ECON. E TECNO. CIMUNIC.</option>
+	<option value="659">CENTRO REF. CONS. NATU. RECUP. A. DEGRAD</option>
+	<option value="677">CENTRO UNB CERRADO</option>
+	<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG</option>
+	<option value="170">DECANATO DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O / DPG</option>
+	<option value="158">DECANATO EXTENS&Atilde;O</option>
+	<option value="351">DEPARTAMENTO DE AUDIOVISUAIS E PUBLICIDADE/DAP</option>
+	<option value="345">DEPARTAMENTO DE COMUNICA&Ccedil;&Atilde;O ORGANIZACIONAL/COM</option>
+	<option value="660">DEPARTAMENTO DE DESIGN (11.01.01.14.04)</option>
+	<option value="449">DEPARTAMENTO DE ENGENHARIA MECANICA</option>
+	<option value="479">DEPARTAMENTO DE ESTUDOS LATINO AMERICANO</option>
+	<option value="678">DEPARTAMENTO DE FARMACIA</option>
+	<option value="791">DEPARTAMENTO DE GESTAO DE POLITICAS PUBL</option>
+	<option value="352">DEPARTAMENTO DE JORNALISMO/JOR</option>
+	<option value="518">DEPARTAMENTO DE MATEM&Aacute;TICA</option>
+	<option value="390">DEPARTAMENTO DE M&Eacute;TODOS E T&Eacute;CNICAS</option>
+	<option value="391">DEPARTAMENTO DE POL&Iacute;TICAS P&Uacute;BLICAS E GEST&Atilde;O DA EDUCA&Ccedil;&Atilde;O</option>
+	<option value="592">DEPARTAMENTO DE PSICOLOGIA CL&Iacute;NICA</option>
+	<option value="483">DEPARTAMENTO DE SOCIOLOGIA</option>
+	<option value="392">DEPARTAMENTO DE TEORIA E FUNDAMENTOS</option>
+	<option value="327">DEPTO ADMINISTRA&Ccedil;&Atilde;O</option>
+	<option value="481">DEPTO ANTROPOLOGIA</option>
+	<option value="492">DEPTO ARTES C&Ecirc;NICAS</option>
+	<option value="498">DEPTO ARTES VISUAIS</option>
+	<option value="464">DEPTO BIOLOGIA CELULAR</option>
+	<option value="462">DEPTO BOT&Acirc;NICA</option>
+	<option value="333">DEPTO CI&Ecirc;NCIAS CONT&Aacute;BEIS ATUARIAIS</option>
+	<option value="508">DEPTO CI&Ecirc;NCIAS DA COMPUTA&Ccedil;&Atilde;O</option>
+	<option value="466">DEPTO CI&Ecirc;NCIAS FISIOL&Oacute;GICAS</option>
+	<option value="337">DEPTO CI&Ecirc;NCIAS INFORMA&Ccedil;&Atilde;O DOCUMENTA&Ccedil;&Atilde;O</option>
+	<option value="467">DEPTO ECOLOGIA</option>
+	<option value="548">DEPTO ECONOMIA</option>
+	<option value="422">DEPTO ENFERMAGEM</option>
+	<option value="437">DEPTO ENGENHARIA CIVIL E AMBIENTAL</option>
+	<option value="760">DEPTO ENGENHARIA DE PRODUCAO</option>
+	<option value="443">DEPTO ENGENHARIA ELETRICA</option>
+	<option value="433">DEPTO ENGENHARIA FLORESTAL</option>
+	<option value="514">DEPTO ESTAT&Iacute;STICA</option>
+	<option value="552">DEPTO FILOSOFIA</option>
+	<option value="469">DEPTO FITOPATOLOGIA</option>
+	<option value="471">DEPTO GEN&Eacute;TICA E MORFOLOGIA</option>
+	<option value="555">DEPTO GEOGRAFIA</option>
+	<option value="539">DEPTO GEOLOGIA GERAL APLICADA</option>
+	<option value="541">DEPTO GEOQU&Iacute;MICA E RECURSOS MINERAIS</option>
+	<option value="559">DEPTO HIST&Oacute;RIA</option>
+	<option value="578">DEPTO LINGUISTICA, PORT. LING. CLASSICAS</option>
+	<option value="574">DEPTO L&Iacute;NGUAS ESTRANGEIRAS E TRADU&Ccedil;&Atilde;O</option>
+	<option value="540">DEPTO MINERALOGIA E PETROLOGIA</option>
+	<option value="495">DEPTO M&Uacute;SICA</option>
+	<option value="424">DEPTO NUTRICAO</option>
+	<option value="427">DEPTO ODONTOLOGIA</option>
+	<option value="594">DEPTO PROCESSOS PSICOL&Oacute;GICOS B&Aacute;SICOS</option>
+	<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN</option>
+	<option value="593">DEPTO PSICOLOGIA ESCOLAR DESENVOLVIMENTO</option>
+	<option value="596">DEPTO PSICOLOGIA SOCIAL E DO TRABALHO</option>
+	<option value="420">DEPTO SAUDE COLETIVA</option>
+	<option value="563">DEPTO SERVI&Ccedil;O SOCIAL</option>
+	<option value="361">DEPTO TECNOLOGIA ARQUITETURA URBANISMO</option>
+	<option value="362">DEPTO TEORIA HISTORIA ARQUIT E URBANISM</option>
+	<option value="580">DEPTO TEORIA LITER&Aacute;RIA E LITERATURA</option>
+	<option value="472">DEPTO ZOOLOGIA</option>
+	<option value="643">DIRETORIA DO CENTRO DE APOIO AO DESENVOLVIMENTO TECNOL&Oacute;GICO</option>
+	<option value="794">FACE GEST&Atilde;O DE POL&Iacute;TICAS P&Uacute;BLICAS/GPP</option>
+	<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERIN&Aacute;RIA</option>
+	<option value="353">FACULDADE DE ARQUITETURA E URBANISMO</option>
+	<option value="674">FACULDADE DE CI&Ecirc;NCIA DA INFORMA&Ccedil;&Atilde;O</option>
+	<option value="410">FACULDADE DE CI&Ecirc;NCIAS DA SA&Uacute;DE</option>
+	<option value="343">FACULDADE DE COMUNICA&Ccedil;&Atilde;O</option>
+	<option value="370">FACULDADE DE DIREITO</option>
+	<option value="381">FACULDADE DE EDUCA&Ccedil;&Atilde;O</option>
+	<option value="393">FACULDADE DE EDUCA&Ccedil;&Atilde;O F&Iacute;SICA</option>
+	<option value="402">FACULDADE DE MEDICINA</option>
+	<option value="666">FACULDADE DE PLANALTINA</option>
+	<option value="429">FACULDADE DE TECNOLOGIA</option>
+	<option value="323">FACULDADE ECONOMIA,  ADMINISTRA&Ccedil;&Atilde;O,  CONTABILIDADE E  GEST POL P&Uacute;BLICAS</option>
+	<option value="284">FAZENDA AGUA LIMPA</option>
+	<option value="288">HOSP-HOSPITAL UNIVERSIT&Aacute;RIO DE BRAS&Iacute;LIA</option>
+	<option value="485">INSTITUTO DE ARTES</option>
+	<option value="668">INSTITUTO DE CI&Ecirc;NCIA POL&Iacute;TICA</option>
+	<option value="455">INSTITUTO DE CI&Ecirc;NCIAS BIOL&Oacute;GICAS</option>
+	<option value="504">INSTITUTO DE CI&Ecirc;NCIAS EXATAS</option>
+	<option value="544">INSTITUTO DE CI&Ecirc;NCIAS HUMANAS</option>
+	<option value="473">INSTITUTO DE CI&Ecirc;NCIAS SOCIAIS</option>
+	<option value="524">INSTITUTO DE F&Iacute;SICA</option>
+	<option value="533">INSTITUTO DE GEOCI&Ecirc;NCIAS</option>
+	<option value="567">INSTITUTO DE LETRAS</option>
+	<option value="583">INSTITUTO DE PSICOLOGIA</option>
+	<option value="610">INSTITUTO DE QU&Iacute;MICA</option>
+	<option value="669">INSTITUTO DE RELA&Ccedil;&Otilde;ES INTERNACIONAIS</option>
+	<option value="542">OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO</option>
+	<option value="1080">PARQUE CIENT&Iacute;FICO E TECNOL&Oacute;GICO DA UNB</option>
+	<option value="827">PARQUE CIENT&Iacute;FICO TECNOL&Oacute;GICO DA UNB</option>
+	<option value="1615">PARQUE DE INOVA&Ccedil;&Atilde;O E SUSTENTABILIDADE DO AMBIENTE CONSTRU&Iacute;DO</option>
+	<option value="69">REITORIA</option>
+	<option value="140">SECRETARIA DE ADMINISTRACAO ACADEMICA</option>
+</select>
+	    	 </td>
+	    </tr>
+		<tr>
+			<td><input id="formBuscaAtividade:selectBuscaUnidadeProponente" type="checkbox" name="formBuscaAtividade:selectBuscaUnidadeProponente" class="noborder" /> </td>
+	    	<td> <label for="unidade"> Unidade Proponente: </label> </td>
+	    	<td>
+				<select id="formBuscaAtividade:buscaUnidade" name="formBuscaAtividade:buscaUnidade" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaUnidadeProponente').checked = true;" style="width: 95%">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="701">APOIO ADMINISTRATIVO (11.01.41.01)</option>
+	<option value="757">ARQUIVO CENTRAL/DIRECAO (11.01.41)</option>
+	<option value="1648">ASSESSORIA ADMINISTRATIVA (11.01.52)</option>
+	<option value="1215">ASSESSORIA CEAD (11.01.24.05)</option>
+	<option value="1164">ASSESSORIA DA SECRETARIA DE ADMINISTRACAO ACADEMICA (11.01.01.01.09)</option>
+	<option value="691">ASSESSORIA DE ACOMPANHAMENTO E MEDIA&Ccedil;&Atilde;O DE CONDUTA (11.01.38)</option>
+	<option value="1650">ASSESSORIA DE AN&Aacute;LISE PROCESSUAL (11.01.54)</option>
+	<option value="1516">ASSESSORIA DE COMUNICACAO INSTITUCIONAL (11.01.50)</option>
+	<option value="1819">ASSESSORIA DE COMUNICA&Ccedil;&Atilde;O DO INSTITUTO DE LETRAS (11.01.01.19.12)</option>
+	<option value="1114">ASSESSORIA DE CONTROLE INTERNO DO DAF (11.01.10.09)</option>
+	<option value="1649">ASSESSORIA DE PARCERIAS E ACORDOS DE COOPERA&Ccedil;&Atilde;O (11.01.53)</option>
+	<option value="1659">ASSESSORIA DE PLANEJAMENTO E ACOMPANHAMENTO FINANCEIRO (11.01.08.09)</option>
+	<option value="761">ASSESSORIA DO DECANTO DE GESTAO DE PESSO (11.01.34.03)</option>
+	<option value="1732">ASSESSORIA DO DPI (11.01.42.10)</option>
+	<option value="705">ASSESSORIA DO DPO (11.01.35.05)</option>
+	<option value="1509">ASSESSORIA PATRIMONIAL E DE APOIO ADMINISTRATIVO (11.01.47.06)</option>
+	<option value="371">ASSIST FAC DIREITO ()</option>
+	<option value="285">ASSIST FAZENDA &Aacute;GUA LIMPA ()</option>
+	<option value="585">ASSIST INST PSICOLOGIA ()</option>
+	<option value="84">AUDITORIA (11.01.03)</option>
+	<option value="616">BANCO DE PESSOAS &Agrave; ESPERA DE LOTA&Ccedil;&Atilde;O ()</option>
+	<option value="245">BANCO DE SERV. TEC. CEDIDOS/AFASTADOS (11.01.34.01)</option>
+	<option value="256">BIBLIOTECA CENTRAL (11.01.13)</option>
+	<option value="672">CAMPUS UNB CEIL&Acirc;NDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SA&Uacute;DE (11.01.31)</option>
+	<option value="673">CAMPUS UNB GAMA: FACULDADE DE CI&Ecirc;NCIAS E TECNOLOGIAS EM ENGENHARIA (11.01.32)</option>
+	<option value="202">CANCELADA SEC DE GESTAO PATRIMONIAL (11.02.76)</option>
+	<option value="161">CASA CULTURA AMERICA LATINA (11.02.52)</option>
+	<option value="590">CENTRO ATENDIM ESTUDOS PSICOL&Oacute;GICOS (11.01.01.20.01)</option>
+	<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENT&Aacute;VEL (11.01.23)</option>
+	<option value="646">CENTRO DE EDUCACAO A DISTANCIA E TECNOLOGIAS EDUCACIONAIS (11.01.24)</option>
+	<option value="314">CENTRO DE EXCEL&Ecirc;NCIA EM TURISMO (11.01.18)</option>
+	<option value="230">CENTRO DE PLANEJAMENTO (11.02.95)</option>
+	<option value="652">CENTRO DOCUMENTA&Ccedil;&Atilde;O DA UnB ()</option>
+	<option value="662">CENTRO EST. AVANC. GOVERNO ADMIN PUBLICA (11.01.01.02.04)</option>
+	<option value="650">CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDISCIPLIN (11.01.25)</option>
+	<option value="657">CENTRO ESTUDOS EM REGULACAO DE MERCADOS ()</option>
+	<option value="655">CENTRO FORMACAO REC HUMANOS EM TRANSPORT (11.01.01.11.05)</option>
+	<option value="316">CENTRO INTEGRADO ORDENAMENTO TERRITORIAL (11.01.20)</option>
+	<option value="165">CENTRO INTERDISCIP. DE FORM. CONTINUADA (11.02.55)</option>
+	<option value="1448">CENTRO INTERNACIONAL DE BIO&Eacute;TICA E HUMANIDADES (11.01.49)</option>
+	<option value="315">CENTRO INTERNACIONAL DE F&Iacute;SICA (11.01.01.16.04)</option>
+	<option value="400">CENTRO OLIMPICO (11.01.01.08.01)</option>
+	<option value="671">CENTRO PESQ. APLIC. BAMBU FIBRAS NATURAI (11.01.01.04.11)</option>
+	<option value="670">CENTRO PESQUISA ARQUITETURA INFORMACAO (11.01.01.02.06)</option>
+	<option value="663">CENTRO POL. DIR. ECON. E TECNO. CIMUNIC. (11.01.28)</option>
+	<option value="659">CENTRO REF. CONS. NATU. RECUP. A. DEGRAD (11.01.27)</option>
+	<option value="322">CENTRO SELE&Ccedil;&Atilde;O E PROMO&Ccedil;&Atilde;O DE EVENTOS (11.08)</option>
+	<option value="677">CENTRO UNB CERRADO (11.01.36)</option>
+	<option value="528">CHEFE DO ARQUIVO / DCF ()</option>
+	<option value="779">COOD. DE ACOMPANHAMENTO DA CARREIRA (11.01.34.06.04)</option>
+	<option value="1125">COORD ADMINISTRATIVA DA EDITORA UNB (11.01.01.26.01)</option>
+	<option value="250">COORD ADMINISTRATIVA SECRET REC HUMANOS ()</option>
+	<option value="110">COORD ALMOXARIFADO (11.02.25)</option>
+	<option value="176">COORD APOIO A POS-GRADUACAO (11.02.63)</option>
+	<option value="237">COORD AVALIACAO E PLANEJAMENTO ()</option>
+	<option value="412">COORD BIOT&Eacute;RIO CENTRAL FAC CI&Ecirc;N SA&Uacute;DE ()</option>
+	<option value="1168">COORD C S POR POSTOS DE TRABALHO D.E (11.01.10.07.07)</option>
+	<option value="249">COORD CAPACITA&Ccedil;&Atilde;O ()</option>
+	<option value="277">COORD COMERCIAL DA EDITORA UNB (11.01.01.26.04)</option>
+	<option value="374">COORD CURSO DE P&Oacute;S-GRAD DIREITO ()</option>
+	<option value="328">COORD CURSO GRAD ADM DIURNO ()</option>
+	<option value="603">COORD CURSO GRAD CI&Ecirc;NCIA POL&Iacute;TICA ()</option>
+	<option value="334">COORD CURSO GRAD CI&Ecirc;NCIAS CONT ATUARIAIS ()</option>
+	<option value="419">COORD CURSO GRAD CI&Ecirc;NCIAS FARMAC&Ecirc;UTICAS ()</option>
+	<option value="512">COORD CURSO GRAD EM COMPUTADOR ()</option>
+	<option value="516">COORD CURSO GRAD ESTAT&Iacute;STICA ()</option>
+	<option value="535">COORD CURSO GRAD GEOCI&Ecirc;NCIAS ()</option>
+	<option value="576">COORD CURSO GRAD L&Iacute;NGUAS ESTRANG TRADU&Ccedil;&Atilde; ()</option>
+	<option value="520">COORD CURSO GRAD MATEM&Aacute;TICA DIURNO ()</option>
+	<option value="496">COORD CURSO GRAD M&Uacute;SICA ()</option>
+	<option value="586">COORD CURSO GRAD PSICOLOGIA ()</option>
+	<option value="565">COORD CURSO GRAD SERVI&Ccedil;O SOCIAL ()</option>
+	<option value="503">COORD CURSO MEST ARTES T&Eacute;CNICAS IMAGEM ()</option>
+	<option value="439">COORD CURSO MEST ESTRUTURAS ()</option>
+	<option value="442">COORD CURSO MEST GEOTECNIA ()</option>
+	<option value="581">COORD CURSO MEST TEORIA LITER&Aacute;RIA LITERA ()</option>
+	<option value="398">COORD CURSO PR&Aacute;TICAS DESPORTIVAS ()</option>
+	<option value="482">COORD CURSO P&Oacute;S-GRAD ANTROPOLOGIA ()</option>
+	<option value="465">COORD CURSO P&Oacute;S-GRAD BIOLOGIA MOLECULAR ()</option>
+	<option value="436">COORD CURSO P&Oacute;S-GRAD CI&Ecirc;NC AMBIENT FLORE ()</option>
+	<option value="406">COORD CURSO P&Oacute;S-GRAD CI&Ecirc;NCIAS M&Eacute;DICAS ()</option>
+	<option value="346">COORD CURSO P&Oacute;S-GRAD COMUNICA&Ccedil;&Atilde;O ()</option>
+	<option value="550">COORD CURSO P&Oacute;S-GRAD ECONOMIA ()</option>
+	<option value="448">COORD CURSO P&Oacute;S-GRAD ENG EL&Eacute;TRICA ()</option>
+	<option value="454">COORD CURSO P&Oacute;S-GRAD ENG MEC&Acirc;NICA ()</option>
+	<option value="470">COORD CURSO P&Oacute;S-GRAD FITOPATOLOGIA ()</option>
+	<option value="558">COORD CURSO P&Oacute;S-GRAD GEOGRAFIA ()</option>
+	<option value="562">COORD CURSO P&Oacute;S-GRAD HIST&Oacute;RIA ()</option>
+	<option value="579">COORD CURSO P&Oacute;S-GRAD LING&Uuml;&Iacute;STICA, L&Iacute;NGUA ()</option>
+	<option value="577">COORD CURSO P&Oacute;S-GRAD L&Iacute;NGUAS ESTR TRADU&Ccedil; ()</option>
+	<option value="407">COORD CURSO P&Oacute;S-GRAD MEDICINA TROPICAL ()</option>
+	<option value="257">COORD DE ADMINISTRACAO E ORCAMENTO (11.01.13.04)</option>
+	<option value="264">COORD DE ATENDIMENTO AOS USUARIOS (11.01.13.03)</option>
+	<option value="734">COORD DE CONTRATOS ESPECIAIS (11.01.10.07.03)</option>
+	<option value="733">COORD DE CONTRATOS SERVICOS SOB DEMANDA (11.01.10.07.02)</option>
+	<option value="1075">COORD DE ESTRATEGIA DE DADOS (11.01.14.03.03)</option>
+	<option value="641">COORD DE EXTENSAO DO CDS (11.01.23.04)</option>
+	<option value="259">COORD DE FORMACAO E DESENVOLV DE ACERVO (11.01.13.02)</option>
+	<option value="1107">COORD DE GESTAO DA INFORMACAO DIGITAL (11.01.13.01)</option>
+	<option value="1389">COORD DE PLANEJAMENTO E COMUNICA&Ccedil;&Atilde;O (11.01.13.05)</option>
+	<option value="1802">COORD DE PRODU&Ccedil;&Atilde;O EDITORIAL DA EDITORA UNB (11.09.03.01)</option>
+	<option value="1073">COORD DE SISTEMAS ACADEMICOS (11.01.14.03.01)</option>
+	<option value="1074">COORD DE SISTEMAS ADMINISTRATIVOS (11.01.14.03.02)</option>
+	<option value="1219">COORD DE TEC DA INFORM E COMUNICACAO (11.01.24.09)</option>
+	<option value="1126">COORD DO ALMOXARIFADO DA EDITORA UNB (11.01.01.26.02)</option>
+	<option value="368">COORD EXTENSAO/FAV ()</option>
+	<option value="399">COORD EXTENS&Atilde;O/FEF ()</option>
+	<option value="478">COORD EXTENS&Atilde;O/ICS ()</option>
+	<option value="1127">COORD FINANCEIRA DA EDITORA UNB (11.01.01.26.03)</option>
+	<option value="109">COORD OBRAS (11.02.24)</option>
+	<option value="97">COORD ORCAMENTARIA (11.02.14)</option>
+	<option value="112">COORD PROJETOS (11.02.27)</option>
+	<option value="1520">COORD PROJETOS ESPECIAIS LICENCIATURA (11.01.06.09.01)</option>
+	<option value="122">COORD PROTECAO PATRIMONIO (11.02.35)</option>
+	<option value="740">COORD. DE ACOMPANHAMENTO ACADEMICO (11.01.06.01.01)</option>
+	<option value="738">COORD. DE ACOMPANHAMENTO DO ENSINO DE GR (11.01.06.03.02)</option>
+	<option value="775">COORD. DE ACOMPANHAMENTO E MOVIMENTACAO (11.01.34.05.03)</option>
+	<option value="723">COORD. DE CONTRATOS ADMINISTRATIVOS (11.01.10.05.04)</option>
+	<option value="720">COORD. DE CONTROLE DE VIAGENS (11.01.10.10.05)</option>
+	<option value="782">COORD. DE ENGENHARIA E SEGURANCA NO TRAB (11.01.34.07.04)</option>
+	<option value="742">COORD. DE ESTAGIOS DA GRADUACAO (11.01.06.01.03)</option>
+	<option value="737">COORD. DE INTEGRACAO DAS LICENCIATURAS (11.01.06.09.02)</option>
+	<option value="781">COORD. DE PERICIA OFICIAL EM SAUDE (11.01.34.07.03)</option>
+	<option value="743">COORD. DE PROJETOS E EVENTOS INSTITUCION (11.01.06.04.04)</option>
+	<option value="769">COORD. DE REGISTRO E CONTROLE FUNCIONAL (11.01.34.04.01)</option>
+	<option value="780">COORD.DE ATENCAO A SAUDE E QUALIDADE DE (11.01.34.07.02)</option>
+	<option value="774">COORD.DE PLAN E ALOCACAO DE PESSOAL TECN (11.01.34.05.02)</option>
+	<option value="649">COORDENACAO ACADEMICA DO CEAD (11.01.24.03)</option>
+	<option value="1822">COORDENACAO ADMINISTRATIVA (11.01.24.16)</option>
+	<option value="1511">COORDENACAO DE ADMINISTRACAO DE IMOVEIS (11.01.47.03)</option>
+	<option value="215">COORDENACAO DE ALMOXARIFADO CENTRAL (11.01.10.06.01)</option>
+	<option value="702">COORDENACAO DE ARQUIVO PERMANENTE (11.01.41.02)</option>
+	<option value="1273">COORDENACAO DE ASSUNTOS ESTRATEGICOS E PRIORITARIOS (11.01.02.05)</option>
+	<option value="71">COORDENACAO DE CERIMONIAL (11.01.45)</option>
+	<option value="1513">COORDENACAO DE COBRANCA E CONTROLE (11.01.47.05)</option>
+	<option value="732">COORDENACAO DE COMERCIO EXTERIOR (11.01.10.02.02)</option>
+	<option value="1698">COORDENACAO DE COMUNICACAO INSTITUCIONAL (11.01.11.02)</option>
+	<option value="1699">COORDENACAO DE COMUNICACAO VISUAL (11.01.11.03)</option>
+	<option value="82">COORDENACAO DE CONSULTIVO (11.01.02.03)</option>
+	<option value="730">COORDENACAO DE CONTRATOS DE GESTAO (11.01.10.07.01)</option>
+	<option value="136">COORDENACAO DE CURSOS CURRICULOS E OFERTA (11.01.01.01.01)</option>
+	<option value="703">COORDENACAO DE GESTAO DE DOCUMENTOS (11.01.41.03)</option>
+	<option value="141">COORDENACAO DE GRADUACAO (11.01.01.01.02)</option>
+	<option value="1510">COORDENACAO DE MANUTENCAO PREDIAL (11.01.47.02)</option>
+	<option value="1512">COORDENACAO DE MERCADO IMOBILIARIO (11.01.47.04)</option>
+	<option value="1184">COORDENACAO DE ORIENTACAO E SUPERVISAO DAS UNIDADES AVANCADAS (11.01.01.01.07)</option>
+	<option value="219">COORDENACAO DE PATRIMONIO (11.01.10.06.02)</option>
+	<option value="156">COORDENACAO DE POS-GRADUACAO (11.01.01.01.08)</option>
+	<option value="1518">COORDENACAO DE PROCESSOS SELETIVOS (11.01.06.04.03)</option>
+	<option value="1697">COORDENACAO DE PRODUCAO DE CONTEUDO (11.01.11.01)</option>
+	<option value="704">COORDENACAO DE PROTOCOLO (11.01.41.04)</option>
+	<option value="1272">COORDENACAO DO CONTENCIOSO (11.01.02.04)</option>
+	<option value="708">COORDENADORIA DE ACOMPANHAMENTO OR&Ccedil;AMENT&Aacute;RIO (11.01.35.01.01)</option>
+	<option value="722">COORDENADORIA DE AN&Aacute;LISE E INSTRU&Ccedil;&Atilde;O PROCESSUAL (11.01.10.05.03)</option>
+	<option value="711">COORDENADORIA DE APOIO &Agrave; INTEGRIDADE E GEST&Atilde;O DE RISCOS (11.01.35.02.02)</option>
+	<option value="770">COORDENADORIA DE APOSENTADORIA E PENSAO (11.01.34.04.02)</option>
+	<option value="683">COORDENADORIA DE ARQUIVOS FUNCIONAIS (11.01.34.03.02)</option>
+	<option value="1267">COORDENADORIA DE ASSESSORAMENTO E APOIO &Agrave; GOVERNAN&Ccedil;A DE TIC (11.01.14.05)</option>
+	<option value="772">COORDENADORIA DE ATENDIMENTO (11.01.34.03.04)</option>
+	<option value="706">COORDENADORIA DE AVALIA&Ccedil;&Atilde;O INSTITUCIONAL (11.01.35.04.01)</option>
+	<option value="777">COORDENADORIA DE CAPACITACAO/PROCAP (11.01.34.06.02)</option>
+	<option value="214">COORDENADORIA DE COMPRAS (11.01.10.05.02)</option>
+	<option value="719">COORDENADORIA DE CONSERVA&Ccedil;&Atilde;O E RES&Iacute;DUOS (11.01.05.01.08)</option>
+	<option value="1265">COORDENADORIA DE CONTRATOS ESPECIAIS E ADMINISTRA&Ccedil;&Atilde;O (11.01.05.05.05)</option>
+	<option value="680">COORDENADORIA DE CONTROLE INTERNO (11.01.34.03.01)</option>
+	<option value="1523">COORDENADORIA DE CONTROLE PROCESSUAL (11.01.10.10.01)</option>
+	<option value="1071">COORDENADORIA DE DATA CENTER (11.01.14.02.04)</option>
+	<option value="727">COORDENADORIA DE EMPENHO (11.01.10.01.04)</option>
+	<option value="776">COORDENADORIA DE ESTAGIO (11.01.34.05.04)</option>
+	<option value="707">COORDENADORIA DE ESTAT&Iacute;STICAS INSTITUCIONAIS (11.01.35.04.02)</option>
+	<option value="712">COORDENADORIA DE ESTRUTURA&Ccedil;&Atilde;O ORGANIZACIONAL (11.01.35.03.01)</option>
+	<option value="762">COORDENADORIA DE ESTUDOS EM GESTAO DE PE (11.01.34.06.01)</option>
+	<option value="726">COORDENADORIA DE EXECU&Ccedil;&Atilde;O FINANCEIRA (11.01.10.01.03)</option>
+	<option value="713">COORDENADORIA DE GERENCIAMENTO DE PROCESSOS (11.01.35.03.02)</option>
+	<option value="778">COORDENADORIA DE GESTAO DE DESEMPENHO (11.01.34.06.03)</option>
+	<option value="271">COORDENADORIA DE GESTAO E PLANEJAMENTO (11.01.14.01)</option>
+	<option value="119">COORDENADORIA DE GEST&Atilde;O DE TRANSPORTES (11.01.05.03.02)</option>
+	<option value="696">COORDENADORIA DE GEST&Atilde;O DOS ESPA&Ccedil;OS COMUNS (11.01.05.01.02)</option>
+	<option value="729">COORDENADORIA DE INSTRU&Ccedil;&Atilde;O CONT&Aacute;BIL E FISCAL (11.01.10.01.06)</option>
+	<option value="695">COORDENADORIA DE LICITA&Ccedil;&Otilde;ES (11.01.05.16.01)</option>
+	<option value="213">COORDENADORIA DE LICITA&Ccedil;&Otilde;ES (11.01.10.05.01)</option>
+	<option value="725">COORDENADORIA DE LIQUIDA&Ccedil;&Atilde;O DA DESPESA (11.01.10.01.02)</option>
+	<option value="1263">COORDENADORIA DE MANUTEN&Ccedil;&Atilde;O DE EQUIPAMENTOS (11.01.05.05.03)</option>
+	<option value="771">COORDENADORIA DE OPERACOES FINANCEIRAS (11.01.34.04.03)</option>
+	<option value="685">COORDENADORIA DE ORIENTACAO A LEGISLACAO (11.01.34.03.03)</option>
+	<option value="718">COORDENADORIA DE PAISAGISMO (11.01.05.16.02)</option>
+	<option value="710">COORDENADORIA DE PLANEJAMENTO E APOIO &Agrave; GOVERNAN&Ccedil;A (11.01.35.02.01)</option>
+	<option value="698">COORDENADORIA DE PLANEJAMENTO ESTRAT&Eacute;GICO E ADMINISTRATIVO (11.01.05.16.03)</option>
+	<option value="728">COORDENADORIA DE PRESTA&Ccedil;&Atilde;O DE CONTAS DE CONTRATOS E INSTRUMENTOS CORRELATOS (11.01.10.01.05)</option>
+	<option value="709">COORDENADORIA DE PROGRAMA&Ccedil;&Atilde;O ORCAMENT&Aacute;RIA (11.01.35.01.02)</option>
+	<option value="773">COORDENADORIA DE PROVIMENTO DOCENTE (11.01.34.05.01)</option>
+	<option value="1069">COORDENADORIA DE REDES E INFRAESTRUTURA (11.01.14.02.02)</option>
+	<option value="684">COORDENADORIA DE SAUDE OCUPACIONAL (11.01.34.07.01)</option>
+	<option value="1072">COORDENADORIA DE SEGURANCA DA INFORMACAO (11.01.14.02.05)</option>
+	<option value="1162">COORDENADORIA DE SEGURAN&Ccedil;A (11.01.05.03.01)</option>
+	<option value="1068">COORDENADORIA DE SERVICOS ESPECIALIZADOS (11.01.14.02.01)</option>
+	<option value="1077">COORDENADORIA DE SITES CORPORATIVOS (11.01.14.03.05)</option>
+	<option value="1076">COORDENADORIA DE SUSTENTA&Ccedil;&Atilde;O E ARQUITETURA DE SISTEMAS (11.01.14.03.04)</option>
+	<option value="724">COORDENADORIA DE TRANSPAR&Ecirc;NCIA, GEST&Atilde;O FINANCEIRA E CUSTOS (11.01.10.01.01)</option>
+	<option value="1634">COORDENA&Ccedil;&Atilde;O ADMINISTRATIVA (INFRA) (11.01.37.05)</option>
+	<option value="1091">COORDENA&Ccedil;&Atilde;O ADMINISTRATIVA DA DDS (11.01.09.01.02)</option>
+	<option value="1824">COORDENA&Ccedil;&Atilde;O CONDOMINIAL (11.01.47.08)</option>
+	<option value="1088">COORDENA&Ccedil;&Atilde;O DA ARTE E CULTURA COMUNIT&Aacute;RIAS (11.01.09.09.03)</option>
+	<option value="750">COORDENA&Ccedil;&Atilde;O DAS CASAS UNIVERSIT&Aacute;RIAS DE CULTURA (11.01.07.02.01)</option>
+	<option value="1096">COORDENA&Ccedil;&Atilde;O DAS MULHERES (11.01.09.05.04)</option>
+	<option value="717">COORDENA&Ccedil;&Atilde;O DE ADEQUA&Ccedil;&Otilde;ES E REFORMAS (11.01.37.08)</option>
+	<option value="745">COORDENA&Ccedil;&Atilde;O DE AN&Aacute;LISE T&Eacute;CNICA E ACOMPANHAMENTO DE A&Ccedil;&Otilde;ES DE EXTENS&Atilde;O (11.01.07.01.02)</option>
+	<option value="1738">COORDENA&Ccedil;&Atilde;O DE APOIO &Agrave;S ATIVIDADES EM TECNOLOGIA E INOVA&Ccedil;&Atilde;O (11.10.03)</option>
+	<option value="1188">COORDENA&Ccedil;&Atilde;O DE ARTICULA&Ccedil;&Atilde;O DA COMUNIDADE EDUCATIVA (11.01.09.10.01)</option>
+	<option value="1189">COORDENA&Ccedil;&Atilde;O DE ARTICULA&Ccedil;&Atilde;O DE REDES PARA PREVEN&Ccedil;&Atilde;O E PROMO&Ccedil;&Atilde;O DA SA&Uacute;DE (11.01.09.10.02)</option>
+	<option value="1092">COORDENA&Ccedil;&Atilde;O DE ASSIST&Ecirc;NCIA ESTUDANTIL (11.01.09.01.03)</option>
+	<option value="1365">COORDENA&Ccedil;&Atilde;O DE ATEN&Ccedil;&Atilde;O E VIGIL&Acirc;NCIA EM SA&Uacute;DE (11.01.09.10.04)</option>
+	<option value="1190">COORDENA&Ccedil;&Atilde;O DE ATEN&Ccedil;&Atilde;O PSICOSSOCIAL (11.01.09.10.03)</option>
+	<option value="1627">COORDENA&Ccedil;&Atilde;O DE CURSOS DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O STRICTO SENSU (11.01.08.05.02)</option>
+	<option value="1122">COORDENA&Ccedil;&Atilde;O DE CURSOS LATO SENSU (11.01.08.05.01)</option>
+	<option value="1737">COORDENA&Ccedil;&Atilde;O DE EMPREENDEDORISMO E DESENVOLVIMENTO EMPRESARIAL E SOCIAL (11.10.02)</option>
+	<option value="1090">COORDENA&Ccedil;&Atilde;O DE ESPORTE E LAZER (11.01.09.09.01)</option>
+	<option value="746">COORDENA&Ccedil;&Atilde;O DE EVENTOS, PLANEJAMENTO E AVALIA&Ccedil;&Atilde;O DA EXTENS&Atilde;O (11.01.07.01.03)</option>
+	<option value="1628">COORDENA&Ccedil;&Atilde;O DE FOMENTO E INTERNACIONALIZA&Ccedil;&Atilde;O (11.01.08.05.03)</option>
+	<option value="1097">COORDENA&Ccedil;&Atilde;O DE GEST&Atilde;O ADMINISTRATIVA DO RU (11.01.09.03.01)</option>
+	<option value="1728">COORDENA&Ccedil;&Atilde;O DE INFRAESTRUTURA E GRUPOS DE PESQUISA (11.01.42.03.02)</option>
+	<option value="715">COORDENA&Ccedil;&Atilde;O DE MANUTEN&Ccedil;&Atilde;O E INSTALA&Ccedil;&Atilde;O (11.01.37.09)</option>
+	<option value="716">COORDENA&Ccedil;&Atilde;O DE MANUTEN&Ccedil;&Atilde;O PREDIAL (INFRA) (11.01.37.07)</option>
+	<option value="1086">COORDENA&Ccedil;&Atilde;O DE ORGANIZA&Ccedil;&Otilde;ES COMUNIT&Aacute;RIAS (11.01.09.09.02)</option>
+	<option value="645">COORDENA&Ccedil;&Atilde;O DE PROJETOS (11.09.01)</option>
+	<option value="1727">COORDENA&Ccedil;&Atilde;O DE PROJETOS DE PESQUISA (11.01.42.03.01)</option>
+	<option value="1098">COORDENA&Ccedil;&Atilde;O DE PROMO&Ccedil;&Atilde;O A ALIMENTA&Ccedil;&Atilde;O (11.01.09.03.02)</option>
+	<option value="144">COORDENA&Ccedil;&Atilde;O DE REGISTRO E EMISS&Atilde;O DE DIPLOMAS E CERTIFICADOS (11.01.01.01.05)</option>
+	<option value="747">COORDENA&Ccedil;&Atilde;O ESTRAT&Eacute;GICA DE A&Ccedil;&Otilde;ES E PUBLICA&Ccedil;&Otilde;ES DE EXTENS&Atilde;O (11.01.07.04.01)</option>
+	<option value="748">COORDENA&Ccedil;&Atilde;O ESTRAT&Eacute;GICA DE FORMA&Ccedil;&Atilde;O E ARTICULA&Ccedil;&Atilde;O SOCIAL (11.01.07.04.02)</option>
+	<option value="1707">COORDENA&Ccedil;&Atilde;O EXECUTIVA DO DECANATO DE ENSINO DE GRADUA&Ccedil;&Atilde;O (11.01.06.03.05)</option>
+	<option value="185">COORDENA&Ccedil;&Atilde;O GERAL DE MORADIA ESTUDANTIL (11.01.09.01.01)</option>
+	<option value="1094">COORDENA&Ccedil;&Atilde;O IND&Iacute;GENA (11.01.09.05.02)</option>
+	<option value="1095">COORDENA&Ccedil;&Atilde;O LGBTQIA+ (11.01.09.05.03)</option>
+	<option value="1093">COORDENA&Ccedil;&Atilde;O NEGRA (11.01.09.05.01)</option>
+	<option value="1662">COORDENA&Ccedil;&Atilde;O PEDAG&Oacute;GICA DO DEG (11.01.06.03.04)</option>
+	<option value="193">DECANATO ADMINISTRACAO E FINANCAS / DAF (11.01.10)</option>
+	<option value="180">DECANATO ASSUNTOS COMUNITARIOS (11.01.09)</option>
+	<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG (11.01.06)</option>
+	<option value="675">DECANATO DE GESTAO DE PESSOAS / DGP (11.01.34)</option>
+	<option value="786">DECANATO DE PESQUISA E INOVA&Ccedil;&Atilde;O (11.01.42)</option>
+	<option value="676">DECANATO DE PLANEJAMENTO,OR&Ccedil;AMENTO E AVALIA&Ccedil;&Atilde;O INSTITUCIONAL (11.01.35)</option>
+	<option value="170">DECANATO DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O / DPG (11.01.08)</option>
+	<option value="158">DECANATO EXTENS&Atilde;O (11.01.07)</option>
+	<option value="351">DEPARTAMENTO DE AUDIOVISUAIS E PUBLICIDADE/DAP (11.01.01.03.01)</option>
+	<option value="345">DEPARTAMENTO DE COMUNICA&Ccedil;&Atilde;O ORGANIZACIONAL/COM (11.01.01.03.05)</option>
+	<option value="660">DEPARTAMENTO DE DESIGN (11.01.01.14.04) (11.01.01.14.04)</option>
+	<option value="449">DEPARTAMENTO DE ENGENHARIA MECANICA (11.01.01.11.04)</option>
+	<option value="479">DEPARTAMENTO DE ESTUDOS LATINO AMERICANO (11.01.01.13.01)</option>
+	<option value="678">DEPARTAMENTO DE FARMACIA (11.01.01.10.05)</option>
+	<option value="791">DEPARTAMENTO DE GESTAO DE POLITICAS PUBL (11.01.01.02.07)</option>
+	<option value="352">DEPARTAMENTO DE JORNALISMO/JOR (11.01.01.03.02)</option>
+	<option value="518">DEPARTAMENTO DE MATEM&Aacute;TICA (11.01.01.15.03)</option>
+	<option value="390">DEPARTAMENTO DE M&Eacute;TODOS E T&Eacute;CNICAS (11.01.01.07.01)</option>
+	<option value="391">DEPARTAMENTO DE POL&Iacute;TICAS P&Uacute;BLICAS E GEST&Atilde;O DA EDUCA&Ccedil;&Atilde;O (11.01.01.07.02)</option>
+	<option value="592">DEPARTAMENTO DE PSICOLOGIA CL&Iacute;NICA (11.01.01.20.02)</option>
+	<option value="483">DEPARTAMENTO DE SOCIOLOGIA (11.01.01.13.03)</option>
+	<option value="392">DEPARTAMENTO DE TEORIA E FUNDAMENTOS (11.01.01.07.03)</option>
+	<option value="327">DEPTO ADMINISTRA&Ccedil;&Atilde;O (11.01.01.02.01)</option>
+	<option value="481">DEPTO ANTROPOLOGIA (11.01.01.13.02)</option>
+	<option value="492">DEPTO ARTES C&Ecirc;NICAS (11.01.01.14.01)</option>
+	<option value="498">DEPTO ARTES VISUAIS (11.01.01.14.03)</option>
+	<option value="464">DEPTO BIOLOGIA CELULAR (11.01.01.12.02)</option>
+	<option value="462">DEPTO BOT&Acirc;NICA (11.01.01.12.01)</option>
+	<option value="601">DEPTO CI&Ecirc;NCIA POL&Iacute;TICA ()</option>
+	<option value="333">DEPTO CI&Ecirc;NCIAS CONT&Aacute;BEIS ATUARIAIS (11.01.01.02.02)</option>
+	<option value="508">DEPTO CI&Ecirc;NCIAS DA COMPUTA&Ccedil;&Atilde;O (11.01.01.15.01)</option>
+	<option value="466">DEPTO CI&Ecirc;NCIAS FISIOL&Oacute;GICAS (11.01.01.12.03)</option>
+	<option value="337">DEPTO CI&Ecirc;NCIAS INFORMA&Ccedil;&Atilde;O DOCUMENTA&Ccedil;&Atilde;O ()</option>
+	<option value="467">DEPTO ECOLOGIA (11.01.01.12.04)</option>
+	<option value="548">DEPTO ECONOMIA (11.01.01.02.03)</option>
+	<option value="422">DEPTO ENFERMAGEM (11.01.01.10.02)</option>
+	<option value="437">DEPTO ENGENHARIA CIVIL E AMBIENTAL (11.01.01.11.02)</option>
+	<option value="760">DEPTO ENGENHARIA DE PRODUCAO (11.01.01.11.06)</option>
+	<option value="443">DEPTO ENGENHARIA ELETRICA (11.01.01.11.03)</option>
+	<option value="433">DEPTO ENGENHARIA FLORESTAL (11.01.01.11.01)</option>
+	<option value="514">DEPTO ESTAT&Iacute;STICA (11.01.01.15.02)</option>
+	<option value="552">DEPTO FILOSOFIA (11.01.01.18.01)</option>
+	<option value="469">DEPTO FITOPATOLOGIA (11.01.01.12.05)</option>
+	<option value="471">DEPTO GEN&Eacute;TICA E MORFOLOGIA (11.01.01.12.06)</option>
+	<option value="555">DEPTO GEOGRAFIA (11.01.01.18.02)</option>
+	<option value="539">DEPTO GEOLOGIA GERAL APLICADA ()</option>
+	<option value="541">DEPTO GEOQU&Iacute;MICA E RECURSOS MINERAIS ()</option>
+	<option value="559">DEPTO HIST&Oacute;RIA (11.01.01.18.03)</option>
+	<option value="578">DEPTO LINGUISTICA, PORT. LING. CLASSICAS (11.01.01.19.02)</option>
+	<option value="574">DEPTO L&Iacute;NGUAS ESTRANGEIRAS E TRADU&Ccedil;&Atilde;O (11.01.01.19.01)</option>
+	<option value="540">DEPTO MINERALOGIA E PETROLOGIA ()</option>
+	<option value="495">DEPTO M&Uacute;SICA (11.01.01.14.02)</option>
+	<option value="424">DEPTO NUTRICAO (11.01.01.10.03)</option>
+	<option value="427">DEPTO ODONTOLOGIA (11.01.01.10.04)</option>
+	<option value="594">DEPTO PROCESSOS PSICOL&Oacute;GICOS B&Aacute;SICOS (11.01.01.20.04)</option>
+	<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN (11.01.01.04.01)</option>
+	<option value="593">DEPTO PSICOLOGIA ESCOLAR DESENVOLVIMENTO (11.01.01.20.03)</option>
+	<option value="596">DEPTO PSICOLOGIA SOCIAL E DO TRABALHO (11.01.01.20.05)</option>
+	<option value="606">DEPTO RELA&Ccedil;&Otilde;ES INTERNACIONAIS ()</option>
+	<option value="420">DEPTO SAUDE COLETIVA (11.01.01.10.01)</option>
+	<option value="563">DEPTO SERVI&Ccedil;O SOCIAL (11.01.01.18.04)</option>
+	<option value="361">DEPTO TECNOLOGIA ARQUITETURA URBANISMO (11.01.01.04.02)</option>
+	<option value="362">DEPTO TEORIA HISTORIA ARQUIT E URBANISM (11.01.01.04.03)</option>
+	<option value="580">DEPTO TEORIA LITER&Aacute;RIA E LITERATURA (11.01.01.19.03)</option>
+	<option value="472">DEPTO ZOOLOGIA (11.01.01.12.07)</option>
+	<option value="133">DIR. DE ACOMP. E INTEG. ACADEMICA (11.01.06.01)</option>
+	<option value="739">DIRET DE INOVACAO PARA O ENSINO DE GRADU (11.01.06.04)</option>
+	<option value="647">DIRET DO CENTRO DE EDUCACAO A DISTANCIA (11.01.24.01)</option>
+	<option value="189">DIRET ESPORTES, ARTES E CULTURA (11.01.09.02)</option>
+	<option value="113">DIRET GESTAO AMBIENTAL (11.02.28)</option>
+	<option value="648">DIRET N&Uacute;CLEO UnB VIRTUAL ()</option>
+	<option value="765">DIRETORIA ACOMPANHAMENTO E MOVIMENTACAO (11.01.34.05)</option>
+	<option value="766">DIRETORIA CAPACITACAO,DESENVOLVIMENTO E (11.01.34.06)</option>
+	<option value="752">DIRETORIA DE ACESSIBILIDADE (11.01.09.04)</option>
+	<option value="764">DIRETORIA DE ADMINISTRACAO DE PESSOAS (11.01.34.04)</option>
+	<option value="1115">DIRETORIA DE AN&Aacute;LISE E CONFORMIDADE PROCESSUAL (11.01.10.10)</option>
+	<option value="179">DIRETORIA DE APOIO A PROJETOS ACAD&Ecirc;MICOS (11.01.42.01)</option>
+	<option value="1187">DIRETORIA DE ATEN&Ccedil;&Atilde;O &Agrave; SA&Uacute;DE DA COMUNIDADE UNIVERSIT&Aacute;RIA (11.01.09.10)</option>
+	<option value="687">DIRETORIA DE AVALIA&Ccedil;&Atilde;O E ESTAT&Iacute;STICAS INSTITUCIONAIS (11.01.35.04)</option>
+	<option value="755">DIRETORIA DE COMPRAS (11.01.10.05)</option>
+	<option value="205">DIRETORIA DE CONTABILIDADE E FINAN&Ccedil;AS (11.01.10.01)</option>
+	<option value="758">DIRETORIA DE CONTRATOS ADMINISTRATIVOS (11.01.10.07)</option>
+	<option value="790">DIRETORIA DE DESENVOLVIMENTO E INTEGRA&Ccedil;&Atilde;O SOCIAL (11.01.07.04)</option>
+	<option value="183">DIRETORIA DE DESENVOLVIMENTO SOCIAL (11.01.09.13)</option>
+	<option value="749">DIRETORIA DE DIFUS&Atilde;O CULTURAL (11.01.07.02)</option>
+	<option value="1089">DIRETORIA DE ESPORTE E ATIVIDADES COMUNIT&Aacute;RIAS (11.01.09.09)</option>
+	<option value="1120">DIRETORIA DE FOMENTO &Agrave; INICIA&Ccedil;&Atilde;O CIENT&Iacute;FICA (11.01.08.04)</option>
+	<option value="756">DIRETORIA DE GESTAO DE MATERIAIS (11.01.10.06)</option>
+	<option value="693">DIRETORIA DE GEST&Atilde;O DE INFRAESTRUTURA (11.01.37.01)</option>
+	<option value="1823">DIRETORIA DE GEST&Atilde;O DE PATRIM&Ocirc;NIO IMOBILI&Aacute;RIO (11.01.47.07)</option>
+	<option value="689">DIRETORIA DE IMPORTACAO E EXPORTACAO (11.01.10.02)</option>
+	<option value="317">DIRETORIA DE MANUTEN&Ccedil;&Atilde;O DE EQUIPAMENTOS (11.01.05.05)</option>
+	<option value="99">DIRETORIA DE MANUTEN&Ccedil;&Atilde;O PREDIAL (11.01.37.04)</option>
+	<option value="759">DIRETORIA DE OBRAS (11.01.37.02)</option>
+	<option value="272">DIRETORIA DE OPERACOES E SERVICOS (11.01.14.02)</option>
+	<option value="194">DIRETORIA DE OR&Ccedil;AMENTO (11.01.35.01)</option>
+	<option value="787">DIRETORIA DE PESQUISA (11.01.42.03)</option>
+	<option value="173">DIRETORIA DE PESQUISA DPG/DIRPE (11.02.60)</option>
+	<option value="1519">DIRETORIA DE PLAN. ACOMP. PEDAGOGICO (11.01.06.09)</option>
+	<option value="195">DIRETORIA DE PLANEJAMENTO (11.01.35.02)</option>
+	<option value="686">DIRETORIA DE PROCESSOS ORGANIZACIONAIS (11.01.35.03)</option>
+	<option value="1825">DIRETORIA DE PROJETOS ESTRAT&Eacute;GICOS (11.01.47.09)</option>
+	<option value="1121">DIRETORIA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O (11.01.08.08)</option>
+	<option value="223">DIRETORIA DE RECURSOS MATERIAIS (11.02.90)</option>
+	<option value="767">DIRETORIA DE SAUDE, SEGURAN&Ccedil;A E QUALIDAD (11.01.34.07)</option>
+	<option value="667">DIRETORIA DE SA&Uacute;DE ()</option>
+	<option value="118">DIRETORIA DE SEGURAN&Ccedil;A E TRANSPORTE (11.01.05.03)</option>
+	<option value="311">DIRETORIA DE SERVI&Ccedil;OS GERAIS (11.01.05.04)</option>
+	<option value="98">DIRETORIA DE SERVI&Ccedil;OS INTEGRADOS (11.01.05.01)</option>
+	<option value="273">DIRETORIA DE SISTEMAS DA INFORMACAO (11.01.14.03)</option>
+	<option value="643">DIRETORIA DO CENTRO DE APOIO AO DESENVOLVIMENTO TECNOL&Oacute;GICO (11.10)</option>
+	<option value="789">DIRETORIA DO CENTRO DE PLANEJAMENTO OSCAR NIEMEYER (11.01.37.03)</option>
+	<option value="622">DIRETORIA DO RESTAURANTE UNIVERSIT&Aacute;RIO (11.01.09.03)</option>
+	<option value="736">DIRETORIA TECNICA DE GRADUACAO (11.01.06.03)</option>
+	<option value="168">DIRETORIA T&Eacute;CNICA DE EXTENS&Atilde;O (11.01.07.01)</option>
+	<option value="1661">DIRE&Ccedil;&Atilde;O-ADJUNTA DA BIBLIOTECA CENTRAL (11.01.13.06)</option>
+	<option value="265">DIV ACERVO GERAL ()</option>
+	<option value="262">DIV CATALOGA&Ccedil;&Atilde;O E CLASSIFICA&Ccedil;&Atilde;O ()</option>
+	<option value="211">DIV EXECUCAO CONTABIL (11.02.84)</option>
+	<option value="260">DIV INTERC&Acirc;MBIO ()</option>
+	<option value="1171">DIV. DE PENALIZACAO EM CONT. DE SERV. POR POSTOS DE TRABALHO C/ DEDICA&Ccedil;&Atilde;O EXCLUSIVA (11.01.10.07.07.03)</option>
+	<option value="1067">DIVISAO DE AQUISICOES E CONTRATACOES DE TI (11.01.14.01.01)</option>
+	<option value="1070">DIVISAO DE ATENDIMENTO AO USUARIO (11.01.14.02.03)</option>
+	<option value="1169">DIVISAO DE CONTRATACAO DE SERVICOS (11.01.10.07.07.01)</option>
+	<option value="731">DIVISAO DE DESPACHO ADUANEIRO (11.01.10.02.02.01)</option>
+	<option value="1170">DIVISAO GESTAO E CONTROLE DA F SERVICOS (11.01.10.07.07.02)</option>
+	<option value="1103">DIVIS&Atilde;O DE ACOMPANHAMENTO DAS AQUISI&Ccedil;&Otilde;ES E REGISTRO DE PRE&Ccedil;O (11.01.10.05.02.02)</option>
+	<option value="1266">DIVIS&Atilde;O DE ADMINISTRA&Ccedil;&Atilde;O E LOG&Iacute;STICA (11.01.05.03.01.01)</option>
+	<option value="699">DIVIS&Atilde;O DE ADMINISTRA&Ccedil;&Atilde;O PREDIAL (11.01.05.01.02.01)</option>
+	<option value="1102">DIVIS&Atilde;O DE APURA&Ccedil;&Atilde;O DE SAN&Ccedil;&Atilde;O A FORNECEDOR (11.01.10.05.02.01)</option>
+	<option value="1633">DIVIS&Atilde;O DE CONTROLE E PRODU&Ccedil;&Atilde;O (11.01.05.01.07.01)</option>
+	<option value="1264">DIVIS&Atilde;O DE PROTE&Ccedil;&Atilde;O PATRIMONIAL E DA VIDA (11.01.05.03.01.02)</option>
+	<option value="276">EDITORA UNIVERSIDADE DE BRAS&Iacute;LIA (11.09.03)</option>
+	<option value="582">ENCARREGADO DE SERVICOS GERAIS - TEL ()</option>
+	<option value="794">FACE GEST&Atilde;O DE POL&Iacute;TICAS P&Uacute;BLICAS/GPP (11.01.01.02.08)</option>
+	<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERIN&Aacute;RIA (11.01.01.05)</option>
+	<option value="353">FACULDADE DE ARQUITETURA E URBANISMO (11.01.01.04)</option>
+	<option value="674">FACULDADE DE CI&Ecirc;NCIA DA INFORMA&Ccedil;&Atilde;O (11.01.33)</option>
+	<option value="410">FACULDADE DE CI&Ecirc;NCIAS DA SA&Uacute;DE (11.01.01.10)</option>
+	<option value="343">FACULDADE DE COMUNICA&Ccedil;&Atilde;O (11.01.01.03)</option>
+	<option value="370">FACULDADE DE DIREITO (11.01.01.06)</option>
+	<option value="381">FACULDADE DE EDUCA&Ccedil;&Atilde;O (11.01.48)</option>
+	<option value="393">FACULDADE DE EDUCA&Ccedil;&Atilde;O F&Iacute;SICA (11.01.01.08)</option>
+	<option value="402">FACULDADE DE MEDICINA (11.01.01.09)</option>
+	<option value="666">FACULDADE DE PLANALTINA (11.01.29)</option>
+	<option value="429">FACULDADE DE TECNOLOGIA (11.01.01.11)</option>
+	<option value="323">FACULDADE ECONOMIA,  ADMINISTRA&Ccedil;&Atilde;O,  CONTABILIDADE E  GEST POL P&Uacute;BLICAS (11.01.01.02)</option>
+	<option value="284">FAZENDA AGUA LIMPA (11.01.16)</option>
+	<option value="751">GABINETE DO DECANATO DE EXTENS&Atilde;O (11.01.07.03)</option>
+	<option value="679">GABINETE DO DECANATO DE GESTAO DE PESSOA (11.01.34.02)</option>
+	<option value="248">GER&Ecirc;NCIA APOSENTADORIA PENS&Atilde;O FEDERAL ()</option>
+	<option value="1663">GER&Ecirc;NCIA DE FISCALIZA&Ccedil;&Atilde;O (11.01.37.10)</option>
+	<option value="1201">GRADUA&Ccedil;&Atilde;O EM ADMINISTRA&Ccedil;&Atilde;O - BACHARELADO (11.01.01.02.01.06)</option>
+	<option value="627">HOSP-CENTRO ALTA COMPLEXIDADE ONCOLOGIA ()</option>
+	<option value="304">HOSP-CENTRO ANESTESIOLOGIA ()</option>
+	<option value="310">HOSP-CENTRO CL&Iacute;NICAS M&Eacute;DICAS ()</option>
+	<option value="302">HOSP-CENTRO DE PEDIATRIA CIR&Uacute;RGICA ()</option>
+	<option value="624">HOSP-CENTRO ENFERM CIRUGIA AMBULATORIAL ()</option>
+	<option value="638">HOSP-CENTRO ENFERMAGEM CENTRO CIRURGICO ()</option>
+	<option value="632">HOSP-CENTRO FATURAMENTO ()</option>
+	<option value="309">HOSP-CENTRO PROGRAMAS ESPECIAIS ()</option>
+	<option value="628">HOSP-DIRET-ADJUNTO EXECUTIVO ()</option>
+	<option value="301">HOSP-DIV NUTRICAO ()</option>
+	<option value="297">HOSP-DIVISAO DE CUSTOS E PLANEJAMENTO ()</option>
+	<option value="306">HOSP-GER ADM CENTRO ALTA COMPLEXIDADE ()</option>
+	<option value="288">HOSP-HOSPITAL UNIVERSIT&Aacute;RIO DE BRAS&Iacute;LIA (11.03)</option>
+	<option value="636">HOSPITAL DA UNIVERSIDADE DE BRASILIA ()</option>
+	<option value="792">HOSPITAL VETERIN&Aacute;RIO - HVET (11.01.01.05.01)</option>
+	<option value="597">INSTITUTO CI&Ecirc;NCIA POL&Iacute;TICA RELA&Ccedil;&Otilde;ES INTERNAC (11.01.01.21)</option>
+	<option value="485">INSTITUTO DE ARTES (11.01.01.14)</option>
+	<option value="668">INSTITUTO DE CI&Ecirc;NCIA POL&Iacute;TICA (11.01.01.24)</option>
+	<option value="455">INSTITUTO DE CI&Ecirc;NCIAS BIOL&Oacute;GICAS (11.01.01.12)</option>
+	<option value="504">INSTITUTO DE CI&Ecirc;NCIAS EXATAS (11.01.01.15)</option>
+	<option value="544">INSTITUTO DE CI&Ecirc;NCIAS HUMANAS (11.01.01.18)</option>
+	<option value="473">INSTITUTO DE CI&Ecirc;NCIAS SOCIAIS (11.01.01.13)</option>
+	<option value="524">INSTITUTO DE F&Iacute;SICA (11.01.01.16)</option>
+	<option value="533">INSTITUTO DE GEOCI&Ecirc;NCIAS (11.01.01.17)</option>
+	<option value="567">INSTITUTO DE LETRAS (11.01.01.19)</option>
+	<option value="583">INSTITUTO DE PSICOLOGIA (11.01.01.20)</option>
+	<option value="610">INSTITUTO DE QU&Iacute;MICA (11.01.01.22)</option>
+	<option value="669">INSTITUTO DE RELA&Ccedil;&Otilde;ES INTERNACIONAIS (11.01.01.25)</option>
+	<option value="1269">N&Uacute;CLEO DE ADMINISTRA&Ccedil;&Atilde;O E CAPACITA&Ccedil;&Atilde;O (11.01.14.01.04)</option>
+	<option value="1124">N&Uacute;CLEO DE AN&Aacute;LISE E INSTRU&Ccedil;&Atilde;O DE PROJETOS (11.01.42.01.03.02)</option>
+	<option value="225">N&Uacute;CLEO DE TECNOLOGIA DA INFORMA&Ccedil;&Atilde;O/NTI (11.01.01.03.07)</option>
+	<option value="542">OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO (11.01.01.17.03)</option>
+	<option value="692">OUVIDORIA UNB (11.01.39)</option>
+	<option value="1080">PARQUE CIENT&Iacute;FICO E TECNOL&Oacute;GICO DA UNB (11.01.51)</option>
+	<option value="827">PARQUE CIENT&Iacute;FICO TECNOL&Oacute;GICO DA UNB (11.01.43)</option>
+	<option value="1615">PARQUE DE INOVA&Ccedil;&Atilde;O E SUSTENTABILIDADE DO AMBIENTE CONSTRU&Iacute;DO (11.01.51.01)</option>
+	<option value="143">POSTO AVANCADO NOTURNO (11.01.01.01.07.02)</option>
+	<option value="154">POSTO AVANCADO SAA FS (11.01.01.01.07.06)</option>
+	<option value="155">POSTO AVANCADO SAA IH (11.01.01.01.07.07)</option>
+	<option value="1163">PREFEITURA ADJUNTA (11.01.05.16)</option>
+	<option value="91">PREFEITURA DA UNB (11.01.05)</option>
+	<option value="81">PROCURADORIA FEDERAL JUNTO A UNB (11.01.02)</option>
+	<option value="664">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ADMINISTRA&Ccedil;&Atilde;O (11.01.01.02.05)</option>
+	<option value="1617">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ADMINISTRA&Ccedil;&Atilde;O (PROFISSIONAL) (11.01.01.02.19)</option>
+	<option value="1847">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ADMINISTRA&Ccedil;&Atilde;O P&Uacute;BLICA (PROFISSIONAL) (11.01.01.02.01.19)</option>
+	<option value="853">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM AGRONEG&Oacute;CIOS (11.01.01.05.03)</option>
+	<option value="854">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM AGRONOMIA (11.01.01.05.04)</option>
+	<option value="855">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ANTROPOLOGIA (11.01.01.13.04)</option>
+	<option value="927">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ARQUITETURA E URBANISMO (11.01.01.04.04)</option>
+	<option value="842">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ARTES C&Ecirc;NICAS (11.01.01.14.05)</option>
+	<option value="911">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ARTES VISUAIS (11.01.01.14.07)</option>
+	<option value="1877">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ASSIST&Ecirc;NCIA FARMAC&Ecirc;UTICA (11.01.31.08)</option>
+	<option value="1491">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM BIOLOGIA ANIMAL (11.01.01.12.06.01)</option>
+	<option value="1501">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM BIOLOGIA MICROBIANA (11.01.01.12.11)</option>
+	<option value="1492">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM BIOTECNOLOGIA E BIODIVERSIDADE - REDE PR&Oacute;-CENTRO-OESTE (11.01.01.12.02.02)</option>
+	<option value="831">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM BIO&Eacute;TICA (11.01.01.10.06)</option>
+	<option value="1489">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM BOT&Acirc;NICA (11.01.01.12.01.01)</option>
+	<option value="900">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIA POL&Iacute;TICA (11.01.01.24.01)</option>
+	<option value="995">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS AMBIENTAIS (11.01.29.11)</option>
+	<option value="909">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS ANIMAIS (11.01.01.05.06)</option>
+	<option value="1488">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS BIOL&Oacute;GICAS (BIOLOGIA MOLECULAR) (11.01.01.12.10)</option>
+	<option value="896">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS CONT&Aacute;BEIS (11.01.01.02.02.01)</option>
+	<option value="946">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS DA INFORMA&Ccedil;&Atilde;O (11.01.33.02)</option>
+	<option value="898">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS DA REABILITA&Ccedil;&Atilde;O (11.01.31.02)</option>
+	<option value="902">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS DA SA&Uacute;DE (11.01.01.10.11)</option>
+	<option value="988">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS DE MATERIAIS (11.01.29.06)</option>
+	<option value="903">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS DO COMPORTAMENTO (11.01.01.20.07)</option>
+	<option value="897">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS E TECNOLOGIAS EM SA&Uacute;DE (11.01.31.01)</option>
+	<option value="906">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS FARMAC&Ecirc;UTICAS (11.01.01.10.12)</option>
+	<option value="997">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS FLORESTAIS (11.01.01.11.09)</option>
+	<option value="904">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS MEC&Acirc;NICAS (11.01.01.11.04.01)</option>
+	<option value="845">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS M&Eacute;DICAS (11.01.01.09.01)</option>
+	<option value="840">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM COMPUTA&Ccedil;&Atilde;O APLICADA (PROFISSIONAL) (11.01.01.15.05)</option>
+	<option value="841">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM COMUNICA&Ccedil;&Atilde;O/PPGCOM (11.01.01.03.03)</option>
+	<option value="929">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM DESENVOLVIMENTO E COOPERA&Ccedil;&Atilde;O INTERNACIONAL (11.01.25.05)</option>
+	<option value="1487">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM DESENVOLVIMENTO SUSTENT&Aacute;VEL (11.01.23.06)</option>
+	<option value="875">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM DESIGN (11.01.01.14.04.01)</option>
+	<option value="914">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM DIREITO (11.01.01.06.06)</option>
+	<option value="1505">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM DIREITO, REGULA&Ccedil;&Atilde;O E POL&Iacute;TICAS P&Uacute;BLICAS (11.01.01.06.11)</option>
+	<option value="916">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM DIREITOS HUMANOS E CIDADANIA (11.01.25.04)</option>
+	<option value="1490">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ECOLOGIA (11.01.01.12.04.01)</option>
+	<option value="1198">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ECONOMIA (11.01.01.02.14)</option>
+	<option value="1619">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ECONOMIA (PROFISSIONAL) (11.01.01.02.20)</option>
+	<option value="977">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM EDUCA&Ccedil;&Atilde;O (11.01.01.07.04)</option>
+	<option value="1620">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM EDUCA&Ccedil;&Atilde;O (PROFISSIONAL) (11.01.48.01)</option>
+	<option value="1185">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM EDUCA&Ccedil;&Atilde;O EM CI&Ecirc;NCIAS (11.01.01.22.04)</option>
+	<option value="910">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM EDUCA&Ccedil;&Atilde;O F&Iacute;SICA (11.01.01.08.04)</option>
+	<option value="1625">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM EDUCA&Ccedil;&Atilde;O F&Iacute;SICA (PROFISSIONAL) (11.01.01.08.12)</option>
+	<option value="843">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENFERMAGEM (11.01.01.10.07)</option>
+	<option value="959">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENGENHARIA BIOM&Eacute;DICA (11.01.32.05)</option>
+	<option value="949">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENGENHARIA DE SISTEMAS ELETR&Ocirc;NICOS E AUTOMA&Ccedil;&Atilde;O (11.01.01.11.03.05)</option>
+	<option value="948">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENGENHARIA EL&Eacute;TRICA (11.01.01.11.03.04)</option>
+	<option value="1186">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENSINO DE CI&Ecirc;NCIAS (PROFISSIONAL) (11.01.01.22.05)</option>
+	<option value="1506">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENSINO DE F&Iacute;SICA (PROFISSIONAL) (11.01.01.16.03)</option>
+	<option value="1613">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ENSINO DE GEOGRAFIA EM REDE (PROFISSIONAL) (11.01.01.18.08)</option>
+	<option value="876">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ESTAT&Iacute;STICA (11.01.01.15.04)</option>
+	<option value="829">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ESTRUTURAS E CONSTRU&Ccedil;&Atilde;O CIVIL (11.01.01.11.02.02)</option>
+	<option value="1225">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ESTUDOS COMPARADOS SOBRE AS AM&Eacute;RICAS (11.01.01.13.01.03)</option>
+	<option value="1494">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ESTUDOS DA TRADU&Ccedil;&Atilde;O (11.01.01.19.01.06)</option>
+	<option value="917">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM FILOSOFIA (11.01.01.18.05)</option>
+	<option value="1664">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM FILOSOFIA (PROFISSIONAL) (11.01.01.18.09)</option>
+	<option value="947">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM FITOPATOLOGIA (11.01.01.12.08)</option>
+	<option value="985">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM F&Iacute;SICA (11.01.01.16.01)</option>
+	<option value="932">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GEOCI&Ecirc;NCIAS APLICADAS E GEODIN&Acirc;MICA (11.01.01.17.02)</option>
+	<option value="1493">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GEOGRAFIA (11.01.01.18.02.02)</option>
+	<option value="931">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GEOLOGIA (11.01.01.17.01)</option>
+	<option value="901">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GEOTECNIA (11.01.01.11.02.04)</option>
+	<option value="1503">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GEST&Atilde;O E REGULA&Ccedil;&Atilde;O DE RECURSOS H&Iacute;DRICOS - PROF&Aacute;GUA (PROFISSIONAL) (11.01.29.20)</option>
+	<option value="933">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GEST&Atilde;O P&Uacute;BLICA (PROFISSIONAL) (11.01.29.01)</option>
+	<option value="1616">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM GOVERNAN&Ccedil;A E INOVA&Ccedil;&Atilde;O EM POL&Iacute;TICAS P&Uacute;BLICAS (PROFISSIONAL) (11.01.01.02.18)</option>
+	<option value="928">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM HIST&Oacute;RIA (11.01.01.18.03.01)</option>
+	<option value="895">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM INFORM&Aacute;TICA (11.01.01.15.01.02)</option>
+	<option value="960">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM INTEGRIDADE DE MATERIAIS DA ENGENHARIA (11.01.32.16)</option>
+	<option value="1989">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM LETRAS - PROFLETRAS (PROFISSIONAL) (11.01.01.19.14)</option>
+	<option value="1495">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM LINGU&Iacute;STICA (11.01.01.19.02.01)</option>
+	<option value="1203">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM LINGU&Iacute;STICA APLICADA (11.01.01.19.07)</option>
+	<option value="987">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM LITERATURA (11.01.01.19.05)</option>
+	<option value="983">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM MATEM&Aacute;TICA (11.01.01.15.06)</option>
+	<option value="990">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM MATEM&Aacute;TICA EM REDE NACIONAL (PROFISSIONAL) (11.01.01.15.07)</option>
+	<option value="874">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM MEDICINA TROPICAL (11.01.01.09.02)</option>
+	<option value="996">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM MEIO AMBIENTE EM DESENVOLVIMENTO RURAL (11.01.29.12)</option>
+	<option value="926">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM METAF&Iacute;SICA (11.01.01.18.06)</option>
+	<option value="873">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM M&Uacute;SICA (11.01.01.14.06)</option>
+	<option value="1502">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM NANOCI&Ecirc;NCIA E NANOBIOTECNOLOGIA (11.01.01.12.12)</option>
+	<option value="899">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM NUTRI&Ccedil;&Atilde;O HUMANA (11.01.01.10.10)</option>
+	<option value="907">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ODONTOLOGIA (11.01.01.10.13)</option>
+	<option value="1496">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PATOLOGIA MOLECULAR (11.01.01.09.06)</option>
+	<option value="1990">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PLANEJAMENTO TERRITORIAL, PARTICIPA&Ccedil;&Atilde;O E TURISMO (11.01.18.07)</option>
+	<option value="1499">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM POL&Iacute;TICA SOCIAL (11.01.01.18.04.01)</option>
+	<option value="1624">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM POL&Iacute;TICAS P&Uacute;BLICAS PARA INF&Acirc;NCIA E JUVENTUDE (PROFISSIONAL) (11.01.25.19)</option>
+	<option value="982">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PROCESSOS DE DESENVOLVIMENTO HUMANO E SA&Uacute;DE (11.01.01.20.03.01)</option>
+	<option value="1545">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PROFARTES (11.01.01.14.08)</option>
+	<option value="1618">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PROFARTES (PROFISSIONAL) (11.01.01.14.09)</option>
+	<option value="978">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PROFNIT - PROPRIEDADE INTELECTUAL E TRANSFER&Ecirc;NCIA DE TECNOLOGIA PARA A INOVA&Ccedil;&Atilde;O (PROFISSIONAL) (11.01.42.02.17)</option>
+	<option value="986">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PSICOLOGIA CL&Iacute;NICA E CULTURA (11.01.01.20.08)</option>
+	<option value="1497">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PSICOLOGIA DO DESENVOLVIMENTO E ESCOLAR (11.01.01.20.03.02)</option>
+	<option value="913">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM PSICOLOGIA SOCIAL, DO TRABALHO E DAS ORGANIZA&Ccedil;&Otilde;ES (PSTO) (11.01.01.20.05.01)</option>
+	<option value="844">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM QU&Iacute;MICA (11.01.01.22.01)</option>
+	<option value="1546">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM REDE NACIONAL PARA ENSINO DAS CI&Ecirc;NCIAS AMBIENTAIS (11.01.29.23)</option>
+	<option value="1622">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM REDE NACIONAL PARA ENSINO DAS CI&Ecirc;NCIAS AMBIENTAIS (PROFISSIONAL) (11.01.23.07)</option>
+	<option value="1498">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM RELA&Ccedil;&Otilde;ES INTERNACIONAIS (11.01.01.25.02)</option>
+	<option value="872">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM SA&Uacute;DE ANIMAL (11.01.01.05.05)</option>
+	<option value="908">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM SA&Uacute;DE COLETIVA (11.01.01.10.14)</option>
+	<option value="1623">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM SA&Uacute;DE COLETIVA (PROFISSIONAL) (11.01.01.10.17)</option>
+	<option value="912">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM SISTEMAS MECATR&Ocirc;NICOS (11.01.01.11.04.02)</option>
+	<option value="915">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM SOCIOLOGIA (11.01.01.13.03.01)</option>
+	<option value="1504">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM SUSTENTABILIDADE JUNTO A POVOS E TERRIT&Oacute;RIOS TRADICIONAIS (11.01.29.21)</option>
+	<option value="830">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM TECNOLOGIA AMBIENTAL E RECURSOS H&Iacute;DRICOS (11.01.01.11.02.03)</option>
+	<option value="930">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM TECNOLOGIAS QU&Iacute;MICA E BIOL&Oacute;GICA (11.01.01.22.02)</option>
+	<option value="828">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM TRANSPORTES (11.01.01.11.02.01)</option>
+	<option value="1500">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O EM ZOOLOGIA (11.01.01.12.07.01)</option>
+	<option value="1543">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O PROFBIO ENSINO DE BIOLOGIA EM REDE NACIONAL (PROFISSIONAL) (11.01.01.12.13)</option>
+	<option value="1621">PROGRAMA DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O PROFISSIONAL EM ENGENHARIA EL&Eacute;TRICA (11.01.01.11.03.18)</option>
+	<option value="1429">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM ATEN&Ccedil;&Atilde;O B&Aacute;SICA (11.03.42)</option>
+	<option value="1430">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM ENFERMAGEM ATEN&Ccedil;&Atilde;O CARDIOPULMONAR (11.03.43)</option>
+	<option value="1431">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM ENFERMAGEM ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.44)</option>
+	<option value="1432">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM FARM&Aacute;CIA ATEN&Ccedil;&Atilde;O CARDIOPULMONAR (11.03.45)</option>
+	<option value="1433">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM FARM&Aacute;CIA ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.46)</option>
+	<option value="1434">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM FISIOTERAPIA ATEN&Ccedil;&Atilde;O CARDIOPULMONAR (11.03.47)</option>
+	<option value="1435">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM FISIOTERAPIA ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.48)</option>
+	<option value="1436">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM NUTRI&Ccedil;&Atilde;O ATEN&Ccedil;&Atilde;O CARDIOPULMONAR (11.03.49)</option>
+	<option value="1437">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM NUTRI&Ccedil;&Atilde;O ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.50)</option>
+	<option value="1438">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM ODONTOLOGIA ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.51)</option>
+	<option value="1439">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM PSICOLOGIA ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.52)</option>
+	<option value="1440">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM SERVI&Ccedil;O SOCIAL ATEN&Ccedil;&Atilde;O CARDIOPULMONAR (11.03.53)</option>
+	<option value="1441">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM SERVI&Ccedil;O SOCIAL ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.54)</option>
+	<option value="1442">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM TERAPIA OCUPACIONAL - ATEN&Ccedil;&Atilde;O CARDIOPULMONAR (11.03.55)</option>
+	<option value="1443">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM TERAPIA OCUPACIONAL - ATEN&Ccedil;&Atilde;O ONCOL&Oacute;GICA (11.03.56)</option>
+	<option value="1811">PROGRAMA DE RESID&Ecirc;NCIA MULTIPROFISSIONAL EM VIGIL&Acirc;NCIA EM SA&Uacute;DE (11.03.69)</option>
+	<option value="1391">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM ANESTESIOLOGIA (11.03.04)</option>
+	<option value="1392">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CARDIOLOGIA (11.03.05)</option>
+	<option value="1393">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CIRURGIA DO APARELHO DIGESTIVO (11.03.06)</option>
+	<option value="1394">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CIRURGIA GERAL (11.03.07)</option>
+	<option value="1395">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CIRURGIA GERAL PROGRAMA AVAN&Ccedil;ADO (11.03.08)</option>
+	<option value="1396">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CIRURGIA TOR&Aacute;CICA (11.03.09)</option>
+	<option value="1839">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CIRURGIA VASCULAR (11.03.72)</option>
+	<option value="1397">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CIRURGIA VIDEOLAPAROSC&Oacute;PICA (11.03.10)</option>
+	<option value="1571">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CLINICA M&Eacute;DICA - ANO ADICIONAL (11.03.67)</option>
+	<option value="1398">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM CL&Iacute;NICA M&Eacute;DICA (11.03.11)</option>
+	<option value="1399">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM COLOPROCTOLOGIA (11.03.12)</option>
+	<option value="1400">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM DERMATOLOGIA (11.03.13)</option>
+	<option value="1401">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM ENDOCRINOLOGIA E METABOLOGIA (11.03.14)</option>
+	<option value="1402">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM ENDOCRINOLOGIA PEDI&Aacute;TRICA (11.03.15)</option>
+	<option value="1403">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM ENDOSCOPIA RESPIRAT&Oacute;RIA (11.03.16)</option>
+	<option value="1404">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM GASTROENTEROLOGIA (11.03.17)</option>
+	<option value="1405">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM GASTROENTEROLOGIA PEDI&Aacute;TRICA (11.03.18)</option>
+	<option value="1406">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM GERIATRIA (11.03.19)</option>
+	<option value="1407">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM HEMATOLOGIA E HEMOTERAPIA (11.03.20)</option>
+	<option value="1408">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM INFECTOLOGIA (11.03.21)</option>
+	<option value="1409">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM MASTOLOGIA (11.03.22)</option>
+	<option value="1410">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM MEDICINA DE FAM&Iacute;LIA E COMUNIDADE (11.03.23)</option>
+	<option value="1411">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM MEDICINA NUCLEAR (11.03.24)</option>
+	<option value="1412">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM NEFROLOGIA (11.03.25)</option>
+	<option value="1413">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM NEONATOLOGIA (11.03.26)</option>
+	<option value="1830">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM NEUROFISIOLOGIA CL&Iacute;NICA (11.03.71)</option>
+	<option value="1657">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM NEUROLOGIA (11.03.68)</option>
+	<option value="1414">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM NEUROLOGIA PEDI&Aacute;TRICA (11.03.27)</option>
+	<option value="1415">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM OBSTETR&Iacute;CIA E GINECOLOGIA (11.03.28)</option>
+	<option value="1416">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM OFTALMOLOGIA (11.03.29)</option>
+	<option value="1417">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM ONCOLOGIA CL&Iacute;NICA (11.03.30)</option>
+	<option value="1418">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM OTORRINOLARINGOLOGIA (11.03.31)</option>
+	<option value="1419">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM PATOLOGIA (11.03.32)</option>
+	<option value="1420">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM PEDIATRIA (11.03.33)</option>
+	<option value="1421">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM PNEUMOLOGIA (11.03.34)</option>
+	<option value="1453">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM PROGRAMA DE PR&Eacute; REQUISITO EM &Aacute;REA CIR&Uacute;RGICA B&Aacute;SICA (11.03.65)</option>
+	<option value="1422">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM PSIQUIATRIA (11.03.35)</option>
+	<option value="1423">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM RADIOLOGIA E DIAGN&Oacute;STICO POR IMAGEM (11.03.36)</option>
+	<option value="1424">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM RADIOTERAPIA (11.03.37)</option>
+	<option value="1425">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM REUMATOLOGIA (11.03.38)</option>
+	<option value="1426">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM TRANSPLANTE DE RIM - NEFROLOGIA (11.03.39)</option>
+	<option value="1427">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM TRANSPLANTE DE RIM - UROLOGIA (11.03.40)</option>
+	<option value="1428">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM UROLOGIA (11.03.41)</option>
+	<option value="1570">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICA EM &Aacute;REA CIR&Uacute;RGICA B&Aacute;SICA (11.03.66)</option>
+	<option value="1444">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM ANATOMIA PATOL&Oacute;GICA VETERIN&Aacute;RIA (11.03.57)</option>
+	<option value="1445">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM ANESTESIOLOGIA VETERIN&Aacute;RIA (11.03.58)</option>
+	<option value="1446">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM CIRURGIA DE PEQUENOS ANIMAIS (11.03.59)</option>
+	<option value="1447">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM CL&Iacute;NICA DE PEQUENOS ANIMAIS (11.03.60)</option>
+	<option value="1449">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM CL&Iacute;NICA E CIRURGIA DE ANIMAIS SILVESTRES (11.03.61)</option>
+	<option value="1450">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM CL&Iacute;NICA E CIRURGIA DE GRANDES ANIMAIS (11.03.62)</option>
+	<option value="1451">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM DOEN&Ccedil;AS INFECCIOSAS E PARASIT&Aacute;RIAS DOS ANIMAIS (11.03.63)</option>
+	<option value="1452">PROGRAMA DE RESID&Ecirc;NCIA M&Eacute;DICO VETERIN&Aacute;RIA EM PATOLOGIA CL&Iacute;NICA VETERIN&Aacute;RIA (11.03.64)</option>
+	<option value="1820">PROGRAMA DE RESID&Ecirc;NCIA UNIPROFISSIONAL EM ENFERMAGEM NEFROLOGIA (11.03.70)</option>
+	<option value="69">REITORIA (11.01)</option>
+	<option value="321">R&Aacute;DIO E TELEVIS&Atilde;O UNIVERSIT&Aacute;RIAS - UNBTV (11.01.21)</option>
+	<option value="186">SAM - SERV. DE ATENDIMENTO MEDICO (11.02.66)</option>
+	<option value="1142">SEC DE ADMINISTRACAO ACADEMICA FGA (11.01.32.07)</option>
+	<option value="1150">SEC DO DEPTO DE ENGENHARIA MECANICA (11.01.01.11.04.03)</option>
+	<option value="120">SECAO APOIO ADMINIST COORD TRANSPORTES (11.02.33)</option>
+	<option value="102">SECAO INST TELEFONICAS (11.02.17)</option>
+	<option value="139">SECRET APOIO A CAMARA DE ENSINO GRADUADO (11.02.46)</option>
+	<option value="414">SECRET APOIO DID&Aacute;TICO FAC CI&Ecirc;NCIAS SA&Uacute;DE ()</option>
+	<option value="591">SECRET CENTRO ATEND ESTUDOS PSICOL&Oacute;GICOS ()</option>
+	<option value="231">SECRET CENTRO DE PLANEJAMENTO (11.02.96)</option>
+	<option value="642">SECRET CENTRO DESENVOL SUSTENT&Aacute;VEL (11.01.23.05)</option>
+	<option value="651">SECRET CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDIS (11.01.25.13)</option>
+	<option value="480">SECRET CEPPAC ()</option>
+	<option value="510">SECRET CURSO GRAD CI&Ecirc;NCIAS COMPUT NOTURN ()</option>
+	<option value="417">SECRET CURSO GRAD FAC CI&Ecirc;NCIAS SA&Uacute;DE ()</option>
+	<option value="530">SECRET CURSO GRAD F&Iacute;SICA NOTURNO ()</option>
+	<option value="536">SECRET CURSO GRAD GEOCI&Ecirc;NCIAS ()</option>
+	<option value="409">SECRET CURSO GRAD MEDICINA ()</option>
+	<option value="356">SECRET CURSO GRADUA&Ccedil;&Atilde;O ARQUIT URBANISMO ()</option>
+	<option value="331">SECRET DEPTO ADMINISTRA&Ccedil;&Atilde;O DIURNO ()</option>
+	<option value="494">SECRET DEPTO ARTES C&Ecirc;NICAS ()</option>
+	<option value="602">SECRET DEPTO CI&Ecirc;NCIA POL&Iacute;TICA ()</option>
+	<option value="228">SECRET DEPTO DE SOCIOLOGIA (11.02.93)</option>
+	<option value="434">SECRET DEPTO ENG FLORESTAL ()</option>
+	<option value="515">SECRET DEPTO ESTAT&Iacute;STICA ()</option>
+	<option value="553">SECRET DEPTO FILOSOFIA ()</option>
+	<option value="575">SECRET DEPTO L&Iacute;NGUAS ESTRANG E TRADU&Ccedil;&Atilde;O (11.01.01.19.09)</option>
+	<option value="519">SECRET DEPTO MATEM&Aacute;TICA ()</option>
+	<option value="192">SECRET DIRET APOIO DESPORTO (11.02.71)</option>
+	<option value="188">SECRET DIRET DESENVOL SOCIAL (11.02.68)</option>
+	<option value="255">SECRET EMPREENDIMENTOS ()</option>
+	<option value="203">SECRET EMPREENDIMENTOS IMOBILIARIOS (11.02.77)</option>
+	<option value="408">SECRET FAC MEDICINA (11.01.01.09.04)</option>
+	<option value="526">SECRET INST F&Iacute;SICA ()</option>
+	<option value="543">SECRET OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO (11.01.01.17.01.01)</option>
+	<option value="236">SECRET PLANEJAMENTO (11.02.99)</option>
+	<option value="83">SECRET PROCURADORIA JURIDICA (11.02.08)</option>
+	<option value="1160">SECRETARIA ADMINISTRATIVA DA PJU (11.01.02.02)</option>
+	<option value="714">SECRETARIA ADMINISTRATIVA DO DPO (11.01.35.06)</option>
+	<option value="1101">SECRETARIA DA DIRETORIA DE CONTABILIDADE E FINAN&Ccedil;AS (11.01.10.01.08)</option>
+	<option value="140">SECRETARIA DE ADMINISTRACAO ACADEMICA (11.01.01.01)</option>
+	<option value="232">SECRETARIA DE ASSUNTOS INTERNACIONAIS (11.01.12)</option>
+	<option value="226">SECRETARIA DE COMUNICACAO (11.01.11)</option>
+	<option value="754">SECRETARIA DE DIREITOS HUMANOS DA UNB (11.01.09.05)</option>
+	<option value="688">SECRETARIA DE INFRAESTRUTURA (11.01.37)</option>
+	<option value="1212">SECRETARIA DE MEIO AMBIENTE (11.01.46)</option>
+	<option value="621">SECRETARIA DE PATRIM&Ocirc;NIO IMOBILI&Aacute;RIO (11.01.47)</option>
+	<option value="240">SECRETARIA DE RECURSOS HUMANOS ()</option>
+	<option value="270">SECRETARIA DE TECNOLOGIA DA INFORMACAO (11.01.14)</option>
+	<option value="1106">SECRETARIA DO DECANATO DE ADMINISTRACAO (11.01.10.08)</option>
+	<option value="587">SECRETARIA DO INSTITUTO DE PSICOLOGIA (11.01.01.20.09)</option>
+	<option value="87">SECRETARIA DOS ORGAOS COLEGIADOS (11.01.04)</option>
+	<option value="763">SECRETARIA E APOIO ADMINISTRATIVO (11.01.34.02.01)</option>
+	<option value="1660">SECRETARIA EXECUTIVA DO DPG (11.01.08.10)</option>
+	<option value="313">SECRETARIO DO DEPARTAMENTO DE NUTRICAO ()</option>
+	<option value="191">SERV ARTE E CULTURA (11.02.70)</option>
+	<option value="216">SERV COMPRAS INTERNACIONAIS (11.02.85)</option>
+	<option value="224">SERV CONVENIOS E CONTRATOS (11.02.91)</option>
+	<option value="206">SERV EXAMES E PRESTACAO DE CONTAS (11.02.79)</option>
+	<option value="653">SERV MICROFILMAGEM (11.01.41.03.01)</option>
+	<option value="184">SERV PROGRAMACAO DESENVOLV SOCIAL (11.02.65)</option>
+	<option value="258">SETOR CONSERVACAO E RESTAURACAO (11.01.13.02.02)</option>
+	<option value="1178">SETOR DE ADMIN PREDIAL E PATRIMONIAL (11.01.13.04.02)</option>
+	<option value="269">SETOR DE ATENDIMENTO NOTURNO (11.01.13.03.04)</option>
+	<option value="267">SETOR DE COLECOES ESPECIAIS (11.01.13.02.04)</option>
+	<option value="1177">SETOR DE COMPRAS (11.01.13.04.01)</option>
+	<option value="1180">SETOR DE EMPRESTIMOS (11.01.13.03.01)</option>
+	<option value="1179">SETOR DE ORGANIZACAO E INFORMACAO (11.01.13.02.01)</option>
+	<option value="261">SETOR DE RECOLOCACAO (11.01.13.03.02)</option>
+	<option value="268">SETOR DE REFERENCIA (11.01.13.03.03)</option>
+	<option value="263">SETOR DE SELECAO E AQUISICAO (11.01.13.02.03)</option>
+	<option value="318">SE&Ccedil;&Atilde;O ELETROT&Eacute;CNICA ()</option>
+	<option value="1741">SUBDIVIS&Atilde;O DE LOG&Iacute;STICA E PREVEN&Ccedil;&Atilde;O A PERDAS (11.01.05.03.01.01.01)</option>
+	<option value="1639">SUBDIVIS&Atilde;O DE PREVEN&Ccedil;&Atilde;O E COMBATE A INC&Ecirc;NDIO (11.01.05.05.04.01)</option>
+	<option value="74">SUBSECRET COMUNICACAO ADMINISTRATIVA (11.02.03)</option>
+	<option value="605">UNIVERSIDADE DE BRAS&Iacute;LIA (11.00)</option>
+	<option value="77">VICE-REITORIA (11.01.01)</option>
+</select></td>
+	    </tr>
+	    
+	    <tr>
+			<td><input id="formBuscaAtividade:selectBuscaUnidadeCoordenador" type="checkbox" name="formBuscaAtividade:selectBuscaUnidadeCoordenador" class="noborder" /> </td>
+					
+	    	<td> <label for="unidade"> Centro/Unidade Acad&#234;mica do(a) Coordenador(a) da A&#231;&#227;o:
+	    			
+				</label> </td>
+	    	<td>
+				<select id="formBuscaAtividade:buscaUnidadeCoordenador" name="formBuscaAtividade:buscaUnidadeCoordenador" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaUnidadeCoordenador').checked = true;" style="width: 95%">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="672">CAMPUS UNB CEIL&Acirc;NDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SA&Uacute;DE</option>
+	<option value="673">CAMPUS UNB GAMA: FACULDADE DE CI&Ecirc;NCIAS E TECNOLOGIAS EM ENGENHARIA</option>
+	<option value="590">CENTRO ATENDIM ESTUDOS PSICOL&Oacute;GICOS</option>
+	<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENT&Aacute;VEL</option>
+	<option value="314">CENTRO DE EXCEL&Ecirc;NCIA EM TURISMO</option>
+	<option value="650">CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDISCIPLIN</option>
+	<option value="655">CENTRO FORMACAO REC HUMANOS EM TRANSPORT</option>
+	<option value="316">CENTRO INTEGRADO ORDENAMENTO TERRITORIAL</option>
+	<option value="1448">CENTRO INTERNACIONAL DE BIO&Eacute;TICA E HUMANIDADES</option>
+	<option value="315">CENTRO INTERNACIONAL DE F&Iacute;SICA</option>
+	<option value="400">CENTRO OLIMPICO</option>
+	<option value="671">CENTRO PESQ. APLIC. BAMBU FIBRAS NATURAI</option>
+	<option value="663">CENTRO POL. DIR. ECON. E TECNO. CIMUNIC.</option>
+	<option value="659">CENTRO REF. CONS. NATU. RECUP. A. DEGRAD</option>
+	<option value="677">CENTRO UNB CERRADO</option>
+	<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG</option>
+	<option value="170">DECANATO DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O / DPG</option>
+	<option value="158">DECANATO EXTENS&Atilde;O</option>
+	<option value="351">DEPARTAMENTO DE AUDIOVISUAIS E PUBLICIDADE/DAP</option>
+	<option value="345">DEPARTAMENTO DE COMUNICA&Ccedil;&Atilde;O ORGANIZACIONAL/COM</option>
+	<option value="660">DEPARTAMENTO DE DESIGN (11.01.01.14.04)</option>
+	<option value="449">DEPARTAMENTO DE ENGENHARIA MECANICA</option>
+	<option value="479">DEPARTAMENTO DE ESTUDOS LATINO AMERICANO</option>
+	<option value="678">DEPARTAMENTO DE FARMACIA</option>
+	<option value="791">DEPARTAMENTO DE GESTAO DE POLITICAS PUBL</option>
+	<option value="352">DEPARTAMENTO DE JORNALISMO/JOR</option>
+	<option value="518">DEPARTAMENTO DE MATEM&Aacute;TICA</option>
+	<option value="390">DEPARTAMENTO DE M&Eacute;TODOS E T&Eacute;CNICAS</option>
+	<option value="391">DEPARTAMENTO DE POL&Iacute;TICAS P&Uacute;BLICAS E GEST&Atilde;O DA EDUCA&Ccedil;&Atilde;O</option>
+	<option value="592">DEPARTAMENTO DE PSICOLOGIA CL&Iacute;NICA</option>
+	<option value="483">DEPARTAMENTO DE SOCIOLOGIA</option>
+	<option value="392">DEPARTAMENTO DE TEORIA E FUNDAMENTOS</option>
+	<option value="327">DEPTO ADMINISTRA&Ccedil;&Atilde;O</option>
+	<option value="481">DEPTO ANTROPOLOGIA</option>
+	<option value="492">DEPTO ARTES C&Ecirc;NICAS</option>
+	<option value="498">DEPTO ARTES VISUAIS</option>
+	<option value="464">DEPTO BIOLOGIA CELULAR</option>
+	<option value="462">DEPTO BOT&Acirc;NICA</option>
+	<option value="333">DEPTO CI&Ecirc;NCIAS CONT&Aacute;BEIS ATUARIAIS</option>
+	<option value="508">DEPTO CI&Ecirc;NCIAS DA COMPUTA&Ccedil;&Atilde;O</option>
+	<option value="466">DEPTO CI&Ecirc;NCIAS FISIOL&Oacute;GICAS</option>
+	<option value="337">DEPTO CI&Ecirc;NCIAS INFORMA&Ccedil;&Atilde;O DOCUMENTA&Ccedil;&Atilde;O</option>
+	<option value="467">DEPTO ECOLOGIA</option>
+	<option value="548">DEPTO ECONOMIA</option>
+	<option value="422">DEPTO ENFERMAGEM</option>
+	<option value="437">DEPTO ENGENHARIA CIVIL E AMBIENTAL</option>
+	<option value="760">DEPTO ENGENHARIA DE PRODUCAO</option>
+	<option value="443">DEPTO ENGENHARIA ELETRICA</option>
+	<option value="433">DEPTO ENGENHARIA FLORESTAL</option>
+	<option value="514">DEPTO ESTAT&Iacute;STICA</option>
+	<option value="552">DEPTO FILOSOFIA</option>
+	<option value="469">DEPTO FITOPATOLOGIA</option>
+	<option value="471">DEPTO GEN&Eacute;TICA E MORFOLOGIA</option>
+	<option value="555">DEPTO GEOGRAFIA</option>
+	<option value="539">DEPTO GEOLOGIA GERAL APLICADA</option>
+	<option value="541">DEPTO GEOQU&Iacute;MICA E RECURSOS MINERAIS</option>
+	<option value="559">DEPTO HIST&Oacute;RIA</option>
+	<option value="578">DEPTO LINGUISTICA, PORT. LING. CLASSICAS</option>
+	<option value="574">DEPTO L&Iacute;NGUAS ESTRANGEIRAS E TRADU&Ccedil;&Atilde;O</option>
+	<option value="540">DEPTO MINERALOGIA E PETROLOGIA</option>
+	<option value="495">DEPTO M&Uacute;SICA</option>
+	<option value="424">DEPTO NUTRICAO</option>
+	<option value="427">DEPTO ODONTOLOGIA</option>
+	<option value="594">DEPTO PROCESSOS PSICOL&Oacute;GICOS B&Aacute;SICOS</option>
+	<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN</option>
+	<option value="593">DEPTO PSICOLOGIA ESCOLAR DESENVOLVIMENTO</option>
+	<option value="596">DEPTO PSICOLOGIA SOCIAL E DO TRABALHO</option>
+	<option value="420">DEPTO SAUDE COLETIVA</option>
+	<option value="563">DEPTO SERVI&Ccedil;O SOCIAL</option>
+	<option value="361">DEPTO TECNOLOGIA ARQUITETURA URBANISMO</option>
+	<option value="362">DEPTO TEORIA HISTORIA ARQUIT E URBANISM</option>
+	<option value="580">DEPTO TEORIA LITER&Aacute;RIA E LITERATURA</option>
+	<option value="472">DEPTO ZOOLOGIA</option>
+	<option value="643">DIRETORIA DO CENTRO DE APOIO AO DESENVOLVIMENTO TECNOL&Oacute;GICO</option>
+	<option value="794">FACE GEST&Atilde;O DE POL&Iacute;TICAS P&Uacute;BLICAS/GPP</option>
+	<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERIN&Aacute;RIA</option>
+	<option value="353">FACULDADE DE ARQUITETURA E URBANISMO</option>
+	<option value="674">FACULDADE DE CI&Ecirc;NCIA DA INFORMA&Ccedil;&Atilde;O</option>
+	<option value="410">FACULDADE DE CI&Ecirc;NCIAS DA SA&Uacute;DE</option>
+	<option value="343">FACULDADE DE COMUNICA&Ccedil;&Atilde;O</option>
+	<option value="370">FACULDADE DE DIREITO</option>
+	<option value="381">FACULDADE DE EDUCA&Ccedil;&Atilde;O</option>
+	<option value="393">FACULDADE DE EDUCA&Ccedil;&Atilde;O F&Iacute;SICA</option>
+	<option value="402">FACULDADE DE MEDICINA</option>
+	<option value="666">FACULDADE DE PLANALTINA</option>
+	<option value="429">FACULDADE DE TECNOLOGIA</option>
+	<option value="323">FACULDADE ECONOMIA,  ADMINISTRA&Ccedil;&Atilde;O,  CONTABILIDADE E  GEST POL P&Uacute;BLICAS</option>
+	<option value="284">FAZENDA AGUA LIMPA</option>
+	<option value="288">HOSP-HOSPITAL UNIVERSIT&Aacute;RIO DE BRAS&Iacute;LIA</option>
+	<option value="485">INSTITUTO DE ARTES</option>
+	<option value="668">INSTITUTO DE CI&Ecirc;NCIA POL&Iacute;TICA</option>
+	<option value="455">INSTITUTO DE CI&Ecirc;NCIAS BIOL&Oacute;GICAS</option>
+	<option value="504">INSTITUTO DE CI&Ecirc;NCIAS EXATAS</option>
+	<option value="544">INSTITUTO DE CI&Ecirc;NCIAS HUMANAS</option>
+	<option value="473">INSTITUTO DE CI&Ecirc;NCIAS SOCIAIS</option>
+	<option value="524">INSTITUTO DE F&Iacute;SICA</option>
+	<option value="533">INSTITUTO DE GEOCI&Ecirc;NCIAS</option>
+	<option value="567">INSTITUTO DE LETRAS</option>
+	<option value="583">INSTITUTO DE PSICOLOGIA</option>
+	<option value="610">INSTITUTO DE QU&Iacute;MICA</option>
+	<option value="669">INSTITUTO DE RELA&Ccedil;&Otilde;ES INTERNACIONAIS</option>
+	<option value="542">OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO</option>
+	<option value="1080">PARQUE CIENT&Iacute;FICO E TECNOL&Oacute;GICO DA UNB</option>
+	<option value="827">PARQUE CIENT&Iacute;FICO TECNOL&Oacute;GICO DA UNB</option>
+	<option value="1615">PARQUE DE INOVA&Ccedil;&Atilde;O E SUSTENTABILIDADE DO AMBIENTE CONSTRU&Iacute;DO</option>
+	<option value="69">REITORIA</option>
+	<option value="140">SECRETARIA DE ADMINISTRACAO ACADEMICA</option>
+</select></td>
+	    </tr>
+
+   		<tr>
+   			<td>
+				<input id="formBuscaAtividade:selectBuscaCentro" type="checkbox" name="formBuscaAtividade:selectBuscaCentro" class="noborder" />
+			</td>
+			<td> <label for="centro">Centro da A&#231;&#227;o:</label></td>
+			<td>
+				<select id="formBuscaAtividade:buscaCentro" name="formBuscaAtividade:buscaCentro" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaCentro').checked = true;" style="width: 300px">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="672">CAMPUS UNB CEIL&Acirc;NDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SA&Uacute;DE - BRAS&Iacute;LIA - 11.01.31</option>
+	<option value="673">CAMPUS UNB GAMA: FACULDADE DE CI&Ecirc;NCIAS E TECNOLOGIAS EM ENGENHARIA - BRAS&Iacute;LIA - 11.01.32</option>
+	<option value="590">CENTRO ATENDIM ESTUDOS PSICOL&Oacute;GICOS - BRAS&Iacute;LIA - 11.01.01.20.01</option>
+	<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENT&Aacute;VEL - BRAS&Iacute;LIA - 11.01.23</option>
+	<option value="314">CENTRO DE EXCEL&Ecirc;NCIA EM TURISMO - BRAS&Iacute;LIA - 11.01.18</option>
+	<option value="650">CENTRO ESTUDOS AVAN&Ccedil;ADOS MULTIDISCIPLIN - BRAS&Iacute;LIA - 11.01.25</option>
+	<option value="655">CENTRO FORMACAO REC HUMANOS EM TRANSPORT - BRAS&Iacute;LIA - 11.01.01.11.05</option>
+	<option value="316">CENTRO INTEGRADO ORDENAMENTO TERRITORIAL - BRAS&Iacute;LIA - 11.01.20</option>
+	<option value="1448">CENTRO INTERNACIONAL DE BIO&Eacute;TICA E HUMANIDADES - BRAS&Iacute;LIA - 11.01.49</option>
+	<option value="315">CENTRO INTERNACIONAL DE F&Iacute;SICA - BRAS&Iacute;LIA - 11.01.01.16.04</option>
+	<option value="400">CENTRO OLIMPICO - BRAS&Iacute;LIA - 11.01.01.08.01</option>
+	<option value="671">CENTRO PESQ. APLIC. BAMBU FIBRAS NATURAI - BRAS&Iacute;LIA - 11.01.01.04.11</option>
+	<option value="663">CENTRO POL. DIR. ECON. E TECNO. CIMUNIC. - BRAS&Iacute;LIA - 11.01.28</option>
+	<option value="659">CENTRO REF. CONS. NATU. RECUP. A. DEGRAD - BRAS&Iacute;LIA - 11.01.27</option>
+	<option value="677">CENTRO UNB CERRADO - BRAS&Iacute;LIA - 11.01.36</option>
+	<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG - BRAS&Iacute;LIA - 11.01.06</option>
+	<option value="170">DECANATO DE P&Oacute;S-GRADUA&Ccedil;&Atilde;O / DPG - BRAS&Iacute;LIA - 11.01.08</option>
+	<option value="158">DECANATO EXTENS&Atilde;O - BRAS&Iacute;LIA - 11.01.07</option>
+	<option value="351">DEPARTAMENTO DE AUDIOVISUAIS E PUBLICIDADE/DAP - BRAS&Iacute;LIA - 11.01.01.03.01</option>
+	<option value="345">DEPARTAMENTO DE COMUNICA&Ccedil;&Atilde;O ORGANIZACIONAL/COM - BRAS&Iacute;LIA - 11.01.01.03.05</option>
+	<option value="660">DEPARTAMENTO DE DESIGN (11.01.01.14.04) - BRAS&Iacute;LIA - 11.01.01.14.04</option>
+	<option value="449">DEPARTAMENTO DE ENGENHARIA MECANICA - BRAS&Iacute;LIA - 11.01.01.11.04</option>
+	<option value="479">DEPARTAMENTO DE ESTUDOS LATINO AMERICANO - BRAS&Iacute;LIA - 11.01.01.13.01</option>
+	<option value="678">DEPARTAMENTO DE FARMACIA - BRAS&Iacute;LIA - 11.01.01.10.05</option>
+	<option value="791">DEPARTAMENTO DE GESTAO DE POLITICAS PUBL - BRAS&Iacute;LIA - 11.01.01.02.07</option>
+	<option value="352">DEPARTAMENTO DE JORNALISMO/JOR - BRAS&Iacute;LIA - 11.01.01.03.02</option>
+	<option value="518">DEPARTAMENTO DE MATEM&Aacute;TICA - BRAS&Iacute;LIA - 11.01.01.15.03</option>
+	<option value="390">DEPARTAMENTO DE M&Eacute;TODOS E T&Eacute;CNICAS - BRAS&Iacute;LIA - 11.01.01.07.01</option>
+	<option value="391">DEPARTAMENTO DE POL&Iacute;TICAS P&Uacute;BLICAS E GEST&Atilde;O DA EDUCA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.01.07.02</option>
+	<option value="592">DEPARTAMENTO DE PSICOLOGIA CL&Iacute;NICA - BRAS&Iacute;LIA - 11.01.01.20.02</option>
+	<option value="483">DEPARTAMENTO DE SOCIOLOGIA - BRAS&Iacute;LIA - 11.01.01.13.03</option>
+	<option value="392">DEPARTAMENTO DE TEORIA E FUNDAMENTOS - BRAS&Iacute;LIA - 11.01.01.07.03</option>
+	<option value="327">DEPTO ADMINISTRA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.01.02.01</option>
+	<option value="481">DEPTO ANTROPOLOGIA - BRAS&Iacute;LIA - 11.01.01.13.02</option>
+	<option value="492">DEPTO ARTES C&Ecirc;NICAS - BRAS&Iacute;LIA - 11.01.01.14.01</option>
+	<option value="498">DEPTO ARTES VISUAIS - BRAS&Iacute;LIA - 11.01.01.14.03</option>
+	<option value="464">DEPTO BIOLOGIA CELULAR - BRAS&Iacute;LIA - 11.01.01.12.02</option>
+	<option value="462">DEPTO BOT&Acirc;NICA - BRAS&Iacute;LIA - 11.01.01.12.01</option>
+	<option value="333">DEPTO CI&Ecirc;NCIAS CONT&Aacute;BEIS ATUARIAIS - BRAS&Iacute;LIA - 11.01.01.02.02</option>
+	<option value="508">DEPTO CI&Ecirc;NCIAS DA COMPUTA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.01.15.01</option>
+	<option value="466">DEPTO CI&Ecirc;NCIAS FISIOL&Oacute;GICAS - BRAS&Iacute;LIA - 11.01.01.12.03</option>
+	<option value="337">DEPTO CI&Ecirc;NCIAS INFORMA&Ccedil;&Atilde;O DOCUMENTA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - </option>
+	<option value="467">DEPTO ECOLOGIA - BRAS&Iacute;LIA - 11.01.01.12.04</option>
+	<option value="548">DEPTO ECONOMIA - BRAS&Iacute;LIA - 11.01.01.02.03</option>
+	<option value="422">DEPTO ENFERMAGEM - BRAS&Iacute;LIA - 11.01.01.10.02</option>
+	<option value="437">DEPTO ENGENHARIA CIVIL E AMBIENTAL - BRAS&Iacute;LIA - 11.01.01.11.02</option>
+	<option value="760">DEPTO ENGENHARIA DE PRODUCAO - BRAS&Iacute;LIA - 11.01.01.11.06</option>
+	<option value="443">DEPTO ENGENHARIA ELETRICA - BRAS&Iacute;LIA - 11.01.01.11.03</option>
+	<option value="433">DEPTO ENGENHARIA FLORESTAL - BRAS&Iacute;LIA - 11.01.01.11.01</option>
+	<option value="514">DEPTO ESTAT&Iacute;STICA - BRAS&Iacute;LIA - 11.01.01.15.02</option>
+	<option value="552">DEPTO FILOSOFIA - BRAS&Iacute;LIA - 11.01.01.18.01</option>
+	<option value="469">DEPTO FITOPATOLOGIA - BRAS&Iacute;LIA - 11.01.01.12.05</option>
+	<option value="471">DEPTO GEN&Eacute;TICA E MORFOLOGIA - BRAS&Iacute;LIA - 11.01.01.12.06</option>
+	<option value="555">DEPTO GEOGRAFIA - BRAS&Iacute;LIA - 11.01.01.18.02</option>
+	<option value="539">DEPTO GEOLOGIA GERAL APLICADA - BRAS&Iacute;LIA - </option>
+	<option value="541">DEPTO GEOQU&Iacute;MICA E RECURSOS MINERAIS - BRAS&Iacute;LIA - </option>
+	<option value="559">DEPTO HIST&Oacute;RIA - BRAS&Iacute;LIA - 11.01.01.18.03</option>
+	<option value="578">DEPTO LINGUISTICA, PORT. LING. CLASSICAS - BRAS&Iacute;LIA - 11.01.01.19.02</option>
+	<option value="574">DEPTO L&Iacute;NGUAS ESTRANGEIRAS E TRADU&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.01.19.01</option>
+	<option value="540">DEPTO MINERALOGIA E PETROLOGIA - BRAS&Iacute;LIA - </option>
+	<option value="495">DEPTO M&Uacute;SICA - BRAS&Iacute;LIA - 11.01.01.14.02</option>
+	<option value="424">DEPTO NUTRICAO - BRAS&Iacute;LIA - 11.01.01.10.03</option>
+	<option value="427">DEPTO ODONTOLOGIA - BRAS&Iacute;LIA - 11.01.01.10.04</option>
+	<option value="594">DEPTO PROCESSOS PSICOL&Oacute;GICOS B&Aacute;SICOS - BRAS&Iacute;LIA - 11.01.01.20.04</option>
+	<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN - BRAS&Iacute;LIA - 11.01.01.04.01</option>
+	<option value="593">DEPTO PSICOLOGIA ESCOLAR DESENVOLVIMENTO - BRAS&Iacute;LIA - 11.01.01.20.03</option>
+	<option value="596">DEPTO PSICOLOGIA SOCIAL E DO TRABALHO - BRAS&Iacute;LIA - 11.01.01.20.05</option>
+	<option value="420">DEPTO SAUDE COLETIVA - BRAS&Iacute;LIA - 11.01.01.10.01</option>
+	<option value="563">DEPTO SERVI&Ccedil;O SOCIAL - BRAS&Iacute;LIA - 11.01.01.18.04</option>
+	<option value="361">DEPTO TECNOLOGIA ARQUITETURA URBANISMO - BRAS&Iacute;LIA - 11.01.01.04.02</option>
+	<option value="362">DEPTO TEORIA HISTORIA ARQUIT E URBANISM - BRAS&Iacute;LIA - 11.01.01.04.03</option>
+	<option value="580">DEPTO TEORIA LITER&Aacute;RIA E LITERATURA - BRAS&Iacute;LIA - 11.01.01.19.03</option>
+	<option value="472">DEPTO ZOOLOGIA - BRAS&Iacute;LIA - 11.01.01.12.07</option>
+	<option value="643">DIRETORIA DO CENTRO DE APOIO AO DESENVOLVIMENTO TECNOL&Oacute;GICO - BRAS&Iacute;LIA - 11.10</option>
+	<option value="794">FACE GEST&Atilde;O DE POL&Iacute;TICAS P&Uacute;BLICAS/GPP - BRAS&Iacute;LIA - 11.01.01.02.08</option>
+	<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERIN&Aacute;RIA - BRAS&Iacute;LIA - 11.01.01.05</option>
+	<option value="353">FACULDADE DE ARQUITETURA E URBANISMO - BRAS&Iacute;LIA - 11.01.01.04</option>
+	<option value="674">FACULDADE DE CI&Ecirc;NCIA DA INFORMA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.33</option>
+	<option value="410">FACULDADE DE CI&Ecirc;NCIAS DA SA&Uacute;DE - BRAS&Iacute;LIA - 11.01.01.10</option>
+	<option value="343">FACULDADE DE COMUNICA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.01.03</option>
+	<option value="370">FACULDADE DE DIREITO - BRAS&Iacute;LIA - 11.01.01.06</option>
+	<option value="381">FACULDADE DE EDUCA&Ccedil;&Atilde;O - BRAS&Iacute;LIA - 11.01.48</option>
+	<option value="393">FACULDADE DE EDUCA&Ccedil;&Atilde;O F&Iacute;SICA - BRAS&Iacute;LIA - 11.01.01.08</option>
+	<option value="402">FACULDADE DE MEDICINA - BRAS&Iacute;LIA - 11.01.01.09</option>
+	<option value="666">FACULDADE DE PLANALTINA - BRAS&Iacute;LIA - 11.01.29</option>
+	<option value="429">FACULDADE DE TECNOLOGIA - BRAS&Iacute;LIA - 11.01.01.11</option>
+	<option value="323">FACULDADE ECONOMIA,  ADMINISTRA&Ccedil;&Atilde;O,  CONTABILIDADE E  GEST POL P&Uacute;BLICAS - BRAS&Iacute;LIA - 11.01.01.02</option>
+	<option value="284">FAZENDA AGUA LIMPA - BRAS&Iacute;LIA - 11.01.16</option>
+	<option value="288">HOSP-HOSPITAL UNIVERSIT&Aacute;RIO DE BRAS&Iacute;LIA - BRAS&Iacute;LIA - 11.03</option>
+	<option value="485">INSTITUTO DE ARTES - BRAS&Iacute;LIA - 11.01.01.14</option>
+	<option value="668">INSTITUTO DE CI&Ecirc;NCIA POL&Iacute;TICA - BRAS&Iacute;LIA - 11.01.01.24</option>
+	<option value="455">INSTITUTO DE CI&Ecirc;NCIAS BIOL&Oacute;GICAS - BRAS&Iacute;LIA - 11.01.01.12</option>
+	<option value="504">INSTITUTO DE CI&Ecirc;NCIAS EXATAS - BRAS&Iacute;LIA - 11.01.01.15</option>
+	<option value="544">INSTITUTO DE CI&Ecirc;NCIAS HUMANAS - BRAS&Iacute;LIA - 11.01.01.18</option>
+	<option value="473">INSTITUTO DE CI&Ecirc;NCIAS SOCIAIS - BRAS&Iacute;LIA - 11.01.01.13</option>
+	<option value="524">INSTITUTO DE F&Iacute;SICA - BRAS&Iacute;LIA - 11.01.01.16</option>
+	<option value="533">INSTITUTO DE GEOCI&Ecirc;NCIAS - BRAS&Iacute;LIA - 11.01.01.17</option>
+	<option value="567">INSTITUTO DE LETRAS - BRAS&Iacute;LIA - 11.01.01.19</option>
+	<option value="583">INSTITUTO DE PSICOLOGIA - BRAS&Iacute;LIA - 11.01.01.20</option>
+	<option value="610">INSTITUTO DE QU&Iacute;MICA - BRAS&Iacute;LIA - 11.01.01.22</option>
+	<option value="669">INSTITUTO DE RELA&Ccedil;&Otilde;ES INTERNACIONAIS - BRAS&Iacute;LIA - 11.01.01.25</option>
+	<option value="542">OBSERVAT&Oacute;RIO SISMOL&Oacute;GICO - BRAS&Iacute;LIA - 11.01.01.17.03</option>
+	<option value="1080">PARQUE CIENT&Iacute;FICO E TECNOL&Oacute;GICO DA UNB - BRAS&Iacute;LIA - 11.01.51</option>
+	<option value="827">PARQUE CIENT&Iacute;FICO TECNOL&Oacute;GICO DA UNB - BRAS&Iacute;LIA - 11.01.43</option>
+	<option value="1615">PARQUE DE INOVA&Ccedil;&Atilde;O E SUSTENTABILIDADE DO AMBIENTE CONSTRU&Iacute;DO - BRAS&Iacute;LIA - 11.01.51.01</option>
+	<option value="69">REITORIA - BRAS&Iacute;LIA - 11.01</option>
+	<option value="140">SECRETARIA DE ADMINISTRACAO ACADEMICA - BRAS&Iacute;LIA - 11.01.01.01</option>
+</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td><input id="formBuscaAtividade:selectBuscaAreaTematicaPrincipal" type="checkbox" name="formBuscaAtividade:selectBuscaAreaTematicaPrincipal" class="noborder" />  
+			</td>
+	    	<td> <label for="unidade"> &#193;rea Tem&#225;tica: </label> </td>
+	    	<td>
+				<select id="formBuscaAtividade:buscaAreaTematica" name="formBuscaAtividade:buscaAreaTematica" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaAreaTematicaPrincipal').checked = true;">	<option value="0" selected="selected"> -- SELECIONE --</option>
+	<option value="1">COMUNICA&Ccedil;&Atilde;O</option>
+	<option value="2">CULTURA</option>
+	<option value="4">DIREITOS HUMANOS E JUSTI&Ccedil;A</option>
+	<option value="5">EDUCA&Ccedil;&Atilde;O</option>
+	<option value="6">MEIO AMBIENTE</option>
+	<option value="7">SA&Uacute;DE</option>
+	<option value="8">TECNOLOGIA E PRODU&Ccedil;&Atilde;O</option>
+	<option value="3">TERRIT&Oacute;RIO</option>
+	<option value="9">TRABALHO</option>
+</select>
+	    	</td>
+	    </tr>
+	    
+	    <tr>
+			<td><input id="formBuscaAtividade:selectBuscaProgramaEstrategico" type="checkbox" name="formBuscaAtividade:selectBuscaProgramaEstrategico" class="noborder" />  
+			</td>
+	    	<td> <label for="selectBuscaProgramaEstrategico"> Programa Estrat&#233;gico: </label> </td>
+	    	<td>
+				<select id="formBuscaAtividade:programaEstrategico" name="formBuscaAtividade:programaEstrategico" size="1">	<option value="-1">N&atilde;o Informada</option>
+</select>
+	    	</td>
+	    </tr>
+	    
+	    <tr>
+			<td>
+				<input id="formBuscaAtividade:selectBuscaAssociado" type="checkbox" name="formBuscaAtividade:selectBuscaAssociado" class="noborder" />
+			</td>
+	    	<td> 
+	    		Dimens&#227;o Acad&#234;mica: 
+	    	</td>
+	    	<td>
+	    		<select id="formBuscaAtividade:associado" name="formBuscaAtividade:associado" size="1" onchange="javascript:$('formBuscaAtividade:selectBuscaAssociado').checked = true;">	<option value="0" selected="selected">-- SELECIONE --</option>
+	<option value="1">PROJETO ASSOCIADO</option>
+	<option value="2">PROJETO ISOLADO</option>
+</select>
+	    	 </td>
+	    </tr>
+	    
+	    <tr>
+	    	<td><input id="formBuscaAtividade:checkPalavrasChaves" type="checkbox" name="formBuscaAtividade:checkPalavrasChaves" class="noborder" /></td>
+	    	<td><label for="formBuscaAtividade:checkPalavrasChaves">
+Palavras-Chave:</label></td>
+	    	<td><input id="formBuscaAtividade:buscaPalavrasChave" type="text" name="formBuscaAtividade:buscaPalavrasChave" onchange="javascript:$('formBuscaAtividade:checkPalavrasChaves').checked = true;" size="70" /></td>
+	    </tr>
+
+		<tr>
+			
+			
+				<td><input id="formBuscaAtividade:selectBuscaServidor" type="checkbox" name="formBuscaAtividade:selectBuscaServidor" class="noborder" onclick="javascript:if($('formBuscaAtividade:selectBuscaCoordenador').checked)$('formBuscaAtividade:selectBuscaCoordenador').checked=$('formBuscaAtividade:selectBuscaServidor').checked;" />
+				</td>
+				<td><label onclick="javascript:$('formBuscaAtividade:selectBuscaServidor').checked=!$('formBuscaAtividade:selectBuscaServidor').checked;javascript:if($('formBuscaAtividade:selectBuscaCoordenador').checked)$('formBuscaAtividade:selectBuscaCoordenador').checked=$('formBuscaAtividade:selectBuscaServidor').checked;">Servidor:</label></td>
+			
+
+			<td>
+			<input id="formBuscaAtividade:buscaServidor" type="hidden" name="formBuscaAtividade:buscaServidor" value="0" /><input id="formBuscaAtividade:buscaNomeServidor" type="text" name="formBuscaAtividade:buscaNomeServidor" onfocus="javascript:$('formBuscaAtividade:selectBuscaServidor').checked = true;" size="70" />
+			
+				<script type="text/javascript">
+new AjaxJspTag.Autocomplete(
+"/sigaa/ajaxServidor", {
+indicator: "indicator",
+source: "formBuscaAtividade:buscaNomeServidor",
+target: "formBuscaAtividade:buscaServidor",
+minimumCharacters: "3",
+className: "autocomplete",
+parameters: "tipo=todos",
+parser: new ResponseXmlToHtmlListParser()
+});
+</script>
+
+
+
+				<span id="indicator" style="display:none; "> <img src="/sigaa/img/indicator.gif" /> </span>
+			</td>
+		</tr>
+		<tr>
+			
+			
+				<td><input id="formBuscaAtividade:selectBuscaCoordenador" type="checkbox" name="formBuscaAtividade:selectBuscaCoordenador" class="noborder" onclick="javascript:$('formBuscaAtividade:selectBuscaServidor').checked=$('formBuscaAtividade:selectBuscaCoordenador').checked;" />
+				</td>
+			
+			
+			<td colspan=2><label onclick="javascript:$('formBuscaAtividade:selectBuscaCoordenador').checked = !$('formBuscaAtividade:selectBuscaCoordenador').checked;javascript:$('formBuscaAtividade:selectBuscaServidor').checked=$('formBuscaAtividade:selectBuscaCoordenador').checked;">Buscar apenas a&#231;&#245;es em que o(a) servidor(a) coordene</label></td>
+			
+		</tr>
+		
+
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="3">
+				<!-- EXIBE PAGINA DE RELATORIO COM DADOS PARA CONTATO COM COORDENADOR -->
+				
+				<!-- EXIBE LISTAGEM NORMAL COMO RESULTADO DA BUSCA -->
+				
+					<input id="formBuscaAtividade:btBuscar" type="submit" name="formBuscaAtividade:btBuscar" value="Buscar" onclick="submit();" /><input id="formBuscaAtividade:btCancelar" type="submit" name="formBuscaAtividade:btCancelar" value="Cancelar" onclick="return confirm('Deseja cancelar a opera&ccedil;&atilde;o? Todos os dados digitados n&atilde;o salvos ser&atilde;o perdidos!');" />
+				
+				
+				
+	    	</td>
+	    </tr>
+	</tfoot>
+	</table>
+	
+	<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id10" />
+</form>
+
+	<br/>
+	<br/>
+	
+
+	
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+<div class="clear"> </div>
+
+
+
+</div> 
+
+	<br />
+
+
+
+	
+
+	
+
+	<div style="width: 80%; text-align: center; margin: 0 auto;">
+
+		<a href='/sigaa/verPortalDiscente.do'>Portal Discente</a>
+
+	</div>
+
+	
+
+	
+
+
+
+	<div id="rodape">
+
+		<p>	SIGAA | Secretaria de Tecnologia da Informa&#231;&#227;o - STI - (61)  3107-0102 | Copyright &copy; 2006-2026 - UFRN - app31.sigaa31
+
+		
+
+		 
+
+			 - <a onclick="javascript:versao();">v4.15.10.58</a>
+
+				
+
+		</p>
+
+	</div>
+
+
+
+
+
+</div>  
+
+
+
+<div id="painel-mensagem-envio"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+
+	  ga('create', '0', 'auto');
+
+	  ga('send', 'pageview');
+
+	
+
+	</script>	
+
+
+
+
+
+
+
+<!-- MYFACES JAVASCRIPT -->
+
+</body>
+
+
+
+</html>
+
+ 
+
+	<script type="text/javascript" charset="UTF-8">
+
+		function versao(){
+
+			var msg='';
+
+			msg+='SIGAA 4.15.10.58,  publicado em: 16/04/2026 15:46\n\n';
+
+			msg+='Depend\u00eancias:\n';
+
+			msg+='Arquitetura 4.4.9\n';
+
+			msg+='Entidades Comuns 2.3.12-SNAPSHOT\n';
+
+			msg+='Servicos Integrados 3.0.1\n';
+
+			msg+='SharedResources 2.1.4\n';
+
+			msg+='Servicos Remoto Biblioteca 1.0.3\n';
+
+			msg+='SIGAA Mobile Objects 1.0.0\n\n';
+
+			msg+='Copyright SINFO/UFRN';
+
+			alert(msg);
+
+		}	
+
+	</script>
+
+
+
+
+
+<script language="javascript">
+
+Relogio.init(40);
+
+</script>
+
+
+	

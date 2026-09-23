@@ -1,0 +1,3754 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+		<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="background">
+
+
+
+
+
+<head>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+
+<meta http-equiv="Pragma" content="no-cache" />
+
+<meta http-equiv="Expires" content="0" />
+
+
+
+
+
+
+
+<title>SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas</title>
+
+<link rel="shortcut icon" href="/sigaa/img/sigaa.ico" />
+
+
+
+<script type="text/javascript" src="/shared/jsBundles/jawr_loader.js"></script>
+
+<script type="text/javascript">
+
+                JAWR.loader.style('/bundles/css/sigaa_base.css', 'all');
+
+        		JAWR.loader.style('/css/ufrn_print.css', 'print');
+
+        		JAWR.loader.script('/bundles/js/sigaa_base.js');
+
+</script>
+
+<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_227240237/bundles/css/sigaa.css" />
+
+
+
+
+<link rel="alternate stylesheet" type="text/css" media="screen" title="mono" href="/sigaa/css/mono.css" />
+
+<link rel="alternate stylesheet" type="text/css" media="screen" title="contraste" href="/sigaa/css/contraste.css" />
+
+
+
+<!-- FontAwesome -->
+
+<link rel="stylesheet" type="text/css" href="/shared/beta/css/font-awesome.css" media="screen" />
+
+
+
+<!-- Painel Genérico para telas Modal -->
+
+<script type="text/javascript" src="/shared/javascript/paineis/painel_generico.js"></script>
+
+
+
+<script src="/sigaa/javascript/styleswitch.js" type="text/javascript" ></script>
+
+
+
+<script src="/sigaa/javascript/prevenir-duplo-clique.js" type="text/javascript"></script>
+
+
+
+
+
+	
+
+	
+
+		<!-- Botão de informar um problema -->
+
+		<link rel="stylesheet" type="text/css" href="/shared/informar-problema/css/informar-problema.css?ver=1.1" media="screen" />
+
+		<script type="text/javascript" src="/shared/informar-problema/js/webcomponents.min.js?ver=1.1"></script>
+
+		<script type="text/javascript" src="/shared/informar-problema/js/html2canvas.js?ver=1.1"></script>
+
+		<script type="text/javascript" src="/shared/informar-problema/js/informar-problema.js?ver=1.1"></script>
+
+		<!-- FIM botão de informar um problema -->
+
+	
+
+	
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+		var mensagem;
+
+		var initMensagem = function() {
+
+			mensagem = new Mensagem();
+
+		}
+
+		YAHOO.util.Event.addListener(window,'load', initMensagem);
+
+		
+
+		function isIE(){
+
+		
+
+					return false;
+
+			
+
+		}
+
+</script>
+
+
+
+<script type="text/javascript" src="/sigaa/javascript/jsCookMenuHack.js"></script>
+
+<!-- Fim dos imports para abrir chamado -->
+
+
+
+	<script src="/shared/javascript/STICookieConsent.js"></script>
+
+	<script>
+
+	    document.addEventListener("DOMContentLoaded", () => {
+
+	    	generateCookieConsentModal("SIGAA", "Nós usamos cookies para melhorar sua experiência de navegação no portal. Ao utilizar o %sitename%, você concorda com a política de monitoramento de cookies. Para ter mais informações sobre como isso é feito e como remover, acesse a <a href=%cookie-policy%>Política de Proteção de Dados Pessoais</a>. Para saber como a UnB trata os dados, acesse a <a href=%privacy-policy%> Política de cookies</a>. Se você concorda, clique em %button-text%.", "https://protecaodedados.unb.br", "https://sti.unb.br/doc-politicas");
+
+	    })
+
+	</script>
+
+	
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="container">
+
+	<div id="cabecalho">
+
+		<div id="info-sistema">
+
+			<h1><span>UnB - SIGAA -</span></h1>
+
+			<h3>Sistema Integrado de Gestão de Atividades Acadêmicas</h3>
+
+			<div class="dir">
+
+				
+
+					
+
+					<style>
+#info-sistema span.sair-sistema,
+	#info-sistema #tempoSessao{
+	display: inline;
+	right: inherit;
+	position: relative;
+	top: 0;
+	padding-right: inherit;
+}
+
+#info-sistema div.dir{
+	top:0;
+	right:0;
+	text-align: right;
+	width: auto;
+	position: absolute;
+	margin:0;
+	padding: 0;
+	height:16px;
+	display: inline;
+	padding-right:5px;
+	color: #FFF;
+}
+#info-sistema span.acessibilidade{
+	padding: 0 5px;
+	border: solid #D99C44;
+	border-width: 0 1px 0 0;
+	margin: 0 5px;
+	padding: 0 5px;
+}
+	#info-sistema span.acessibilidade a{
+		font-size: 1.1em;
+		font-weight: bolder;
+		color: #FFF;
+		margin-left: 2px;
+		letter-spacing: 0.1px;
+		word-spacing: 0.1px;
+	}
+	#info-sistema span.acessibilidade a.fonteMenor strong{
+		font-size: 0.9em;
+	}
+	.rich-tabpanel-content {
+		font-size: inherit;
+	}	
+</style>
+<span class="acessibilidade">
+	<a class="fonteMaior" title="Aumentar a texto" alt="Aumentar a texto" href="#">
+		<strong>A</strong>+
+	</a>
+	<a class="fonteMenor" title="Diminuir o texto" alt="Diminuir o texto" href="#">
+		<strong>A</strong>-
+	</a>
+</span>
+<span class="acessibilidade">
+	<a title="Acessar Portal Público SIGAA" alt="Portal Público SIGAA" href="https://sig.unb.br/sigaa/public" target="_blank">
+		<strong>Portal Público</strong>
+	</a>
+</span>
+
+	<span class="acessibilidade">
+		<a title="Ajuda" alt="Ajuda" href="http://portalsig.unb.br/manuais" target="_blank">
+			Ajuda?
+		</a>
+	</span>
+
+<script type="text/javascript" src="/shared/javascript/jquery/jquery-1.4.4.min.js"></script>
+<script src="/sigaa/javascript/jquery.fontsize.js" type="text/javascript" ></script>
+<script type="text/javascript" >
+	redimensionarFonte('.acessibilidade', '#conteudo', 11, 11, 14);
+</script>
+<script>var $jq = jQuery.noConflict();</script>
+
+					<span id="tempoSessao"></span>
+
+					<span class="sair-sistema"> <a href="/sigaa/logar.do?dispatch=logOff">SAIR</a> </span>
+
+				
+
+			</div>
+
+		</div>
+
+	 
+
+
+
+	<div id="painel-usuario"  >
+
+	
+
+		<div id="menu-usuario">
+
+		<ul>
+
+			<li class="modulos">
+
+			
+
+				<span id="modulos"> <a href="#" id="show-modulos"> Módulos </a> </span>
+
+			
+
+			</li>
+
+			
+
+				
+
+				<li class="caixa-postal">
+
+				
+
+					
+
+									
+
+						<a href=/sigaa/abrirCaixaPostal.jsf?sistema=2> 
+
+							
+
+							Caixa Postal					
+
+							
+
+							 
+
+						</a>
+
+					
+
+				
+
+				</li>
+
+				
+
+			
+
+			
+
+			
+
+				<li class="chamado">
+
+				
+
+					
+
+					
+
+						
+
+						
+
+							<a href="#" onclick="window.open('https://www.servicostic.unb.br/', 'chamado', 'scrollbars=1,width=700,height=600')">Abrir Chamado</a>
+
+						
+
+					
+
+				
+
+				</li>
+
+			 
+
+			
+
+			
+
+			
+
+				 
+
+					<li class="menus">
+
+						<a href="/sigaa/verPortalDiscente.do">Menu Discente</a>
+
+					</li>
+
+				 
+
+			
+
+			
+
+			
+
+				
+
+
+
+<li class="dados-pessoais">
+
+	
+
+		<a href="#" onclick="window.open('/sigaa/alterar_dados.jsf','','width=670,height=430, top=100, left=100, scrollbars' )">Alterar senha</a>
+
+	
+
+</li>
+
+			
+
+
+
+			
+
+				<!-- INICIO botão Informar problema -->
+
+					
+
+				<!-- FIM botão Informar problema -->
+
+			
+
+			
+
+		</ul>
+
+		
+
+		
+
+		
+
+		
+
+		</div>
+
+
+
+		<div id="info-usuario">
+
+
+
+		<p class="periodo-atual">
+
+			
+
+				Semestre atual: <strong>2026.1</strong>			
+
+			
+
+			</br>
+
+			
+
+		</p>		
+
+		<p class="usuario">
+
+		
+
+			<span title="JOAO DA SILVA">
+
+				JOAO DA SILVA
+
+			</span>
+
+			
+
+			
+
+		
+
+		</p>
+
+
+
+		<p class="unidade">
+
+			DEPTO CIÊNCIAS DA COMPUTAÇÃO
+
+			 (11.01.01.15.01)
+
+			
+
+		</p>
+
+
+
+		</div>
+
+	
+
+	<div id="menu-principal"></div>
+
+	</div>
+
+	</div>
+
+	
+
+
+
+	<div id="conteudo">
+
+
+
+
+
+
+
+	<script src="/sigaa/javascript/encoding.js" type="text/javascript"></script>
+	<div id="painel-erros" style="position: relative; padding-bottom: 10px;">
+		
+	
+		
+			
+				
+				
+					<ul class="warning">
+						
+							<li>Você ainda não solicitou matrícula on-line no semestre 2026.1</li>
+						
+					</ul>
+				
+			
+		
+	
+		
+	
+		
+			<div id="fechar-painel-erros" style="position: absolute; bottom: 2px; right: 2px;" >
+				<a href="javascript://nop/" onclick="$('painel-erros').remove();" style="color: #AAA; font-size: 0.9em;">
+					(x) fechar mensagens
+				</a>
+			</div>
+		
+	</div>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<script type="text/javascript">
+
+//Função adicionada no cabeçalho para evitar a reescrita em cada JSP.
+
+function contarCaracteres(field, idMostraQuantidadeUsuario, maxlimit) {
+
+	
+
+	if (field.value.length > maxlimit){
+
+		field.value = field.value.substring(0, maxlimit);
+
+	}else{ 
+
+		document.getElementById(idMostraQuantidadeUsuario).innerHTML = maxlimit - field.value.length ;
+
+	} 
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+<h2>
+
+
+
+
+
+
+
+	<a href='/sigaa/verPortalDiscente.do'>Portal Discente</a> >
+
+		
+
+	Lista de Projeto de Pesquisa
+
+</h2>
+
+
+
+<style>
+
+	span.info {
+
+		font-size: 0.8em;
+
+		color: #444;
+
+	}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<form name="projetoPesquisaForm" method="post" action="/sigaa/pesquisa/projetoPesquisa/buscarProjetos.do"><input type="hidden" name="dispatch"  id="dispatch"><input type="hidden" name="view" value="adicionarHorario" id="view">
+
+<input type="hidden" name="buscar" value="true">
+
+<input type="hidden" name="finalidadeBusca" value="1">
+
+
+
+		<table class="formulario" align="center" style="width: 99%">
+
+			<caption class="listagem">Critérios de Busca dos Projetos</caption>
+
+
+
+			<tr>
+
+				<td width="3%">
+
+					<input type="checkbox" name="filtros" value="2" class="noborder" id="tipoProjeto">
+
+				</td>
+
+				<td width="22%"> <label for="tipoProjeto"> Tipo: </label> </td>
+
+				<td>
+
+					<input type="radio" name="obj.interno" value="true" checked="checked" onclick="$(tipoProjeto).checked = true;" class="noborder" id="tipoInterno"> <label for="tipoInterno">Interno</label>
+
+					<input type="radio" name="obj.interno" value="false" onclick="$(tipoProjeto).checked = true;" class="noborder" id="tipoExterno"> <label for="tipoExterno">Externo</label>
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="22" class="noborder" id="codigoProjeto"></td>
+
+				<td> <label for="codigoProjeto">Código:</label> </td>
+
+				<td>
+
+					<input type="text" name="codigo" maxlength="14" size="13" value="" onclick="$(codigoProjeto).checked = true;">
+
+					<span class="info"> (Formato: PPPNNNN-AAAA, onde PPP = prefixo, NNNN = número e AAAA = ano) </span>
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="10" class="noborder" id="anoProjeto"></td>
+
+				<td> <label for="anoProjeto">Ano:</label> </td>
+
+				<td>
+
+					<input type="text" name="obj.codigo.ano" maxlength="5" size="6" value="0" onclick="$(anoProjeto).checked = true;">
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="11" class="noborder" id="pesquisador"> </td>
+
+				<td> <label for="pesquisador">Pesquisador:</label> </td>
+
+				<td onclick="$(pesquisador).checked = true;" >
+
+					
+
+					
+
+					
+
+					
+
+					
+    <script type="text/javascript" src="/shared/javascript/prototype.js"></script>
+    <script type="text/javascript">
+        JAWR.loader.script('/bundles/js/scriptaculous.js');
+		JAWR.loader.script('/javascript/ajaxtags/overlibmws.js');
+		JAWR.loader.script('/javascript/ajaxtags/ajaxtags.js');
+		JAWR.loader.style('/javascript/ajaxtags/css/ajaxtags.css');
+     </script>
+	
+
+
+<input type="hidden" id="buscaAjaxDocente">
+<input type="hidden" id="inativos" value="true">
+<input type="hidden" name="membroProjeto.servidor.id" value="0" class="contentLink" id="idDocente">
+
+<table class="buscaAjax">
+	<tr>
+		<td colspan="6">
+				
+			<input type="radio" name="tipoAjaxDocente" onclick="buscarDocentePor('buscaAjaxDocenteUFRN')" value="ufrn" 
+					id="buscaAjaxDocenteUFRN" class="noborder">
+			<label onclick="buscarDocentePor('buscaAjaxDocenteUFRN')">Todos da UnB</label>
+			
+			<input type="radio" name="tipoAjaxDocente" onclick="buscarDocentePor('buscaAjaxDocenteUnidade')" value="unidade" 
+					id="buscaAjaxDocenteUnidade" class="noborder">
+			<label onclick="buscarDocentePor('buscaAjaxDocenteUnidade')">Somente da minha unidade</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="6" style="height: 25px">
+			<input type="text" name="membroProjeto.servidor.pessoa.nome" size="70" value="" onclick="docenteOnClick()" onchange="docenteOnChange()" onfocus="docenteOnFocus()" id="paramAjaxDocente">
+			
+			<span id="indicatorDocente" style="display:none;">
+			<img src="/sigaa/img/indicator.gif" /></span>
+		</td>
+	</tr>	
+</table>
+
+<script type="text/javascript">
+new AjaxJspTag.Autocomplete(
+"/sigaa/ajaxDocente", {
+indicator: "indicatorDocente",
+source: "paramAjaxDocente",
+target: "idDocente",
+minimumCharacters: "3",
+className: "autocomplete",
+parameters: "tipo={buscaAjaxDocente},inativos={inativos}",
+parser: new ResponseXmlToHtmlListParser()
+});
+</script>
+
+
+
+
+<span id="indicatorDocente" style="display:none; ">
+	<img src="/sigaa/img/indicator.gif" />
+</span>
+
+<script type="text/javascript">
+	// Quem quiser usar, deve re-escrever no final da sua jsp
+	function docenteOnFocus() {
+	}
+	function docenteOnChange() {
+	}
+	function docenteOnClick() {
+	}
+	
+	function buscarDocentePor(radio) {
+		$('buscaAjaxDocente').value = $(radio).value;
+		marcaCheckBox(radio);
+		$('paramAjaxDocente').focus();
+	}
+
+	window.onload = function() {
+		buscarDocentePor('buscaAjaxDocenteUFRN');
+	};
+</script>
+
+
+					<script type="text/javascript">
+
+						function docenteOnChange() {
+
+							getEl('pesquisador').dom.checked = true;
+
+						}
+
+					</script>
+
+				</td>
+
+			</tr>
+
+
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="13" class="noborder" id="centro"> </td>
+
+				<td> <label for="centro">Centro/Unidade:</label> </td>
+
+				<td>
+
+					<select name="centro.id" onclick="$(centro).checked = true;" style="width:90%"><option value="-1">-- SELECIONE --</option>
+
+						<option value="672">CAMPUS UNB CEILÂNDIA: FACULDADE DE CIENCIAS E TECNOLOGIAS EM SAÚDE (11.01.31)</option>
+
+<option value="673">CAMPUS UNB GAMA: FACULDADE DE CIÊNCIAS E TECNOLOGIAS EM ENGENHARIA (11.01.32)</option>
+
+<option value="640">CENTRO DE DESENVOLVIMENTO SUSTENTÁVEL (11.01.23)</option>
+
+<option value="650">CENTRO ESTUDOS AVANÇADOS MULTIDISCIPLIN (11.01.25)</option>
+
+<option value="193">DECANATO ADMINISTRACAO E FINANCAS / DAF (11.01.10)</option>
+
+<option value="180">DECANATO ASSUNTOS COMUNITARIOS (11.01.09)</option>
+
+<option value="130">DECANATO DE ENSINO DE GRADUACAO / DEG (11.01.06)</option>
+
+<option value="675">DECANATO DE GESTAO DE PESSOAS / DGP (11.01.34)</option>
+
+<option value="786">DECANATO DE PESQUISA E INOVAÇÃO (11.01.42)</option>
+
+<option value="676">DECANATO DE PLANEJAMENTO,ORÇAMENTO E AVALIAÇÃO INSTITUCIONAL (11.01.35)</option>
+
+<option value="170">DECANATO DE PÓS-GRADUAÇÃO / DPG (11.01.08)</option>
+
+<option value="158">DECANATO EXTENSÃO (11.01.07)</option>
+
+<option value="360">DEPTO PROJETOS EXPRES REPRES ARQ E URBAN (11.01.01.04.01)</option>
+
+<option value="363">FACULDADE DE AGRONOMIA E MEDICINA VETERINÁRIA (11.01.01.05)</option>
+
+<option value="353">FACULDADE DE ARQUITETURA E URBANISMO (11.01.01.04)</option>
+
+<option value="674">FACULDADE DE CIÊNCIA DA INFORMACAO (11.01.33)</option>
+
+<option value="410">FACULDADE DE CIÊNCIAS DA SAÚDE (11.01.01.10)</option>
+
+<option value="343">FACULDADE DE COMUNICAÇÃO (11.01.01.03)</option>
+
+<option value="370">FACULDADE DE DIREITO (11.01.01.06)</option>
+
+<option value="381">FACULDADE DE EDUCAÇÃO (11.01.48)</option>
+
+<option value="393">FACULDADE DE EDUCAÇÃO FÍSICA (11.01.01.08)</option>
+
+<option value="402">FACULDADE DE MEDICINA (11.01.01.09)</option>
+
+<option value="666">FACULDADE DE PLANALTINA (11.01.29)</option>
+
+<option value="429">FACULDADE DE  TECNOLOGIA (11.01.01.11)</option>
+
+<option value="323">FACULDADE ECONOMIA,  ADMINISTRAÇÃO,  CONTABILIDADE E  GEST POL PÚBLICAS (11.01.01.02)</option>
+
+<option value="485">INSTITUTO DE ARTES (11.01.01.14)</option>
+
+<option value="668">INSTITUTO DE CIÊNCIA POLÍTICA (11.01.01.24)</option>
+
+<option value="455">INSTITUTO DE CIÊNCIAS BIOLÓGICAS (11.01.01.12)</option>
+
+<option value="504">INSTITUTO DE CIÊNCIAS EXATAS (11.01.01.15)</option>
+
+<option value="544">INSTITUTO DE CIÊNCIAS HUMANAS (11.01.01.18)</option>
+
+<option value="473">INSTITUTO DE CIÊNCIAS SOCIAIS (11.01.01.13)</option>
+
+<option value="524">INSTITUTO DE FÍSICA (11.01.01.16)</option>
+
+<option value="533">INSTITUTO DE GEOCIÊNCIAS (11.01.01.17)</option>
+
+<option value="567">INSTITUTO DE LETRAS (11.01.01.19)</option>
+
+<option value="583">INSTITUTO DE PSICOLOGIA (11.01.01.20)</option>
+
+<option value="610">INSTITUTO DE QUÍMICA (11.01.01.22)</option>
+
+<option value="669">INSTITUTO DE RELAÇÕES INTERNACIONAIS (11.01.01.25)</option>
+
+<option value="1080">PARQUE CIENTÍFICO E TECNOLÓGICO DA UNB (11.01.51)</option></select>
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="14" class="noborder" id="unidade"> </td>
+
+				<td> <label for="unidade">Unidade:</label> </td>
+
+				<td>
+
+					
+
+			    	
+
+					
+
+
+<input type="text" name="unidade.nome" value="" onclick="unidadeOnClick()" onchange="unidadeOnChange()" onfocus="unidadeOnFocus()" style="width:80%" id="nomeUnidade">
+
+<script type="text/javascript">
+new AjaxJspTag.Autocomplete(
+"/sigaa/ajaxUnidade", {
+indicator: "indicatorUnidade",
+source: "nomeUnidade",
+target: "idUnidade",
+minimumCharacters: "3",
+className: "autocomplete",
+parameters: "tipo=",
+parser: new ResponseXmlToHtmlListParser()
+});
+</script>
+
+
+
+
+<span id="indicatorUnidade" style="display:none; "> <img
+	src="/sigaa/img/indicator.gif" /> </span>
+
+<input type="hidden" name="unidade.id" value="0" class="contentLink" id="idUnidade">
+
+
+	<script type="text/javascript">
+		// Quem quiser usar, deve re-escrever no final da sua jsp
+		function unidadeOnFocus() {
+		}
+		function unidadeOnChange() {
+		}
+		function unidadeOnClick() {
+		}
+	</script>
+
+
+
+					<script type="text/javascript">
+
+						function unidadeOnClick() {
+
+							getEl('unidade').dom.checked = true;
+
+						}
+
+					</script>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="20" class="noborder" id="titulo"> </td>
+
+				<td> <label for="titulo"> Título: </label> </td>
+
+				<td>
+
+					<input type="text" name="titulo" value="" onclick="$('titulo').checked = true;" style="width:90%">
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="21" class="noborder" id="objetivos"> </td>
+
+				<td> <label for="objetivos"> Objetivos: </label> </td>
+
+				<td>
+
+					<input type="text" name="objetivos" value="" onclick="$('objetivos').checked = true;" style="width:90%">
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="23" class="noborder" id="linhaPesquisa"> </td>
+
+				<td> <label for="linhaPesquisa"> Linha de Pesquisa: </label> </td>
+
+				<td>
+
+					<input type="text" name="obj.linhaPesquisa.nome" value="" onclick="$('linhaPesquisa').checked = true;" style="width:90%">
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="15" class="noborder" id="areaConhecimento"> </td>
+
+				<td> <label for="areaConhecimento"> Área de Conhecimento: </label> </td>
+
+				<td>
+
+					<select name="subarea.id" onclick="$(areaConhecimento).checked = true;" style="width:90%"><option value="-1">-- SELECIONE UMA ÁREA DE CONHECIMENTO --</option>
+
+				        <option value="60200006">Administração</option>
+
+<option value="90100000">Administração Hospitalar</option>
+
+<option value="50100009">Agronomia</option>
+
+<option value="70300003">Antropologia</option>
+
+<option value="70400008">Arqueologia</option>
+
+<option value="60400005">Arquitetura e Urbanismo</option>
+
+<option value="80300006">Artes</option>
+
+<option value="10400001">Astronomia</option>
+
+<option value="20900007">Biofísica</option>
+
+<option value="20100000">Biologia Geral</option>
+
+<option value="20800002">Bioquímica</option>
+
+<option value="21400008">Biotecnologia</option>
+
+<option value="20300000">Botânica</option>
+
+<option value="10300007">Ciência da Computação</option>
+
+<option value="60700009">Ciência da Informação</option>
+
+<option value="50700006">Ciência e Tecnologia de Alimentos</option>
+
+<option value="70900000">Ciência Política</option>
+
+<option value="60900008">Comunicação</option>
+
+<option value="60600004">Demografia</option>
+
+<option value="61200000">Desenho Industrial</option>
+
+<option value="92500005">Desenvolvimento e Inovação Tecnológica em Biologia</option>
+
+<option value="60100001">Direito</option>
+
+<option value="20500009">Ecologia</option>
+
+<option value="60300000">Economia</option>
+
+<option value="61100005">Economia Doméstica</option>
+
+<option value="70800006">Educação</option>
+
+<option value="40900002">Educação Física</option>
+
+<option value="40400000">Enfermagem</option>
+
+<option value="31200001">Engenharia Aeroespacial</option>
+
+<option value="50300008">Engenharia Agrícola</option>
+
+<option value="31300006">Engenharia Biomédica</option>
+
+<option value="30100003">Engenharia Civil</option>
+
+<option value="30300002">Engenharia de Materiais e Metalúrgica</option>
+
+<option value="30200008">Engenharia de Minas</option>
+
+<option value="30800005">Engenharia de Produção</option>
+
+<option value="31000002">Engenharia de Transportes</option>
+
+<option value="30400007">Engenharia Elétrica</option>
+
+<option value="30500001">Engenharia Mecânica</option>
+
+<option value="31100007">Engenharia Naval e Oceânica</option>
+
+<option value="30900000">Engenharia Nuclear</option>
+
+<option value="30600006">Engenharia Química</option>
+
+<option value="30700000">Engenharia Sanitária</option>
+
+<option value="40300005">Farmácia</option>
+
+<option value="21000000">Farmacologia</option>
+
+<option value="70100004">Filosofia</option>
+
+<option value="10500006">Física</option>
+
+<option value="20700008">Fisiologia</option>
+
+<option value="40800008">Fisioterapia e Terapia Ocupacional</option>
+
+<option value="40700003">Fonoaudiologia</option>
+
+<option value="93000006">Fontes Alternativas de Energia</option>
+
+<option value="20200005">Genética</option>
+
+<option value="10700005">Geociências</option>
+
+<option value="70600007">Geografia</option>
+
+<option value="70500002">História</option>
+
+<option value="21100004">Imunologia</option>
+
+<option value="80200001">Letras</option>
+
+<option value="80100007">Lingüística</option>
+
+<option value="10100008">Matemática</option>
+
+<option value="40100006">Medicina</option>
+
+<option value="50500007">Medicina Veterinária</option>
+
+<option value="21200009">Microbiologia</option>
+
+<option value="20600003">Morfologia</option>
+
+<option value="99900009">Multidisciplinar</option>
+
+<option value="60800003">Museologia</option>
+
+<option value="40500004">Nutrição</option>
+
+<option value="10800000">Oceanografia</option>
+
+<option value="40200000">Odontologia</option>
+
+<option value="21300003">Parasitologia</option>
+
+<option value="92900003">Planejamento Energético</option>
+
+<option value="60500000">Planejamento Urbano e Regional</option>
+
+<option value="10200002">Probabilidade e Estatística</option>
+
+<option value="70700001">Psicologia</option>
+
+<option value="10600000">Química</option>
+
+<option value="50200003">Recursos Florestais e Engenharia Florestal</option>
+
+<option value="50600001">Recursos Pesqueiros e Engenharia de Pesca</option>
+
+<option value="40600009">Saúde Coletiva</option>
+
+<option value="61000000">Serviço Social</option>
+
+<option value="70200009">Sociologia</option>
+
+<option value="93100000">Tecnologia e Inovação</option>
+
+<option value="71000003">Teologia</option>
+
+<option value="61300004">Turismo</option>
+
+<option value="20400004">Zoologia</option>
+
+<option value="50400002">Zootecnia</option></select>
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="16" class="noborder" id="grupoPesquisa"> </td>
+
+				<td> <label for="grupoPesquisa">Grupo de Pesquisa:</label> </td>
+
+				<td>
+
+					<select name="obj.linhaPesquisa.grupoPesquisa.id" onclick="$(grupoPesquisa).checked = true;" style="width:90%"><option value="-1">-- SELECIONE UM GRUPO DE PESQUISA --</option>
+
+						<option value="4033115">Academia de curadoria - laboratório de práticas curatoriais e crítica de arte</option>
+
+<option value="4034067">Acervos Fotográficos</option>
+
+<option value="1113233">Acesso a medicamentos e uso responsável</option>
+
+<option value="4033121">Acesso a Medicamentos e Uso Responsável - AMUR</option>
+
+<option value="4033845">Acesso Livre</option>
+
+<option value="4033311">Ações Afirmativas: Políticas de Inclusão no Ensino Superior e na Pesquisa</option>
+
+<option value="4033067">ACV Brasil - Avaliação do Ciclo de Vida de Produtos</option>
+
+<option value="4034053">Adaptações estruturais e funcionais de plantas em resposta a variações ambientais</option>
+
+<option value="4033107">A desinformação científica como um problema público: uma proposta de estudo comparativo Argentina, Brasil e</option>
+
+<option value="4033117">Administração da Justiça</option>
+
+<option value="4034043">Administração Pública - Foco nas Instituições e Ações Governamentais</option>
+
+<option value="7643230">AFETO - Grupo de Pesquisa em Etnocenologia</option>
+
+<option value="4033480">AFETO - Grupo de Pesquisa em Etnocenologia</option>
+
+<option value="4033598">A formação do professor de língua estrangeira</option>
+
+<option value="4033590">A fraseologia e sua equação nas sub-áreas da Lingüística Aplicada</option>
+
+<option value="4033265">Água &amp; Ambiente Construído</option>
+
+<option value="4033534">ALEA- Laboratório de Associação da Linguística, Educação e Antropologia em Estudos do Contato de</option>
+
+<option value="4032780">Alimentação e Microbiota intestinal</option>
+
+<option value="4033285">Alimentação e qualidade de vida nas restrições alimentares</option>
+
+<option value="19647614">Alterações Cardiorrespiratórias de Graduandos da Área da Saúde Mediante Estresse Físico e Mental</option>
+
+<option value="17292669">Alterações morfofisiológicas decorrentes dos transtornos circulatórios</option>
+
+<option value="4033057">AMAMENTAÇAO E SAUDE</option>
+
+<option value="4032750">Ambiente 33 - Espacialidades, Comunicação, Estética e Tecnologias</option>
+
+<option value="7307978">A Multimodalidade em Material Didático de Ensino de Línguas</option>
+
+<option value="4033552">Análise do Comportamento, Cognição e Cultura (Brasília)</option>
+
+<option value="4033787">Análise não linear e aplicações</option>
+
+<option value="18075767">Análises Fitoquímicas</option>
+
+<option value="4033211">Análises Laboratoriais Aplicadas</option>
+
+<option value="4033486">Animalia: Grupo de Estudos sobre as Relações entre Humanos e Animais na Antiguidade</option>
+
+<option value="20211688">animalidades/visualidades: as vidas animais e humanas na artes visuais e na literatura</option>
+
+<option value="7569058">Aporia - Grupo de estudos em Filosofia e Performance</option>
+
+<option value="4033532">Aprendizagem, Comportamento e Letramento informacional</option>
+
+<option value="4032864">Aprendizagem, escolarização e desenvolvimento humano</option>
+
+<option value="4033674">Aprendizagens,Tecnologias e Educação a Distância</option>
+
+<option value="4033351">A Proposta Multirrede-Discursiva: componentes e lineamentos para a formação em línguas (materna e</option>
+
+<option value="2379756">A Proposta Multirrede-Discursiva: componentes e lineamentos para a formação em línguas (materna e estrangeiras)</option>
+
+<option value="18425965">AQUASENSE - Sensoriamento remoto para o monitoramento da qualidade das águas continentais</option>
+
+<option value="2414710">Arca de Noé - Pedagogia Assistida por Animais</option>
+
+<option value="20430743">Archai: as origens plurais do pensamento ocidental</option>
+
+<option value="4033161">ARCHAI: AS ORIGENS PLURAIS DO PENSAMENTO OCIDENTAL</option>
+
+<option value="4033355">Áreas Úmidas do Cerrado: flora, filogenia, ecologia e fatores ambientais</option>
+
+<option value="4033600">Arte Computacional</option>
+
+<option value="4033833">Arte, Sociedade e Interpretações do Brasil</option>
+
+<option value="4033029">Aspectos microbiológicos e imunológicos da interação hospedeiro-fungo</option>
+
+<option value="4033095">As Tecnologias Digitais da Informação e Comunicação nos Processos de Formação Musical</option>
+
+<option value="4032904">A Sustentabilidade em Arquitetura e Urbanismo</option>
+
+<option value="1374428">Ateliê de estudos de retórica</option>
+
+<option value="4033011">Atenção à saúde urológica nos ciclos de vida</option>
+
+<option value="6433075">Atenção Primária à Saúde e Medicina de Família e Comunidade</option>
+
+<option value="4033837">A tradução como ferramenta de resistência e inclusão</option>
+
+<option value="4033259">Automação, Quimiometria e Química Ambiental (AQQUA)</option>
+
+<option value="4032734">Avaliação de tecnologias em doenças tropicais negligenciadas</option>
+
+<option value="21282613">Avaliação e Análise de Política, Planejamento e Instrumentos de Gestão Ambiental</option>
+
+<option value="19040830">Avaliação e intervenção em Doenças Raras</option>
+
+<option value="4034001">Avaliação e organização do trabalho pedagógico</option>
+
+<option value="4032850">Bactérias aeróbias formadoras de endósporos - Bafes</option>
+
+<option value="4032989">Bactérias lácticas e Probióticos na Alimentação</option>
+
+<option value="8915564">Biblioteca digital</option>
+
+<option value="4033143">Biblioteca e Sociedade</option>
+
+<option value="4033333">BICAS - Iniciativa BRICS de Estudos sobre Transformações Agrárias</option>
+
+<option value="18868511">BICAS - Iniciativa BRICS de Estudos sobre Transformações Agrárias</option>
+
+<option value="4033105">Biocom - Biografia, poesia e comunicação</option>
+
+<option value="4033602">Biodisponibilidade e Metabolismo de MIcronutrientes</option>
+
+<option value="15829813">Biodonto Reserach</option>
+
+<option value="2381200">Bioeconomia e Inovação</option>
+
+<option value="4032724">Bioética, Saúde Mental e Direitos Humanos</option>
+
+<option value="17614743">Biofísica Molecular</option>
+
+<option value="4033167">Biogeografia Aplicada</option>
+
+<option value="4033566">Biogeografia, Ecologia e Conservação do Cerrado</option>
+
+<option value="4033137">Biogeoquímica da Zona Critica</option>
+
+<option value="4033361">Bioinformática e Biologia Computacional</option>
+
+<option value="4033558">Biologia, Ecologia e Conservação de mamíferos</option>
+
+<option value="4033586">Biologia Estrutural de Células Germinativas</option>
+
+<option value="4032732">Biologia Molecular aplicada à inspeção e tecnologia dos produtos de origem animal</option>
+
+<option value="4034059">Biomecânica da Locomoção e Desempenho Motor</option>
+
+<option value="4032902">Bioprospecção no Bioma Amazônico</option>
+
+<option value="4033077">BiTGroup - Grupo de Pesquisa em Sistemas Biométricos</option>
+
+<option value="2904448">BRACES (Brazil corpus of english and spanish)</option>
+
+<option value="4034009">Brasil, Brasília: Capítulos na História da Arquitetura e do Urbanismo</option>
+
+<option value="4033257">Carcinogênese de cabeça e pescoço</option>
+
+<option value="15702426">Cartografias Jurídicas</option>
+
+<option value="4033907">CASA - Grupo de estudos e pesquisas em Cultura, Alimentação e Saúde</option>
+
+<option value="4032830">CASCA - Coletivo de Antropologia e Saúde Coletiva</option>
+
+<option value="4033329">Catálise Química</option>
+
+<option value="18870223">Cátedra UNESCO Archai sobre as Origens Plurais do Pensamento Ocidental</option>
+
+<option value="4033500">Cauim: estudos e práticas dialógicas no contexto de povos e territórios tradicionais</option>
+
+<option value="1097536">Cauim - Estudos e Práticas Dialógicas no Contexto de Povos e Territórios Tradicionais</option>
+
+<option value="4033309">CEGAFI Pesquisa</option>
+
+<option value="4033506">Células-tronco Neurais</option>
+
+<option value="4033490">CENA SANKOFA - Núcleo de estudos das corporeidades e saberes tradicionais na cena contemporânea</option>
+
+<option value="8516159">Centro de Estudos, Desenvolvimento e Inovação em Software - CEDIS</option>
+
+<option value="4033359">Centro de Estudos Globais</option>
+
+<option value="4033965">Centro de Estudos Interdisciplinares em Biociências</option>
+
+<option value="2018372">Centro de Estudos Interdisciplinares em Biociências - UnB</option>
+
+<option value="4033153">Centro de Estudos sobre as Relações Internacionais do Brasil Contemporâneo</option>
+
+<option value="4033496">Centro de Pesquisa em Direito Constitucional Comparado da Universidade de Brasília</option>
+
+<option value="1243214">Centro de Pesquisas em Endocrinologia e Metabologia UnB</option>
+
+<option value="4033227">Centro de Pesquisas em Endocrinologia e Metabologia UnB</option>
+
+<option value="4033031">Centro de Referência sobre Drogas e Vulnerabilidades Associadas</option>
+
+<option value="4033353">CETAS - Centro de Estudos sobre Tecnologia, Afetos e Subjetividade</option>
+
+<option value="4033135">Charles Morazé</option>
+
+<option value="20328764">CHYS Complexidade, Hypnose e Subjetividade</option>
+
+<option value="4033867">Cidadania, Administração de Conflitos e Justiça - CAJU</option>
+
+<option value="4032790">Cidades e Patrimonialização na América Latina e Caribe - GECIPA</option>
+
+<option value="4033963">Cidades Possíveis</option>
+
+<option value="4033875">Ciências, Tecnologias e Públicos</option>
+
+<option value="17263762">Ciência, Tecnologia e Inovaçao em Alimentos</option>
+
+<option value="4033859">Climatologia Geográfica - UnB</option>
+
+<option value="4033492">Cognição e Percepção</option>
+
+<option value="8946438">Co-Laboratório de Pesquisa e Experimentação</option>
+
+<option value="4033149">Coletivo de Documentação e Pesquisa em Dança Eros Volúsia - CDPDan</option>
+
+<option value="6778129">Comciência, educação e sociedade</option>
+
+<option value="4032806">Competência em Informação e Populações Vulneráveis</option>
+
+<option value="4033025">Complexidade, Hypnose e Subjetividade</option>
+
+<option value="4033785">Comportamento em Transportes e Novas Tecnologias</option>
+
+<option value="19815486">Computação Quântica e Criptografia da FCTE</option>
+
+<option value="4033618">Comunicação Comunitária e Cidadania</option>
+
+<option value="4033494">Comunicação, Educação, Mobilização Social e Acesso à Informação</option>
+
+<option value="6527003">Comunicação e Imaginação Literária</option>
+
+<option value="4032766">Comunicação Extensiva e Produção em AV3</option>
+
+<option value="4032894">Comunicação humana e cognição</option>
+
+<option value="4033305">Conhecimento e Aplicação de Bambus e Fibras Naturais - CAB</option>
+
+<option value="4032802">Conscient - Laboratório de Estudos em consumo sustentável</option>
+
+<option value="4032888">Conservação de fauna e serviços associados</option>
+
+<option value="19097280">Constitucionalismo Digital</option>
+
+<option value="19567641">Constitucionalismo Digital</option>
+
+<option value="4034033">CONSTITUIÇÃO, EMPRESA E MERCADO (GECEM/UnB)</option>
+
+<option value="4032820">Constituição, Política e Instituições Judiciais</option>
+
+<option value="4033103">Consumo e Cultura Material</option>
+
+<option value="4033560">Contabilidade, Auditoria e Governança no Mercado Financeiro e de Capitais</option>
+
+<option value="4032828">Contabilidade Financeira Aplicada</option>
+
+<option value="4033620">Contabilidade para usuários externos</option>
+
+<option value="4033069">Controle Microbiano de Insetos</option>
+
+<option value="16995938">Corpos e políticas públicas</option>
+
+<option value="4033199">Corrupção, desonestidade e comportamento ético</option>
+
+<option value="4033536">CPS - Centro de Pesquisa em Comunicação Política e Saúde Pública</option>
+
+<option value="4034075">Crescimento, Distribuição e Mudança Estrutural</option>
+
+<option value="4033925">Criatividade, educação e singularidade</option>
+
+<option value="4033335">Criatividade, Superdotação e Desenvolvimento Humano</option>
+
+<option value="4033570">Crítica Constitucional</option>
+
+<option value="4033989">Crítica e Direito Internacional</option>
+
+<option value="17289469">Cromatina, receptor nuclear e microbiota intestinal</option>
+
+<option value="9022983">Cuidados transdisciplinar da pele</option>
+
+<option value="4034051">Cultura, Mídia e Política</option>
+
+<option value="6650586">Cultura, religião, sujeitos e politicas</option>
+
+<option value="4033949">Currículo: Concepções Teóricas e Práticas Educativas</option>
+
+<option value="4033877">Currículo e Processo Formativo: inovação e interdisciplinaridade</option>
+
+<option value="8436791">Custos aplicados e IOT (Internet of Things)</option>
+
+<option value="8394862">CyberAccountability Innovators - CyAI</option>
+
+<option value="2148138">da condição anfíbia: a-método-artifício</option>
+
+<option value="4033357">De Corruptione - História da Corrupção na Idade Média</option>
+
+<option value="4032860">DelARTES - Desenvolvimento humano: linguagens, arte e estética</option>
+
+<option value="4033819">DEMOCRACIA, SOCIEDADE CIVIL e SERVIÇO SOCIAL</option>
+
+<option value="4034007">Demodê - Grupo de Pesquisa sobre Democracia e Desigualdades</option>
+
+<option value="4033263">Dentistry systematic review group</option>
+
+<option value="4033893">Desafios do Constitucionalismo</option>
+
+<option value="4033865">Desempenho degradação e vida útil dos edifícios e de seus elementos</option>
+
+<option value="4033650">Desenho e Gestão do Teletrabalho</option>
+
+<option value="4033007">Desenvolvimento e Controle da Qualidade de Fármacos e Medicamentos</option>
+
+<option value="4033075">Desenvolvimento e Democracia na América Latina</option>
+
+<option value="4033676">Desenvolvimento subjetivo em contextos educativos - GEDESU</option>
+
+<option value="9014658">Design, Cultura e Materialidade</option>
+
+<option value="4033763">Design Educação</option>
+
+<option value="8582293">Design e implementação de um dispositivo didático que utiliza tecnologias aditivas e subtrativas para apoiar aulas práticas</option>
+
+<option value="3397492">Determinantes do Envelhecimento Humano</option>
+
+<option value="4033061">Determinantes do Envelhecimento Humano</option>
+
+<option value="4033791">Diagnóstico e Estudo das Enfermidades dos Animais Domésticos e Silvestres</option>
+
+<option value="4033043">Diagnóstico e Gestão Ambiental</option>
+
+<option value="4033993">Dimensões da Vida Urbana</option>
+
+<option value="4034061">Dimensões Morfológicas do Processo de Urbanização</option>
+
+<option value="4033205">Dinâmica e Fluido Estrutura</option>
+
+<option value="4033458">Dinâmica, Manejo e Gestão da Produção Florestal</option>
+
+<option value="4034069">Dinâmica Molecular em Polímeros Conjugados</option>
+
+<option value="4033616">Diptera do Cerrado</option>
+
+<option value="4033484">Direito, Economia e Sociedade</option>
+
+<option value="4033550">Direito e Educação</option>
+
+<option value="4033935">Direito, Gênero e Famílias</option>
+
+<option value="4033504">Direito, Racionalidade e Inteligência Artificial  - DRIA.UnB</option>
+
+<option value="1916845">Direitos Humanos Diversos Olhares</option>
+
+<option value="4033219">Direitos Humanos, Educação, Mediação e Movimentos Sociais</option>
+
+<option value="4032816">Direito, Sociedade Mundial e Constituição - DISCO</option>
+
+<option value="4032818">Documentação, modelagem e conservação do patrimônio (LabeUrbe)</option>
+
+<option value="4033805">Doenças Crônicas e Degenerativas do Intestino Grosso e do Assoalho Pélvico</option>
+
+<option value="15645212">DOENÇAS RESPIRATORIAS NA INFANCIA E ADOLESCENCIA</option>
+
+<option value="4034013">DRAMATURGIA E CRÍTICA TEATRAL</option>
+
+<option value="7152425">Drogas, cérebro e comportamento</option>
+
+<option value="4033291">Drosofilídeos (Insecta) como ferramentas para a Biologia da Conservação</option>
+
+<option value="4032852">Dzeta Investigações em Educação Matemática - DIEM</option>
+
+<option value="16119014">Ebó: grupo de pesquisa História e Psicanálise numa abordagem antirracista</option>
+
+<option value="4033767">ECOA - Etnologia em Contextos Africanos</option>
+
+<option value="18665360">Ecologia Microbiana</option>
+
+<option value="17406543">Ecologia Urbana Neotropical</option>
+
+<option value="4033799">Economics and Politics Research Group</option>
+
+<option value="4033933">Educação Aberta</option>
+
+<option value="2071122">Educaçao bilíngue</option>
+
+<option value="2071164">Educaçao bilíngue e criaçao de materiais multimodais</option>
+
+<option value="4033207">EDUCAÇÃO CRÍTICA E AUTORIA CRIATIVA</option>
+
+<option value="4877471">Educação do Campo na região Centro-Oeste: diálogos e proposições em tempos de pandemia</option>
+
+<option value="6863416">Educação do Campo na região Centro-Oeste: diálogos e proposições em tempos de pandemia</option>
+
+<option value="4033237">EDUCAÇÃO, ECOLOGIA HUMANA E TRANSDISCIPLINARIDADE</option>
+
+<option value="4033281">Educação e Pesquisa em Contabilidade</option>
+
+<option value="4033564">Educação e poder</option>
+
+<option value="4033628">Educação Física Escolar, Esporte e Sociedade</option>
+
+<option value="4033975">Educação Musical Escolar e Autobiografia - GEMAB</option>
+
+<option value="17648519">EducaTO: formação, educação e terapia ocupacional</option>
+
+<option value="4033572">Eixos, planos, ficções: grupo brasiliense de direito e arte</option>
+
+<option value="4033781">Encontro de Saberes: A Inclusão dos Mestres e dos Saberes Tradicionais no Mundo Acadêmico</option>
+
+<option value="8357522">Enfoque  Ecossistêmico da Saúde</option>
+
+<option value="3055529">Engenharia de Software, Governança em TIC e Governança Digital</option>
+
+<option value="4033436">Ensino-aprendizagem de língua japonesa como língua estrangeira e Bilinguismo</option>
+
+<option value="4033891">Ensino, Aprendizagem e Formação de Professores em Geografia</option>
+
+<option value="4033568">Entrenós - Trabalho e Linguagem</option>
+
+<option value="2889280">Envelhecimento e Longevidade</option>
+
+<option value="18442407">Environmental Proteomics Biotechnology Group</option>
+
+<option value="4033817">Enzimologia</option>
+
+<option value="4033985">Epistemologia do Romance</option>
+
+<option value="4033554">Equações Diferenciais: Modelagem, Análise e Aplicações</option>
+
+<option value="4033622">Equações Diofantinas, Combinatória e Aplicações</option>
+
+<option value="4033474">Ereko</option>
+
+<option value="4032868">Escritura: linguagem e pensamento</option>
+
+<option value="4033588">Espaço, Poética, Jogo</option>
+
+<option value="4034047">Estado, Informação e Sociedade (EIS)</option>
+
+<option value="4033961">Estado, Regulação, Internet e Sociedade</option>
+
+<option value="4033341">Estrutura e Reabilitação do Ambiente Construído</option>
+
+<option value="4032752">Estruturas de Concreto e Estruturas Reforçadas</option>
+
+<option value="4034057">Estruturas e Arquitetura</option>
+
+<option value="4033315">Estudo da Epidemiologia, diagnóstico e tratamento das leishmanioses.</option>
+
+<option value="4033957">Estudo das Propriedades Eletrônicas e de Transporte de Semicondutores Orgânicos</option>
+
+<option value="4034017">Estudo do Controle Motor Utilizando Abordagens Multivariáveis</option>
+
+<option value="4033668">Estudos Asiáticos</option>
+
+<option value="4032993">Estudos Comparados de Sociologia Econômica</option>
+
+<option value="17056145">Estudos de compostos para controle de crescimento e virulência de micro-organismos patogênicos</option>
+
+<option value="4033839">Estudos de Recepção e Intertextualidade</option>
+
+<option value="4033375">Estudos de roteiros: arquivos, processos e cartografias</option>
+
+<option value="4033189">Estudos em Complicações Após Anestesias</option>
+
+<option value="1299012">Estudos e pesquisas colaborativas com povos indígenas, comunidades dos quilombos e povos e comunidades tradicionais</option>
+
+<option value="4033155">Estudos Hidrológicos e Hidráulicos</option>
+
+<option value="18576292">Estudos Lexicais, Terminológicos e da Tradução de Língua de Sinais</option>
+
+<option value="16026476">Estudos Lexicais, Terminológicos e da Tradução em Ciências Humanas e Língua de Sinais</option>
+
+<option value="15958160">Estudos Lexicais, Terminológicos e da Tradução em Ciências Humanas e Língua de Sinais</option>
+
+<option value="4033861">Estudos prospectivos: formação e atuação profissional do arquivista</option>
+
+<option value="4033450">Estudos Qonstitucionais</option>
+
+<option value="4033969">Estudos sobre a Mundialização da Educação</option>
+
+<option value="16098588">Estudos Terminológicos e da Tradução em Ciências Humanas e Língua de Sinais</option>
+
+<option value="4033903">Ética e Filosofia Política</option>
+
+<option value="4033323">Etnologia Indígena em contextos nacionais: Brasil - Austrália - Canadá.</option>
+
+<option value="4033213">Evolução de Bacias Sedimentares</option>
+
+<option value="4033269">Experimenta - Grupo de Pesquisa em Marketing, Desempenho e Estratégia</option>
+
+<option value="7389956">Experimenta - pesquisa em desempenho de marketing e estratégia</option>
+
+<option value="8504553">FALE COMIGO: ESPAÇO DE ESCUTA E DIÁLOGO INTERGERACIONAL</option>
+
+<option value="8504191">FALE COMIGO: ESPAÇO DE ESCUTA E DIÁLOGO INTERGERACIONAL</option>
+
+<option value="4033247">Fatores Humanos na Interação e Comunicação da Informação</option>
+
+<option value="6123428">Ferramentas de inteligência artificial: aplicação em Odontologia</option>
+
+<option value="4033879">Filosofia antiga e medieval</option>
+
+<option value="4033612">Filosofia da Ciência e Método Científico</option>
+
+<option value="18503219">Filosofia Formal da MAtemática</option>
+
+<option value="4032870">Financiamento da educação: avanços e desafios</option>
+
+<option value="4033769">Fìsica Estatística e Matemática</option>
+
+<option value="4033127">Fisiologia Clinica do Exercício e Reabilitação</option>
+
+<option value="4032882">Fluid Mechanics of Complex Flows: Microhydrodynamics and Rheology  -  GRUPO VORTEX</option>
+
+<option value="4032726">FOCO -Fenomenologia e cotidiano</option>
+
+<option value="1832175">FOCO - Fenomenologia e Cotidiano</option>
+
+<option value="4033979">FOCS Laboratory - Fog, Cloud, Sky Laboratory</option>
+
+<option value="4033444">FOHPS núcleo de estudos e pesquisas sobre Fundo Público, Orçamento, Hegemonia e Política Social</option>
+
+<option value="8410998">Formação, Educação e Terapia Ocupacional</option>
+
+<option value="4032730">Fotoquímica e Nanobiotecnologia</option>
+
+<option value="4033313">Funcionalismo, Tipologia e Ensino</option>
+
+<option value="4033337">Fundações, Ensaios de Campo e Taludes</option>
+
+<option value="4033640">Fundamentos e Tecnologias do Cuidar em Enfermagem</option>
+
+<option value="4033783">Fundamentos históricos, epistemológicos e teóricos da Arquivologia</option>
+
+<option value="4033672">G.A.M.I.N.G - Grupo de Estudos Avançados, Métodos e Inovação em Games</option>
+
+<option value="1641181">GEA</option>
+
+<option value="4033033">GEACT - Grupo de Estudos de Ações Coletivas, Conflitualidades e Territórios</option>
+
+<option value="7432218">GEALC - Grupo de Estudos América Latina e China</option>
+
+<option value="4033203">GEAPP - Grupo de Econometria para Avaliação de Políticas Públicas</option>
+
+<option value="17535354">GECAE - Grupo de Estudos em Espaço, Corpo, Arte e Estética</option>
+
+<option value="4033225">GEDE - Grupo de Estudos de Direito e Economia</option>
+
+<option value="4033111">GEFFOP - Grupo de Estudos sobre Filosofia da Educação e Formação de Professores</option>
+
+<option value="4032892">Gênero, Comunicação e Sociabilidade</option>
+
+<option value="4032788">Genética Molecular e Biotecnologia de Leveduras</option>
+
+<option value="4033592">GENPOSS -  Grupo de Estudos e Pesquisa em Gênero, Política Social e Serviços Sociais</option>
+
+<option value="4033179">GEOBAOBÁS</option>
+
+<option value="4033169">Geofísica e Tectônica</option>
+
+<option value="4033193">Geofísica Forense</option>
+
+<option value="4032848">Geografia, Ambiente e Saúde</option>
+
+<option value="20326631">GeoGreen</option>
+
+<option value="4034023">Geometria Diferencial</option>
+
+<option value="4032782">Geossintéticos em Geotecnia e Meio Ambiente</option>
+
+<option value="4032804">Geotecnologias aplicadas à Geociências</option>
+
+<option value="4033327">Geotecnologias aplicadas a modelagem de processos naturais</option>
+
+<option value="1958533">GEPLAD</option>
+
+<option value="19966159">GEP-ODONTOCOLETIVA  Grupo de Pesquisa em Odontologia em Saúde Coletiva, Clínica e Território</option>
+
+<option value="4033524">GEPOLT - Gestão de Políticas de Trabalho</option>
+
+<option value="4033923">GEPPA - Grupo de Estudos, Pesquisas e Práticas Artísticas</option>
+
+<option value="4033636">GEPPE _ Grupo de Estudos e Pesquisas em Práticas Educativas</option>
+
+<option value="4033325">GEPPHERG - Grupo de Estudo e Pesquisa em Políticas Públicas, História, Educação das Relações Raciais e de</option>
+
+<option value="15927969">GEPPHERG GRUPO DE ESTUDOS E PESQUISAS EM POLITICAS PÚBLICAS, HISTÓRIA, EDUCAÇÃO DAS RELAÇÕES RACIAIS E GÊNENRO</option>
+
+<option value="4033163">Geprocessamento Aplicado à Análise Ambiental</option>
+
+<option value="4032792">GERA - Grupo de Estudos em Resíduos Orgânicos de Interesse para Agricultura</option>
+
+<option value="4032900">GERAJU - grupo de pesquisa gerações e juventude</option>
+
+<option value="4033089">GESCardio - Grupo de Estudos em Saúde Cardiovascular</option>
+
+<option value="4033887">GESPU - GESTÃO DE SERVIÇOS PÚBLICOS</option>
+
+<option value="4033099">Gestão Ambiental Urbana</option>
+
+<option value="5092073">Gestão de Custos Indicadores de Desempenho</option>
+
+<option value="4033955">Gestão de Operações, Logística e Métodos de Análise</option>
+
+<option value="4033301">Gestão de Risco em Engenharia de Produção</option>
+
+<option value="3657881">Gestão do cuidado, práticas de educação  e  integralidade:  os saberes e fazeres da saúde coletiva nos territórios diversos</option>
+
+<option value="4033271">Gestão do Trabalho, Liderança e Transformação Digital no Setor Público</option>
+
+<option value="4033847">Gestão e Economia no ambiente Construído</option>
+
+<option value="4034055">Gestão em Educação a Distância</option>
+
+<option value="4033610">Gestão, Prospectiva Estratégica, Inovação, Cultura e Turismo</option>
+
+<option value="4034035">GESTÃO TERRITORIAL E AMBIENTAL</option>
+
+<option value="4033630">GIPI - Grupo Interdisciplinar de Pesquisa sobre a Infância</option>
+
+<option value="8648944">Governança Corporativa Aplicada a Micro e Pequenos Negócios</option>
+
+<option value="15963781">Governança, Desempenho, Valor, Controles e Riscos</option>
+
+<option value="4033520">Governança de transição para a agricultura regenerativa</option>
+
+<option value="18836700">Governança, Sistemas Agroalimentares e Redes Globais de Produção - GovernAGRO</option>
+
+<option value="8482961">Govtech - Pesquisas aplicadas a soluções sistematizadas para o Estado</option>
+
+<option value="7501162">Govtech - Pesquisas aplicadas a soluções sistematizadas para o Estado</option>
+
+<option value="18868348">GPelvis - Grupo de Pesquisa e Estudo em Saúde da Mulher, Saúde Pélvica e Gênero</option>
+
+<option value="4033013">GPIPP - Grupo de Pesquisa em Inovação, projetos e processos</option>
+
+<option value="4033793">Grupo Brasileiro de Estudos Críticos de Discurso e Pobreza (REDLAD-Brasil)</option>
+
+<option value="4033079">Grupo Candango de Criminologia - Repensando Sociedade, Controle Penal e Sistema de Justiça</option>
+
+<option value="4033502">Grupo de Análise Numérica de Obras Subterrâneas em Maciços Rochosos</option>
+
+<option value="4033634">Grupo de Aprendizagem Colaborativa Online - GACO</option>
+
+<option value="4032768">Grupo de Automação e Controle - GRACO</option>
+
+<option value="4033039">Grupo de Dinâmica de Sistemas - GDS-UnB</option>
+
+<option value="4033851">Grupo de Dinâmica e Ab Initio - GDAI</option>
+
+<option value="4033514">Grupo de Dinâmica e Reatividade Molecular</option>
+
+<option value="4033267">Grupo de Economia Política - Gecopol</option>
+
+<option value="21424641">Grupo de Estudo de Fisioterapia em Oncologia - GEFON (certificado cnpq</option>
+
+<option value="4033614">Grupo de Estudo de História em Quadrinhos - GIBI</option>
+
+<option value="4033141">GRUPO DE ESTUDO EM BIOQUIMICA E AVALIACAO NUTRICIONAL</option>
+
+<option value="4033187">Grupo de Estudo em Fisiologia e Epidemiologia do Exercício e da Atividade Física</option>
+
+<option value="4033277">Grupo de Estudo em Linguística da Libras GEPLIBRAS</option>
+
+<option value="2995364">Grupo de Estudo em Ultrassonografia</option>
+
+<option value="8379973">Grupo de Estudo e Pesquisa da Saúde em Libras - GEPSLIBRAS</option>
+
+<option value="4033279">Grupo de Estudo e Pesquisa em Atividade Motora Adaptada</option>
+
+<option value="4033967">Grupo de Estudo e Pesquisa em Docência, Didática e Trabalho Pedagógico - PRODOCÊNCIA</option>
+
+<option value="4033482">Grupo de Estudo e Pesquisa em História da Enfermagem (GEPHEnf)</option>
+
+<option value="4033081">Grupo de Estudo e Pesquisa sobre Formação e Atuação de Professores/Pedagogos - GEPFAPe</option>
+
+<option value="4033131">Grupo de Estudos Avançados em Energia e Ambiente - GREA</option>
+
+<option value="4033937">Grupo de Estudos Avançados em Sociolinguística (GEAS)</option>
+
+<option value="4032756">Grupo de Estudos Críticos e Avançados em Linguagens</option>
+
+<option value="4033542">Grupo de Estudos da Antiguidade Tardia</option>
+
+<option value="6287701">Grupo de Estudos das Relações Étnico-Raciais e Antirracismo</option>
+
+<option value="1987481">Grupo de Estudos de Autorregulação e Motivação</option>
+
+<option value="4033883">Grupo de Estudos de Comércio e Concorrência (GECC)</option>
+
+<option value="4033656">Grupo de Estudos de Políticas de Avaliação da Educação Superior - GEPAES</option>
+
+<option value="4033648">Grupo de Estudos do Sistema Agroindustrial - GESA</option>
+
+<option value="4033881">Grupo de Estudos em Avaliação da Educação e Pesquisa em Contabilidade (EduCont)</option>
+
+<option value="4033071">Grupo de Estudos em Direito das Telecomunicações - GETEL/UnB</option>
+
+<option value="4033977">Grupo de Estudos em Direito Internacional Privado, do Comércio Internacional e Direitos Humanos</option>
+
+<option value="4032884">Grupo de Estudos em Direito Sanitário - GESAN/UnB</option>
+
+<option value="5136333">Grupo de Estudos em Educação das Relações Étnico-Raciais</option>
+
+<option value="1846664">Grupo de estudos em Fisioterapia nas Neurodisfunções</option>
+
+<option value="7040975">Grupo de Estudos em Hidrogênio e Células a Combustível</option>
+
+<option value="4033021">Grupo de Estudos em Medicina Equina- GEMEQ</option>
+
+<option value="19640695">grupo de estudos em neurociência, exercício físico e envelhecimento (GENEFE)</option>
+
+<option value="4032798">Grupo de Estudos em Oftalmologia Veterinária</option>
+
+<option value="4033273">Grupo de Estudos em Política e Sustentabilidade</option>
+
+<option value="15902604">Grupo de estudos em Viticultura</option>
+
+<option value="4034077">Grupo de Estudos e Pesquisa de Avaliação, Políticas, Planejamento e Gestão Participativa em saúde</option>
+
+<option value="5132173">GRUPO DE ESTUDOS E PESQUISA EM ENSINO DE BOTÂNICA</option>
+
+<option value="4032987">Grupo de Estudos e Pesquisa em Espaço e Democracia</option>
+
+<option value="2889630">Grupo de Estudos e Pesquisa em Jurisprudência e Constituição</option>
+
+<option value="4033456">Grupo de Estudos e Pesquisa em Saúde, Sociedade e Política Social</option>
+
+<option value="4032836">GRUPO DE ESTUDOS E PESQUISA PROFISSÃO DOCENTE: FORMAÇÃO, SABERES E PRÁTICAS - Geppesp</option>
+
+<option value="4033488">Grupo de Estudos e Pesquisas em Desenvolvimento Humano e Socioeducação (GEPDHS)</option>
+
+<option value="4033580">Grupo de Estudos e Pesquisas em Filosofia, Políticas Educacionais e Educação em Ciências</option>
+
+<option value="4033889">Grupo de Estudos e Pesquisas em Gerontologia e Geriatria (GEPGG)</option>
+
+<option value="4033171">Grupo de Estudos e Pesquisas em Governos Locais - GEPGL</option>
+
+<option value="4033510">Grupo de Estudos e Pesquisas em Gramática Teórica  (GEGT)</option>
+
+<option value="4032834">Grupo de Estudos e Pesquisas em Informação e Comunicação em Saúde Coletiva</option>
+
+<option value="4033658">Grupo de Estudos e Pesquisas em Linguística Ecossistêmica - GEPLE</option>
+
+<option value="4032744">Grupo de Estudos e Pesquisas em Materialismo Histórico-Dialético e Educação (CONSCIÊNCIA)</option>
+
+<option value="4033083">Grupo de Estudos e Pesquisas em Saúde da Família</option>
+
+<option value="4033049">&quot;Grupo de Estudos e Pesquisas &quot;&quot;História, Sociedade e Educação no Brasil&quot;&quot; no DF, HISTEDBR - DF - HISTEDBR&quot;</option>
+
+<option value="4033432">Grupo de Estudos e Pesquisa sobre os Estudos Sociais da Infância</option>
+
+<option value="4033945">Grupo de Estudos e Pesquisas para o Trabalho</option>
+
+<option value="4032814">Grupo de Estudos e Pesquisas sobre a contribuição de Anísio Teixeira para a educação brasileira</option>
+
+<option value="4033119">Grupo de Estudos e Pesquisas sobre Atividade Física para Idosos (GEPAFI)</option>
+
+<option value="4033367">Grupo de Estudos e Pesquisas sobre Fundamentos do Serviço Social e América Latina (GFAL)</option>
+
+<option value="4033460">Grupo de Estudos e Pesquisas sobre Maternidades, Parentalidade e Sociedade - GMATER</option>
+
+<option value="4032826">Grupo de Estudos e Pesquisas sobre o Trabalho, Gestão e Educação em Saúde</option>
+
+<option value="4034025">Grupo de Estudos e Pesquisas sobre Políticas e Práticas de Saúde/Enfermagem</option>
+
+<option value="4033053">Grupo de Estudos e Pesquisas sobre Trabalho, Sociabilidade e Serviço Social - TRASSO</option>
+
+<option value="19972277">Grupo de Estudos Funcionais das Línguas de Sinais - GEFULS</option>
+
+<option value="4033917">Grupo de Estudos Integrado</option>
+
+<option value="4033841">Grupo de Estudos Marxistas e Pesquisas em Política Social e Trabalho - GEMPP</option>
+
+<option value="4033594">Grupo de Estudos Político-Sociais (POLITIZA)</option>
+
+<option value="4033109">Grupo de Estudos sobre a  Competitividade e Sustentabilidade do Agronegócio/GECOMP</option>
+
+<option value="4033654">Grupo de Estudos sobre Formação e Integração ensino-serviço-comunidade - GEFIESCO</option>
+
+<option value="4034063">Grupo de Fundamentos, Divulgação Científica e Estudos de Gênero em Física</option>
+
+<option value="4033159">Grupo de Inovação em Automação Industrial - GIAI</option>
+
+<option value="4033849">Grupo de Investigação de Ensino em Matemática</option>
+
+<option value="4033073">Grupo de Materiais Inteligentes e Funcionais - GMatI</option>
+
+<option value="4032866">Grupo de Materiais Nanoestruturados</option>
+
+<option value="4032822">Grupo de Modelagem e Simulação de Materiais</option>
+
+<option value="4033181">Grupo de Modelagem e Simulação de Sistemas Automotivos - GMSSA</option>
+
+<option value="4293775">Grupo de Novos Materiais Para Catálise Química Sustentável</option>
+
+<option value="7330253">Grupo de Pesquisa aplicada DataLab</option>
+
+<option value="4033195">Grupo de Pesquisa e Estudos Avançados sobre Comportamento Organizacional (GepaCO)</option>
+
+<option value="4033815">Grupo de Pesquisa e Formação Sociocrítica em Educação Física, Esporte e Lazer - AVANTE</option>
+
+<option value="19095088">Grupo de Pesquisa em Ações de Prevenção à Violência e Gestão do Cuidado às Vítimas - AVIVA</option>
+
+<option value="4033871">Grupo de Pesquisa em Aprendizado de Máquina</option>
+
+<option value="4033835">GRUPO DE PESQUISA EM ATENÇÃO PRIMÁRIA À SAÚDE: GESTÃO, GERÊNCIA E CUIDADO</option>
+
+<option value="4033221">Grupo de Pesquisa em Comunicação Organizacional e Pensamento Sistêmico - COMSiS</option>
+
+<option value="6395083">Grupo de Pesquisa em Direito Comparado e Sistemas Jurídicos Romanísticos</option>
+
+<option value="4033365">Grupo de Pesquisa em Direito Comparado e Sistemas Jurídicos Romanísticos</option>
+
+<option value="6529835">Grupo de Pesquisa em Direito Comparado e Sistemas Jurídicos Romanísticos</option>
+
+<option value="8322104">GRUPO DE PESQUISA EM DIREITO PREVIDENCIÁRIO</option>
+
+<option value="4033953">Grupo de Pesquisa em Economia Política e História Econômica da Universidade de Brasília</option>
+
+<option value="4033927">Grupo de Pesquisa em Ensino de Ciências e seus dispositivos: sujeitos, saberes, práticas, discursos e</option>
+
+<option value="4032862">Grupo de Pesquisa em Epidemiologia e Saúde Coletiva (GPESC)</option>
+
+<option value="4033971">Grupo de Pesquisa em Estudos Europeus (GEE)</option>
+
+<option value="18753130">Grupo de Pesquisa em ética e filosofia política da UnB</option>
+
+<option value="20929096">Grupo de Pesquisa em Filosofia da Religião da UnB</option>
+
+<option value="18793441">Grupo de pesquisa em Hidrogênio e Células a Combustível</option>
+
+<option value="4033045">Grupo de Pesquisa em História do Urbanismo e da Cidade-GPHUC</option>
+
+<option value="4033670">Grupo de Pesquisa em História e Historiografia da Educação da Universidade de Brasília - GRUPHE/UnB</option>
+
+<option value="4033895">Grupo de Pesquisa em Interação Patógeno-Hospedeiro</option>
+
+<option value="4033929">Grupo de Pesquisa em Percepção Visual</option>
+
+<option value="4032898">Grupo de Pesquisa em Polímeros e Nanomateriais - UnB (GPOLN-UnB)</option>
+
+<option value="4033438">Grupo de Pesquisa em Redes Avançadas Sem Fio (GRAFo)</option>
+
+<option value="17379824">Grupo de Pesquisa em Retórica, Argumentação e Juridicidades</option>
+
+<option value="8240536">Grupo de pesquisa em risco cardiovascular</option>
+
+<option value="19066962">Grupo de Pesquisa em Riscos, Privacidade, Segurança Cibernética e Gestão de Crises</option>
+
+<option value="4033775">Grupo de Pesquisa em Saúde, Cuidado e Envelhecimento (GPeSEn)</option>
+
+<option value="4033339">Grupo de Pesquisa em Segurança Viária</option>
+
+<option value="4033801">Grupo de Pesquisa em Tecnologias do Cuidar - GPTEC</option>
+
+<option value="4033498">Grupo de Pesquisa em Treinamento de Força</option>
+
+<option value="2375769">Grupo de Pesquisa em Turismo, Políticas Públicas e Desenvolvimento Regional</option>
+
+<option value="4033373">GRUPO DE PESQUISA EPISTEMOLOGIAS E PRÁXIS ECOPOLÍTICAS EMANCIPATÓRIAS - GPEPEE</option>
+
+<option value="4033027">Grupo de pesquisa Jacques Lacan: Teoria, Clínica, Discursos Conexos.</option>
+
+<option value="4033157">Grupo de Pesquisa Modernismo e Discursos Utópicos</option>
+
+<option value="4033023">Grupo de Pesquisa Mundo do Trabalho e Teoria Social</option>
+
+<option value="19902046">Grupo de Pesquisa na Atenção a Família</option>
+
+<option value="4033646">Grupo de Pesquisa na Atenção à Família</option>
+
+<option value="4033530">Grupo de Pesquisa PERFIL: Avaliação Psicológica no Contexto de Segurança Pública, Privada e Forças Armadas</option>
+
+<option value="16709545">Grupo de Pesquisa Revoluções e Contrarrevoluções</option>
+
+<option value="4033789">Grupo de Pesquisas em Gestão de Pessoas, Clientes &amp; Cidadãos</option>
+
+<option value="4033508">Grupo de Pesquisa sobre Biopolítica, Racionalidade Neoliberal e os Desaparecidos Sociais</option>
+
+<option value="16093693">Grupo de Pesquisa sobre Formação Esportiva e Carreira do Atleta</option>
+
+<option value="4033059">Grupo de Pesquisa sobre Gestão e Contabilidade Pública/Privada - GESCONPP</option>
+
+<option value="8994156">Grupo de Pesquisa sobre Institucionalismo Histórico (GPInH)</option>
+
+<option value="17732718">Grupo de Pesquisa sobre Institucionalismo Histórico (GPInH)</option>
+
+<option value="8666476">Grupo de Pesquisa sobre Institucionalismo Histórico (GPInH)</option>
+
+<option value="4033087">Grupo de Pesquisa sobre o Urbano e a Cidade - GEURB</option>
+
+<option value="4033638">Grupo de Pesquisa sobre Planejamento e Inovação em Transportes - GPIT</option>
+
+<option value="1786809">Grupo de Pesquisa Teatro de Animação UnB</option>
+
+<option value="18836829">Grupo de propulsão elétrica e plasmas industriais</option>
+
+<option value="1384641">Grupo de Simulação Computational de Materiais</option>
+
+<option value="5155561">Grupo Direito, Economia e Sociedade (GDES)</option>
+
+<option value="4033239">Grupo Inovare de Estudos sobre Mudança nas Organizações e Redes Sociais</option>
+
+<option value="4033582">Grupo interdisciplinar de pesquisa e desenvolvimento de fármacos e medicamentos</option>
+
+<option value="4032776">Grupo Interdisciplinar de Pesquisa em Ciências e Tecnologias da Música e do Som</option>
+
+<option value="6353885">Grupo Interdisciplinar de Pesquisa em Letramento em Saude (GIPELS)</option>
+
+<option value="4033297">Grupo interdisciplinar em ciências da saúde</option>
+
+<option value="4033771">Grupo Lean - Grupo de Estudos e Pesquisas Lean Thinking</option>
+
+<option value="4032824">Grupo Motivação e o Ensino de Ciências- GMEC</option>
+
+<option value="4032886">Grupo PENSA (Pesquisa em Nutrição e Saúde)</option>
+
+<option value="4034021">Grupos com condições de Finitude</option>
+
+<option value="1176890">Grupos de Estudos e Pesquisas em Materialismo Histórico-Dialético e Educação (Consciência)</option>
+
+<option value="4033478">Grupos de pesquisas antropológicas e linguísticas do Noroeste Amazônico (KAAPI)</option>
+
+<option value="16141167">Grupos finitos</option>
+
+<option value="4033255">Grupos Profinitos</option>
+
+<option value="4033091">Herpetologia do Cerrado</option>
+
+<option value="4033055">Histopatologia dos tecidos mineralizados e mucosa bucal</option>
+
+<option value="4033009">História da Conservação da Natureza: Ativismo e Ciência</option>
+
+<option value="4033947">História da onça-pintada (Panthera onca) no Brasil</option>
+
+<option value="4033518">História da tradução no Brasil: tradução literária, crítica de tradução, perfil de tradutor.</option>
+
+<option value="7308605">História dos Conhecimentos</option>
+
+<option value="16021937">História e Psicanálise</option>
+
+<option value="4032890">Imagem - Grupo de pesquisa sobre corpo e educação</option>
+
+<option value="4033129">Imagens e(m) Cena</option>
+
+<option value="7222446">IMIGRAÇÃO, GÊNEROS TEXTUAIS E TRADUÇÃO</option>
+
+<option value="4033951">Impacto</option>
+
+<option value="4033251">Imunologia Molecular</option>
+
+<option value="4033526">Infantia</option>
+
+<option value="4032872">InfoKnow-Computer Systems for Information and Knowledge Treatment</option>
+
+<option value="7363830">Informação Pública e Eleições (IPÊ)</option>
+
+<option value="4033546">Inovação em Bioeconomia</option>
+
+<option value="1628465">Inovações e Tecnologias Aplicadas em Geotecnia Ambiental (Geofluxo)</option>
+
+<option value="4032880">Inovações e Tecnologias Aplicadas em Geotecnia Ambiental (GeoFluxo)</option>
+
+<option value="17649289">Insurgências: laboratório de investigações em extensão e direitos humanos</option>
+
+<option value="17637244">INSURGÊNCIAS: LABORATÓRIO DE INVESTIGAÇÕES EM EXTENSÃO E DIREITOS HUMANOS</option>
+
+<option value="1382958">Inteligência Artificial Aplicada à Administração e à Gestão</option>
+
+<option value="4033448">Inteligência Artificial em Ciências da Saúde</option>
+
+<option value="4033440">Inteligência e Projetos em Defesa</option>
+
+<option value="4033035">Inteligência Organizacional e Competitiva</option>
+
+<option value="4032906">Intemperismo, lateritização e o regolito tropical</option>
+
+<option value="4034039">Interações biológicas e nanomateriais</option>
+
+<option value="4033051">Interface Patógeno-Hospedeiro</option>
+
+<option value="4033522">Internet e Direitos Humanos</option>
+
+<option value="3106370">Investigações Transdisciplinares em Educação para a Ciência, Saúde e Ambiente</option>
+
+<option value="6418585">(In)visibilidades: Grupo de pesquisa sobra a imagem da pessoa com deficiência</option>
+
+<option value="4033235">IOR&amp;N - Inter-organizational Relationships and Networks Research Group - GERIR</option>
+
+<option value="7261415">Ipe - Informação Pública e Eleições</option>
+
+<option value="4058688">Jornalismo e Memória na Comunicação</option>
+
+<option value="7258139">JURAPP - Grupo de Pesquisa em Jurisdição Administrativa e Políticas Públicas</option>
+
+<option value="4032762">Justiça de Transição</option>
+
+<option value="4033065">Justiça Social, política e desigualdades</option>
+
+<option value="4033209">LaBCCERVa/IQD/UnB - Laboratório de Bioprocessos Cervejeiros e Catálise em Energias Renováveis</option>
+
+<option value="4033101">LabEC - Laboratório de Estudos Críticos do Discurso</option>
+
+<option value="4033943">Laboratório Aberto de Brasília</option>
+
+<option value="4033041">Laboratório Cardiovascular da Faculdade de Medicina da UnB</option>
+
+<option value="17520820">Laboratório de Agregados Anfifílicios e Biomoléculas</option>
+
+<option value="4032746">Laboratório de Antropologia da Ciência e da Técnica</option>
+
+<option value="18068368">Laboratório de Antropologia da Saúde</option>
+
+<option value="18132629">Laboratório de Antropologia da Saúde</option>
+
+<option value="18073235">Laboratório de Antropologia da Saúde</option>
+
+<option value="4033191">Laboratório de Aprendizado de Máquina em Finanças e Organizações.</option>
+
+<option value="4033295">Laboratório de Bioética, Ética em Pesquisa e Integridade Científica</option>
+
+<option value="18835089">Laboratório de Bioprocessos Cervejeiros e Catálise em Energias Renováveis</option>
+
+<option value="19284556">Laboratório de brincadeiras e jogos afro-brasileiros e indígenas</option>
+
+<option value="19704733">Laboratório de Comportamento Motor e Sinais Biológicos</option>
+
+<option value="4032455">Laboratório de Desenvolvimento de Inovações Terapêuticas (LADETER)</option>
+
+<option value="4034005">Laboratório de Desenvolvimento em Design</option>
+
+<option value="4033217">Laboratório de Dispositivos e Circuitos Integrados - LDCI</option>
+
+<option value="4033578">Laboratório de Ensino de Sociologia Lélia Gonzalez</option>
+
+<option value="4032991">LABORATÓRIO DE ESTUDOS DA CIDADANIA, ADMINISTRAÇÃO DE CONFLITOS E JUSTIÇA - (CAJU)</option>
+
+<option value="4033454">Laboratório de Estudos da Insurreição: sexualidade e violência</option>
+
+<option value="4033899">Laboratório de Estudos em Gestão dos Serviços de Saúde - LABGEST</option>
+
+<option value="4032772">Laboratório de Estudos e Pesquisas em Aprendizagem e Inclusão (LEPAI)</option>
+
+<option value="4034027">Laboratório de Estudos e Pesquisas em Psicometria e Inteligência</option>
+
+<option value="4033626">Laboratório de Estudos e Pesquisas Multidisciplinares em Segurança do Paciente</option>
+
+<option value="16530875">Laboratório de Estudos e Práticas em Eventos</option>
+
+<option value="4033371">Laboratório de Estudos Farmacêuticos da Unb - LEFAR</option>
+
+<option value="15858176">Laboratório de Estudos sobre a Época Moderna</option>
+
+<option value="16003629">Laboratório de Evidências e Estudos Farmacêuticos da Unb - LEFAR</option>
+
+<option value="4033233">Laboratório de Gestão de Políticas Penais - LABGEPEN</option>
+
+<option value="4033047">LABORATÓRIO DE IMUNOLOGIA E INFLAMAÇÃO - LIMI</option>
+
+<option value="5984700">Laboratório de Inovação em Governança, da Gestão de Riscos, do Controle e da Auditoria-LAbGOVER</option>
+
+<option value="17323485">Laboratório de Inteligência Computacional, Engenharia e Experiência de Usuário - LinceX</option>
+
+<option value="17388249">Laboratório de Inteligência Computacional, Engenharia e Experiência de Usuário - LinceX</option>
+
+<option value="4032997">Laboratório de Inteligência de Redes</option>
+
+<option value="4033797">LABORATÓRIO DE MATERIAIS E COMBUSTÍVEIS</option>
+
+<option value="4033831">Laboratório de Nanociência Ambiental e Aplicada LNAA-FUP/UnB</option>
+
+<option value="4033919">&quot;&quot;&quot; Laboratório de Pesquisa em História e Historiografia do Brasil&quot;&quot;&quot;</option>
+
+<option value="2339832">Laboratorio de Pesquisa em Saude da Mulher</option>
+
+<option value="4033604">Laboratório de Pesquisa em Saúde da Mulher - UNB</option>
+
+<option value="4033869">Laboratório de Pesquisas sobre Ação Pública para o Desenvolvimento Democrático - LAP2D</option>
+
+<option value="4033576">Laboratório de Políticas de Comunicação</option>
+
+<option value="17494420">Laboratório de Práticas Integrativas e Complementares em Saúde</option>
+
+<option value="16053807">Laboratório de Práticas Integrativas em Saúde</option>
+
+<option value="4033125">Laboratório de Propulsão Química</option>
+
+<option value="4033001">Laboratório de Prospecção tecnológica, propriedade intelectual e transferência de tecnologia</option>
+
+<option value="3058042">Laboratório de Prospecção tecnológica, propriedade intelectual e transferência de tecnologia</option>
+
+<option value="4033165">Laboratório de Química Metodológica e Orgânica Sintética (LaQMOS)</option>
+
+<option value="4033097">Laboratório de Simulação e Controle de Sistemas Aeroespaciais</option>
+
+<option value="4033123">Laboratório de Sociologia Não-Exemplar UnB/UFRRJ/UFRGS/UFMG</option>
+
+<option value="1959066">Laboratório de Teatro de Formas Animadas - LATA</option>
+
+<option value="6873241">Laboratório de Teoria Social, Filosofia e Psicanálise do Centro Oeste (Latesfip-Cerrado)</option>
+
+<option value="17657917">Laboratório de Transferência de Massa e Processos de Separação - LabTSep</option>
+
+<option value="4033973">Laboratório e Grupo de Estudos em Relações Interétnicas (LAGERI)</option>
+
+<option value="4033476">Laboratório Interdisciplinar de Educação, Cultura &amp; Arte - Labeca</option>
+
+<option value="4033241">Laboratório Interdisciplinar de Pesquisa aplicada à Prática Clínica em Oncologia (LIONCO)</option>
+
+<option value="4033574">Laboratório) sobre a Pluralidade e Transpessoalidade do Cuidado em Enfermagem e Saúde/LAPTCES</option>
+
+<option value="4724820">Labor Movens - Grupo de Estudos e Pesquisas em Condições de Trabalho no Turismo</option>
+
+<option value="4033442">LACIS - Laboratório do Ambiente Construído, Inclusão e Sustentabilidade</option>
+
+<option value="4033139">LADECIC</option>
+
+<option value="4033289">LADES - Laboratório de Acesso à Justiça e Desigualdades</option>
+
+<option value="17957483">LAEMI Laboratório de estudos sobre migrações internacionais</option>
+
+<option value="4033987">LASIC - Laboratório de Síntese Inorgânica e Cristalografia</option>
+
+<option value="16353770">LASIC - Laboratório de Síntese Inorgânica e Cristalografia</option>
+
+<option value="4033430">LATA - Laboratório de Teatro de Formas Animadas</option>
+
+<option value="4033959">LEITURA E PRODUÇÃO DE GÊNEROS NAS PRÁTICAS SOCIAIS, ESCOLARES E PROFISSIONAIS</option>
+
+<option value="17616811">LEPTTO: Laboratório de Estudos e Práticas em Trabalho e Terapia Ocupacional</option>
+
+<option value="4033855">LETRAMENTOS ACADÊMICOS EM LÍNGUAS NO ENSINO SUPERIOR (LALES)</option>
+
+<option value="4033921">Letras mirando horizontes</option>
+
+<option value="15476211">LexiC: ciência, projetos e pesquisa sobre Léxico</option>
+
+<option value="4033303">LexiC: ciência, projetos e pesquisa sobre Léxico</option>
+
+<option value="4034073">LFDC - Laboratório de Fabricação Digital e Customização em Massa</option>
+
+<option value="8561144">LIMA - Laboratório de Inorgânica e Materiais</option>
+
+<option value="9007262">Língua Japonesa e conteúdos midiáticos - Ensino, apresendizagem, interpretação e aplicação</option>
+
+<option value="4033795">LinseLab - Laboratório de Estudos e Pesquisas sobre Inovação e Serviços</option>
+
+<option value="4033829">LiterArtes</option>
+
+<option value="4033911">Literatura e corpo</option>
+
+<option value="4033317">Literatura, Educação e Dramaturgias Contemporâneas (LEDrac)</option>
+
+<option value="4034029">Literatura e modernidade periférica</option>
+
+<option value="4033821">Lógica no Avião</option>
+
+<option value="18635847">LOTUS - Laboratório de Otimização de Tecnologias para Uso Sustentável</option>
+
+<option value="4032840">LudEQ - Núcleo de Pesquisa e Investigação em Jogos e Atividades Lúdicas no Ensino de Química</option>
+
+<option value="17869842">LUPA - Laboratório de Universos Poéticos e Aprendizagens em Artes</option>
+
+<option value="4034031">Macroeconomia Estruturalista do Desenvolvimento</option>
+
+<option value="4033660">Madalenas em Ação: estudos feministas e de gênero em comunicação</option>
+
+<option value="4032796">Manejo da Produção Florestal</option>
+
+<option value="4033231">Manejo do solo e de resíduos orgânicos para uma agricultura de baixa emissão de carbono</option>
+
+<option value="4032842">Manejo Integrado de Insetos-Praga em Cultivos Sustentáveis</option>
+
+<option value="4033446">MapTrad - Mapeamentos em Tradução</option>
+
+<option value="4032758">Maré - Núcleo de Estudos em Cultura Jurídica e Atlântico Negro</option>
+
+<option value="5099022">Matula - Sociabilidades, diferenças e desigualdades</option>
+
+<option value="18676265">MECANIZAÇÃO AGRÍCOLA</option>
+
+<option value="4033307">Melhoramento genético e manejo cultural de fruteiras.</option>
+
+<option value="4033347">Melhoramento genético e manejo cultural de hortaliças convencionais e não convencionais</option>
+
+<option value="4033005">MEMOIC - Memória, Cultura, Oralidade e Imagem</option>
+
+<option value="7308615">Memórias e histórias sobre a fotografia em Brasília</option>
+
+<option value="7308631">Memórias e histórias sobre a fotografia em Brasília</option>
+
+<option value="20184906">Memórias e Histórias sobre a Fotografia em Brasília</option>
+
+<option value="4033229">Meninas.comp</option>
+
+<option value="4033779">Mensuração e Gestão de Risco em Finanças Corporativas</option>
+
+<option value="4033897">Metalogênese do Pré-Cambriano</option>
+
+<option value="8147796">METODOLOGIAS, EDUCAÇÃO E MATERIAIS EM ARTES VISUAIS</option>
+
+<option value="8580764">Metodologias, Educação e Materiais em Artes Visuais - MEMAV</option>
+
+<option value="8151873">METODOLOGIAS, EDUCAÇÃO E MATERIAIS EM ARTES VISUAIS  - MEMAV</option>
+
+<option value="4033983">Métodos Numéricos em Engenharia</option>
+
+<option value="4033287">Métodos topológicos e variacionais aplicados a problemas elípticos não lineares</option>
+
+<option value="4033642">Microbiologia Veterinária</option>
+
+<option value="17281302">Micropolítica, Cuidado e Saúde Coletiva  nos territórios diversos</option>
+
+<option value="4033765">Microrganismos e alimentos: controle de qualidade, produção de enzimas e suas aplicações.</option>
+
+<option value="19418579">Mirada ao Revés</option>
+
+<option value="19314169">MIRA - práticas de processo e observação da cena.</option>
+
+<option value="4032457">MOBILANG: Mobilidades, contatos de línguas, políticas e direitos linguísticos</option>
+
+<option value="4034003">Modelagem Matemática e Computacional</option>
+
+<option value="4033544">Modelagem Preditiva, Quantificação de Incerteza, Aprendizado de Máquina e Inteligência Artificial Para</option>
+
+<option value="4032451">Morfologia e Imunologia Aplicada</option>
+
+<option value="16737068">Morfologia e Imunologia Aplicadas</option>
+
+<option value="4032786">Morfologia e Metabolismo Animal</option>
+
+<option value="4033652">Mousikê - textualidades dramático-musicais</option>
+
+<option value="5708163">MOVER</option>
+
+<option value="4033243">Movimentos Indígenas, Políticas Indigenistas e Indigenismo</option>
+
+<option value="4033223">Mudanças climáticas e seus impactos na germinação, crescimento inicial e desenvolvimento de plantas e na</option>
+
+<option value="2935111">MuLEC - MultiLínguas Estrangeiras para Crianças</option>
+
+<option value="4032810">Musealização da Arte: poéticas em narrativas</option>
+
+<option value="4032995">MUSEOLOGIA LAB: Laboratório de Pesquisa em Cultura digital e Museologia Virtual</option>
+
+<option value="4033915">Museologia, Patrimônio e Memória</option>
+
+<option value="20476848">Museu virtual da FEB - história, pesquisa e inovação em Preservação Digital</option>
+
+<option value="4032812">Música brasileira: texto, contexto, práticas e modos de difusão</option>
+
+<option value="4033823">Nanobiotecnologia e Saúde</option>
+
+<option value="4033606">Nanotecnologia verde: ambiente, saúde e sustentabilidade</option>
+
+<option value="4033548">NEBIC: Nucleo de Estudos do Bicameralismo e Instituições Comparadas</option>
+
+<option value="15983765">NEBIC: Núcleo de Estudos do Bicameralismo e Instituições Comparadas</option>
+
+<option value="4033173">NEPESF - Núcleo de Estudos e Pesquisas em Envelhecimento, Saúde e Funcionalidade</option>
+
+<option value="4033452">NESNUT - Núcleo de Estudos Epidemiológicos em Saúde e Nutrição</option>
+
+<option value="4033275">Neurociências e Cognição em Idosos (NeuroCog-Idoso)</option>
+
+<option value="4033245">Neurociências e Comportamento</option>
+
+<option value="17710903">Neurocirurgia endovascular</option>
+
+<option value="16091763">Neurodiversidade, Família e Acessibilidade Cultural</option>
+
+<option value="17625353">Neuropsicologia, Comunicação e Habilidades socioemocionais</option>
+
+<option value="4032774">NExT Núcleo de P&amp;D para Excelência e Transformação do Setor Público</option>
+
+<option value="15735334">Nós-em-rede</option>
+
+<option value="8423780">Nós-em-rede</option>
+
+<option value="4033133">NTAAI - Núcleo de Tecnologia Assistiva, Acessibilidade e Inovação</option>
+
+<option value="4032856">Núcleo Brasília</option>
+
+<option value="4033913">Núcleo de Análise e Avaliação de Políticas Públicas - NAAPP</option>
+
+<option value="4032838">Núcleo de Desenvolvimento de Processos Químicos</option>
+
+<option value="5143886">Núcleo de diversidade e crítica organizacional</option>
+
+<option value="18813144">Núcleo de Estudos</option>
+
+<option value="15627249">Núcleo de Estudos da Infância e da Juventude</option>
+
+<option value="4033466">Núcleo de Estudos da Insegurança Alimentar e Fome : Arroz com Feijão</option>
+
+<option value="4034011">Núcleo de Estudos de Semiótica em Comunicação.</option>
+
+<option value="4034049">Núcleo de Estudos do Corpo e Natureza - Necon</option>
+
+<option value="19052255">Núcleo de Estudos em Agroecologia e Produção Orgânica (NEA)</option>
+
+<option value="4032778">Núcleo de Estudos em Agroecologia e Produção Orgânica (NEA)</option>
+
+<option value="18752052">NUCLEO DE ESTUDOS EM ARBORIZAÇÃO E SISTEMAS AGROFLORESTAIS - NEAS</option>
+
+<option value="18813161">Núcleo de Estudos Em Arborização Urbana e Sistemas Agroflorestais - NEAS</option>
+
+<option value="8451142">Nucleo de Estudos em Artes e Linguagens</option>
+
+<option value="15587723">Núcleo de Estudos em Atividades Aeroagrícolas</option>
+
+<option value="4033528">Núcleo de Estudos em Avaliação Psicológica Clínica - NEAPSIC</option>
+
+<option value="2915633">Núcleo de Estudos em Contexto Hospitalar, Cuidados Paliativos e Ocupações</option>
+
+<option value="5156165">Núcleo de Estudos em Contexto Hospitalar, Cuidados Paliativos e Ocupações</option>
+
+<option value="4033624">Núcleo de Estudos em Educação e Promoção em Saúde - NESPROM</option>
+
+<option value="4033991">Núcleo de Estudos em Licitações e Contratos Administrativos</option>
+
+<option value="8568698">Núcleo de estudos e Pesquisa em Terapia Ocupacional e Logoterapia.</option>
+
+<option value="16028263">Núcleo de estudos e pesquisas em terapia ocupacional e logoterapia</option>
+
+<option value="7225073">Núcleo de Estudos Infância Cultura e Sociedade (NEICS)</option>
+
+<option value="6061442">NÚCLEO DE ESTUDOS INFANCIA, POLITICAS E SOCIEDADE - NEIPS&amp;#8203;</option>
+
+<option value="4033644">Núcleo de Estudos Latino-americanos</option>
+
+<option value="4033019">Núcleo de Estudos Limnológicos (NEL)</option>
+
+<option value="21478337">Núcleo de estudos linguísticos para uma educação transformadora - NEGUE</option>
+
+<option value="4033249">Núcleo de Estudos Mário Pedrosa</option>
+
+<option value="4033931">Núcleo de Estudos sobre o Pensamento Alemão. NEPA/UnB</option>
+
+<option value="4032854">Núcleo de Evidências em Saúde</option>
+
+<option value="16099003">Núcleo de Pesquisa Aplicada em Políticas Públicas, Gestão e Inovação em Saúde</option>
+
+<option value="1592720">Núcleo de Pesquisa em Responsabilidade Socioambiental Corporativa</option>
+
+<option value="5075891">Núcleo de Pesquisa Flora Tristán: representações, conflitos e direitos</option>
+
+<option value="4033863">Núcleo de Pesquisa no Ensino de Ciências</option>
+
+<option value="4032449">Nucleo de Pesquisas em Politicas Publicas de Turismo</option>
+
+<option value="4033468">Núcleo SinalizAção: Linguística e Acessibilidade</option>
+
+<option value="4033853">Observatório da educação e do Ensino Médio no Distrito Federal</option>
+
+<option value="16702263">Observatório da Longevidade</option>
+
+<option value="4033873">Observatório da Radiodifusão Pública na América Latina</option>
+
+<option value="8389366">Observatório das Migrações Internacionais (OBMigra)</option>
+
+<option value="16094567">Observatório de Políticas de Igualdade Racial</option>
+
+<option value="16073556">Observatório de Políticas Públicas Culturais</option>
+
+<option value="4033319">Observatório de Políticas Públicas: estudos territoriais e equidade</option>
+
+<option value="2972486">OBSERVATORIO DO MOVIMENTO PELA TECNOLOGIA SOCIAL NA AMERICA LATINA E CARIBE</option>
+
+<option value="4033283">Observatório do Populismo do século 21</option>
+
+<option value="16435834">Observatório do Populismo na América Latina</option>
+
+<option value="4033215">O DIREITO ACHADO NA RUA</option>
+
+<option value="4033562">Odontologia Reabilitadora e Estética - UnB</option>
+
+<option value="17881851">O Pensamento Linguístico de Noah Webster</option>
+
+<option value="4033556">Óptica Quântica Teórica (OQT)</option>
+
+<option value="4033664">Ouvindo as ouvidorias do sistema prisional: Lei de acesso à informação, sociedade e cidadania</option>
+
+<option value="18494112">Palimpsesto: Tecituras entre literatura japonesa, literatura brasileira e psicologia</option>
+
+<option value="4033369">Parasitologia Veterinária do Cerrado</option>
+
+<option value="17772712">Patologia Molecular do Câncer</option>
+
+<option value="7294851">Pedogeomorfologia e Atributos da Paisagem</option>
+
+<option value="4032728">Pensamento e Cultura</option>
+
+<option value="4033608">Pensamento Social Latino-Americano</option>
+
+<option value="4033293">PEQUI - Pesquisas sobre Envelhecimento e Quedas em Idosos</option>
+
+<option value="4033472">Percursos, narrativas, fragmentos: história do direito e do constitucionalismo</option>
+
+<option value="4032770">PERIFÉRICO, TRABALHOS EMERGENTES</option>
+
+<option value="4033909">Perspectivas críticas da educação em ciências</option>
+
+<option value="17666236">Pesquisa</option>
+
+<option value="4032748">Pesquisa e Inovação em Materiais Cimentìcios</option>
+
+<option value="4032878">Pesquisa em Educação, formação profissional e gestão pública no Brasil</option>
+
+<option value="7275425">Pesquisas translacionais em Genética Humana e Médica</option>
+
+<option value="4032844">Pesquisa teórica e empírica em finanças: mercados de capitais e finanças corporativas</option>
+
+<option value="7227592">Pesquisa Translacional em Envelhecimento (PETE): Da Epidemiologia à Atenção à Saúde.</option>
+
+<option value="7227822">Pesquisa Translacional em Envelhecimento (PETE): Da Epidemiologia à Atenção à Saúde.</option>
+
+<option value="4033811">PHIBIO: FILOSOFIA E BIOÉTICA</option>
+
+<option value="4033321">Pi: Grupo de Pesquisas e Investigações em Educação Matemática</option>
+
+<option value="4032808">Pilab - World Pendulum Alliance (WP@ELAB)</option>
+
+<option value="4033197">PISAC - Parque de Inovação e Sustentabilidade do Ambiente Construído</option>
+
+<option value="6036887">Pluriepistemologias e Ensino de História</option>
+
+<option value="4032784">Poéticas contemporâneas (Vivoverso)</option>
+
+<option value="4034071">Poéticas do Corpo</option>
+
+<option value="4032742">Política e Avaliação da Educação Básica e Superior</option>
+
+<option value="4033981">Política e Gestão Florestal</option>
+
+<option value="20479306">Política e Gestão Florestal</option>
+
+<option value="4033177">Políticas e Gestão de Ciência, Tecnologia e Inovação em Saúde</option>
+
+<option value="1760084">Políticas Públicas, Turismo e Desenvolvimento</option>
+
+<option value="4033885">PORTUGUÊS LÍNGUA DE HERANÇA: aspectos teórico-descritivos e práticos</option>
+
+<option value="4033999">Pós-Colheita de Produtos de Origem Vegetal</option>
+
+<option value="18896351">Pratico - Laboratório de Prática de Ensino e Pesquisa da Educação Física e do Esporte</option>
+
+<option value="4033434">Preservação de Coleções e Bens Culturais, Artísticos e de Ciência &amp; Tecnologia</option>
+
+<option value="4033813">Previdência Social no Brasil: Desequilíbrios e Perspectivas</option>
+
+<option value="19877732">Prisões e práticas de Estado: pesquisas sobre saúde e letalidade prisional</option>
+
+<option value="4033632">Probabilidade Aplicada e Modelagem Estocástica</option>
+
+<option value="4033939">Processo Civil, Acesso à Justiça e Tutela dos Direitos</option>
+
+<option value="4033015">Produção e Purificação de Biomoléculas de Interesse a Saúde Humana</option>
+
+<option value="4033261">Produtos Tensoriais Não-abelianos de Grupos: Propriedades Estruturais, Condições de Finitude e</option>
+
+<option value="4033037">Programa de Conservação dos Mamíferos da Chapada dos Veadeiros</option>
+
+<option value="4032754">Projectum - Estudos Avançados para Metodologias Matemáticas Aplicadas a Gestão</option>
+
+<option value="4033825">Projeto TermiTraDiCo: Terminologia e Tradução Direcionadas por Corpus</option>
+
+<option value="4033584">ProLaw-Lab - Precedentes, Democracia e Direitos Humanos</option>
+
+<option value="4033349">Promoção de saúde e práticas integrativas</option>
+
+<option value="4032876">Promoção e Equidade em Saúde</option>
+
+<option value="4033017">Proteômica de neutrófilos</option>
+
+<option value="6810510">Psicologia Clínica e Relações Étnico-Raciais</option>
+
+<option value="4034037">Psicologia da Saúde e Desenvolvimento</option>
+
+<option value="15760041">Psicologia da Saúde Ocupacional</option>
+
+<option value="4033363">PSICOLOGIA DIALÓGICA E CULTURAL</option>
+
+<option value="1097862">Psicologia e Ladinidades</option>
+
+<option value="4033343">Psicologia Escolar e Desenvolvimento Humano: formação, pesquisa, intervenção</option>
+
+<option value="4033803">Public Intelligence Laboratory - PILab</option>
+
+<option value="4033516">Public Sector Accounting and Control Research (CSP)</option>
+
+<option value="5943812">Quadrital</option>
+
+<option value="5128021">Quadrital - Quadrinhos, Tradução, Acessibilidade e Linguagens</option>
+
+<option value="4034045">Qualidade e Convergência de Normas Contábeis</option>
+
+<option value="4033995">Qualidade nutricional e alimentar</option>
+
+<option value="4033666">QUESTÕES TEÓRICAS E PRÁTICAS DA FRASEOLOGIA E PAREMIOLOGIA CONTEMPORÂNEAS</option>
+
+<option value="4033462">Química Teórica</option>
+
+<option value="4033093">R5 - Laboratório de Pesquisa Aplicada para Psicologia Transcultural, Tecnologia e Inovação</option>
+
+<option value="4033540">RAJ - Grupo de Estudos e Pesquisas sobre Raça, Juventude e Violência</option>
+
+<option value="3893749">Reações Químicas</option>
+
+<option value="4032858">Recursos Hídricos e Irrigação</option>
+
+<option value="4032800">Rede Experiência, Narrativas e Pedagogias da Resistência (REDExp)</option>
+
+<option value="4033085">Redes Sociais Complexas e Inteligência Cooperativa</option>
+
+<option value="4032764">Reeducação Funcional e Desempenho Humano (ReDe)</option>
+
+<option value="4034041">Relações Internacionais do MERCOSUL</option>
+
+<option value="4034015">Reportagem e apuração jornalística</option>
+
+<option value="8585524">Representação e design: experimentações sobre a relação entre imagem e projeto no campo do design</option>
+
+<option value="5616747">Representação Gráfica - Integração, Visualização e Simulação - Aplicada à Engenharia Ambiental e Civil</option>
+
+<option value="4033201">ReproequiUnB</option>
+
+<option value="5128785">Requisitos de Software</option>
+
+<option value="4033843">RESIDRO</option>
+
+<option value="4033464">RESOCIE - Grupo de Pesquisa sobre Relações entre Sociedade e Estado</option>
+
+<option value="4033470">Retórica, Argumentação e Juridicidades</option>
+
+<option value="2369298">S</option>
+
+<option value="4032874">Sala de Situação de Saúde</option>
+
+<option value="15745426">Saúde Bucal da Criança - UnB</option>
+
+<option value="20711076">Saúde Bucal da Criança - UnB</option>
+
+<option value="4033145">Saúde do Homem no Brasil e Contextos Internacionais</option>
+
+<option value="4033003">Saúde, Trabalho, Migração  e Direitos Humanos</option>
+
+<option value="4033941">Semigrupos Numéricos e temas afins</option>
+
+<option value="15998021">Sexualidades e Serviço Social - SexuSS</option>
+
+<option value="4032832">SGPAV</option>
+
+<option value="5914155">SIGNO- Os significantes e os significados do ensino e da produção de textos: pesquisa, ação e reflexão</option>
+
+<option value="4033183">SIGNO: Os significantes e os significados do ensino e da produção de textos: pesquisa, ação e reflexão</option>
+
+<option value="2196138">SIMULAÇÃO COMPUTACIONAL NO AMBIENTE CONSTRUÍDO</option>
+
+<option value="4033175">Simulação Computacional no Ambiente Construído - SiCAC</option>
+
+<option value="4033809">SISTEMA INTERNACIONAL NO ANTROPOCENO E MUDANÇA GLOBAL DO CLIMA</option>
+
+<option value="4032760">Sistemas Elétricos de Potência</option>
+
+<option value="4032736">Social Change Lab - Pesquisas em Mudanças Sociais</option>
+
+<option value="4033997">SOLEDUC - (Socio)Linguística, Letramentos Múltiplos e Educação</option>
+
+<option value="4032740">Sujeitos, Territórios e a construção de conhecimento</option>
+
+<option value="4033827">Sustentabilidade, Desempenho e Reabilitação das Edificações</option>
+
+<option value="4033345">TATA - Conhecimentos, ciências e tecnologias</option>
+
+<option value="4033185">Taxonomia e Evolução de Famílias Megadiversas de Angiospermas</option>
+
+<option value="3386910">Teatroescuta</option>
+
+<option value="7384389">Teatro Pândego</option>
+
+<option value="4033901">Técnicas Não Lineares para Controle de Sistemas Incertos</option>
+
+<option value="17761380">Tecnologia de Bioprocessos e Fermentação</option>
+
+<option value="4034065">Tecnologia dos Medicamentos, Alimentos e Cosméticos</option>
+
+<option value="4033857">Tecnologias da Informação e Comunicação -TIC e Educação Inclusiva</option>
+
+<option value="4033331">Tecnologias Limpas</option>
+
+<option value="4033253">Tecnologias para Terapia Gênica. Technology for Gene Therapy Lab.</option>
+
+<option value="4033512">Tectônica e Fluxo de Fluidos</option>
+
+<option value="16413410">Telessaúde Integrada</option>
+
+<option value="4033063">Teoria da Computação</option>
+
+<option value="16108102">Teorias alternativas em eletrodinâmica e gravitação</option>
+
+<option value="4033807">Teorias de Difusão e Análise de Políticas Públicas</option>
+
+<option value="6861855">Terapia Ocupacional, gênero e diversidade</option>
+
+<option value="4032896">Termitologia Neotropical</option>
+
+<option value="16240220">Terras, direitos e histórias indígenas no Brasil</option>
+
+<option value="1985711">teste</option>
+
+<option value="4032794">Textualidades Contemporâneas : Processos de Hibridação.</option>
+
+<option value="4032999">Topos - Paisagem, Projeto, Planejamento</option>
+
+<option value="4032738">TOPUS - Grupo de Pesquisa sobre Espaço, Literatura e outras Artes</option>
+
+<option value="17556342">Toxicologia Ambiental</option>
+
+<option value="4033596">Toxinologia</option>
+
+<option value="4033905">Trabalho, Constituição e Cidadania</option>
+
+<option value="4034019">Trabalho, Educação e Discriminação - TEDis</option>
+
+<option value="4033773">Trabalho, Interseccionalidades e direitos</option>
+
+<option value="17287060">Trabalho, Política Urbana e Serviço Social - Locuss-UnB</option>
+
+<option value="4033538">TRADUÇÃO E PSICANÁLISE</option>
+
+<option value="4033662">Tradução: políticas e práticas</option>
+
+<option value="6210520">Tradução, Terminologia Multilíngue e Ensino Intercultural de Línguas</option>
+
+<option value="4033113">TransLab</option>
+
+<option value="4033777">Transporte Quântico em Sistemas Desordenados</option>
+
+<option value="20123932">Tratamento de Água para Abastecimento e Águas Residuárias</option>
+
+<option value="2961768">Ultrassonografia em dermatologia</option>
+
+<option value="15832915">Um Olhar para a Amazônia: sua gente, seus rios e florestas</option>
+
+<option value="4033299">ValueHealthLab - Laboratório de Estudos para Melhoria da Qualidade, da Segurança do Paciente e do Valor em</option>
+
+<option value="20147615">VÉRTICE - Núcleo de Performance e Processos Criativos</option>
+
+<option value="21467008">videosartesvidas: campos ampliados e corpos implicados na arte contemporânea</option>
+
+<option value="4032453">Violência, Cidadania e Segurança</option>
+
+<option value="4033151">VIOLES - GRUPO DE PESQUISA SOBRE TRÁFICO DE PESSOAS, VIOLÊNCIA E EXPLORAÇÃO SEXUAL DE</option>
+
+<option value="4033147">Virologia de Insetos</option>
+
+<option value="4032846">Vocalidade &amp; Cena.</option>
+
+<option value="1841412">Vou te Contar! Contadores de histórias.</option>
+
+<option value="1819707">Vou te Contar! Contadores de histórias.</option></select>
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="17" class="noborder" id="agenciaFinanciadora"> </td>
+
+				<td> <label for="agenciaFinanciadora">Agência Financiadora:</label> </td>
+
+				<td>
+
+					<select name="financiamentoProjetoPesq.entidadeFinanciadora.id" onclick="$(agenciaFinanciadora).checked = true;" style="width:90%"><option value="-1">-- SELECIONE UMA AGÊNCIA FINANCIADORA --</option>
+
+						<option value="20913398">Aberystwyth University</option>
+
+<option value="5060595">Advocacia-Geral da União</option>
+
+<option value="8509733">Agência Brasileira de Inteligência</option>
+
+<option value="100705406">Agência Espacial Brasileira</option>
+
+<option value="5202282">Agência Nacional de Águas e Saneamento Básico</option>
+
+<option value="8332626">Agência Nacional de Aviação Civil</option>
+
+<option value="16428776">Agência Nacional de Energia Elétrica</option>
+
+<option value="5020220">Agência Nacional de Telecomunicações</option>
+
+<option value="16738959">Agência Nacional de Transportes Aquaviários</option>
+
+<option value="17870846">Agência Nacional de Transportes Terrestres</option>
+
+<option value="16598723">Agência Nacional de Vigilância Sanitária</option>
+
+<option value="13">Agência Nacional do Petróleo Gás Natural e Biocombustíveis</option>
+
+<option value="17650301">Agência Reguladora de Águas, Energia e Saneamento Básico do Distrito Federal</option>
+
+<option value="8327216">Associação Brasileira de Empresas Aéreas</option>
+
+<option value="16058664">Associação Brasileira de Tratamento e Apoio à Pesquisa da Cannabis Medicinal</option>
+
+<option value="17571147">Associação dos Engenheiros Florestais do Distrito Federal</option>
+
+<option value="20561808">AstraZeneca</option>
+
+<option value="17379634">Automni Automações Industriais LTDA</option>
+
+<option value="16556051">Axía Mineração S.A.</option>
+
+<option value="5936146">Banco do Brasil</option>
+
+<option value="7">BNB</option>
+
+<option value="15827927">BRASKEM S.A.</option>
+
+<option value="4845082">BRB Serviços S/A</option>
+
+<option value="21586780">BUS2 PLANEJAMENTO, OPERACAO E INOVACAO NA MOBILIDADE LTDA</option>
+
+<option value="16399410">Caixa Econômica Federal</option>
+
+<option value="17473854">Center for Aids Research</option>
+
+<option value="17944534">Centro Brasileiro de Pesquisa em Avaliação e Seleção e de Promoção de Eventos</option>
+
+<option value="91012284">Centro de Lançamento da Barreira do Inferno</option>
+
+<option value="7144275">Centro Gestor e Operacional do Sistema de Proteção da Amazônia</option>
+
+<option value="17098835">Centro Nacional de Pesquisa em Energia e Materiais</option>
+
+<option value="16178097">Centro Nacional de Primatas</option>
+
+<option value="100196390">Cetacean Society International</option>
+
+<option value="20105098">Colégio Pedro II</option>
+
+<option value="2223449">Companhia de Águas e Esgoto do Rio Grande do Norte - CAERN</option>
+
+<option value="20379056">Companhia de Desenvolvimento dos Vales do São Francisco e do Parnaíba</option>
+
+<option value="17684561">Companhia de Pesquisa de Recursos Mineirais</option>
+
+<option value="7181419">Companhia de Saneamento Ambiental do Distrito Federal</option>
+
+<option value="19749448">Companhia de Saneamento de Minas Gerais</option>
+
+<option value="8667076">Companhia Nacional de Abastecimento</option>
+
+<option value="107250414">COMPERVE - NÚCLEO PERMANENTE DE CONCURSOS</option>
+
+<option value="16738999">Concessionária Catarinense de Rodovias S.A</option>
+
+<option value="17844417">Concessionária das Rodovias Integradas do Sul S/A</option>
+
+<option value="3">Conselho Nacional de Desenvolvimento Científico e Tecnológico</option>
+
+<option value="8942194">Conselho Nacional do Ministério Público</option>
+
+<option value="20264269">Conselho Regional de Enfermagem do Distrito Federal</option>
+
+<option value="4">Coordenação de Aperfeiçoamento de Pessoal de Nível Superior</option>
+
+<option value="16572365">Copperlaf Technologies Inc.</option>
+
+<option value="8">CT GAS</option>
+
+<option value="16036513">Danish Agency for Higher Education and Science</option>
+
+<option value="8509106">DeltaV Engenharia Espacial LTDA</option>
+
+<option value="8942112">Departamento de Engenharia e Construção do Exército Brasileiro</option>
+
+<option value="4520135">Departamento de Trânsito</option>
+
+<option value="4336510">Departamento de Trânsito - DETRAN</option>
+
+<option value="19341154">Departamento Nacional de Infraestrutura de Transportes</option>
+
+<option value="4064526">Departamento Penitenciário Nacional</option>
+
+<option value="18750130">Economic &amp; Social Research Council </option>
+
+<option value="109311990">Elsevier Editora</option>
+
+<option value="4032506">Emenda parlamentar</option>
+
+<option value="4684242">Emenda Parlamentar</option>
+
+<option value="19225381">Emenda Parlamentar de Deputados Federais</option>
+
+<option value="16432690">Empresa Brasileira de Infraestrutura Aeroportuária</option>
+
+<option value="17364100">Empresa Brasileira de Pesquisa Agropecuária</option>
+
+<option value="17884795">Empresa de Assistência Técnica e Extensão Rural do Distrito Federal</option>
+
+<option value="4832236">Empresa Gestora de Ativos</option>
+
+<option value="9">EMPRESA PRIVADA</option>
+
+<option value="17528211">Endangered Languages Documentation Programme</option>
+
+<option value="17284535">Escola Nacional de Administração Pública</option>
+
+<option value="17396212">Exército Brasileiro</option>
+
+<option value="6">FAEX</option>
+
+<option value="10">FAPAM</option>
+
+<option value="9543460">FAPERN</option>
+
+<option value="7300760">Federeção Nacional das APAEs</option>
+
+<option value="14">FINEP</option>
+
+<option value="117">Finep+CnPq</option>
+
+<option value="5249628">Fundação Butantan</option>
+
+<option value="18872208">Fundação Cultural Palmares</option>
+
+<option value="89184755">Fundação de Amparo a Ciência e Tecnologia do estado de Pernambuco</option>
+
+<option value="4002412">Fundação de Apoio a Pesquisa do Distrito Federal - FAPDF</option>
+
+<option value="4726666">Fundação de Desenvolvimento da Pesquisa</option>
+
+<option value="17664555">Fundação de Ensino e Pesquisa em Ciências da Saúde</option>
+
+<option value="17806465">Fundação de Ensino e Pesquisa em Ciências de Saúde</option>
+
+<option value="16906487">Fundação de Tecnologia Florestal e Geoprocessamento</option>
+
+<option value="8477372">Fundação Escola Nacional de Administração Pública</option>
+
+<option value="17806481">Fundação Nacional de Desenvolvimento das Instituições de Ensino Particular</option>
+
+<option value="101772815">Fundação Nacional de Saúde</option>
+
+<option value="17664566">Fundação Nacional do Desenvolvimento do Ensino Superior Particular</option>
+
+<option value="16095807">Fundação Nacional dos Povos Indígenas</option>
+
+<option value="15411870">Fundação O Boticário de Proteção à Natureza</option>
+
+<option value="17421105">Fundação Parque Tecnológico Itaipu</option>
+
+<option value="19822045">Fundo Nacional de Desenvolvimento da Educação</option>
+
+<option value="104608490">Fundo Nacional de Telecomunicações</option>
+
+<option value="11">FUNPEC</option>
+
+<option value="6695698">Governo do Estado do Espírito Santo</option>
+
+<option value="90967325">Governo do Estado do Rio Grande do Norte</option>
+
+<option value="105842797">Grupo Vila</option>
+
+<option value="20379076">Heidelberg Institute of Global Health</option>
+
+<option value="8748144">HITACHI KOKUSAI LINEAR EQUIPAMENTOS ELETRÔNICOS SA</option>
+
+<option value="2571381">IEL/SEBRAE/SENAI/CNPq</option>
+
+<option value="17379029">Infra S.A</option>
+
+<option value="21575587">INOVATEC-JP</option>
+
+<option value="5249482">Instituto Brasileiro de Cidades Inteligentes, Humanas e Sustentáveis</option>
+
+<option value="4177279">Instituto Brasileiro de Desenvolvimento e Sustentabilidade</option>
+
+<option value="8477382">Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis</option>
+
+<option value="8648607">Instituto de Pesquisa Econômica Aplicada</option>
+
+<option value="6073430">Instituto do Câncer Infantil e Pediatra Especializada</option>
+
+<option value="4832248">Instituto do Patrimônio Histórico e Artístico Nacional</option>
+
+<option value="18302156">Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais</option>
+
+<option value="8942122">Instituto Hercílio Randon</option>
+
+<option value="6072451">Instituto Interamericano de Cooperação para a Agricultura</option>
+
+<option value="5967546">Instituto Nacional de Colonização e Reforma Agrária</option>
+
+<option value="86321329">Instituto Nacional de Estudos e Pesquisas Educacionais</option>
+
+<option value="7534819">Instituto Nacional do Seguro Social</option>
+
+<option value="16357317">Instituto Serrapilheira</option>
+
+<option value="17758282">Investco S/A</option>
+
+<option value="16933117">Jiangsu Bioperfectus Techoologies Co., Ltd.</option>
+
+<option value="1980924">Kadoll Divisions Indústria e Comérico Ltda.</option>
+
+<option value="107638213">Light Serviços de Eletricidade S.A.</option>
+
+<option value="16343232">London School of Economics and Political Science</option>
+
+<option value="19071893">LUPA DATA SERVIÇOS EM TECNOLOGIA DA INFORMAÇÃO LTDA</option>
+
+<option value="19329336">Marinha do Brasil - Estado-Maior da Armada</option>
+
+<option value="3714839">MCT/CNPq/MEC/CAPES</option>
+
+<option value="106251401">MICROSOFT</option>
+
+<option value="20097710">Mineração Rio do Norte</option>
+
+<option value="8709474">Ministério da Agricultura e Pecuária</option>
+
+<option value="4254680">Ministério da Cidadania</option>
+
+<option value="20165339">Ministério da Cultura</option>
+
+<option value="20500285">Ministério da Defesa</option>
+
+<option value="86321427">Ministério da Educação</option>
+
+<option value="7109611">Ministério da Gestão e da Inovação em Serviços Públicos</option>
+
+<option value="7850282">Ministério da Igualdade Racial</option>
+
+<option value="4064479">Ministério da Infraestrutura</option>
+
+<option value="4064493">Ministério da Justiça e Segurança Pública</option>
+
+<option value="4839750">Ministério da Mulher, da Família e dos Direitos Humanos</option>
+
+<option value="7121434">Ministério da Pesca e Aquicultura</option>
+
+<option value="4196467">Ministério da Saúde</option>
+
+<option value="20112864">Ministério das Cidades</option>
+
+<option value="5774757">Ministério das Comunicações</option>
+
+<option value="8495230">Ministério das Mulheres</option>
+
+<option value="17933080">Ministério de Ciência, Tecnologia e Inovação</option>
+
+<option value="8120853">Ministério do Desenvolvimento Agrário e Agricultura Familiar</option>
+
+<option value="8120840">Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome</option>
+
+<option value="8602897">Ministério do Meio Ambiente e Mudança do Clima</option>
+
+<option value="18192109">Ministério do Planejamento e Orçamento</option>
+
+<option value="8274577">Ministério dos Direitos Humanos e Cidadania</option>
+
+<option value="19885320">Ministério do Trabalho e Emprego</option>
+
+<option value="19809224">Ministério do Turismo</option>
+
+<option value="5897429">Ministério Público do Distrito Federal e Territórios</option>
+
+<option value="17304337">Ministérios dos Povos Indigenas</option>
+
+<option value="20163656">Município de Valparaíso do Goiás</option>
+
+<option value="8908733">Núcleo Pesquisa Análises sobre Meio Ambiente Desenvolvimento Sustentabilidade</option>
+
+<option value="16572304">Operador Nacional do sistema</option>
+
+<option value="8908729">Organização de Nações Unidas para a Alimentação e a Agricultura</option>
+
+<option value="89126212">Organização Pan-Americana da Saúde</option>
+
+<option value="1">Outra</option>
+
+<option value="17942625">PARS Bioteconologia LTDA</option>
+
+<option value="12">PETROBRAS</option>
+
+<option value="4553557">Polícia Federal do Brasil</option>
+
+<option value="16199550">Polícia Militar do Tocantins</option>
+
+<option value="17566983">Polícia Rodoviária Federal</option>
+
+<option value="16252136">Procel/Eletrobrás - Chamada Pública NZEB Brasil Procel Edifica</option>
+
+<option value="20168005">Procuradoria-Geral da Fazenda Nacional</option>
+
+<option value="16996470">Programa das Nações Unidas para o Desenvolvimento</option>
+
+<option value="18222514">SAIPHER ATC LTDA</option>
+
+<option value="18672248">Secretaria de Comunicação Social da Presidência da República</option>
+
+<option value="4265501">Secretaria de Educação do Distrito Federal</option>
+
+<option value="94723878">Secretaria de Estado da Infra-estrutura</option>
+
+<option value="7247429">Secretaria de Estado de Administração do Governo do Estado de Goiás</option>
+
+<option value="15974985">Secretaria de Estado de Administração Penitenciária do Distrito Federal</option>
+
+<option value="3785747">Secretaria de Estado de Agricultura e Pesca</option>
+
+<option value="19820299">Secretaria de Estado de Economia do Governo do Distrito Federal</option>
+
+<option value="8325366">Secretária de Gestão Digital</option>
+
+<option value="8495667">Secretaria de Patrimônio da União</option>
+
+<option value="98521371">Secretaria Nacional de Juventude</option>
+
+<option value="8131882">Secretaria Nacional de Segurança Alimentar e Nutricional</option>
+
+<option value="8941698">Secretário de Estado de Transporte e Mobilidade do Distrito Federal</option>
+
+<option value="2">Sem Financiamento</option>
+
+<option value="7328132">Senado Federal</option>
+
+<option value="8357701">SERRA DO FACÃO ENERGIA S.A.</option>
+
+<option value="16996105">Serviço Brasileiro de Apoio às Micro e Pequenas Empresas - Sebrae</option>
+
+<option value="16556814">Serviço Florestal Brasileiro</option>
+
+<option value="2363278">Serviço Geológico do Brasil</option>
+
+<option value="2382522">Serviço Geológico do Brasil</option>
+
+<option value="7225313">Social Sciences and Humanities Research Council of Canada</option>
+
+<option value="17739185">Sociedade Brasileira de Engenheiros Florestais</option>
+
+<option value="16332305">Society for the Protection of Underground Networks</option>
+
+<option value="5729205">Superintendência de Desenvolvimento do Centro-Oeste</option>
+
+<option value="8753959">Supremo Tribunal Federal</option>
+
+<option value="8926882">Tecsys do Brasil Industrial SA</option>
+
+<option value="17695540">TIMAC Agro</option>
+
+<option value="90508509">TRIBUNAL DE CONTAS DO RIO GRANDE DO NORTE.</option>
+
+<option value="100">Tribunal de Justiça do Estado do Rio Grande do Norte</option>
+
+<option value="16551602">Tribunal de Justiça do Estado do Tocantins</option>
+
+<option value="17284532">Tribunal Regional Eleitoral do Distrito Federal</option>
+
+<option value="16253423">Tribunal Regional Federal da 1ª Região</option>
+
+<option value="20163653">Tribunal Superior do Trabalho</option>
+
+<option value="5">UFRN</option>
+
+<option value="114">UFRN/ PROART</option>
+
+<option value="6648882">Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes</option>
+
+<option value="17279768">Universidade Estadual de Montes Claros</option>
+
+<option value="20393880">Universidade Federal de Viçosa</option>
+
+<option value="8912052">Universidade Federal Fluminense</option>
+
+<option value="16013611">Vale</option>
+
+<option value="4064532">VALEC - Engenharia, Construções e Ferrovias S.A.</option>
+
+<option value="17585780">VALEOURO BIOTEC LTDA</option>
+
+<option value="21201844">VALE S.A.</option>
+
+<option value="91658654">Viapol</option>
+
+<option value="17488656">VITAL ENGENHARIA AMBIENTAL S/A</option>
+
+<option value="8977184">VMI SISTEMAS DE SEGURANÇA LTDA</option>
+
+<option value="21587366">WWF BRASIL</option></select>
+
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="25" class="noborder" id="editalPesquisa"> </td>
+
+				<td> <label for="editalPesquisa"> Edital: </label></td>
+
+				<td>
+
+					<select name="obj.edital.id" onclick="$(editalPesquisa).checked = true;" style="width:90%"><option value="-1">-- SELECIONE UM EDITAL --</option>
+
+						
+
+							<option disabled style="font-weight: bold;">2022</option>
+
+							<option value="4520687">Edital PIBITI FAPDF</option></select>
+
+				</td>
+
+			</tr>
+
+
+
+			
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="18" class="noborder" id="situacaoProjeto"> </td>
+
+				<td> <label for="situacaoProjeto"> Situação do Projeto: </label></td>
+
+				<td>
+
+					<select name="obj.situacaoProjeto.id" onclick="$(situacaoProjeto).checked = true;" style="width:50%"><option value="-1">-- SELECIONE UMA SITUAÇÃO --</option>
+
+						<option value="200">CADASTRO EM ANDAMENTO</option>
+
+<option value="201">SUBMETIDO</option>
+
+<option value="205">AGUARDANDO VALIDAÇÃO</option>
+
+<option value="206">NECESSITA CORREÇÃO</option>
+
+<option value="207">VALIDADO</option>
+
+<option value="208">NÃO VALIDADO</option>
+
+<option value="210">CADASTRADO</option>
+
+<option value="211">DISTRIBUÍDO PARA AVALIAÇÃO (AUTOMATICAMENTE)</option>
+
+<option value="212">AVALIAÇÃO INSUFICIENTE</option>
+
+<option value="213">DISTRIBUIÇÃO PARA AVALIAÇÃO (MANUALMENTE)</option>
+
+<option value="214">APROVADO</option>
+
+<option value="215">EM EXECUÇÃO</option>
+
+<option value="221">RENOVADO</option>
+
+<option value="222">FINALIZADO</option>
+
+<option value="223">REPROVADO</option>
+
+<option value="224">DESATIVADO</option>
+
+<option value="225">EXCLUÍDO</option>
+
+<option value="226">ENCERRADO COM PENDÊNCIAS</option></select>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="26" class="noborder" id="naturezaProjeto"> </td>
+
+				<td> <label for="naturezaProjeto"> Natureza do Projeto: </label></td>
+
+				<td>
+
+					<select name="obj.naturezaProjetoPesquisa.id" onclick="$(naturezaProjeto).checked = true;" style="width:50%"><option value="-1">-- SELECIONE UMA NATUREZA --</option>
+
+						<option value="1">Projeto de Pesquisa</option>
+
+<option value="2">Projeto de Desenvolvimento Científico e Tecnológico</option>
+
+<option value="3">Projeto de Fomento à Inovação</option></select>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="27" class="noborder" id="tipoPesquisa"> </td>
+
+				<td> <label for="tipoPesquisa"> Tipo de Pesquisa: </label></td>
+
+				<td>
+
+					<select name="obj.tipoPesquisa.id" onclick="$(tipoPesquisa).checked = true;" style="width:50%"><option value="-1">-- SELECIONE UM TIPO --</option>
+
+						<option value="1">Pesquisa Básica</option>
+
+<option value="2">Pesquisa Aplicada</option></select>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td width="3%"> <input type="checkbox" name="filtros" value="19" class="noborder" id="situacaoRelatorio"> </td>
+
+				<td width="22%"> <label for="situacaoRelatorio"> Relatório Final </label></td>
+
+				<td>
+
+					<input type="radio" name="relatorioSubmetido" value="true" onclick="$(situacaoRelatorio).checked = true;" class="noborder" id="situacaoSubmetido"> <label for="situacaoSubmetido">Submetido</label>
+
+					<input type="radio" name="relatorioSubmetido" value="false" checked="checked" onclick="$(situacaoRelatorio).checked = true;" class="noborder" id="situacaoNaoSubmetido"> <label for="situacaoNaoSubmetido">Não Submetido</label>
+
+				</td>
+
+			</tr>
+
+			<tr>
+
+				<td> <input type="checkbox" name="filtros" value="99" class="noborder" id="formatoRelatorio"> </td>
+
+				<td colspan="2"> <label for="formatoRelatorio"> <b>Gerar relatório</b> </label> </td>
+
+			</tr>
+
+			
+
+
+
+			<tfoot>
+
+				<tr>
+
+					<td colspan="3">
+
+						<input type="button" value="Buscar" onclick=" submitMethod('list', this); ">
+
+						<input type="button" value="Cancelar" onclick="if (confirm('Deseja cancelar a operação? Todos os dados digitados serão perdidos!')) {  submitMethod('cancelar', this);  } ">
+
+					</td>
+
+				</tr>
+
+			</tfoot>
+
+		</table>
+
+</form>
+
+
+
+
+
+
+
+<br /><br />
+
+
+
+
+
+
+
+
+
+<style>
+
+	table.listagem th {
+
+		padding: 1px 4px;
+
+	}
+
+
+
+	table.listagem tr.ano td {
+
+		font-weight: bold;
+
+		background-color: #C4D2EB;
+
+		padding: 3px 15px;
+
+		border-bottom: 1px solid #CCC;
+
+		font-size: 1.1em;
+
+	}
+
+</style>
+
+
+
+
+
+
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+<div class="clear"> </div>
+
+
+
+</div> 
+
+	<br />
+
+
+
+	
+
+	
+
+	<div style="width: 80%; text-align: center; margin: 0 auto;">
+
+		<a href='/sigaa/verPortalDiscente.do'>Portal Discente</a>
+
+	</div>
+
+	
+
+	
+
+
+
+	<div id="rodape">
+
+		<p>	SIGAA | Secretaria de Tecnologia da Informação - STI - (61)  3107-0102 | Copyright &copy; 2006-2026 - UFRN - app31.sigaa31
+
+		
+
+		 
+
+			 - <a onclick="javascript:versao();">v4.15.10.58</a>
+
+				
+
+		</p>
+
+	</div>
+
+
+
+
+
+</div>  
+
+
+
+<div id="painel-mensagem-envio"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+
+	  ga('create', '0', 'auto');
+
+	  ga('send', 'pageview');
+
+	
+
+	</script>	
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+
+ 
+
+	<script type="text/javascript" charset="UTF-8">
+
+		function versao(){
+
+			var msg='';
+
+			msg+='SIGAA 4.15.10.58,  publicado em: 16/04/2026 15:46\n\n';
+
+			msg+='Depend\u00eancias:\n';
+
+			msg+='Arquitetura 4.4.9\n';
+
+			msg+='Entidades Comuns 2.3.12-SNAPSHOT\n';
+
+			msg+='Servicos Integrados 3.0.1\n';
+
+			msg+='SharedResources 2.1.4\n';
+
+			msg+='Servicos Remoto Biblioteca 1.0.3\n';
+
+			msg+='SIGAA Mobile Objects 1.0.0\n\n';
+
+			msg+='Copyright SINFO/UFRN';
+
+			alert(msg);
+
+		}	
+
+	</script>
+
+
+
+
+
+<script language="javascript">
+
+Relogio.init(40);
+
+</script>
+
+
+	
+
+

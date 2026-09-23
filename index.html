@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGAA Remix - Mostruário de Variantes Visuais</title>
+    <link rel="icon" type="image/x-icon" href="v1/img/sigaa.ico">
+    <style>
+        :root {
+            --bg-color: #0f141c;
+            --card-bg: #1a2230;
+            --card-border: #2c384e;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --accent-v1: #f59e0b;
+            --accent-v2: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: linear-gradient(180deg, #131b28 0%, var(--bg-color) 100%);
+            border-bottom: 1px solid var(--card-border);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            background: linear-gradient(90deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+        }
+        .card.v1:hover {
+            border-color: var(--accent-v1);
+        }
+        .card.v2:hover {
+            border-color: var(--accent-v2);
+        }
+        .card-header {
+            margin-bottom: 16px;
+        }
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .card.v1 .card-tag {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .card.v2 .card-tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .features-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .features-list li {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .features-list li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .btn {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        .btn-v1 {
+            background: #f59e0b;
+            color: #111827;
+        }
+        .btn-v1:hover {
+            background: #d97706;
+            color: #000;
+        }
+        .btn-v2 {
+            background: #2563eb;
+            color: #ffffff;
+        }
+        .btn-v2:hover {
+            background: #1d4ed8;
+        }
+        .privacy-box {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px dashed #334155;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .privacy-box h3 {
+            font-size: 1rem;
+            color: #e2e8f0;
+            margin-bottom: 6px;
+        }
+        .privacy-box p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 24px 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: #0b0f15;
+        }
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="badge">Universidade de Brasília • SIGAA Remix</span>
+            <h1>Protótipos e Variantes Visuais</h1>
+            <p class="subtitle">Apresentação interativa das propostas visuais autônomas desenvolvidas para modernizar e dinamizar a interface do portal discente do SIGAA UnB.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="grid">
+            <!-- VARIANTE 1 -->
+            <div class="card v1">
+                <div>
+                    <div class="card-header">
+                        <span class="card-tag">Variante 1 • Urbana</span>
+                        <h2>Grafite de Rua</h2>
+                    </div>
+                    <p>Estética inspirada na cena urbana do Distrito Federal, trazendo tipografia autoral, menus em tags abertas e carrossel lateral de notícias.</p>
+                    <ul class="features-list">
+                        <li>Tipografia MostWasted e GraffitiBombing embutidas offline</li>
+                        <li>Painel de navegação sem menus colapsados</li>
+                        <li>Faixa contínua (ticker tape) para avisos em tempo real</li>
+                        <li>Carrossel de banners com rolamento lateral fluido</li>
+                    </ul>
+                </div>
+                <a href="v1/index.html" class="btn btn-v1">Explorar Variante 1 (Grafite) &rarr;</a>
+            </div>
+
+            <!-- VARIANTE 2 -->
+            <div class="card v2">
+                <div>
+                    <div class="card-header">
+                        <span class="card-tag">Variante 2 • Produtividade</span>
+                        <h2>Alta Acessibilidade</h2>
+                    </div>
+                    <p>Foco absoluto em simplicidade, contraste e rapidez de navegação através de um grande centro de busca e atalhos rápidos em chips.</p>
+                    <ul class="features-list">
+                        <li>Painel central de busca rápida e intuitiva</li>
+                        <li>Chips de atalho para notas, IRA, bolsas e histórico</li>
+                        <li>Paleta de alto contraste com fontes de alta legibilidade</li>
+                        <li>Eliminação de barreiras cognitivas e cliques desnecessários</li>
+                    </ul>
+                </div>
+                <a href="v2/index.html" class="btn btn-v2">Explorar Variante 2 (Acessível) &rarr;</a>
+            </div>
+        </div>
+
+        <div class="privacy-box">
+            <h3>Privacidade e Sanitização de Dados</h3>
+            <p>Todas as páginas disponíveis neste ambiente foram 100% sanitizadas e desvinculadas de servidores internos. Todos os registros acadêmicos e fotos apresentados utilizam dados e avatares fictícios de demonstração.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Projeto SIGAA Remix • Mantido pela comunidade discente da UnB • <a href="https://github.com/Jhefferson15/unb-sigaa-remix" target="_blank">Repositório no GitHub</a></p>
+    </footer>
+</body>
+</html>

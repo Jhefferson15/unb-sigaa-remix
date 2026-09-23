@@ -1,0 +1,783 @@
+/* ========================================================
+   ESTILO GRAFITE DE RUA & PIXACAO - VARIANTE V1 (SIGAA REMIX)
+   Estetica Conceitual Urbana: Titulos em Grafite Bold + Demais Textos em Pixacao
+   Fontes 100% Embutidas em Base64 - Totalmente Offline sem Downloads Externos
+   ======================================================== */
+
+@import url('fonts_embedded.css');
+
+:root {
+    /* Tipografia de Titulos: Grafite Bold com letras gordas (Bombing / Throw-up) */
+    --graffiti-title-font: 'GraffitiBombing', 'GraffitiThrowUp', Impact, cursive, sans-serif;
+    
+    /* Tipografia Conceitual de Todas as Outras: Pixacao Urbana Legivel (MostWasted / SedgwickAve) */
+    --pixacao-font: 'MostWasted', 'SedgwickAve', cursive, sans-serif;
+
+    /* Paleta Neon de Grafite Urbano */
+    --graffiti-neon-yellow: #f5ee38;
+    --graffiti-neon-pink: #ff2a85;
+    --graffiti-neon-cyan: #00f0ff;
+    --graffiti-neon-lime: #39ff14;
+    --graffiti-neon-orange: #ff6b35;
+
+    /* Tons de Fundo e Molduras */
+    --graffiti-bg: #0f0f15;
+    --graffiti-card-bg: #1a1a24;
+    --graffiti-card-alt-bg: #222230;
+    --graffiti-border: #35354a;
+    --graffiti-text: #f0f0f5;
+    --graffiti-text-muted: #b0b0c5;
+}
+
+
+
+/* Regra Ampla Conceitual: TODAS as outras fontes estilizam-se como PIXACAO */
+p, span, div, a, li, td, label, input, button, select, textarea, small, strong, em, b, i,
+.card-desc, .card-code, .card-action-link, .tag-btn, .ticker-item, .card-badge, .ticker-pill,
+#perfil-docente td, #perfil-docente p, #perfil-docente a, #painel-usuario a, #painel-usuario p,
+table.subFormulario td, table.listagem td, table.tabelaRelatorio td, #noticias-portal p,
+#info-sistema h3, #info-sistema a, .graffiti-mini-tag, .tag-stamp {
+    font-family: var(--pixacao-font) !important;
+    letter-spacing: 1px !important;
+}
+
+body, html, html.background {
+    background-color: var(--graffiti-bg) !important;
+    background-image: radial-gradient(#262638 18%, transparent 19%), linear-gradient(180deg, #14141d 0%, #0d0d12 100%) !important;
+    background-size: 18px 18px, 100% 100% !important;
+    color: var(--graffiti-text) !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    overflow-x: hidden !important;
+}
+
+#container {
+    background-color: #161620 !important;
+    border: 3px solid #333348 !important;
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.18) !important;
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* ========================================================
+   CABECALHO E PAINEL SUPERIOR (ALINHAMENTO E CONTRASTE)
+   ======================================================== */
+#info-sistema, #cabecalho {
+    background: #0d0d12 !important;
+    border-bottom: 4px solid var(--graffiti-neon-cyan) !important;
+}
+
+#info-sistema {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    padding: 10px 16px !important;
+}
+
+#info-sistema h1 {
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 26px !important;
+    color: var(--graffiti-neon-yellow) !important;
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px var(--graffiti-neon-pink) !important;
+    margin: 0 !important;
+    letter-spacing: 1.5px !important;
+}
+
+#info-sistema h3 {
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    color: #8bbce5 !important;
+    font-weight: normal !important;
+    margin: 0 0 0 10px !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: none !important;
+    text-transform: none !important;
+}
+
+#info-sistema div.dir {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin: 0 !important;
+}
+
+#info-sistema div.dir a {
+    color: #ffffff !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    padding: 4px 8px !important;
+    background: #252536 !important;
+    border-radius: 4px !important;
+    border: 1px solid #3d3d56 !important;
+}
+
+#info-sistema div.dir a:hover {
+    color: var(--graffiti-neon-yellow) !important;
+    border-color: var(--graffiti-neon-yellow) !important;
+}
+
+#painel-usuario {
+    background: #14141d !important;
+    border-top: 1px solid #333348 !important;
+    border-bottom: 3px solid var(--graffiti-neon-yellow) !important;
+    padding: 8px 16px !important;
+}
+
+#painel-usuario #menu-usuario li a {
+    color: var(--graffiti-neon-cyan) !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+#painel-usuario #info-usuario p {
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    color: #dedee8 !important;
+}
+
+#info-usuario span.nome {
+    display: block !important;
+    margin-bottom: 4px !important;
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 19px !important;
+    color: var(--graffiti-neon-yellow) !important;
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px var(--graffiti-neon-pink) !important;
+    letter-spacing: 1px !important;
+}
+
+/* ========================================================
+   MENU DE TAGS DESCOLAPSADO (ESTILO ADESIVOS URBANOS)
+   ======================================================== */
+.graffiti-menu-uncollapsed, #menu-dropdown {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    position: static !important;
+    margin: 15px 0 20px 0 !important;
+    padding: 16px !important;
+    background: var(--graffiti-card-bg) !important;
+    border: 3px solid var(--graffiti-neon-pink) !important;
+    border-radius: 8px !important;
+    box-shadow: 5px 5px 0px #000, 8px 8px 0px var(--graffiti-neon-cyan) !important;
+}
+
+.graffiti-menu-title {
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 24px !important;
+    color: var(--graffiti-neon-yellow) !important;
+    margin-bottom: 14px !important;
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px var(--graffiti-neon-pink) !important;
+    letter-spacing: 1.5px !important;
+}
+
+.graffiti-tags-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.graffiti-tags-list li {
+    display: inline-block !important;
+}
+
+.tag-btn {
+    display: inline-block !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    padding: 10px 16px !important;
+    border-radius: 5px !important;
+    border: 2px solid #000000 !important;
+    box-shadow: 3px 3px 0px #000 !important;
+    letter-spacing: 0.5px !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.graffiti-tags-list li:nth-child(odd) .tag-btn {
+    transform: rotate(-1.5deg);
+}
+
+.graffiti-tags-list li:nth-child(even) .tag-btn {
+    transform: rotate(1.5deg);
+}
+
+.tag-btn:hover {
+    transform: scale(1.08) rotate(0deg) !important;
+    box-shadow: 5px 5px 0px #000, 6px 6px 0px var(--graffiti-neon-pink) !important;
+}
+
+/* Cores de Tags com Alto Contraste (Texto Escuro em Fundo Neon) */
+.tag-yellow {
+    background: var(--graffiti-neon-yellow) !important;
+    color: #111116 !important;
+}
+
+.tag-pink {
+    background: var(--graffiti-neon-pink) !important;
+    color: #111116 !important;
+}
+
+.tag-cyan {
+    background: var(--graffiti-neon-cyan) !important;
+    color: #111116 !important;
+}
+
+.tag-lime {
+    background: var(--graffiti-neon-lime) !important;
+    color: #111116 !important;
+}
+
+.tag-orange {
+    background: var(--graffiti-neon-orange) !important;
+    color: #111116 !important;
+}
+
+/* ========================================================
+   SISTEMA DE BANNER COM ROLAMENTO LATERAL (URBANO / GRAFITE)
+   ======================================================== */
+.graffiti-banner-system {
+    margin: 20px 0 25px 0 !important;
+    padding: 16px !important;
+    background: #171722 !important;
+    background-image: linear-gradient(135deg, rgba(255, 42, 133, 0.08) 0%, rgba(0, 240, 255, 0.08) 100%) !important;
+    border: 3px solid var(--graffiti-neon-cyan) !important;
+    border-radius: 10px !important;
+    box-shadow: 6px 6px 0px #000, 9px 9px 0px var(--graffiti-neon-pink) !important;
+    position: relative !important;
+}
+
+.graffiti-banner-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
+    border-bottom: 2px dashed #3a3a52 !important;
+    padding-bottom: 10px !important;
+}
+
+.graffiti-banner-heading {
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 22px !important;
+    color: var(--graffiti-neon-yellow) !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px var(--graffiti-neon-pink) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    letter-spacing: 1.5px !important;
+}
+
+.graffiti-banner-heading .tag-stamp {
+    font-family: var(--pixacao-font) !important;
+    font-weight: 800 !important;
+    font-size: 11px !important;
+    background: var(--graffiti-neon-pink) !important;
+    color: #111116 !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    text-shadow: none !important;
+    letter-spacing: 1px !important;
+    transform: rotate(-2deg) !important;
+    box-shadow: 2px 2px 0px #000 !important;
+}
+
+.graffiti-banner-controls {
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.banner-ctrl-btn {
+    background: #252538 !important;
+    border: 2px solid var(--graffiti-neon-yellow) !important;
+    color: var(--graffiti-neon-yellow) !important;
+    font-family: var(--pixacao-font) !important;
+    font-weight: 900 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    width: 38px !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    box-shadow: 3px 3px 0px #000 !important;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.banner-ctrl-btn:hover {
+    background: var(--graffiti-neon-yellow) !important;
+    color: #000000 !important;
+    transform: scale(1.1) !important;
+    box-shadow: 4px 4px 0px #000 !important;
+}
+
+/* 1. Faixa de Rolamento Continuo (Ticker Tape / Marquee) */
+.graffiti-ticker-wrapper {
+    background: #0d0d12 !important;
+    border: 2px solid var(--graffiti-neon-yellow) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8) !important;
+}
+
+.graffiti-ticker-lead {
+    background: var(--graffiti-neon-yellow) !important;
+    color: #111116 !important;
+    font-family: var(--pixacao-font) !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    white-space: nowrap !important;
+    letter-spacing: 1px !important;
+    flex-shrink: 0 !important;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.4) !important;
+    z-index: 2 !important;
+}
+
+.graffiti-ticker-viewport {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.graffiti-ticker-track {
+    display: inline-flex !important;
+    gap: 32px !important;
+    white-space: nowrap !important;
+    padding-left: 20px !important;
+    animation: graffitiTickerScroll 30s linear infinite !important;
+}
+
+.graffiti-ticker-track:hover {
+    animation-play-state: paused !important;
+}
+
+@keyframes graffitiTickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.ticker-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    color: #f5f5ff !important;
+}
+
+.ticker-pill {
+    font-family: var(--pixacao-font) !important;
+    font-weight: 800 !important;
+    font-size: 10px !important;
+    padding: 2px 7px !important;
+    border-radius: 3px !important;
+    border: 1px solid #000 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+}
+
+.pill-cyan { background: var(--graffiti-neon-cyan) !important; color: #111116 !important; }
+.pill-pink { background: var(--graffiti-neon-pink) !important; color: #111116 !important; }
+.pill-yellow { background: var(--graffiti-neon-yellow) !important; color: #111116 !important; }
+.pill-lime { background: var(--graffiti-neon-lime) !important; color: #111116 !important; }
+.pill-orange { background: var(--graffiti-neon-orange) !important; color: #111116 !important; }
+
+/* 2. Carrossel Horizontal de Cards (Rolamento Lateral Interativo) */
+.graffiti-carousel-container {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.graffiti-carousel-track {
+    display: flex !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    padding: 8px 4px 14px 4px !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--graffiti-neon-pink) #1c1c28 !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.graffiti-carousel-track::-webkit-scrollbar {
+    height: 8px !important;
+}
+
+.graffiti-carousel-track::-webkit-scrollbar-track {
+    background: #1a1a24 !important;
+    border-radius: 4px !important;
+}
+
+.graffiti-carousel-track::-webkit-scrollbar-thumb {
+    background: var(--graffiti-neon-pink) !important;
+    border-radius: 4px !important;
+}
+
+.graffiti-banner-card {
+    flex: 0 0 280px !important;
+    max-width: 280px !important;
+    background: var(--graffiti-card-bg) !important;
+    border: 2px solid var(--graffiti-border) !important;
+    border-radius: 8px !important;
+    padding: 14px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 4px 4px 0px #000 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+    position: relative !important;
+    user-select: none !important;
+}
+
+.graffiti-banner-card:hover {
+    transform: translateY(-4px) rotate(-0.5deg) !important;
+    box-shadow: 6px 6px 0px #000, 8px 8px 0px var(--graffiti-neon-cyan) !important;
+    border-color: var(--graffiti-neon-cyan) !important;
+}
+
+.card-top {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+}
+
+.card-badge {
+    font-family: var(--pixacao-font) !important;
+    font-weight: 800 !important;
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+    border-radius: 3px !important;
+    color: #111116 !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: none !important;
+    text-transform: uppercase !important;
+}
+
+.badge-yellow { background: var(--graffiti-neon-yellow) !important; }
+.badge-pink { background: var(--graffiti-neon-pink) !important; }
+.badge-cyan { background: var(--graffiti-neon-cyan) !important; }
+.badge-lime { background: var(--graffiti-neon-lime) !important; }
+.badge-orange { background: var(--graffiti-neon-orange) !important; }
+
+.card-code {
+    font-family: var(--pixacao-font) !important;
+    font-weight: 600 !important;
+    font-size: 11px !important;
+    color: var(--graffiti-text-muted) !important;
+}
+
+.graffiti-banner-card h4.card-title {
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 18px !important;
+    color: #ffffff !important;
+    margin: 4px 0 8px 0 !important;
+    line-height: 1.25 !important;
+    text-shadow: 1px 1px 0px #000, 3px 3px 0px var(--graffiti-neon-pink) !important;
+    letter-spacing: 1px !important;
+}
+
+.graffiti-banner-card p.card-desc {
+    font-family: var(--pixacao-font) !important;
+    font-size: 12px !important;
+    color: #dedee8 !important;
+    margin: 0 0 12px 0 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.3px !important;
+}
+
+.card-action-link {
+    display: inline-block !important;
+    font-family: var(--pixacao-font) !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    padding: 8px 14px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    background: var(--graffiti-neon-yellow) !important;
+    color: #111116 !important;
+    border: 2px solid #000 !important;
+    box-shadow: 2px 2px 0px #000 !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+    align-self: flex-start !important;
+    text-shadow: none !important;
+    letter-spacing: 0.5px !important;
+}
+
+.card-action-link:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: 4px 4px 0px #000 !important;
+    transform: scale(1.05) !important;
+}
+
+/* ========================================================
+   ESTRUTURA DE LAYOUT EM GRID (SEM QUEBRAS, SEM FLOATS, SEM VAZIOS)
+   ======================================================== */
+#portal-docente > #menu-dropdown,
+#portal-docente > div.clear {
+    display: none !important;
+}
+
+#portal-docente {
+    display: grid !important;
+    grid-template-columns: 1fr 310px !important;
+    grid-template-rows: auto !important;
+    gap: 22px !important;
+    align-items: start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+#main-docente {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+}
+
+#perfil-docente {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 310px !important;
+    max-width: 310px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    background: var(--graffiti-card-bg) !important;
+    border: 2px solid var(--graffiti-neon-cyan) !important;
+    box-shadow: 5px 5px 0px #000, 7px 7px 0px rgba(0, 240, 255, 0.2) !important;
+    color: var(--graffiti-text) !important;
+    border-radius: 8px !important;
+}
+
+@media (max-width: 980px) {
+    #portal-docente {
+        grid-template-columns: 1fr !important;
+    }
+    #perfil-docente {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    #main-docente {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+    .tag-btn {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body, html {
+        overflow-x: hidden !important;
+    }
+    #container {
+        width: 100% !important;
+        border: none !important;
+    }
+    #painel-usuario #menu-usuario li a,
+    #painel-usuario #info-usuario p {
+        font-size: 11px !important;
+    }
+    .graffiti-banner-card {
+        flex: 0 0 82vw !important;
+        max-width: 82vw !important;
+    }
+    .graffiti-banner-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    .graffiti-banner-controls {
+        align-self: flex-end !important;
+    }
+}
+
+/* ========================================================
+   DADOS DO PERFIL DISCENTE (CONTRASTE E LEGIBILIDADE WCAG)
+   ======================================================== */
+#perfil-docente .pessoal-docente {
+    background: #232332 !important;
+    color: var(--graffiti-text) !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+}
+
+#perfil-docente #agenda-docente {
+    background: #232332 !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+}
+
+#perfil-docente table {
+    width: 100% !important;
+}
+
+#perfil-docente table td {
+    color: #e6e6f0 !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+}
+
+#perfil-docente table td b,
+#perfil-docente table td strong {
+    color: var(--graffiti-neon-cyan) !important;
+    font-weight: 600 !important;
+}
+
+#perfil-docente a, #main-docente a {
+    color: var(--graffiti-neon-cyan) !important;
+}
+
+#perfil-docente .foto img {
+    border: 3px solid var(--graffiti-neon-pink) !important;
+    box-shadow: 3px 3px 0px #000 !important;
+    border-radius: 6px !important;
+}
+
+/* ========================================================
+   TABELAS DE TURMAS E FORUM (DADOS TECNICOS E BADGES)
+   ======================================================== */
+#turmas-portal.simple-panel, #forum-portal.simple-panel {
+    background: var(--graffiti-card-bg) !important;
+    border: 2px solid var(--graffiti-border) !important;
+    box-shadow: 5px 5px 0px #000 !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    overflow: hidden !important;
+}
+
+#turmas-portal h3, #forum-portal h3, #noticias-portal h3, caption, .subFormulario th, th {
+    font-family: var(--graffiti-title-font) !important;
+    font-size: 18px !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    color: var(--graffiti-neon-yellow) !important;
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px var(--graffiti-neon-pink) !important;
+}
+
+table.subFormulario, table.listagem, table.tabelaRelatorio {
+    background: var(--graffiti-card-bg) !important;
+    border: 2px solid var(--graffiti-border) !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+}
+
+table.subFormulario th, table.listagem th, table.tabelaRelatorio th {
+    background: #262638 !important;
+    color: var(--graffiti-neon-yellow) !important;
+    border-color: #3e3e55 !important;
+    font-size: 14px !important;
+}
+
+table.subFormulario td, table.listagem td, table.tabelaRelatorio td {
+    color: #e6e6f0 !important;
+    border-color: #333348 !important;
+    padding: 8px 12px !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+}
+
+tr.odd, tr.linhaImpar {
+    background-color: #191924 !important;
+}
+
+tr.linhaPar {
+    background-color: #1f1f2c !important;
+}
+
+#noticias-portal {
+    background: #222230 !important;
+    border: 2px solid var(--graffiti-neon-pink) !important;
+    color: var(--graffiti-text) !important;
+    box-shadow: 5px 5px 0px #000 !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+}
+
+#noticias-portal p {
+    font-family: var(--pixacao-font) !important;
+    font-size: 13px !important;
+    color: #c0c0d2 !important;
+}
+
+/* Badges Substitutivas de Icones Antigos */
+.graffiti-mini-tag {
+    display: inline-block !important;
+    font-family: var(--pixacao-font) !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
+    border: 1px solid #000000 !important;
+    box-shadow: 2px 2px 0px #000000 !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: none !important;
+    text-transform: uppercase !important;
+    cursor: default !important;
+}
+
+.graffiti-avaliacao-box {
+    margin: 12px 0 !important;
+    text-align: center !important;
+}
+
+.graffiti-card-action-btn {
+    display: block !important;
+    font-family: var(--pixacao-font) !important;
+    font-weight: 800 !important;
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+    border-radius: 6px !important;
+    border: 2px solid #000 !important;
+    box-shadow: 3px 3px 0px #000 !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    letter-spacing: 0.8px !important;
+    color: #111116 !important;
+    background: var(--graffiti-neon-yellow) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.graffiti-card-action-btn:hover {
+    transform: scale(1.04) !important;
+    box-shadow: 5px 5px 0px #000 !important;
+    background: #ffffff !important;
+}
+
+/* Ocultar tooltips legados de horario para evitar sobreposicao de texto */
+.popUp, span.popUp {
+    display: none !important;
+}
+

@@ -1,0 +1,141 @@
+/* Estilo de Acessibilidade - Variante V2 (Apresentacao) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+:root {
+    --a11y-font: 'Atkinson Hyperlegible', 'Open Sans', system-ui, -apple-system, sans-serif;
+    --a11y-bg: #f8fafc;
+    --a11y-surface: #ffffff;
+    --a11y-primary: #003366;
+    --a11y-primary-light: #e6f0fa;
+    --a11y-text: #111827;
+    --a11y-text-muted: #374151;
+    --a11y-border: #4b5563;
+    --a11y-focus: #f59e0b;
+    --a11y-yellow: #fff500;
+}
+
+body, html.background {
+    background: var(--a11y-bg) !important;
+    color: var(--a11y-text) !important;
+    font-family: var(--a11y-font) !important;
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+}
+
+/* Foco de Alta Visibilidade */
+*:focus {
+    outline: 4px solid var(--a11y-focus) !important;
+    outline-offset: 3px !important;
+}
+
+/* Grande Painel de Busca Acessivel */
+.painel-busca-destaque {
+    display: block !important;
+    background: var(--a11y-primary) !important;
+    color: #ffffff !important;
+    padding: 28px !important;
+    margin: 20px auto 30px auto !important;
+    max-width: 1200px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0, 51, 102, 0.18) !important;
+    border: 3px solid #001f3f !important;
+}
+
+.painel-busca-destaque h2 {
+    font-size: 26px !important;
+    color: #ffffff !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.painel-busca-destaque p {
+    font-size: 18px !important;
+    color: #dbeafe !important;
+    margin-bottom: 16px !important;
+}
+
+.busca-container-input {
+    display: flex !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+}
+
+.busca-campo-grande {
+    flex: 1 !important;
+    min-width: 320px !important;
+    font-size: 20px !important;
+    padding: 14px 20px !important;
+    border-radius: 8px !important;
+    border: 3px solid #ffffff !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+}
+
+.busca-botao-grande {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    padding: 14px 32px !important;
+    background: var(--a11y-yellow) !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+}
+
+.busca-filtros-rapidos {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+    flex-wrap: wrap !important;
+}
+
+.filtro-chip {
+    background: #ffffff !important;
+    color: var(--a11y-primary) !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    border: 2px solid transparent !important;
+}
+
+.filtro-chip:hover {
+    border-color: var(--a11y-yellow) !important;
+    background: var(--a11y-primary-light) !important;
+}
+
+/* Interface Simplificada e Alto Contraste */
+h1, h2, h3, caption, th {
+    color: var(--a11y-primary) !important;
+    font-family: var(--a11y-font) !important;
+    font-weight: 800 !important;
+}
+
+table.listagem, table.tabelaRelatorio {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 3px solid var(--a11y-border) !important;
+    background: #ffffff !important;
+    margin-top: 16px !important;
+}
+
+table.listagem th, table.tabelaRelatorio th {
+    background: var(--a11y-primary-light) !important;
+    color: var(--a11y-primary) !important;
+    font-size: 18px !important;
+    padding: 16px !important;
+    border: 2px solid var(--a11y-border) !important;
+}
+
+table.listagem td, table.tabelaRelatorio td {
+    font-size: 17px !important;
+    padding: 14px 16px !important;
+    border: 2px solid #9ca3af !important;
+    color: var(--a11y-text) !important;
+}
+
+/* Simplificacao de Icones e Elementos Distrativos */
+img[src*="ajuda"], img[src*="extensao"], .painel-banner-secundario {
+    display: none !important;
+}

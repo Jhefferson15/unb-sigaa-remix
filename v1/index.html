@@ -1,0 +1,1083 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html class="background" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/navmenu.jscookmenu.HtmlJSCookMenuRenderer/JSCookMenu.js" type="text/javascript"><!--
+
+//--></script>
+<script src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/navmenu.jscookmenu.HtmlJSCookMenuRenderer/MyFacesHack.js" type="text/javascript"><!--
+
+//--></script>
+<script type="text/javascript"><!--
+var myThemeOfficeBase='/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/navmenu.jscookmenu.HtmlJSCookMenuRenderer/ThemeOffice/';
+//--></script>
+<script src="/sigaa/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/17763682/navmenu.jscookmenu.HtmlJSCookMenuRenderer/ThemeOffice/theme.js" type="text/javascript"><!--
+
+//--></script>
+
+<meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="0" http-equiv="Expires"/>
+<title>SIGAA - Sistema Integrado de Gestão de Atividades Acadêmicas</title>
+<script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js.jsf" type="text/javascript"></script><link href="img/sigaa.ico" rel="shortcut icon"/>
+<script src="/shared/jsBundles/jawr_loader.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+                JAWR.loader.style('/bundles/css/sigaa_base.css', 'all');
+
+        		JAWR.loader.style('/css/ufrn_print.css', 'print');
+
+        		JAWR.loader.script('/bundles/js/sigaa_base.js');
+
+</script>
+
+
+
+<!-- FontAwesome -->
+
+<!-- Painel Gen&#233;rico para telas Modal -->
+<script src="/shared/javascript/paineis/painel_generico.js" type="text/javascript"></script>
+<script src="/sigaa/javascript/styleswitch.js" type="text/javascript"></script>
+<script src="/sigaa/javascript/prevenir-duplo-clique.js" type="text/javascript"></script>
+<!-- Bot&#227;o de informar um problema -->
+
+<script src="/shared/informar-problema/js/webcomponents.min.js?ver=1.1" type="text/javascript"></script>
+<script src="/shared/informar-problema/js/html2canvas.js?ver=1.1" type="text/javascript"></script>
+<script src="/shared/informar-problema/js/informar-problema.js?ver=1.1" type="text/javascript"></script>
+<!-- FIM bot&#227;o de informar um problema -->
+<script type="text/javascript">
+
+		var mensagem;
+
+		var initMensagem = function() {
+
+			mensagem = new Mensagem();
+
+		}
+
+		YAHOO.util.Event.addListener(window,'load', initMensagem);
+
+		
+
+		function isIE(){
+
+		
+
+					return false;
+
+			
+
+		}
+
+</script>
+<script src="/sigaa/javascript/jsCookMenuHack.js" type="text/javascript"></script>
+<!-- Fim dos imports para abrir chamado -->
+<script src="/shared/javascript/STICookieConsent.js"></script>
+<script>
+
+	    document.addEventListener("DOMContentLoaded", () => {
+
+	    	generateCookieConsentModal("SIGAA", "N&#243;s usamos cookies para melhorar sua experi&#234;ncia de navega&#231;&#227;o no portal. Ao utilizar o %sitename%, voc&#234; concorda com a pol&#237;tica de monitoramento de cookies. Para ter mais informa&#231;&#245;es sobre como isso &#233; feito e como remover, acesse a <a href=%cookie-policy%>Pol&#237;tica de Prote&#231;&#227;o de Dados Pessoais</a>. Para saber como a UnB trata os dados, acesse a <a href=%privacy-policy%> Pol&#237;tica de cookies</a>. Se voc&#234; concorda, clique em %button-text%.", "https://protecaodedados.unb.br", "https://sti.unb.br/doc-politicas");
+
+	    })
+
+	</script>
+<script type="text/javascript">
+      window.Relogio = { init: function() {} };
+      window.prevenirDuploClique = function() { return true; };
+      window.redimensionarFonte = function() {};
+      window.generateCookieConsentModal = function() {};
+      window.YAHOO = { util: { Event: { addListener: function() {} } } };
+    </script>
+<link href="css/sigaa_offline_complete.css" rel="stylesheet" type="text/css"/>
+<link href="img/sigaa.ico" rel="shortcut icon"/>
+<link href="css/sigaa_offline_complete.css" rel="stylesheet" type="text/css"/>
+<link href="graffiti.css" rel="stylesheet" type="text/css"/>
+<link href="img/sigaa.ico" rel="shortcut icon"/>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTROLE DE VARIANTES (SIGAA REMIX) -->
+    <div id="sigaa-remix-variant-control-bar" style="
+        background: #1e1e24;
+        color: #ffffff;
+        padding: 8px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 999999;
+        border-bottom: 2px solid #333;
+    ">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <a href="../index.html" style="color: #fff; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 6px; font-size: 14px; background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 4px;">
+                &larr; Voltar ao Portal
+            </a>
+            <span style="font-size: 14px; color: #bbb;">| SIGAA Remix Live Preview</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="background: #ffcc00; color: #111; font-weight: bold; padding: 4px 12px; border-radius: 4px; font-size: 13px;">Variante 1 (Grafite) Ativa</span>
+            <a href="../v2/index.html" style="color: #64b5f6; text-decoration: none; font-weight: bold; font-size: 13px; padding: 4px 10px; border: 1px solid #64b5f6; border-radius: 4px; transition: 0.2s;">Alternar para Variante 2 (Acessibilidade) &rarr;</a>
+        </div>
+    </div>
+    
+<div id="container">
+<div id="cabecalho">
+<div id="info-sistema">
+<h1><span>UnB - SIGAA -</span></h1>
+<h3>Sistema Integrado de Gestão de Atividades Acadêmicas</h3>
+<div class="dir">
+<style>
+#info-sistema span.sair-sistema,
+	#info-sistema #tempoSessao{
+	display: inline;
+	right: inherit;
+	position: relative;
+	top: 0;
+	padding-right: inherit;
+}
+
+#info-sistema div.dir{
+	top:0;
+	right:0;
+	text-align: right;
+	width: auto;
+	position: absolute;
+	margin:0;
+	padding: 0;
+	height:16px;
+	display: inline;
+	padding-right:5px;
+	color: #FFF;
+}
+#info-sistema span.acessibilidade{
+	padding: 0 5px;
+	border: solid #D99C44;
+	border-width: 0 1px 0 0;
+	margin: 0 5px;
+	padding: 0 5px;
+}
+	#info-sistema span.acessibilidade a{
+		font-size: 1.1em;
+		font-weight: bolder;
+		color: #FFF;
+		margin-left: 2px;
+		letter-spacing: 0.1px;
+		word-spacing: 0.1px;
+	}
+	#info-sistema span.acessibilidade a.fonteMenor strong{
+		font-size: 0.9em;
+	}
+	.rich-tabpanel-content {
+		font-size: inherit;
+	}	
+</style>
+<span class="acessibilidade">
+<a alt="Aumentar a texto" class="fonteMaior" href="#" title="Aumentar a texto">
+<strong>A</strong>+
+	</a>
+<a alt="Diminuir o texto" class="fonteMenor" href="#" title="Diminuir o texto">
+<strong>A</strong>-
+	</a>
+</span>
+<span class="acessibilidade">
+<a alt="Portal Público SIGAA" href="https://sig.unb.br/sigaa/public" target="_blank" title="Acessar Portal Público SIGAA">
+<strong>Portal Público</strong>
+</a>
+</span>
+<span class="acessibilidade">
+<a alt="Ajuda" href="http://portalsig.unb.br/manuais" target="_blank" title="Ajuda">
+			Ajuda?
+		</a>
+</span>
+<script src="/shared/javascript/jquery/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="/sigaa/javascript/jquery.fontsize.js" type="text/javascript"></script>
+<script type="text/javascript">
+	redimensionarFonte('.acessibilidade', '#conteudo', 11, 11, 14);
+</script>
+<script>var $jq = jQuery.noConflict();</script>
+<span id="tempoSessao"></span>
+<span class="sair-sistema"> <a href="/sigaa/logar.do?dispatch=logOff">SAIR</a> </span>
+</div>
+</div>
+<div id="painel-usuario">
+<div id="menu-usuario">
+<ul>
+<li class="modulos">
+<span id="modulos"> <a href="#" id="show-modulos"> Módulos </a> </span>
+</li>
+<li class="caixa-postal">
+<a href="/sigaa/abrirCaixaPostal.jsf?sistema=2"> 
+
+							
+
+							Caixa Postal					
+
+							
+
+							 
+
+						</a>
+</li>
+<li class="chamado">
+<a href="#" onclick="window.open('https://www.servicostic.unb.br/', 'chamado', 'scrollbars=1,width=700,height=600')">Abrir Chamado</a>
+</li>
+<li class="menus">
+<a href="/sigaa/verPortalDiscente.do">Menu Discente</a>
+</li>
+<li class="dados-pessoais">
+<a href="#" onclick="window.open('/sigaa/alterar_dados.jsf','','width=670,height=430, top=100, left=100, scrollbars' )">Alterar senha</a>
+</li>
+<!-- INICIO bot&#227;o Informar problema -->
+<!-- FIM bot&#227;o Informar problema -->
+</ul>
+</div>
+<div id="info-usuario">
+<p class="periodo-atual">
+
+			
+
+				Semestre atual: <strong>2026.1</strong>
+
+</p>
+<p class="usuario">
+<span title="JOAO DA SILVA">
+
+				JOAO DA SILVA
+
+			</span>
+</p>
+<p class="unidade">
+
+			DEPTO CIÊNCIAS DA COMPUTAÇÃO
+
+			 (11.01.01.15.01)
+
+			
+
+		</p>
+</div>
+<div id="menu-principal"></div>
+</div>
+</div>
+<div id="conteudo">
+<script type="text/javascript">
+
+//Fun&#231;&#227;o adicionada no cabe&#231;alho para evitar a reescrita em cada JSP.
+
+function contarCaracteres(field, idMostraQuantidadeUsuario, maxlimit) {
+
+	
+
+	if (field.value.length > maxlimit){
+
+		field.value = field.value.substring(0, maxlimit);
+
+	}else{ 
+
+		document.getElementById(idMostraQuantidadeUsuario).innerHTML = maxlimit - field.value.length ;
+
+	} 
+
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+	JAWR.loader.script('/javascript/paineis/noticias.js');
+    JAWR.loader.script('/bundles/js/jquery.js');
+</script>
+<script src="/shared/javascript/jquery/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script src="/sigaa/javascript/rotator.js" type="text/javascript"></script>
+<style>
+#cboxLoadedContent iframe {
+	background-color:#FFFFFF;
+}
+</style>
+
+<div aria-label="Menu Grafite Sem Colapso" class="graffiti-menu-uncollapsed" id="menu-dropdown" role="navigation">
+<div class="graffiti-menu-title">
+        PAINEL DE NAVEGACAO - SIGAA REMIX V1 (GRAFITE DE RUA)
+      </div>
+<ul class="graffiti-tags-list">
+<li><a class="tag-btn tag-yellow" href="grades.html">NOTAS &amp; MENCOES</a></li>
+<li><a class="tag-btn tag-pink" href="Consultar_205ndices_Acad234micos.html">INDICES &amp; IRA</a></li>
+<li><a class="tag-btn tag-cyan" href="Calend225rio_Acad234mico.html">CALENDARIO 2026</a></li>
+<li><a class="tag-btn tag-lime" href="Emitir_Atestado_de_Matr237cula.html">ATESTADO MATRICULA</a></li>
+<li><a class="tag-btn tag-orange" href="history.html">HISTORICO ESCOLAR</a></li>
+<li><a class="tag-btn tag-cyan" href="Consultar_Projetos.html">PROJETOS PESQUISA</a></li>
+<li><a class="tag-btn tag-yellow" href="Consultar_A231245es.html">EXTENSAO UNB</a></li>
+<li><a class="tag-btn tag-pink" href="Minhas_Bolsas_na_Institui231227o.html">BOLSAS ATIVAS</a></li>
+<li><a class="tag-btn tag-lime" href="Mural_de_Vagas.html">MURAL DE ESTAGIO</a></li>
+</ul>
+</div>
+<!-- SISTEMA DE BANNER COM ROLAMENTO LATERAL (URBANO / GRAFITE) -->
+<div aria-label="Mural Urbano e Banner de Destaques" class="graffiti-banner-system" role="region">
+<div class="graffiti-banner-header">
+<h3 class="graffiti-banner-heading">
+          MURAL DE DESTAQUES &amp; AVISOS
+          <span class="tag-stamp">CAMPUS UNB</span>
+</h3>
+<div aria-label="Controles de rolamento lateral do banner" class="graffiti-banner-controls">
+<button aria-label="Rolar banner para a esquerda" class="banner-ctrl-btn" id="graffitiBannerPrev" type="button">&lt;</button>
+<button aria-label="Rolar banner para a direita" class="banner-ctrl-btn" id="graffitiBannerNext" type="button">&gt;</button>
+</div>
+</div>
+<!-- 1. Faixa de Rolamento Continuo (Ticker Tape / Marquee) -->
+<div aria-label="Faixa de noticias e alertas com rolamento continuo" class="graffiti-ticker-wrapper">
+<div class="graffiti-ticker-lead">ALERTA URBANO</div>
+<div class="graffiti-ticker-viewport">
+<div class="graffiti-ticker-track">
+<span class="ticker-item"><span class="ticker-pill pill-cyan">CALENDARIO 2026</span> Periodo de trancamento geral encerra em breve no SIGAA</span>
+<span class="ticker-item"><span class="ticker-pill pill-pink">ICC NORTE &amp; SUL</span> Salas reformadas com murais de arte e acesso livre aos discentes</span>
+<span class="ticker-item"><span class="ticker-pill pill-yellow">RESTAURANTE UNIVERSITARIO</span> Cardapio especial e recarga de carteirinha sem fila</span>
+<span class="ticker-item"><span class="ticker-pill pill-lime">PESQUISA &amp; EXTENSAO</span> Edital PIBIC 2026 aberto com 120 vagas de bolsistas</span>
+<span class="ticker-item"><span class="ticker-pill pill-orange">BCE 24 HORAS</span> Biblioteca Central aberta ininterruptamente com salas de estudo</span>
+<span class="ticker-item"><span class="ticker-pill pill-cyan">CALENDARIO 2026</span> Periodo de trancamento geral encerra em breve no SIGAA</span>
+<span class="ticker-item"><span class="ticker-pill pill-pink">ICC NORTE &amp; SUL</span> Salas reformadas com murais de arte e acesso livre aos discentes</span>
+<span class="ticker-item"><span class="ticker-pill pill-yellow">RESTAURANTE UNIVERSITARIO</span> Cardapio especial e recarga de carteirinha sem fila</span>
+<span class="ticker-item"><span class="ticker-pill pill-lime">PESQUISA &amp; EXTENSAO</span> Edital PIBIC 2026 aberto com 120 vagas de bolsistas</span>
+<span class="ticker-item"><span class="ticker-pill pill-orange">BCE 24 HORAS</span> Biblioteca Central aberta ininterruptamente com salas de estudo</span>
+</div>
+</div>
+</div>
+<!-- 2. Carrossel Horizontal de Cards (Sistema de Rolamento Lateral) -->
+<div class="graffiti-carousel-container">
+<div aria-label="Carrossel com rolamento lateral de banners" class="graffiti-carousel-track" id="graffitiCarouselTrack" role="region" tabindex="0">
+<div class="graffiti-banner-card">
+<div class="card-top">
+<span class="card-badge badge-yellow">CRONOGRAMA</span>
+<span class="card-code">2026.1</span>
+</div>
+<h4 class="card-title">CALENDARIO ACADEMICO</h4>
+<p class="card-desc">Datas oficiais de matricula extraordinaria, trancamentos parciais e lancamento de mencoes finais.</p>
+<a class="card-action-link" href="Calend225rio_Acad234mico.html">VER CALENDARIO</a>
+</div>
+<div class="graffiti-banner-card">
+<div class="card-top">
+<span class="card-badge badge-cyan">SALAS &amp; HORARIOS</span>
+<span class="card-code">4 TURMAS</span>
+</div>
+<h4 class="card-title">TURMAS NO ICC &amp; PAT</h4>
+<p class="card-desc">Consulte cronogramas de aula presenciais, frequencias registradas e contatos diretos dos docentes.</p>
+<a class="card-action-link" href="#turmas-portal">ACESSAR TURMAS</a>
+</div>
+<div class="graffiti-banner-card">
+<div class="card-top">
+<span class="card-badge badge-pink">DESEMPENHO</span>
+<span class="card-code">IRA ATIVO</span>
+</div>
+<h4 class="card-title">INDICES &amp; RENDIMENTO</h4>
+<p class="card-desc">Acompanhe a evolucao do seu IRA geral, IRA por semestre e historico detalhado de creditos cumpridos.</p>
+<a class="card-action-link" href="Consultar_205ndices_Acad234micos.html">CONSULTAR IRA</a>
+</div>
+<div class="graffiti-banner-card">
+<div class="card-top">
+<span class="card-badge badge-lime">ALIMENTACAO</span>
+<span class="card-code">RU DARCY</span>
+</div>
+<h4 class="card-title">RESTAURANTE UNIVERSITARIO</h4>
+<p class="card-desc">Cardapio balanceado com opcoes veganas e tradicionais, horarios das catracas e saldo estudantil.</p>
+<a class="card-action-link" href="#noticias-portal">VER CARDAPIO</a>
+</div>
+<div class="graffiti-banner-card">
+<div class="card-top">
+<span class="card-badge badge-orange">OPORTUNIDADES</span>
+<span class="card-code">ESTAGIOS</span>
+</div>
+<h4 class="card-title">MURAL DE VAGAS &amp; BOLSAS</h4>
+<p class="card-desc">Bolsas ativas de extensao, monitoria remunerada e novas vagas de estagio homologadas na UnB.</p>
+<a class="card-action-link" href="Mural_de_Vagas.html">EXPLORAR VAGAS</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Script de Rolamento Lateral Interativo -->
+<script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+        var track = document.getElementById("graffitiCarouselTrack");
+        var btnPrev = document.getElementById("graffitiBannerPrev");
+        var btnNext = document.getElementById("graffitiBannerNext");
+
+        if (track && btnPrev && btnNext) {
+          var scrollAmount = 300;
+
+          btnPrev.addEventListener("click", function() {
+            track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+          });
+
+          btnNext.addEventListener("click", function() {
+            track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          });
+
+          // Suporte a arraste com mouse (drag-to-scroll)
+          var isDown = false;
+          var startX;
+          var scrollLeftPos;
+
+          track.addEventListener("mousedown", function(e) {
+            isDown = true;
+            startX = e.pageX - track.offsetLeft;
+            scrollLeftPos = track.scrollLeft;
+            track.style.cursor = "grabbing";
+          });
+
+          track.addEventListener("mouseleave", function() {
+            isDown = false;
+            track.style.cursor = "default";
+          });
+
+          track.addEventListener("mouseup", function() {
+            isDown = false;
+            track.style.cursor = "default";
+          });
+
+          track.addEventListener("mousemove", function(e) {
+            if (!isDown) return;
+            e.preventDefault();
+            var x = e.pageX - track.offsetLeft;
+            var walk = (x - startX) * 1.5;
+            track.scrollLeft = scrollLeftPos - walk;
+          });
+        }
+      });
+    </script>
+<div id="portal-docente">
+
+<script>
+function redirectManual(){
+	return window.open("https://sistema.ouvidorias.gov.br/publico/Manifestacao/RegistrarManifestacao.aspx?ReturnUrl=%2f","_blank");
+}
+</script>
+<div id="perfil-docente">
+<div class="pessoal-docente">
+<div class="foto">
+<img src="img/foto_aluno.jpg" style="width: 100px; height: 125px"/>
+</div>
+<ul>
+<li>
+<a href="/sigaa/abrirCaixaPostal.jsf?sistema=2">
+								Mensagens
+							</a>
+</li>
+<li>
+<a class="perfil" href="perfil.jsf">
+							Atualizar Foto e Perfil
+						</a>
+</li>
+<li>
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="j_id_jsp_340461267_268" method="post" name="j_id_jsp_340461267_268">
+<input name="j_id_jsp_340461267_268" type="hidden" value="j_id_jsp_340461267_268"/>
+<script language="Javascript" type="text/javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {f.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var i = 0;for (k in pvp) {var p = document.createElement("input");p.type = "hidden";p.name = k;p.value = pvp[k];f.appendChild(p);adp[i++] = p;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<a href="#" id="j_id_jsp_340461267_268:meusDadosPessoais" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_268'),{'j_id_jsp_340461267_268:meusDadosPessoais':'j_id_jsp_340461267_268:meusDadosPessoais'},'');}return false">Meus Dados Pessoais</a><input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</li>
+</ul>
+<div class="clear"> </div>
+</div>
+<p class="info-docente">
+<span class="nome"> <small><b>JOAO DA SILVA</b></small> </span>
+
+				
+					Estudante de Graduação em Ciências da Computação - Universidade de Brasília.
+				
+			</p>
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="form_links" method="post" name="form_links">
+<input name="form_links" type="hidden" value="form_links"/>
+<div id="agenda-docente" style="text-align: center">
+<a class="graffiti-card-action-btn tag-yellow" href="#">AVALIACAO INSTITUCIONAL 2026</a>
+</div>
+<input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+<p style="text-align: center; font-size: x-small">
+<a href="" target="_blank">
+				Regulamento dos Cursos de Graduação
+				</a>
+</p>
+<br/>
+<p style="text-align: center; font-size: x-small">
+<a href="https://saa.unb.br/graduacao/calendario-academico" target="_blank">
+					Calendário Acadêmico de Graduação
+					</a>
+</p>
+<div id="agenda-docente">
+<h4> Dados Institucionais </h4>
+<table>
+<tr>
+<td> Matrícula: </td>
+<td> 123456789 </td>
+</tr>
+<tr>
+<td valign="top"> Curso: </td>
+<td> COMPUTAÇÃO/CIC - Licenciatura -
+						N </td>
+</tr>
+<tr>
+<td> Nível: </td>
+<td> GRADUAÇÃO </td>
+</tr>
+<tr>
+<td> Status: </td>
+<td> ATIVO </td>
+</tr>
+<tr>
+<td> E-Mail: </td>
+<td>
+							joao.silva@aluno.unb.br
+						</td>
+</tr>
+<tr>
+<td> Entrada: </td>
+<td> 2026.1</td>
+</tr>
+<tr>
+<td colspan="2"> </td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: center; font-style: italic">Índices Acadêmicos</td>
+</tr>
+<tr>
+<td colspan="2">
+<table width="100%">
+<tr>
+</tr>
+<tr>
+<td><acronym title="Índice de Rendimento Acadêmico">IRA:</acronym></td>
+<td align="right"><div style="margin-right:15px;">0.0</div></td>
+</tr>
+<tr>
+</tr>
+<tr>
+</tr>
+<tr>
+</tr>
+<tr>
+<td><acronym title="Média Ponderada">MP:</acronym></td>
+<td align="right"><div style="margin-right:15px;">0.0</div></td>
+</tr>
+<tr>
+<td align="center" colspan="4">
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="j_id_jsp_340461267_277" method="post" name="j_id_jsp_340461267_277">
+<input name="j_id_jsp_340461267_277" type="hidden" value="j_id_jsp_340461267_277"/>
+<a href="#" id="j_id_jsp_340461267_277:detalharIndiceAcademico" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_277'),{'j_id_jsp_340461267_277:detalharIndiceAcademico':'j_id_jsp_340461267_277:detalharIndiceAcademico'},'');}return false" style="font-size:9px; margin-right:12px;">Detalhar</a><input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<br/>
+<i><center>
+								Integralizações:</center></i>
+<br/>
+<table>
+<tr>
+<td> CH. Obrigatória Pendente </td>
+<td align="right"> 2340 </td>
+</tr>
+<tr>
+<td> CH. Optativa Pendente </td>
+<td align="right"> 750 </td>
+</tr>
+<tr>
+<td> CH. Total Currículo </td>
+<td align="right"> 3210 </td>
+</tr>
+<tr>
+<td> CH. Complementar Pendente </td>
+<td align="right"> 120 </td>
+</tr>
+<tr>
+<td colspan="2" style="border-width: 1px; border-color: black; border-style: thin; background: white;">
+<div style="border: thin; border-color: black; width: 0.0%; background: silver; text-align: center;">
+												 
+											</div>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+											
+											
+												0% Integralizado
+											
+										</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="formExibirExtrato" method="post" name="formExibirExtrato">
+<input name="formExibirExtrato" type="hidden" value="formExibirExtrato"/>
+<p style="text-align: center; font-size: x-small">
+<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formExibirExtrato'),{'formExibirExtrato:j_id_jsp_340461267_280':'formExibirExtrato:j_id_jsp_340461267_280'},'');}return false};return (a()==false) ? false : b();">Mostrar Extrato do Restaurante</a>
+</p>
+<input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</div>
+<div id="main-docente">
+<script type="text/javascript">
+			var fcontent=new Array()
+			
+			</script>
+<div id="noticias-portal">
+<p class="noticia destaque"> <br>Não há notícias cadastradas.</br></p>
+</div>
+<div class="simple-panel" id="turmas-portal">
+<h4> Turmas do Semestre   </h4>
+<table class="subFormulario" style="font-size: x-small;">
+<thead>
+<tr>
+<th style="background: #DEDFE3; width: 90%;">Últimas Atualizações</th>
+<th nowrap="nowrap" style="background: #DEDFE3;">
+<a class="rotator-prev" href="#">&lt;&lt;</a>
+<a class="rotator-pause" href="#">Parar</a>
+<a class="rotator-continue" href="#">Continuar</a>
+<a class="rotator-next" href="#">&gt;&gt;</a>
+</th>
+</tr>
+</thead>
+<tr>
+<td>
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="formAtualizacoesTurmas" method="post" name="formAtualizacoesTurmas">
+<input name="formAtualizacoesTurmas" type="hidden" value="formAtualizacoesTurmas"/>
+<div id="atualizacoes-turma" style="position: relative; padding-bottom: 7%; display: block;">
+<div class="rotator">
+<table>
+<tr>
+<td>
+																14/04/2026 - 
+																<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmas'),{'formAtualizacoesTurmas:j_id_jsp_340461267_293':'formAtualizacoesTurmas:j_id_jsp_340461267_293','idTurma':'1602655'},'');}return false};return (a()==false) ? false : b();">ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES (2026.1)</a>
+</td>
+</tr>
+<tr>
+<td>Nova Notícia: Aulas de APC Turma 06 na 3ª-feira será na sala BSAN A1 29/41</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+																13/04/2026 - 
+																<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmas'),{'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_1':'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_1','idTurma':'1606269'},'');}return false};return (a()==false) ? false : b();">ORGANIZAÇÃO DA EDUCAÇÃO BRASILEIRA (2026.1)</a>
+</td>
+</tr>
+<tr>
+<td>Nova Notícia: INFORMAÇÃO SOBRE AULA</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+																13/04/2026 - 
+																<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmas'),{'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_2':'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_2','idTurma':'1602662'},'');}return false};return (a()==false) ? false : b();">FORMAÇÃO DOCENTE EM COMPUTAÇÃO (2026.1)</a>
+</td>
+</tr>
+<tr>
+<td>Nova Notícia: LOCAL DE AULA - FDC</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+																16/03/2026 - 
+																<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmas'),{'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_3':'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_3','idTurma':'1606269'},'');}return false};return (a()==false) ? false : b();">ORGANIZAÇÃO DA EDUCAÇÃO BRASILEIRA (2026.1)</a>
+</td>
+</tr>
+<tr>
+<td>Nova Notícia: Plano de Curso</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+																16/03/2026 - 
+																<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('formAtualizacoesTurmas'),{'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_4':'formAtualizacoesTurmas:j_id_jsp_340461267_293j_id_4','idTurma':'1606269'},'');}return false};return (a()==false) ? false : b();">ORGANIZAÇÃO DA EDUCAÇÃO BRASILEIRA (2026.1)</a>
+</td>
+</tr>
+<tr>
+<td>Nova Notícia: Inicio do semestre / curso</td>
+</tr>
+</table>
+</div>
+</div>
+<input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</td>
+</tr>
+</table>
+<table style="margin-top: 1%;">
+<thead>
+<tr>
+<th width="50%">Componente Curricular</th>
+<th style="text-align:left">Local</th>
+<th width="15%">Horário</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="5" style="background: #C8D5EC; font-weight: bold; padding: 2px 0 2px 5px;">
+											2026.1
+										</td>
+</tr>
+<tr class="odd">
+<td class="descricao">
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="form_acessarTurmaVirtual" method="post" name="form_acessarTurmaVirtual">
+<input name="form_acessarTurmaVirtual" type="hidden" value="form_acessarTurmaVirtual"/>
+<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtual'),{'form_acessarTurmaVirtual:j_id_jsp_340461267_296':'form_acessarTurmaVirtual:j_id_jsp_340461267_296','frontEndIdTurma':'FC8053A0AE4B684CA47235CF3CD370398270B05B'},'');}return false};return (a()==false) ? false : b();">ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES</a><input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</td>
+<td class="info" style="text-align:left">45N12(BSA N AT 19/41) 3N12(PJC BT 060)</td>
+<td class="info"><center>345N12 (16/03/2026 - 18/07/2026)
+										
+										
+										
+										
+												<span class="graffiti-mini-tag tag-cyan">INFO</span>
+<span style="position: absolute;">
+<div class="popUp" id="ajuda324485" onmouseout="document.getElementById('ajuda324485').style.visibility = 'hidden';" style="width: 190px; ">
+		
+
+												Terça-feira 19:00 às 20:40<br>Quarta-feira 19:00 às 20:40<br>Quinta-feira 19:00 às 20:40  <br/>
+</br></br></div>
+</span>
+</center>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="5" id="linha_1602655" style="display: none;"></td>
+</tr>
+<tr class="">
+<td class="descricao">
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="form_acessarTurmaVirtualj_id_1" method="post" name="form_acessarTurmaVirtualj_id_1">
+<input name="form_acessarTurmaVirtualj_id_1" type="hidden" value="form_acessarTurmaVirtualj_id_1"/>
+<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtualj_id_1'),{'form_acessarTurmaVirtualj_id_1:j_id_jsp_340461267_296j_id_1':'form_acessarTurmaVirtualj_id_1:j_id_jsp_340461267_296j_id_1','frontEndIdTurma':'5824508C3531C51BD33923A0F43B72EF7C9C2DF6'},'');}return false};return (a()==false) ? false : b();">EDUCAÇÃO INCLUSIVA</a><input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</td>
+<td class="info" style="text-align:left">FE5S3</td>
+<td class="info"><center>3M1234 (16/03/2026 - 18/07/2026)
+										
+										
+										
+										
+												<span class="graffiti-mini-tag tag-cyan">INFO</span>
+<span style="position: absolute;">
+<div class="popUp" id="ajuda946710" onmouseout="document.getElementById('ajuda946710').style.visibility = 'hidden';" style="width: 190px; ">
+		
+
+												Terça-feira 08:00 às 11:50  <br/>
+</div>
+</span>
+</center>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="5" id="linha_1603653" style="display: none;"></td>
+</tr>
+<tr class="odd">
+<td class="descricao">
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="form_acessarTurmaVirtualj_id_2" method="post" name="form_acessarTurmaVirtualj_id_2">
+<input name="form_acessarTurmaVirtualj_id_2" type="hidden" value="form_acessarTurmaVirtualj_id_2"/>
+<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtualj_id_2'),{'form_acessarTurmaVirtualj_id_2:j_id_jsp_340461267_296j_id_2':'form_acessarTurmaVirtualj_id_2:j_id_jsp_340461267_296j_id_2','frontEndIdTurma':'65CE652961EF019E611FF9FD47CCC4B68085569A'},'');}return false};return (a()==false) ? false : b();">FORMAÇÃO DOCENTE EM COMPUTAÇÃO</a><input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</td>
+<td class="info" style="text-align:left">BSA N AT 09/41</td>
+<td class="info"><center>35N34 (16/03/2026 - 18/07/2026)
+										
+										
+										
+										
+												<span class="graffiti-mini-tag tag-cyan">INFO</span>
+<span style="position: absolute;">
+<div class="popUp" id="ajuda996029" onmouseout="document.getElementById('ajuda996029').style.visibility = 'hidden';" style="width: 190px; ">
+		
+
+												Terça-feira 20:50 às 22:30<br/>Quinta-feira 20:50 às 22:30  <br/>
+</div>
+</span>
+</center>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="5" id="linha_1602662" style="display: none;"></td>
+</tr>
+<tr class="">
+<td class="descricao">
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="form_acessarTurmaVirtualj_id_3" method="post" name="form_acessarTurmaVirtualj_id_3">
+<input name="form_acessarTurmaVirtualj_id_3" type="hidden" value="form_acessarTurmaVirtualj_id_3"/>
+<a href="#" onclick="var a=function(){return prevenirDuploClique();};var b=function(){if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('form_acessarTurmaVirtualj_id_3'),{'form_acessarTurmaVirtualj_id_3:j_id_jsp_340461267_296j_id_3':'form_acessarTurmaVirtualj_id_3:j_id_jsp_340461267_296j_id_3','frontEndIdTurma':'BFD0737B7A2F80050C9749ABACEBF74664073AE1'},'');}return false};return (a()==false) ? false : b();">ORGANIZAÇÃO DA EDUCAÇÃO BRASILEIRA</a><input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</td>
+<td class="info" style="text-align:left">FE5S7</td>
+<td class="info"><center>2N1234 (16/03/2026 - 18/07/2026)
+										
+										
+										
+										
+												<span class="graffiti-mini-tag tag-cyan">INFO</span>
+<span style="position: absolute;">
+<div class="popUp" id="ajuda362811" onmouseout="document.getElementById('ajuda362811').style.visibility = 'hidden';" style="width: 190px; ">
+		
+
+												Segunda-feira 19:00 às 22:30  <br/>
+</div>
+</span>
+</center>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="5" id="linha_1606269" style="display: none;"></td>
+</tr>
+</tbody>
+</table>
+<span class="mais" style="text-align: left;">
+</span>
+<span class="mais">
+<a href="/sigaa/portais/discente/turmas.jsf">Ver turmas anteriores</a>
+</span>
+</div>
+<div class="simple-panel" id="participantes">
+<h4> Comunidades Virtuais que participa atualmente </h4>
+<p class="vazio">
+						Não participa de nenhuma comunidade virtual.
+					</p>
+</div>
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="formAtividades" method="post" name="formAtividades">
+<input name="formAtividades" type="hidden" value="formAtividades"/>
+<div class="simple-panel" id="avaliacao-portal">
+<h4> Minhas atividades  </h4>
+<p class="vazio">
+								Não há atividades cadastradas para os próximos 15 dias ou decorridos 7 dias.
+							</p>
+</div>
+<input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+<div class="simple-panel" id="forum-portal">
+<h4>FÓRUM DO CURSO DE COMPUTAÇÃO </h4>
+<form action="/sigaa/portais/discente/discente.jsf" enctype="application/x-www-form-urlencoded" id="j_id_jsp_340461267_339" method="post" name="j_id_jsp_340461267_339">
+<input name="j_id_jsp_340461267_339" type="hidden" value="j_id_jsp_340461267_339"/>
+<!-- Tarefa 11468 UnB - Texto alterado -->
+<div class="descricaoOperacao">
+			Caro(a) Aluno(a), este fórum é destinado para discussões relacionadas ao seu curso. Todos(as) os(as) alunos(as)
+			do curso e a coordenação tem acesso a ele.
+		</div>
+<!-- Fim Tarefa 11468 UnB -->
+<center>
+<a href="#" id="j_id_jsp_340461267_339:novoTopicoForum" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:novoTopicoForum':'j_id_jsp_340461267_339:novoTopicoForum'},'');}return false">Cadastrar novo tópico para este fórum</a>
+			  
+			<a href="#" id="j_id_jsp_340461267_339:listarTopicosForum" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:listarTopicosForum':'j_id_jsp_340461267_339:listarTopicosForum'},'');}return false">Visualizar todos os tópicos para este fórum</a>
+</center>
+<br/>
+<table class="listagem">
+<thead>
+<tr>
+<th>Título</th>
+<th>Autor</th>
+<th style="text-align: center">Respostas</th>
+<th style="text-align: center">Data</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="linhaPar">
+<td width="50%">
+<a href="#" id="j_id_jsp_340461267_339:mostrarForumMensagemCurso" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:mostrarForumMensagemCurso':'j_id_jsp_340461267_339:mostrarForumMensagemCurso','idForumMensagem':'21570942','id':'737733'},'');}return false">Calouras da computação 2025/2 e 2026/1, Data: 29 de abril, Horário: 17h, Local: Auditório CIC</a>
+</td>
+<td><acronym title="MARIA DE FATIMA RAMOS BRANDAO"> 18560342168 </acronym></td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">
+								
+									12/04/2026 06:30:03
+								 
+								
+							</td>
+<td>
+<span class="graffiti-mini-tag tag-pink">MSG</span></td>
+</tr>
+<tr class="linhaImpar">
+<td width="50%">
+<a href="#" id="j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_1" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_1':'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_1','idForumMensagem':'21061745','id':'737733'},'');}return false">Inscrições para monitoria nas disciplinas/turmas do CIC no semestre 2026</a>
+</td>
+<td><acronym title="MARIA DE FATIMA RAMOS BRANDAO"> 18560342168 </acronym></td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">
+								
+									26/03/2026 00:07:14
+								 
+								
+							</td>
+<td>
+<span class="graffiti-mini-tag tag-pink">MSG</span></td>
+</tr>
+<tr class="linhaPar">
+<td width="50%">
+<a href="#" id="j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_2" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_2':'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_2','idForumMensagem':'21408004','id':'737733'},'');}return false">Seleção de tutores para o Programa Elos</a>
+</td>
+<td><acronym title="MARIA DE FATIMA RAMOS BRANDAO"> 18560342168 </acronym></td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">
+								
+									23/03/2026 14:12:36
+								 
+								
+							</td>
+<td>
+<span class="graffiti-mini-tag tag-pink">MSG</span></td>
+</tr>
+<tr class="linhaImpar">
+<td width="50%">
+<a href="#" id="j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_3" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_3':'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_3','idForumMensagem':'21403647','id':'737733'},'');}return false">Período de solicitação de ATIVIDADES COMPLEMENTARES no Sem 1/2026 - 24/04/26!</a>
+</td>
+<td><acronym title="MARIA DE FATIMA RAMOS BRANDAO"> 18560342168 </acronym></td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">
+								
+									23/03/2026 00:47:33
+								 
+								
+							</td>
+<td>
+<span class="graffiti-mini-tag tag-pink">MSG</span></td>
+</tr>
+<tr class="linhaPar">
+<td width="50%">
+<a href="#" id="j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_4" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_4':'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_4','idForumMensagem':'19731579','id':'737733'},'');}return false">PROCESSO SELETIVO -  Empresa Júnior de Computação (CJR)</a>
+</td>
+<td><acronym title="MARCELO GRANDI MANDELLI"> 00721691099 </acronym></td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">
+								
+									25/09/2025 22:31:47
+								 
+								
+							</td>
+<td>
+<span class="graffiti-mini-tag tag-pink">MSG</span>
+</td>
+</tr>
+<tr class="linhaImpar">
+<td width="50%">
+<a href="#" id="j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_5" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_340461267_339'),{'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_5':'j_id_jsp_340461267_339:mostrarForumMensagemCursoj_id_5','idForumMensagem':'19630382','id':'737733'},'');}return false">TUTORIA ESTRUTURA DE DADOS - Formulário de Inscrições</a>
+</td>
+<td><acronym title="MARCELO GRANDI MANDELLI"> 00721691099 </acronym></td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">
+								
+									05/09/2025 09:43:54
+								 
+								
+							</td>
+<td>
+<span class="graffiti-mini-tag tag-pink">MSG</span>
+</td>
+</tr>
+</tbody>
+</table>
+<input id="javax.faces.ViewState" name="javax.faces.ViewState" type="hidden" value="j_id3"/>
+</form>
+</div>
+</div>
+<div class="clear"> </div>
+</div>
+<style>
+	#avaliacao-portal th, #avaliacao-portal td{
+		text-align:left;
+	}
+</style>
+<script type="text/javascript">
+	PainelNoticias.init('/sigaa/portais/docente/viewNoticia.jsf');
+</script>
+<div class="clear"> </div>
+</div>
+<br/>
+<div style="width: 80%; text-align: center; margin: 0 auto;">
+<a href="/sigaa/verPortalDiscente.do">Portal Discente</a>
+</div>
+<div id="rodape">
+<p>	SIGAA | Secretaria de Tecnologia da Informação - STI - (61)  3107-0102 | Copyright © 2006-2026 - UFRN - app31.sigaa31
+
+		
+
+		 
+
+			 - <a onclick="javascript:versao();">v4.15.10.58</a>
+</p>
+</div>
+</div>
+<div id="painel-mensagem-envio"> </div>
+<script>
+
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+
+	  ga('create', '0', 'auto');
+
+	  ga('send', 'pageview');
+
+	
+
+	</script>
+<!-- MYFACES JAVASCRIPT -->
+</body>
+</html>
+<script charset="UTF-8" type="text/javascript">
+
+		function versao(){
+
+			var msg='';
+
+			msg+='SIGAA 4.15.10.58,  publicado em: 16/04/2026 15:46\n\n';
+
+			msg+='Depend\u00eancias:\n';
+
+			msg+='Arquitetura 4.4.9\n';
+
+			msg+='Entidades Comuns 2.3.12-SNAPSHOT\n';
+
+			msg+='Servicos Integrados 3.0.1\n';
+
+			msg+='SharedResources 2.1.4\n';
+
+			msg+='Servicos Remoto Biblioteca 1.0.3\n';
+
+			msg+='SIGAA Mobile Objects 1.0.0\n\n';
+
+			msg+='Copyright SINFO/UFRN';
+
+			alert(msg);
+
+		}	
+
+	</script>
+<script language="javascript">
+
+Relogio.init(40);
+
+</script>

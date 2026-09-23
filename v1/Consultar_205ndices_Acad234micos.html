@@ -1,0 +1,942 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="background" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Sistema Integrado de Gest&#227;o de Atividades Acad&#234;micas</title>
+	
+	<link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" rel="stylesheet" type="text/css" /><link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" media="rich-extended-skinning" rel="stylesheet" type="text/css" /><script src="/sigaa/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.PrototypeScript.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/utils.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/browser_info.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/modalPanel.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/modalPanelBorders.js.jsf" type="text/javascript"></script><link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/modalPanel.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" rel="stylesheet" type="text/css" /><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/available.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/jquery/jquery.js.jsf" type="text/javascript"></script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/script/controlUtils.js.jsf" type="text/javascript"></script><script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js.jsf" type="text/javascript"></script><script type="text/javascript" src="/shared/jsBundles/jawr_loader.js" ></script>
+	<script type="text/javascript">
+		JAWR.loader.style('/bundles/css/sigaa_base.css','all');
+		JAWR.loader.style('/css/ufrn_relatorio.css','all');
+		JAWR.loader.style('/css/ufrn_print.css', 'print');
+
+		JAWR.loader.script('/bundles/js/sigaa_base.js');
+	</script>
+	<link rel="stylesheet" type="text/css" media="all" href="/sigaa/cssBundles/gzip_227240237/bundles/css/sigaa.css" />
+
+	<link rel="stylesheet" media="all" href="/shared/css/ufrn.css"/>
+	
+	<script src="/shared/javascript/STICookieConsent.js"></script>
+	<script>
+	    document.addEventListener("DOMContentLoaded", () => {
+	    	generateCookieConsentModal("SIGAA", "N&#243;s usamos cookies para melhorar sua experi&#234;ncia de navega&#231;&#227;o no portal. Ao utilizar o %sitename%, voc&#234; concorda com a pol&#237;tica de monitoramento de cookies. Para ter mais informa&#231;&#245;es sobre como isso &#233; feito e como remover, acesse a <a href=%cookie-policy%>Pol&#237;tica de Prote&#231;&#227;o de Dados Pessoais</a>. Para saber como a UnB trata os dados, acesse a <a href=%privacy-policy%> Pol&#237;tica de cookies</a>. Se voc&#234; concorda, clique em %button-text%.", "https://protecaodedados.unb.br", "https://sti.unb.br/doc-politicas");
+	    })
+	</script>
+</head>
+
+<body>
+
+<div id="relatorio-container">
+
+		<div id="relatorio-cabecalho">
+			<div id="ufrn"><img src="/shared/img/instituicao/ufrn.gif" height="40"/> <br /> <a href='/sigaa/verPortalDiscente.do'>Portal Discente</a></div>
+			<div id="sinfo"><img src="/shared/img/instituicao/sinfo.gif" height="50"/>  </div>
+			<div id="texto">
+				Universidade de Bras&#237;lia<br>
+				Sistema Integrado de Gest&#227;o de Atividades Acad&#234;micas<br>
+
+				
+				<br />
+				<span class="dataAtual"> Emitido em
+				
+				
+					19/04/2026 17:26
+				
+				</span>
+			</div>
+		<div class="clear"> </div>	
+		</div>
+		<div id="relatorio">
+
+		<br/>
+
+
+
+
+
+
+
+
+<style>
+
+table.tabelaRelatorio tbody td {
+
+	border-bottom: 1px solid black;
+
+}
+
+
+
+.autenticacao {
+
+	color: #922;
+
+	font-weight: bold;
+
+	text-align: center;
+
+}
+
+h4 {
+
+	border-bottom: 1px solid #BBB;
+
+	margin-bottom: 3px;
+
+	padding-bottom: 2px;
+
+	text-align: center;
+
+}
+
+p {
+
+	text-align: center;
+
+}
+
+</style>
+
+
+
+
+
+
+
+	<style>
+
+	.listagemPopup {
+		width: 100%;
+		margin: 0 auto;
+		text-align: left;
+		font-size: 12px;
+		padding-left: 10px;
+	}
+	
+	.colunas td {
+		font-weight: bold;
+		border-bottom: 1px solid;
+	}
+	
+</style>
+
+
+
+<div id="panel" style="display: none;"><input autocomplete="off" id="panelOpenedState" name="panelOpenedState" type="hidden" /><div class="rich-modalpanel " id="panelContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="panelDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="panelFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="panelCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="panelShadowDiv"></div><div class=" rich-mpnl-content" id="panelContentDiv"><div class="rich-mpnl-text rich-mpnl-controls "><img id="hidelink" src="/sigaa/img/close.png" class="hidelink" /><script type="text/javascript">Richfaces.componentControl.attachAvailable('#hidelink','onclick','#panel','hide')</script></div><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="panelContentTable" style="width: 700px;height: 1px;"><tr style="height: 1%;"><td class="rich-mpnl-header-cell"><div class="rich-mpnl-text rich-mpnl-header " id="panelHeader" style="white-space: nowrap;">C&Aacute;LCULOS DOS INDICADORES DE RENDIMENTO ACAD&Ecirc;MICO ACUMULADO</div></td></tr><tr style="height: 99%"><td class="rich-mpnl-body" valign="top">
+	
+		
+	
+	
+		
+	
+
+	<div style="height: 250px; overflow: auto;">
+		<table>
+			<tr>
+				<td>
+					<p>
+						&nbsp;&nbsp;A <b>M&#233;dia de Conclus&#227;o (MC)</b> &#233; a m&#233;dia ponderada do rendimento acad&#234;mico final nos componentes
+					 	curriculares em que o estudante conseguiu &#234;xito ao longo do curso, obtida pela seguinte f&#243;rmula:
+					</p>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img id="imgMC" src="/sigaa/img/formulas_indices/formulaMC.png" class="hidelink" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						&nbsp;&nbsp;S&#227;o contabilizados todos os <b>Nx</b> componentes curriculares conclu&#237;dos com
+						&#234;xito ap&#243;s  o  in&#237;cio  do  curso, sendo <b>ni</b> a nota (rendimento acad&#234;mico) final obtida no <b>i-</b>&#233;simo 
+						componente curricular e <b>ci</b> a carga hor&#225;ria discente do <b>i-</b>&#233;simo componente curricular.
+						S&#227;o exclu&#237;dos do c&#225;lculo os componentes curriculares trancados, cancelados,
+						reprovados, aproveitados, incorporados e dispensados
+						e os componentes curriculares cujo rendimento acad&#234;mico n&#227;o &#233; expresso de forma num&#233;rica.			
+					</p>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<table>	
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;A <b> M&#233;dia de Conclus&#227;o Normalizada (MCN)</b> &#233; a MC do estudante normalizada em rela&#231;&#227;o &#224;
+					m&#233;dia (&mu;) e desvio padr&#227;o amostral (&sigma;) das MC dos concluintes do mesmo curso,
+					obtida pela seguinte f&#243;rmula:
+					</p>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img id="imgMCN1" src="/sigaa/img/formulas_indices/formulaMCN1.png" class="hidelink" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;Nessa f&#243;rmula, <b>MC</b> &#233; a M&#233;dia de Conclus&#227;o do estudante para o qual est&#225; sendo calculada a <b>MCN</b>. 
+					A m&#233;dia (&mu;) e desvio padr&#227;o amostral (&sigma;) s&#227;o calculados pelas seguintes f&#243;rmulas:
+					</p>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img id="imgMCN2" src="/sigaa/img/formulas_indices/formulaMCN2.png" class="hidelink" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;S&#227;o contabilizados os <b>M</b> estudantes que conclu&#237;ram o mesmo
+					curso nos &#250;ltimos 5 (cinco) anos, sendo <b>MCi</b> a M&#233;dia de Conclus&#227;o final obtida pelo
+					<b>i-</b>&#233;simo concluinte. S&#227;o exclu&#237;dos do c&#225;lculo estudantes que n&#227;o conclu&#237;ram com &#234;xito o curso por
+					qualquer motivo bem como aqueles que fizeram apenas apostilamento de habilita&#231;&#227;o ou certifica&#231;&#227;o
+					de &#234;nfase.</p>
+					<p>Para os cursos com mais de um turno ou mais de uma habilita&#231;&#227;o ou &#234;nfase, a m&#233;dia e desvio padr&#227;o amostral
+					s&#227;o os mesmos para todos os estudantes das diferentes matrizes curriculares.</p>
+					<p>&nbsp;&nbsp;A  m&#233;dia  e  desvio  padr&#227;o  s&#227;o	calculados  para  os  cursos  que  t&#234;m  estudantes  concluintes  h&#225;  pelo menos 5 (cinco) anos ou em n&#250;mero superior
+					a 100 (cem). Caso contr&#225;rio, utilizam-se os valores m&#233;dios do centro acad&#234;mico do curso ou, caso imposs&#237;vel, do centro com maior similaridade.
+					</p>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<table>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;O <b>&#205;ndice de Efici&#234;ncia em Carga Hor&#225;ria (IECH)</b> &#233; o percentual da carga hor&#225;ria
+					utilizada pelo estudante que se converteu em aprova&#231;&#227;o, obtido pela seguinte f&#243;rmula:
+					</p>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img id="imgIECH" src="/sigaa/img/formulas_indices/formulaIECH.png" class="hidelink" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;S&#227;o contabilizados no numerador os <b>Np</b> componentes curriculares nos quais o estudante obteve aprova&#231;&#227;o
+					ou integralizou ap&#243;s o in&#237;cio do curso, incluindo-se os componentes incorporados depois do in&#237;cio do curso
+					e excluindo-se os componentes aproveitados, cursados antes do in&#237;cio do curso, e os dispensados.</p>
+					<p>S&#227;o contabilizados no denominador os <b>Nm</b>
+					componentes curriculares nos quais o estudante teve a matr&#237;cula efetuada ap&#243;s o in&#237;cio do curso,
+					incluindo-se os componentes incorporados ap&#243;s o in&#237;cio do curso e os trancamentos, reprova&#231;&#245;es
+					e cancelamentos de matr&#237;cula e excluindo-se os componentes curriculares aproveitados, cursados antes
+					do in&#237;cio do curso, e os dispensados. </p>
+					<p><b>Ci</b> &#233; a carga hor&#225;ria discente do <b>i-</b>&#233;simo componente curricular.</p>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<table>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;O <b>&#205;ndice de Efici&#234;ncia em Per&#237;odos Letivos (IEPL)</b> &#233; divis&#227;o da carga hor&#225;ria acumulada
+					pela carga hor&#225;ria esperada, obtida pela seguinte f&#243;rmula:	
+					</p>
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<img id="imgIEPL" src="/sigaa/img/formulas_indices/formulaIEPL.png" class="hidelink" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;S&#227;o contabilizados no numerador todos os <b>Na</b> componentes curriculares nos quais o estudante acumulou carga hor&#225;ria ap&#243;s o in&#237;cio do curso, incluindo-se os componentes curriculares incorporados ap&#243;s
+					o in&#237;cio do curso e excluindo-se os componentes curriculares aproveitados, cursados antes do in&#237;cio do
+					curso, e os dispensados.</p>
+					<p><b>ci</b> &#233; a carga hor&#225;ria discente do <b>i-</b>&#233;simo componente curricular.</p>
+					<p><b>P</b> &#233; o n&#250;mero de per&#237;odos j&#225; cursados pelo estudante, excluindo-se os per&#237;odos letivos nos quais o
+					programa foi suspenso e aqueles durante os quais o estudante esteve realizando mobilidade acad&#234;mica em
+					outra institui&#231;&#227;o, n&#227;o incluindo tamb&#233;m os per&#237;odos letivos contados no perfil inicial. 
+					</p>
+					<p><b>CHM</b> e <b>DP</b> s&#227;o a carga hor&#225;ria m&#237;nima e a dura&#231;&#227;o padr&#227;o, respectivamente, para integraliza&#231;&#227;o da
+					estrutura curricular do estudante. </p>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<table>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;O <b>&#205;ndice de Efici&#234;ncia Acad&#234;mica (IEA)</b> &#233; o produto da MC pelo IECH e pelo IEPL,
+					conforme a seguinte f&#243;rmula:
+					</p>
+					<br>
+					<p>
+					<b>IEA = MC &#215; IECH &#215; IEPL</b>
+					</p>
+				</td>
+			</tr>
+		</table>
+			<br><br>
+		<table>
+			<tr>
+				<td>
+					<p>
+					&nbsp;&nbsp;O <b>&#205;ndice de Efici&#234;ncia Acad&#234;mica Normalizado (IEAN)</b> &#233; o produto da MCN pelo IECH
+					e pelo IEPL, conforme a seguinte f&#243;rmula:
+					</p>
+					<br>
+					<p>
+					<b>IEAN = MCN &#215; IECH &#215; IEPL</b>
+					</p>
+				</td>
+			</tr>
+		</table>
+		<br><br>		
+		
+	</div>
+	
+	<br/>
+	
+</td></tr></table></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="panelCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="panelLastHref"></button></div><script type="text/javascript">new ModalPanel('panel',
+				{
+					width: -1,
+					height: -1,
+
+					minWidth: 700,
+					minHeight: -1,
+
+					resizeable: false,
+					moveable: true,
+
+					left: "auto",
+					top: "auto",
+
+					zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
+					domElementAttachment: "",				
+					keepVisualState: false,
+					showWhenRendered: false,
+					selectBehavior: "disable",
+
+					autosized: true,
+					overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div>
+
+
+
+
+
+	<table id="identificacao">
+
+		<tr>
+
+			<th style="font-weight: bold">Per&#237;odo Letivo:</th>
+
+			<td> 2026.1</td>
+
+			<th style="font-weight: bold">N&#237;vel:</th>
+
+			<td> GRADUA&#199;&#195;O</td>
+
+		</tr>
+
+		<tr>
+
+			<th width="20%" style="font-weight: bold">Matr&#237;cula:</h>
+
+			<td width="45%"> 123456789</td>
+
+			<th width="10%" style="font-weight: bold">V&#237;nculo:</th>
+
+			<td> </td>
+
+		</tr>
+
+		<tr>
+
+			<th style="font-weight: bold">Nome:</th>
+
+			<td colspan="3"> JOAO DA SILVA</td>
+
+		</tr>
+
+
+
+		<tr>
+
+			<th style="font-weight: bold">Curso:</th>
+
+			<td> COMPUTA&#199;&#195;O/CIC - Licenciatura - N</td>
+
+			<th style="font-weight: bold">Cidade:</th>
+
+			<td> BRAS&#205;LIA</td>
+
+		</tr>
+
+		
+
+			<tr>
+
+				
+
+				
+
+					<th style="font-weight: bold">Forma&#231;&#227;o:</th>
+
+					<td> </td>
+
+				
+
+			</tr>
+
+		
+
+		
+
+
+
+	</table>
+
+
+
+	<br />
+
+	<h2 style="width: 100%">&#205;ndices Acad&#234;micos</h2>
+
+
+
+	<table class="tabelaRelatorio" width="100%">
+
+		<thead>
+
+			<tr>
+
+				<th align="left">Sigla</th>
+
+				<th align="left">&#205;ndice</th>
+
+				<th style="text-align: right">Valor</th>
+
+
+
+			</tr>
+
+		</thead>
+
+		<tbody>
+
+			
+
+				
+
+			
+
+										
+
+					<tr>
+
+						<td align="left">IRA</td>
+
+						<td align="left">&#205;ndice de Rendimento Acad&#234;mico</td>
+
+						<td style="text-align: right">0.0</td>
+
+					</tr>
+
+				
+
+			
+
+				
+
+			
+
+				
+
+			
+
+				
+
+			
+
+				
+
+			
+
+				
+
+			
+
+				
+
+			
+
+										
+
+					<tr>
+
+						<td align="left">MP</td>
+
+						<td align="left">M&#233;dia Ponderada</td>
+
+						<td style="text-align: right">0.0</td>
+
+					</tr>
+
+				
+
+			
+
+		</tbody>
+
+	</table>
+
+
+
+	<br />
+
+	<!--  
+
+	
+
+	
+
+		<h2 style="width: 100%">Gr&#225;fico da M&#233;dia de Conclus&#227;o Normalizada</h2>
+
+	
+
+		
+
+		<table width="100%">
+
+			<tr>
+
+				<td>
+
+					
+
+					
+
+						
+
+					
+
+					
+
+				 <IMG BORDER="0" HEIGHT="250" WIDTH="400" ALT="" src="/sigaa/cewolf;jsessionid=77D894D35B50E73A612DD8186C3C3864.sigaa31?img=-871344132&amp;width=400&amp;height=250&amp;iehack=.png"></td>
+
+				<td>
+
+				<table width="100%">
+
+					<tr>
+
+						<td><strong>M&#233;dia das MCs:</strong></td>
+
+						<td>4,0318</td>
+
+					</tr>
+
+					<tr>
+
+						<td><strong>Desvio Padr&#227;o das MCs:</strong></td>
+
+						<td>0,2402</td>
+
+					</tr>
+
+					<tr>
+
+						<td><strong>Maior MC:</strong></td>
+
+						<td>4,8265</td>
+
+					</tr>
+
+					<tr>
+
+						<td><strong>Menor MC:</strong></td>
+
+						<td>3,5172</td>
+
+					</tr>
+
+				</table>
+
+				<br/>
+
+					<center>
+
+					Voc&#234; est&#225; entre as <strong><em>99,95%</em></strong>
+
+					melhores MCs do seu curso.
+
+					</center>
+
+				<br/><br/>
+
+					<center>*Obs.: Os valores normalizados levam em considera&#231;&#227;o apenas os alunos conclu&#237;dos.</center>	
+
+				</td>
+
+			</tr>
+
+		</table>
+
+	
+
+	
+
+	
+
+	
+
+	
+
+		<br />
+
+		<h2 style="width: 100%">Gr&#225;fico do &#205;ndice de Efici&#234;ncia Acad&#234;mica Normalizado</h2>
+
+	
+
+		
+
+		<table width="100%">
+
+			<tr>
+
+				<td>
+
+					
+
+					
+
+						
+
+					
+
+					
+
+				 <IMG BORDER="0" HEIGHT="250" WIDTH="450" ALT="" src="/sigaa/cewolf;jsessionid=77D894D35B50E73A612DD8186C3C3864.sigaa31?img=-1101028741&amp;width=450&amp;height=250&amp;iehack=.png"></td>
+
+				<td>
+
+				<table width="100%">
+
+					<tr>
+
+						<td><strong>M&#233;dia dos IEANs:</strong></td>
+
+						<td>182,8711</td>
+
+					</tr>
+
+					<tr>
+
+						<td><strong>Desvio Padr&#227;o dos IEANs:</strong></td>
+
+						<td>140,2183</td>
+
+					</tr>
+
+					<tr>
+
+						<td><strong>Maior IEAN:</strong></td>
+
+						<td>867,8158</td>
+
+					</tr>
+
+					<tr>
+
+						<td><strong>Menor IEAN:</strong></td>
+
+						<td>001,2234</td>
+
+					</tr>
+
+				</table>
+
+				<br/>
+
+					<center>
+
+					Voc&#234; est&#225; entre os <strong><em>90,39%</em></strong>
+
+					melhores IEANs do seu curso.
+
+					</center>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+	
+
+	 
+
+	-->
+
+	
+
+	<br/><br/>
+
+	<h2 style="width: 100%">Descri&#231;&#227;o dos &#205;ndices Acad&#234;micos</h2>
+
+	<table class="tabelaRelatorio" width="100%" id="tabelaDescricao">
+
+
+
+		<tbody>
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+					<tr>
+
+						<td align="left"><b>IRA</b></td>
+
+						<td align="left">O &#205;ndice de Rendimento Acad&#234;mico (IRA) &#233; a m&#233;dia do rendimento escolar final obtido pelo(a) discente nos componentes curriculares que concluiu, ponderadas pela carga hor&#225;ria discente dos componentes.</td>
+
+					</tr>
+
+				
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+			
+
+				
+
+				
+
+					<tr>
+
+						<td align="left"><b>MP</b></td>
+
+						<td align="left">M&#233;dia ponderada das men&#231;&#245;es obtidas nas disciplinas obrigat&#243;rias e optativas.</td>
+
+					</tr>
+
+				
+
+			
+
+		</tbody>
+
+	</table>
+
+	<br>
+
+	<!--  
+
+	<table width="100%">
+
+		<tr>
+
+			<td align="right" class="naoImprimir"><a id="link" name="link" href="#_self" tabindex="1000"><img id="imgFormula" src="/sigaa/img/view.gif" class="hidelink" />
+
+				  Visualizar F&#243;rmulas para C&#225;lculo
+
+        <script type="text/javascript">Richfaces.componentControl.attachAvailable('#link','onclick','#panel','show')</script></a></td>
+
+		</tr>
+
+	</table>
+
+	-->
+
+
+
+
+
+<div id="autenticacao">
+
+	<h4>ATEN&#199;&#195;O</h4>
+
+	<p>
+
+		Para verificar a autenticidade deste documento acesse
+
+		<span class="autenticacao">https://sigaa.unb.br/sigaa/documentos/</span> informando o n&#250;mero do documento <span class="autenticacao">2954992</span>, 
+
+		a data de emiss&#227;o e o c&#243;digo de verifica&#231;&#227;o <span class="autenticacao">684228353a</span>
+
+	</p>
+
+</div>
+
+
+
+
+
+</div> 
+
+	<div class="clear"> </div>
+
+	<br/>
+
+	<div id="relatorio-rodape">
+
+		<p>
+
+			<table width="100%">
+
+				<tr>
+
+					<td class="voltar" align="left">
+
+						
+
+						 	<a href="javascript:history.back();"> Voltar </a>
+
+						
+
+						
+
+					</td>
+
+					<td width="70%"  align="center">
+
+					SIGAA | Secretaria de Tecnologia da Informa&#231;&#227;o - STI - (61)  3107-0102 | Copyright &copy; 2006-2026 - UFRN - app31.sigaa31
+
+					</td>
+
+					<td class="naoImprimir" align="right">
+
+						<a onclick="javascript:window.print();" href="#">Imprimir</a>
+
+					</td>
+
+					<td class="naoImprimir" align="right">
+
+						<a onclick="javascript:window.print();" href="#">							
+
+							<img alt="Imprimir" title="Imprimir" src="/shared/javascript/ext-1.1/docs/resources/print.gif"/>
+
+						</a>
+
+					</td>
+
+				</tr>
+
+			</table>
+
+		</p>
+
+
+
+	</div>
+
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+
+	  ga('create', '0', 'auto');
+
+	  ga('send', 'pageview');
+
+	
+
+	</script>	
+
+
+
+
+
+
+
+<!-- MYFACES JAVASCRIPT -->
+
+</body>
+
+</html>
+
